@@ -1,18 +1,18 @@
 ---
 title: Instalace nástrojů pro tvorbu obsahu
 description: Tento článek vám pomůže stáhnout a nainstalovat klientské nástroje, které jsou potřeba pro Git a úpravy souborů markdownu.
-author: bryanla
-ms.author: bryanla
-manager: mbaldwin
-ms.date: 01/04/2018
+author: jasonwhowell
+ms.author: jasonh
+manager: kfile
+ms.date: 04/30/2018
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 0ca942e557640db1ba36d3f5b1064656ed3dea8d
-ms.sourcegitcommit: 3ec397fab57ea582edb03a59609f62d886410ee8
+ms.openlocfilehash: 1011c3fc829202a3df134ddc80eb05b8959b7bf6
+ms.sourcegitcommit: 7b668124f25b8ad0442937a3ad05b19a47af5970
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-content-authoring-tools"></a>Instalace nástrojů pro tvorbu obsahu
 
@@ -20,6 +20,7 @@ Tento článek popisuje postup interaktivní instalace nástrojů klienta Git a 
 > [!div class="checklist"]
 > * Instalace [Git pro Windows](https://git-scm.com/download/win)
 > * Instalace [Visual Studio Code](https://code.visualstudio.com/)
+> * Instalace [balíčku pro vytváření obsahu na webu Docs](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack)
 
 >[!IMPORTANT]
 > Pokud děláte jenom menší změny článku, kroky v tomto článku dělat *nemusíte* a můžete pokračovat přímo na [pracovní postup pro rychlé změny](index.md#quick-edits-to-existing-documents).
@@ -58,6 +59,16 @@ Stáhněte a nainstalujte [VS Code](https://code.visualstudio.com/). Domovská s
 
 > [!TIP]
 > Spuštěním příkazu `code .` na příkazovém řádku nebo v prostředí Bash spustíte VS Code a otevřete aktuální složku. Pokud je aktuální složka součástí místního úložiště Git, dojde k integraci GitHubu v nástroji Visual Studio Code automaticky.
+
+## <a name="docs-authoring-pack"></a>Balíček pro vytváření obsahu na webu Docs
+Nainstalujte balíček pro vytváření obsahu na webu Docs pro Visual Studio Code. Tato sada rozšíření obsahuje základní podporu pro vytváření obsahu, která vám pomůže s psaním Markdownu, a funkci náhledu, abyste si mohli prohlédnout, jak Markdown vypadá ve stylu webu docs.microsoft.com.
+
+   Navštivte tuto [stránku marketplace](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) a vyberte **Nainstalovat**, nebo vyhledejte `docsmsft.docs-authoring-pack` v seznamu rozšíření v okně VS Code. 
+
+   Balíček pro vytváření obsahu na webu Docs zpřístupníte stisknutím kláves Alt+M v sadě VS Code. Panel nástrojů je standardně skrytý, dá se ale zobrazit. Zobrazíte ho úpravou nastavení sady VS Code (Ctrl+čárka) a přidáním uživatelského nastavení `"markdown.showToolbar": true`.
+
+   Další informace najdete na stránce [Balíček pro vytváření obsahu na webu Docs](how-to-write-docs-auth-pack.md).
+
 
 ## <a name="next-steps"></a>Další kroky
 
