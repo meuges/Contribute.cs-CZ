@@ -8,11 +8,11 @@ ms.date: 06/30/2017
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 5ad2ca323b680078c2bfd2fc4cac6fb1883c411f
-ms.sourcegitcommit: dd1b4e915f4996ac029d2a0704ced785438d3484
+ms.openlocfilehash: 5f7f90b69953e23833906202c739d2168b139d7e
+ms.sourcegitcommit: 3ec397fab57ea582edb03a59609f62d886410ee8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="git-and-github-essentials-for-docs"></a>Základy Gitu a GitHubu pro web Docs
 
@@ -80,7 +80,7 @@ Kořenový adresář každého úložiště obvykle pro pohodlnější použív�
 
 *Žádost o přijetí změn* představuje pohodlný způsob pro přispěvatele, jak navrhnout sadu změn, které se mají použít na výchozí větev. Změny (označované také jako *potvrzení*) jsou uložené ve větvi přispěvatele. GitHub tak může dopad jejich *sloučení* s výchozí větví nejdřív namodelovat. Žádost o přijetí změn také slouží jako mechanismus, který poskytne přispěvateli zpětnou vazbu z procesu sestavení a ověření, od recenzenta žádostí o přijetí změn nebo z dotazů položených před sloučením s výchozí větví.
 
-Existují dva způsoby, jak pomocí žádosti o přijetí změn přispívat, a to podle velikosti změn, které chcete navrhnout. Budeme se tím podrobně zabývat později v oddílech [pracovního postupu pro GitHub](light-workflow.md) tohoto průvodce.
+Existují dva způsoby, jak pomocí žádosti o přijetí změn přispívat, a to podle velikosti změn, které chcete navrhnout. Budeme se tím podrobně zabývat později v oddílech [pracovního postupu pro GitHub](how-to-write-workflows-major.md) tohoto průvodce.
 
 <!---- Reference links for Docs landing pages, associated GitHub repositories, and related Forums matrix. ------------------>
 <!---- PLEASE INSERT URLS IN ASCENDING SORT ORDER, AND REMOVE LOCALE SEGMENT FROM URLS (that is, en-us) FOR LOCALIZED FORUMS! -->
