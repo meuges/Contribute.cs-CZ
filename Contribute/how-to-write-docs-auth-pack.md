@@ -1,19 +1,18 @@
 ---
 title: Balíček pro vytváření obsahu na webu Docs pro VS Code
-description: Balíček rozšíření pro VS Code pro usnadnění vytváření Markdownu pro docs.microsoft.com
+description: Tento článek popisuje balíček rozšíření pro VS Code, který usnadňuje vytváření obsahu v jazyce Markdown pro docs.microsoft.com.
 author: meganbradley
 ms.author: mbradley
 manager: jemash
 ms.date: 04/06/2018
-ms.article: contributor-guide
-ms.prod: n.a
-ms.service: n.a
-ms.technology: n.a
-ms.openlocfilehash: 5c857deb07e28e1f6744c895a291bf78a6acf1df
-ms.sourcegitcommit: dd1b4e915f4996ac029d2a0704ced785438d3484
+ms.prod: non-product-specific
+ms.topic: contributor-guide
+ms.custom: external-contributor-guide
+ms.openlocfilehash: d0d61db2faf88598ecd2c800fb5fbe8df8ec44f5
+ms.sourcegitcommit: 7b668124f25b8ad0442937a3ad05b19a47af5970
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="docs-authoring-pack-for-vs-code"></a>Balíček pro vytváření obsahu na webu Docs pro VS Code
 
@@ -87,7 +86,7 @@ Uživatelé staršího rozšíření s kódovým názvem Gauntlet si mohou všim
 
 ## <a name="known-issues"></a>Známé problémy
 
-- [DocFX Preview] MacOS a Linux: DocFX Preview nespouští náhled správně (u těchto platforem se náhled standardně přepne na VS Code Markdown).
-- [DocFx Preview] Všechny platformy: Některé syntaxe, například odkazy xref (křížové odkazy) na rozhraní API, se v náhledu správně nezobrazují a v některých případech zanechávají v obsahu mezery.
-- [Externí záložky] Linux: Seznam souborů se sice zobrazí, ale nejsou k dispozici žádná záhlaví pro výběr.
-- [Vložené soubory] Linux: Seznam souborů se sice zobrazí, ale po výběru se nepřidá žádný odkaz.
+- DocFX Preview: V systémech MacOS a Linux se v DocFX Preview nespouští náhled správně (u těchto platforem se náhled standardně přepne na VS Code Markdown).
+- DocFx Preview: Na všech platformách se některé syntaxe, například odkazy xref (křížové odkazy) na rozhraní API, v náhledu správně nezobrazují a v některých případech zanechávají v obsahu mezery.
+- Externí záložky: V Linuxu se seznam souborů sice zobrazí, ale nejsou k dispozici žádná záhlaví pro výběr.
+- Vložené soubory: V Linuxu se seznam souborů sice zobrazí, ale po výběru se nepřidá žádný odkaz.

@@ -8,11 +8,11 @@ ms.date: 01/18/2018
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: d9c7211641fb05aaca8a76e10c7216ff61a5d23c
-ms.sourcegitcommit: dd1b4e915f4996ac029d2a0704ced785438d3484
+ms.openlocfilehash: f702d0d29ee7dc9c69cb26b79bf6283d91b6b6bc
+ms.sourcegitcommit: 3ec397fab57ea582edb03a59609f62d886410ee8
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>Místní nastavení úložiště Git pro dokumentaci
 
@@ -27,7 +27,7 @@ Abyste mohli začít přispívat, provedete následující jednorázová nastave
 > * Konfigurace vzdálené hodnoty upstreamu
 
 > [!IMPORTANT]
-> Pokud děláte jenom menší změny článku, kroky v tomto článku provádět *nemusíte*. Můžete pokračovat přímo na [pracovní postup pro menší nebo občasné změny](light-workflow.md).
+> Pokud děláte jenom menší změny článku, kroky v tomto článku provádět *nemusíte*. Můžete pokračovat přímo na [pracovní postup pro rychlé změny](index.md#quick-edits-to-existing-documents).
 >
 
 ## <a name="overview"></a>Přehled
@@ -46,7 +46,7 @@ Dokumentace hostovaná na webu [docs.microsoft.com](https://docs.microsoft.com) 
 
 1. Pokud nevíte, které úložiště použít, navštivte tento článek na webu docs.microsoft.com pomocí svého webového prohlížeče. Vyberte odkaz **Upravit** (ikona tužky) v pravém horním rohu článku.
 
-   ![Kliknutím na Upravit určete úložiště a umístění souboru.](media/edit-article.png)
+   ![Kliknutím na Upravit určete úložiště a umístění souboru.](media/index/edit-article.png)
 
 2. Tento odkaz vás nasměruje na umístění webu github.com s odpovídajícím souborem Markdown v příslušném úložišti. Poznačte si adresu URL a zjistěte název úložiště.
 
