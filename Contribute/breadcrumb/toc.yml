@@ -1,0 +1,7 @@
+- name: Docs
+  href: /
+  homepage: /
+  items:
+    - name: Průvodce pro přispěvatele
+      href: /contribute/
+      homepage: /contribute/
