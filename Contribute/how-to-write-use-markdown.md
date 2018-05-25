@@ -8,17 +8,22 @@ ms.date: 07/13/2017
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 96d00abc052c3b23ca62201dccdbe590a927e72d
-ms.sourcegitcommit: de6e6b6ca641fdd5b30eb46deee9ac3a500089ef
+ms.openlocfilehash: 041398361aef90c44bdf3a0dad4aaa2d40a38289
+ms.sourcegitcommit: 782b689882cce3ce07f5613763322989f2d0d63f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
 Články na docs.microsoft.com jsou psané jednoduchým jazykem využívajícím značky, který se nazývá [Markdown](https://daringfireball.net/projects/markdown/) a snadno se čte i učí. Díky tomu se v oboru rychle stal standardem.
 
-Protože je obsah Docs uložený v GitHubu, může používat nadstavbu Markdownu zvanou [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), která poskytuje další funkce pro běžné potřeby formátování. Kromě toho platforma OPS (Open Publishing Services) implementuje rozšíření DFM (DocFX Flavored Markdown). DFM je s GFM (GitHub Flavored Markdown) vysoce kompatibilní a přidává možnosti podporující funkce specifické pro Docs.
+Protože je obsah Docs uložený v GitHubu, může používat nadstavbu Markdownu zvanou [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), která poskytuje další funkce pro běžné potřeby formátování. Platforma OPS (Open Publishing Services) navíc implementuje Markdig Markdown Parser. Markdig je vysoce kompatibilní s rozšířením GitHub Flavored Markdown (GFM) a přidává možnosti podporující funkce specifické pro Docs.
+
+* Markdig je rozšiřitelný procesor Markdownu pro .NET, který je rychlý, výkonný a kompatibilní se syntaxí CommonMark.
+* https://github.com/lunet-io/markdig
+* Lepší podpora komunity
+* Lepší podpora standardů
 
 ## <a name="markdown-basics"></a>Základy Markdownu
 
@@ -145,7 +150,7 @@ se zobrazí takto:
 
 Další informace o vytváření tabulek:
 
-- Funkce [zalamování tabulek](#table-wrapping) DFM, která může pomoct při formátování širokých tabulek
+- [Funkce zalamování tabulek](#table-wrapping) v Markdigu určená k formátování širokých tabulek
 - [Organizování informací pomocí tabulek](https://help.github.com/articles/organizing-information-with-tables/) v GitHubu
 - Webová aplikace [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables) (Generátor tabulek v Markdownu)
 - [Markdown Cheatsheet (Tahák pro Markdown) od Adama Pritcharda](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables)
@@ -161,7 +166,7 @@ Syntaxe Markdownu pro vložený odkaz se skládá z části `[link text]`, což 
 Další informace o tvorbě odkazů:
 
 - Podrobnosti o základní podpoře odkazů v Markdownu najdete v [průvodci syntaxí Markdownu](https://daringfireball.net/projects/markdown/syntax#link).
-- Podrobnosti o další syntaxi odkazů, kterou umožňuje DFM, najdete v sekci [Odkazy](how-to-write-links.md) tohoto průvodce.
+- Podrobnosti o další syntaxi odkazů, které nabízí Markdig, najdete v oddílu [Odkazy](how-to-write-links.md) tohoto průvodce.
 
 ### <a name="code-snippets"></a>Fragmenty kódu
 
@@ -272,9 +277,9 @@ CREATE TABLE T1 (
 ## <a name="ops-custom-markdown-extensions"></a>Vlastní rozšíření Markdownu od OPS
 
 > [!NOTE]
-> Platforma OPS (Open Publishing Services) implementuje rozšíření DFM (DocFX Flavored Markdown), které je vysoce kompatibilní s rozšířením GFM (GitHub Flavored Markdown). Rozšíření DFM přidává prostřednictvím rozšíření Markdownu další funkce. Tento průvodce tak jako referenční informace zahrnuje vybrané články z úplného průvodce vytvářením obsahu OPS. (Podívejte se třeba na„Rozšíření DFM a Markdownu“ a „Fragmenty kódu“ v obsahu.)
+> Platforma Open Publishing Services (OPS) implementuje analyzátor Markdig Parser pro Markdown, který je vysoce kompatibilní s rozšířením GFM (GitHub Flavored Markdown). Markdig přidává v rozšířeních Markdownu některé další funkce. Tento průvodce tak jako referenční informace zahrnuje vybrané články z úplného průvodce vytvářením obsahu OPS. (Podívejte se v obsahu například na „Rozšíření Markdig a Markdown“ a „Fragmenty kódu“.)
 
-Články Docs používají GFM na většinu formátování, jako jsou odstavce, odkazy, seznamy a nadpisy. Na bohatší formátování používají články funkce DFM jako:
+Články Docs používají GFM na většinu formátování, jako jsou odstavce, odkazy, seznamy a nadpisy. Ke složitějšímu formátování článků můžete používat třeba tyto funkce Markdigu:
 
 - Bloky poznámek
 - Zahrnutí
@@ -282,7 +287,7 @@ CREATE TABLE T1 (
 - Vložená videa
 - Fragmenty/ukázky kódu
 
-Kompletní seznam najdete v částech „Rozšíření DFM a Markdownu“ a „Fragmenty kódu“ v obsahu.
+Kompletní seznam funkcí najdete v tématech „Rozšíření Markdig a Markdown“ a „Fragmenty kódu“ v obsahu.
 
 ### <a name="note-blocks"></a>Bloky poznámek
 
@@ -297,7 +302,7 @@ Obecně by se bloky poznámek měly používat střídmě, protože můžou půs
 
 ### <a name="includes"></a>Zahrnutí
 
-Když máte opakovaně použitelný text nebo soubory obrázků, které je potřeba zahrnout do souborů článků, můžete použít odkaz na soubor „zahrnutí“ prostřednictvím funkce DFM k zahrnutí souboru. Tato funkce platformě OPS říká, aby daný soubor zahrnula do vašeho souboru článku při jeho vytvoření, a soubor se tak stal součástí vašeho publikovaného článku. K dispozici jsou tři typy zahrnutí, které vám pomůžou znovu použít obsah:
+Pokud máte opakovaně použitelný text nebo soubory obrázků, které chcete zahrnout do souborů s články, použijte odkaz na zahrnutý soubor prostřednictvím funkce Markdigu pro zahrnutí souboru. Tato funkce platformě OPS říká, aby daný soubor zahrnula do vašeho souboru článku při jeho vytvoření, a soubor se tak stal součástí vašeho publikovaného článku. K dispozici jsou tři typy zahrnutí, které vám pomůžou znovu použít obsah:
 
 - Vložení: umožňuje znovu použít běžný vložený fragment textu v jiné větě.
 - Blok: umožňuje znovu použít celý soubor Markdownu jako blok vnořený do oddílu článku.
@@ -309,7 +314,7 @@ Tady jsou požadavky a důležité informace týkající se zahrnutí:
 
 - Zahrnutí použijte, kdykoli potřebujete, aby se stejný text zobrazoval ve více článcích.
 - Zahrnutí typu Blok používejte na výrazná množství obsahu – jeden nebo dva odstavce, sdílený postup nebo sdílený oddíl. Nepoužívejte je na nic menšího než větu.
-- Zahrnutí se nevykreslí v zobrazení článku vykresleném GitHubem, protože závisejí na rozšířeních DFM. Vykreslí se až po zveřejnění.
+- Zahrnuté soubory se nebudou vykreslovat v zobrazení článku vykresleném GitHubem, protože závisejí na rozšířeních Markdigu. Vykreslí se až po zveřejnění.
 - Dbejte na to, aby byl všechen text v zahrnutí napsaný v úplných větách nebo frázích, které nezávisí na předchozím nebo následujícím textu v článku, který na zahrnutí odkazuje. Ignorováním tohoto pravidla vznikne nepřeložitelný řetězec, který naruší lokalizované použití.
 - Nevkládejte zahrnutí do jiných zahrnutí. Není to podporováno.
 - Multimediální soubory umístěte do složky s multimédii konkrétního podadresáře zahrnutí, třeba do složky `<repo>`/includes/media. Adresář multimédií nesmí ve svém kořenu obsahovat obrázky. Pokud zahrnutí obrázky nemá, pak odpovídající adresář multimédií není potřeba.
@@ -318,13 +323,13 @@ Tady jsou požadavky a důležité informace týkající se zahrnutí:
 
 ### <a name="selectors"></a>Voliče
 
-Voliče používejte v technických článcích, když vytváříte více charakterů stejného článku, abyste vyřešili rozdíly v implementaci pro různé technologie nebo platformy. Typicky se to nejvíce hodí na náš obsah pro mobilní platformy pro vývojáře. V DFM jsou v současnosti dva různé typy voličů – jednoduchý a vícenásobný volič.
+Voliče používejte v technických článcích, když vytváříte více charakterů stejného článku, abyste vyřešili rozdíly v implementaci pro různé technologie nebo platformy. Typicky se to nejvíce hodí na náš obsah pro mobilní platformy pro vývojáře. V Markdigu jsou v současnosti dva různé typy voličů: jednoduchý a vícenásobný.
 
 Protože do každého článku ve výběru přijde stejný Markdown voliče, doporučujeme umístit volič pro článek do zahrnutí. Pak můžete na zahrnutí odkázat ve všech článcích, které stejný volič používají.
 
 ### <a name="code-snippets"></a>Fragmenty kódu
 
-DFM podporuje zahrnutí kódu do článku prostřednictvím svého rozšíření pro fragmenty kódu. To poskytuje pokročilé vykreslení, které vychází z funkcí GFM, jako například výběr programovacího jazyka a barvy syntaxe. Navíc nabízí užitečné funkce jako:
+Markdig podporuje rozšířené zahrnutí kódu do článku prostřednictvím rozšíření pro fragmenty kódu. To poskytuje pokročilé vykreslení, které vychází z funkcí GFM, jako například výběr programovacího jazyka a barvy syntaxe. Navíc nabízí užitečné funkce jako:
 
 - Zahrnutí centralizovaných ukázek/fragmentů kódu z externího úložiště
 - Uživatelské rozhraní s kartami k zobrazení více verzí ukázek kódu v různých jazycích
