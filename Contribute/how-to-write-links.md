@@ -1,19 +1,13 @@
 ---
 title: Používání odkazů v dokumentaci
 description: Tento článek obsahuje pokyny k vytváření odkazů na obsah na webu docs.microsoft.com.
-author: bryanla
-ms.author: bryanla
-manager: mbaldwin
 ms.date: 06/29/2017
-ms.prod: non-product-specific
-ms.topic: contributor-guide
-ms.custom: external-contributor-guide
-ms.openlocfilehash: 1699e57ac6a4dc4c5a1ef099ea183b3cbc6307cd
-ms.sourcegitcommit: 782b689882cce3ce07f5613763322989f2d0d63f
+ms.openlocfilehash: a66e2fb4febf1947afe01919b96b1c10873cf57d
+ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34469525"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36239719"
 ---
 # <a name="using-links-in-documentation"></a>Používání odkazů v dokumentaci
 Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy přesměrovávají uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
@@ -63,7 +57,10 @@ Pokud chcete vytvořit hotlink z technického článku na webu Docs na jiný te
   `[link text](../directory/article-name.md)`
 
 - Článek odkazující na různé sady docset (i ve stejném úložišti): `[link text](./directory/article-name)`
-  
+
+> [!IMPORTANT]
+> V žádném z výše uvedených příkladů se jako součást odkazu nepoužívá `~/`. Pokud vytváříte odkaz na cestu v kořeni úložiště, začněte znakem `/`. Při zahrnutí řetězce `~/` vznikají neplatné odkazy pro navigaci do zdrojových úložišť na GitHubu. Problém se vyřeší, když bude cesta začínat znakem `/`.
+
 ## <a name="links-to-anchors"></a>Odkazy na ukotvení
 
 Ukotvení vytvářet nemusíte. Generují se automaticky pro všechny nadpisy H2 při publikování. Jediné, co musíte udělat, je vytvořit odkazy na oddíly H2.

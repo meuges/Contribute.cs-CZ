@@ -1,19 +1,13 @@
 ---
 title: Průvodce správným stylem na webu Docs – rychlý start
 description: Tento článek je stručným průvodcem k požadavkům na styl, který obsahuje pouze nejdůležitější témata do začátku na webu docs.microsoft.com.
-author: bryanla
-ms.author: bryanla
-manager: mbaldwin
 ms.date: 07/25/2017
-ms.prod: non-product-specific
-ms.topic: contributor-guide
-ms.custom: external-contributor-guide
-ms.openlocfilehash: 74f78b72f61cfebddb0cb03b73a3a806f4fe4a10
-ms.sourcegitcommit: 782b689882cce3ce07f5613763322989f2d0d63f
+ms.openlocfilehash: 34cd0dc1760f2a569f8bfec782f04b2691a74470
+ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34469387"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36239596"
 ---
 # <a name="docs-style-and-voice-quick-start"></a>Rychlý start věnovaný stylu a způsobu vyjadřování na webu Docs
 
@@ -56,5 +50,6 @@ Naše technické články se překládají do několika jazyků a některé z 
 ## <a name="localized-documentation"></a>Lokalizovaná dokumentace
 
 - Pokud přispíváte k lokalizované dokumentaci, využívejte web [Microsoft Language Portal](https://www.microsoft.com/Language/Default.aspx).
-- Pokud chcete získat pokyny pro lokalizaci, informace o stylu jazyka a jeho použití v technických publikacích a informace o formátech dat pro konkrétní trh, stáhněte si ve svém jazyce [průvodce správným stylem](https://www.microsoft.com/Language/StyleGuides.aspx).
-- Lokalizovanou terminologii Microsoftu ve svém jazyce můžete vyhledat ve [schválené terminologii konkrétního produktu](https://www.microsoft.com/Language/Search.aspx) nebo si můžete stáhnout [kolekci terminologie Microsoftu](https://www.microsoft.com/Language/Terminology.aspx).
+- Pokud chcete získat pokyny pro lokalizaci, informace o stylu jazyka a jeho použití v technických publikacích a informace o formátech dat pro konkrétní trh, stáhněte si ve svém jazyce [průvodce správným stylem](https://www.microsoft.com/Language/StyleGuides).
+- Lokalizovanou terminologii Microsoftu ve svém jazyce můžete vyhledat ve [schválené terminologii konkrétního produktu](https://www.microsoft.com/Language/Default.aspx) nebo si můžete stáhnout [kolekci terminologie Microsoftu](https://www.microsoft.com/Language/Terminology.aspx).
+- Více se dozvíte v [části týkající se lokalizace](https://docs.microsoft.com/style-guide/global-communications/) v průvodci správným stylem od Microsoftu.
