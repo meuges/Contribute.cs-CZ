@@ -4,7 +4,7 @@
       "docset_name": "ContributionGuide",
       "build_source_folder": "Contribute",
       "build_output_subfolder": "ContributionGuide",
-      "locale": "cs-CZ",
+      "locale": "cs-CZ",{
       "monikers": [],
       "moniker_ranges": [],
       "open_to_public_contributors": true,
@@ -20,9 +20,7 @@
   "continue_with_document_error": true,
   "skip_source_output_uploading": false,
   "need_preview_pull_request": true,
-	"contribution_branch_mappings": {
-		       "live-sxs": "live"
-  },
+  "contribution_branch_mappings": {},
   "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/Contribute.cs-CZ",
   "git_repository_branch_open_to_public_contributors": "live",
   "dependent_repositories": [
