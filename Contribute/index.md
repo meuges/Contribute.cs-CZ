@@ -5,18 +5,18 @@ author: billwagner
 ms.author: wiwagn
 manager: wpickett
 ms.date: 04/17/2018
-ms.openlocfilehash: a0c52fea8f3a57cdfe89c2cd7a24ef7b511ada7c
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 6206f61a69c14575a726da9ce64ad0b765c7aa87
+ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239762"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251451"
 ---
 # <a name="microsoft-docs-contributor-guide-overview"></a>Průvodce pro přispěvatele na web Microsoft Docs – přehled
 
 Vítá vás Průvodce pro přispěvatele na webu [docs.microsoft.com](https://docs.microsoft.com) (Docs)!
 
-Některé sady naší dokumentace jsou dostupné jako Open Source hostovaný na GitHubu. Tento model přijímá stále více týmů. Dokonce i sady dokumentů, které nejsou celé dostupné jako Open Source, mají veřejná úložiště, ve kterých můžete zadávat žádosti o přijetí změn. Komunikace mezi produktovými inženýry, týmy pro obsah a našimi zákazníky je tak jednodušší a efektivnější. Práce v otevřeném prostředí poskytuje několik výhod:
+Některé sady naší dokumentace jsou dostupné jako Open Source hostovaný na GitHubu. Tento model si přisvojuje stále více týmů v Microsoftu. Dokonce i sady dokumentů, které nejsou celé dostupné jako Open Source, mají veřejná úložiště, ve kterých můžete zadávat žádosti o přijetí změn. Komunikace mezi produktovými inženýry, týmy pro obsah a našimi zákazníky je tak jednodušší a efektivnější. Práce v otevřeném prostředí poskytuje několik výhod:
 
 - Plánování úložišť Open Source se provádí otevřeně, což umožňuje získávat zpětnou vazbu o tom, které dokumenty jsou nejvíce žádané.
 - Revize úložišť Open Source se provádějí otevřeně, takže je možné v naší nové verzi publikovat nejužitečnější obsah.

@@ -5,18 +5,18 @@ author: jasonwhowell
 ms.author: jasonh
 manager: kfile
 ms.date: 04/30/2018
-ms.openlocfilehash: 00631485f1f4eed9e0de2f6df98d973a819dfe4d
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 9f22a416810711c076645a9483f022112a3a7642
+ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238913"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251463"
 ---
 # <a name="install-content-authoring-tools"></a>Instalace nástrojů pro tvorbu obsahu
 
 Tento článek popisuje postup interaktivní instalace nástrojů klienta Git a Visual Studio Code.
 > [!div class="checklist"]
-> * Instalace [Git pro Windows](https://git-scm.com/download/win)
+> * Instalace [Gitu](https://git-scm.com/)
 > * Instalace [Visual Studio Code](https://code.visualstudio.com/)
 > * Instalace [balíčku pro vytváření obsahu na webu Docs](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack)
 
@@ -25,9 +25,13 @@ Tento článek popisuje postup interaktivní instalace nástrojů klienta Git a 
 >
 > Větším přispěvatelům doporučujeme tyto kroky provést, protože vám umožní používat [pracovní postup pro větší nebo dlouho probíhající změny](how-to-write-workflows-major.md). I když máte oprávnění k zápisu do hlavního úložiště, *důrazně doporučujeme (a tento průvodce to předpokládá), abyste úložiště rozvětvili a naklonovali* a měli tak oprávnění ke čtení/zápisu pro ukládání navrhovaných změn ve své větvi.
 
-## <a name="install-git-client-tools-on-windows"></a>Instalace nástrojů klienta Git ve Windows
+## <a name="install-git-client-tools"></a>Instalace nástrojů klienta Git 
 
- Nainstalujte nejnovější verzi [nástrojů klienta Git od Software Freedom Conservancy](https://git-scm.com/download/). Nainstalujete tím systém správy verzí Git včetně aplikace příkazového řádku Git Bash, která slouží k interakci s místním úložištěm Git.
+ Nainstalujte nejnovější verzi [nástrojů klienta Git od Software Freedom Conservancy](https://git-scm.com/download/) pro svou platformu. 
+
+* [Git pro Windows](https://git-scm.com/download/win) Tím nainstalujete systém správy verzí Git včetně aplikace příkazového řádku Git Bash, která slouží k interakci s místním úložištěm Git.
+* Git pro Mac se dodává jakou součást nástrojů příkazového řádku Xcode. Jednoduše spusťte `git` z příkazového řádku. V případě potřeby budete vyzváni k instalaci nástrojů příkazového řádku. [Git pro Mac](https://git-scm.com/download/mac) si také můžete stáhnout od Software Freedom Conservancy.
+* [Git pro Linux a Unix](https://git-scm.com/download/linux)
 
 Pokud před rozhraním příkazového řádku (CLI) dáváte přednost grafickému uživatelskému rozhraní (GUI), k oblíbeným možnostem patří [dostupní klienti GUI od Software Freedom Conservancy](https://git-scm.com/downloads/guis), [GitHub Desktop od GitHubu](https://desktop.github.com/) nebo [Visual Studio Code](https://www.visualstudio.com/products/code-vs.aspx).
 

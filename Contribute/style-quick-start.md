@@ -2,22 +2,22 @@
 title: Průvodce správným stylem na webu Docs – rychlý start
 description: Tento článek je stručným průvodcem k požadavkům na styl, který obsahuje pouze nejdůležitější témata do začátku na webu docs.microsoft.com.
 ms.date: 07/25/2017
-ms.openlocfilehash: 34cd0dc1760f2a569f8bfec782f04b2691a74470
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 3a91669ba9ad6711bcc436952d1d6cb311b9d4f6
+ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239596"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40243016"
 ---
 # <a name="docs-style-and-voice-quick-start"></a>Rychlý start věnovaný stylu a způsobu vyjadřování na webu Docs
 
-Tento rychlý start vyžaduje minimum času, ale poskytne vám představu, jak používat nejdůležitější koncepty stylu Dokumentace, když píšete články pro web docs.microsoft.com. Tyto pokyny platí, ať už vytváříte novou dokumentaci, nebo upravujete tu existující.
+Tento rychlý start je stručným průvodcem pro psaní technického obsahu určeného k publikování na web docs.microsoft.com. Tyto pokyny platí, ať už vytváříte novou dokumentaci, nebo upravujete tu existující.
 
-Minimálně prosím:
+Osvědčené postupy:
 
 - Zkontrolujte pravopis a gramatiku v článcích, i kdybyste je kvůli tomu museli zkopírovat a vložit do Wordu.
 - Používejte přirozený a přívětivý způsob vyjadřování, jako byste se s někým jiným osobně bavili.
-- Používejte jednoduché věty. Jsou jednoduší na porozumění a snadnější na přeložení jak pro překladatele, tak pro strojový překlad.
+- Používejte jednoduché věty. Díky snadno čitelným větám může čtenář rychle postupovat podle vašich pokynů.
 
 ## <a name="use-the-microsoft-voice-principles"></a>Použití zásad způsobu vyjadřování Microsoftu
 
