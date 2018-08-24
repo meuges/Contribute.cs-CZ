@@ -2,12 +2,12 @@
 title: Používání odkazů v dokumentaci
 description: Tento článek obsahuje pokyny k vytváření odkazů na obsah na webu docs.microsoft.com.
 ms.date: 06/29/2017
-ms.openlocfilehash: a66e2fb4febf1947afe01919b96b1c10873cf57d
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: dad0460cfb36594c17cef1b079c5fc14191f56f7
+ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239719"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40251448"
 ---
 # <a name="using-links-in-documentation"></a>Používání odkazů v dokumentaci
 Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy přesměrovávají uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
@@ -148,12 +148,12 @@ Struktura adresy URL:
 
 Část &lt;moniker-name&gt; je volitelná. Pokud ji vynecháte, budete přesměrováni na nejnovější verzi obsahu. Část &lt;service-name&gt; je jedním z příkladů uvedených v následujících základních adresách URL:
 
-- Obsah Azure PowerShell (AzureRM): https://docs.microsoft.com/powershell/azure/
-- Obsah Azure PowerShell (ASM): https://docs.microsoft.com/powershell/azure/_servicemanagement_
-- Obsah Azure Active Directory (AzureAD) PowerShell: https://docs.microsoft.com/powershell/azure/_active-directory_
-- Azure Service Fabric PowerShell: https://docs.microsoft.com/powershell/azure/_service-fabric_
-- Azure Information Protection PowerShell: https://docs.microsoft.com/powershell/azure/_aip_
-- Azure Elastic DB Jobs PowerShell: https://docs.microsoft.com/powershell/azure/_elasticdbjobs_
+- Obsah Azure PowerShell (AzureRM): [https://docs.microsoft.com/powershell/azure/](https://docs.microsoft.com/powershell/azure/)
+- Obsah Azure PowerShell (ASM): [https://docs.microsoft.com/powershell/azure/_servicemanagement_](https://docs.microsoft.com/powershell/azure/servicemanagement)
+- Obsah Azure Active Directory (AzureAD) PowerShell: [https://docs.microsoft.com/powershell/azure/_active-directory_](https://docs.microsoft.com/powershell/azure/active-directory)
+- Azure Service Fabric PowerShell: [https://docs.microsoft.com/powershell/azure/_service-fabric_](https://docs.microsoft.com/powershell/azure/service-fabric)
+- Azure Information Protection PowerShell: [https://docs.microsoft.com/powershell/azure/_aip_](https://docs.microsoft.com/powershell/azure/aip)
+- Azure Elastic DB Jobs PowerShell: [https://docs.microsoft.com/powershell/azure/_elasticdbjobs_](https://docs.microsoft.com/powershell/azure/elasticdbjobs)
 
 Když tyto adresy URL použijete, budete přesměrováni na nejnovější verzi obsahu. Tímto způsobem nemusíte určovat verzi parametru moniker. Nebudete tak mít odkazy na koncepční obsah, které se musí při změně verze aktualizovat.
 
