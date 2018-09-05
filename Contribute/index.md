@@ -5,12 +5,12 @@ author: billwagner
 ms.author: wiwagn
 manager: wpickett
 ms.date: 04/17/2018
-ms.openlocfilehash: 6206f61a69c14575a726da9ce64ad0b765c7aa87
-ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
+ms.openlocfilehash: 94fad6f4b2faeefff687eb57cd2de8a0fb5bbbf3
+ms.sourcegitcommit: 5e508a7ad2991632a38f302e4769b36e3bf37eb2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251451"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43308886"
 ---
 # <a name="microsoft-docs-contributor-guide-overview"></a>Průvodce pro přispěvatele na web Microsoft Docs – přehled
 
@@ -31,7 +31,7 @@ Aby to bylo ještě jednodušší, uživatelské prostředí na webu [docs.micro
 
 ## <a name="quick-edits-to-existing-documents"></a>Rychlé úpravy existujících dokumentů
 
-Rychlé úpravy zjednodušují proces oznamování a oprav drobných chyb a vynechávek v dokumentech. I přes veškeré úsilí můžou v našich publikovaných dokumentech zůstat drobné gramatické a pravopisné chyby. Je sice možné oznamovat tyto chyby tak, že vytvoříte položky problémů, když ale vytvoříte žádost o přijetí změn, bude oprava těchto chyb rychlejší a jednodušší. Téměř u každého článku se zobrazuje tlačítko pro úpravy, které je znázorněno na následujícím obrázku. Kliknutím na tlačítko **Edit** (Upravit) přejdete ke zdrojovému souboru na GitHubu.
+Rychlé úpravy zjednodušují proces oznamování a oprav drobných chyb a vynechávek v dokumentech. I přes veškeré úsilí můžou v našich publikovaných dokumentech zůstat drobné gramatické a pravopisné chyby. Je sice možné oznamovat tyto chyby tak, že vytvoříte položky problémů, když ale vytvoříte žádost o přijetí změn, bude oprava těchto chyb rychlejší a jednodušší. Téměř u každého článku se zobrazuje tlačítko pro úpravy, které je znázorněno na následujícím obrázku. Kliknutím na **Edit** (Upravit) se dostanete na zdrojový soubor na GitHubu.
 
 ![Umístění odkazu pro úpravy](./media/index/edit-article.png)
 
@@ -46,6 +46,12 @@ Po provedení změn se posuňte do dolní části stránky. Zadejte název a pop
 
 ![navržení změny](./media/index/submit-pull-request.png)
 
+Teď, když jste navrhli změnu, musíte požádat vlastníky úložiště, aby vaši změnu „přijali“ do svého úložiště. K tomu slouží takzvaná „žádost o přijetí změn“. Když jste kliknuli na **Propose file change** (Navrhnout změnu souboru) v obrázku výše, měli byste se dostat na novou stránku, která vypadá jako na následujícím obrázku:
+
+![vytvoření žádosti o přijetí změn](media/index/create-pull-request.png)
+
+Klikněte na **Create pull request** (Vytvořit žádost o přijetí změn), zadejte název (a volitelně popis) této žádosti o přijetí změn a pak znovu klikněte na **Create pull request**.
+
 A to je vše! Členové týmu pro obsah provedou revizi a sloučení vaší žádosti o přijetí změn. Pokud jste provedli větší změny, je možné, že dostanete zpětnou vazbu vyžadující nějaké změny.
 
 Uživatelské rozhraní GitHubu pro úpravy se přizpůsobuje podle oprávnění uživatele v daném úložišti. Předchozí obrázky jsou přesné pro přispěvatele, kteří nemají oprávnění k zápisu do cílového úložiště. GitHub automaticky vytvoří ve vašem účtu fork cílového úložiště. Pokud máte oprávnění k zápisu do cílového úložiště, GitHub vytvoří v cílovém úložišti novou větev. Název větve má formát **\<GitHubId\>-patch-n** a používá vaše ID pro GitHub a číselný identifikátor pro větev opravy.
@@ -53,6 +59,12 @@ Uživatelské rozhraní GitHubu pro úpravy se přizpůsobuje podle oprávnění
 Žádosti o přijetí změn používáme pro všechny změny, tedy i od přispěvatelů, kteří mají oprávnění k zápisu. U většiny úložišť je větev `master` chráněná, takže aktualizace je nutné odesílat jako žádosti o přijetí změn.
 
 Prostředí pro úpravy v prohlížeči je nejvhodnější pro drobné nebo málo časté změny. Pokud provádíte velké příspěvky nebo používáte pokročilé funkce Git (třeba správu větví nebo pokročilé řešení konfliktů při sloučení), potřebujete [vytvořit fork úložiště a pracovat místně](how-to-write-workflows-major.md).
+
+> [!NOTE]
+> Pokud je to povolené, můžete článek upravit v **libovolném jazyce**, přičemž podle typu úpravy se stane následující:
+> 1. Jakákoli schválená jazyková změna zároveň pomůže vylepšit náš modul strojového překladu.
+> 2. Jakákoli úprava, která podstatně změní obsah článku, se zpracuje interně a změna se odešle do stejného článku v angličtině, takže pokud bude schválena, lokalizuje se do všech jazyků.
+> Vámi navržená vylepšení tedy pozitivně ovlivní nejen články ve vašem vlastním jazyce, ale také ve všech dostupných jazycích.
 
 ## <a name="review-open-prs"></a>Revize otevřených žádostí o přijetí změn
 
