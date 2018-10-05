@@ -2,12 +2,12 @@
 title: Používání odkazů v dokumentaci
 description: Tento článek obsahuje pokyny k vytváření odkazů na obsah na webu docs.microsoft.com.
 ms.date: 06/29/2017
-ms.openlocfilehash: dad0460cfb36594c17cef1b079c5fc14191f56f7
-ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
+ms.openlocfilehash: 92c23f2b91c67d7a1695c5f1e5dcdc80a8517f6e
+ms.sourcegitcommit: 37cd16636d7dcfc5222ef5a5d60e4ff30f74485c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030926"
 ---
 # <a name="using-links-in-documentation"></a>Používání odkazů v dokumentaci
 Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy přesměrovávají uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
