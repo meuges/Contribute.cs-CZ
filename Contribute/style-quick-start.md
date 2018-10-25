@@ -2,12 +2,12 @@
 title: Průvodce správným stylem na webu Docs – rychlý start
 description: Tento článek je stručným průvodcem k požadavkům na styl, který obsahuje pouze nejdůležitější témata do začátku na webu docs.microsoft.com.
 ms.date: 07/25/2017
-ms.openlocfilehash: 3a91669ba9ad6711bcc436952d1d6cb311b9d4f6
-ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
+ms.openlocfilehash: 861181c7bfa22881fdd11327d19b2d7d517775c8
+ms.sourcegitcommit: 6f1997864c000a9cd25fb9171a8f8fdb8b5b5ece
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40243016"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084392"
 ---
 # <a name="docs-style-and-voice-quick-start"></a>Rychlý start věnovaný stylu a způsobu vyjadřování na webu Docs
 
@@ -15,7 +15,7 @@ Tento rychlý start je stručným průvodcem pro psaní technického obsahu urč
 
 Osvědčené postupy:
 
-- Zkontrolujte pravopis a gramatiku v článcích, i kdybyste je kvůli tomu museli zkopírovat a vložit do Wordu.
+- Zkontrolujte pravopis a gramatiku v článcích, i kdybyste je kvůli tomu museli zkopírovat a vložit do Microsoft Wordu.
 - Používejte přirozený a přívětivý způsob vyjadřování, jako byste se s někým jiným osobně bavili.
 - Používejte jednoduché věty. Díky snadno čitelným větám může čtenář rychle postupovat podle vašich pokynů.
 
@@ -45,11 +45,11 @@ Naše technické články se překládají do několika jazyků a některé z 
 - U postupu, který obsahuje fragmenty kódu, přidejte další informace o daném kroku ke kódu jako komentář. Snižuje se tím množství textu, který musí uživatelé přečíst. Klíčová informace se zkopíruje do projektu s kódem, aby uživatelům připomněla, k čemu kód slouží, až si ji později přečtou.
 - Používejte velká písmena na začátku názvů a nadpisů.
 - Rozlišujte „odebrat“ a „odstranit“.
-- V každé větě, která předchází seznamu nebo fragmentu kódu, použijte slova „následující“ nebo „takto“.
+- Další pokyny najdete v [průvodci správným stylem při psaní pro Microsoft](https://docs.microsoft.com/style-guide/welcome).
 
 ## <a name="localized-documentation"></a>Lokalizovaná dokumentace
 
 - Pokud přispíváte k lokalizované dokumentaci, využívejte web [Microsoft Language Portal](https://www.microsoft.com/Language/Default.aspx).
 - Pokud chcete získat pokyny pro lokalizaci, informace o stylu jazyka a jeho použití v technických publikacích a informace o formátech dat pro konkrétní trh, stáhněte si ve svém jazyce [průvodce správným stylem](https://www.microsoft.com/Language/StyleGuides).
 - Lokalizovanou terminologii Microsoftu ve svém jazyce můžete vyhledat ve [schválené terminologii konkrétního produktu](https://www.microsoft.com/Language/Default.aspx) nebo si můžete stáhnout [kolekci terminologie Microsoftu](https://www.microsoft.com/Language/Terminology.aspx).
-- Více se dozvíte v [části týkající se lokalizace](https://docs.microsoft.com/style-guide/global-communications/) v průvodci správným stylem od Microsoftu.
+- Další informace o lokalizaci najdete v části věnované globální komunikaci v [průvodci správným stylem při psaní pro Microsoft](https://docs.microsoft.com/style-guide/global-communications).
