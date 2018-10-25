@@ -2,12 +2,12 @@
 title: Průvodce správným stylem na webu Docs – rychlý start
 description: Tento článek je stručným průvodcem k požadavkům na styl, který obsahuje pouze nejdůležitější témata do začátku na webu docs.microsoft.com.
 ms.date: 07/25/2017
-ms.openlocfilehash: 861181c7bfa22881fdd11327d19b2d7d517775c8
-ms.sourcegitcommit: 6f1997864c000a9cd25fb9171a8f8fdb8b5b5ece
+ms.openlocfilehash: f5c32d3fb71ef3513c68b9c506c823997bfe4d8f
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084392"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805567"
 ---
 # <a name="docs-style-and-voice-quick-start"></a>Rychlý start věnovaný stylu a způsobu vyjadřování na webu Docs
 
@@ -51,5 +51,5 @@ Naše technické články se překládají do několika jazyků a některé z 
 
 - Pokud přispíváte k lokalizované dokumentaci, využívejte web [Microsoft Language Portal](https://www.microsoft.com/Language/Default.aspx).
 - Pokud chcete získat pokyny pro lokalizaci, informace o stylu jazyka a jeho použití v technických publikacích a informace o formátech dat pro konkrétní trh, stáhněte si ve svém jazyce [průvodce správným stylem](https://www.microsoft.com/Language/StyleGuides).
-- Lokalizovanou terminologii Microsoftu ve svém jazyce můžete vyhledat ve [schválené terminologii konkrétního produktu](https://www.microsoft.com/Language/Default.aspx) nebo si můžete stáhnout [kolekci terminologie Microsoftu](https://www.microsoft.com/Language/Terminology.aspx).
+- Lokalizovanou terminologii Microsoftu ve svém jazyce můžete vyhledat ve [schválené terminologii konkrétního produktu](https://www.microsoft.com/Language/Default.aspx) nebo si můžete stáhnout [kolekci terminologie Microsoftu](https://www.microsoft.com/language/Terminology).
 - Další informace o lokalizaci najdete v části věnované globální komunikaci v [průvodci správným stylem při psaní pro Microsoft](https://docs.microsoft.com/style-guide/global-communications).
