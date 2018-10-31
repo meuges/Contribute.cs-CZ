@@ -2,12 +2,12 @@
 title: Používání odkazů v dokumentaci
 description: Tento článek obsahuje pokyny k vytváření odkazů na obsah na webu docs.microsoft.com.
 ms.date: 06/29/2017
-ms.openlocfilehash: 92c23f2b91c67d7a1695c5f1e5dcdc80a8517f6e
-ms.sourcegitcommit: 37cd16636d7dcfc5222ef5a5d60e4ff30f74485c
+ms.openlocfilehash: 1820ed9af561964d7afe0b29827ee43526c72489
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030926"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805762"
 ---
 # <a name="using-links-in-documentation"></a>Používání odkazů v dokumentaci
 Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy přesměrovávají uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
@@ -158,7 +158,7 @@ Struktura adresy URL:
 Když tyto adresy URL použijete, budete přesměrováni na nejnovější verzi obsahu. Tímto způsobem nemusíte určovat verzi parametru moniker. Nebudete tak mít odkazy na koncepční obsah, které se musí při změně verze aktualizovat.
 
 Pokud chcete vytvořit odkaz, najděte ve svém prohlížeči stránku, na kterou chcete odkázat, a zkopírujte její adresu URL.
-Potom odeberte https://docs.microsoft.com a informace o národním prostředí.
+Potom odeberte `https://docs.microsoft.com` a informace o národním prostředí.
 
 Když odkazujete z obsahu stránky, musíte použít celou adresu URL bez informace o národním prostředí.
 

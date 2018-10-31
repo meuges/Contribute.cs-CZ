@@ -1,20 +1,19 @@
 ---
-title: Balíček pro vytváření obsahu na webu Docs pro VS Code
-description: Tento článek popisuje balíček rozšíření pro VS Code, který usnadňuje vytváření obsahu v jazyce Markdown pro docs.microsoft.com.
+title: Balíček pro vytváření obsahu na webu Docs pro Visual Studio Code
+description: Tento článek popisuje balíček rozšíření pro Visual Studio Code, který usnadňuje vytváření obsahu v jazyce Markdown pro docs.microsoft.com.
 author: meganbradley
 ms.author: mbradley
-manager: jemash
-ms.date: 04/06/2018
-ms.openlocfilehash: b9fedce0a73c5c4212ffd0893c745fab56677c8c
-ms.sourcegitcommit: 5e508a7ad2991632a38f302e4769b36e3bf37eb2
+ms.date: 10/22/2018
+ms.openlocfilehash: 00afafbbf16096ac6433c0ab276578d8d9084b51
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43308909"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805647"
 ---
 # <a name="docs-authoring-pack-for-vs-code"></a>Balíček pro vytváření obsahu na webu Docs pro VS Code
 
-Balíček pro vytváření obsahu na webu Docs je kolekce rozšíření nástroje VS Code, který vám pomůže s vytvářením obsahu v jazyce Markdown pro docs.microsoft.com. Balíček je [dostupný na VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) a obsahuje následující rozšíření:
+Balíček pro vytváření obsahu na webu Docs je kolekce rozšíření nástroje Visual Studio Code, která vám pomohou s vytvářením obsahu v jazyce Markdown pro docs.microsoft.com. Balíček je [dostupný na VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) a obsahuje následující rozšíření:
 
 - [markdownlint:](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) Oblíbený markdownový linter od Davida Ansona, který vám pomůže zajistit, aby Markdown dodržoval osvědčené postupy.
 - [Code Spell Checker:](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) Kontrola pravopisu od firmy Street Side Software, která funguje plně offline.
@@ -103,7 +102,7 @@ Rozšíření Templates podporuje tři dynamická pole metadat: author, ms.autho
 |----------|---------------|
 |author    |Vaše ID GitHubu, pokud je zadané v souboru nastavení nástroje VS Code.|
 |ms.author |Váš alias Microsoftu, pokud je zadaný v souboru nastavení nástroje VS Code. Pokud nejste zaměstnancem Microsoftu, nechejte toto pole nezadané.|
-|ms.date   |Aktuální datum ve formátu MM/DD/RRRR podporovaném v Docs. Toto datum se neaktualizuje automaticky, když soubor následně aktualizujete – musíte ho aktualizovat ručně, aby bylo patrné, že článek má novější datum.|
+|ms.date   |Aktuální datum ve formátu MM/DD/RRRR podporovaném v Docs. Toto datum se při následné aktualizaci souboru neaktualizuje automaticky. Ruční aktualizací hodnoty ms.date musíte vyznačit nejnovější datum publikování na webu docs.microsoft.com.|
 
 ### <a name="to-set-author-github-id-andor-msauthor-microsoft-alias"></a>Nastavení polí author (ID GitHubu) a/nebo ms.author (alias Microsoftu)
 

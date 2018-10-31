@@ -2,18 +2,18 @@
 title: Používání Markdownu pro vytváření článků na webu Docs
 description: Tento článek poskytuje základní a referenční informace o jazyku Markdown, který slouží k vytváření článků publikovaných na docs.microsoft.com.
 ms.date: 07/13/2017
-ms.openlocfilehash: dca1ccba2ae4ebd08b6039f5d780e7a7ac92e79f
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 6bb8a1fa20957512addb07dda0e68abec4b0a83f
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238959"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805717"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
-Články na docs.microsoft.com jsou psané jednoduchým jazykem využívajícím značky, který se nazývá [Markdown](https://daringfireball.net/projects/markdown/) a snadno se čte i učí. Díky tomu se v oboru rychle stal standardem.
+Články na [docs.microsoft.com](http://docs.microsoft.com) jsou psané jednoduchým jazykem využívajícím značky, který se nazývá [Markdown](https://daringfireball.net/projects/markdown/) a snadno se čte i učí. Díky tomu se v oboru rychle stal standardem.
 
-Protože je obsah Docs uložený v GitHubu, může používat nadstavbu Markdownu zvanou [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), která poskytuje další funkce pro běžné potřeby formátování. Platforma OPS (Open Publishing Services) navíc implementuje Markdig Markdown Parser. Markdig je vysoce kompatibilní s rozšířením GitHub Flavored Markdown (GFM) a přidává možnosti podporující funkce specifické pro Docs.
+Protože je obsah Docs uložený v GitHubu, může používat nadstavbu Markdownu zvanou [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), která poskytuje další funkce pro běžné potřeby formátování. Platforma OPS (Open Publishing Services) navíc implementuje Markdig Markdown Parser. Markdig je vysoce kompatibilní s GFM a přidává možnosti podporující funkce specifické pro Docs.
 
 * Markdig je rozšiřitelný procesor Markdownu pro .NET, který je rychlý, výkonný a kompatibilní se syntaxí CommonMark.
 * https://github.com/lunet-io/markdig
@@ -27,10 +27,10 @@ Protože je obsah Docs uložený v GitHubu, může používat nadstavbu Markdown
 K vytvoření nadpisu se používá znak hash (#):
 
 ```markdown
-    # This is heading 1
-    ## This is heading 2
-    ### This is heading 3
-    #### This is heading 4
+# This is heading 1
+## This is heading 2
+### This is heading 3
+#### This is heading 4
 ```
 
 ### <a name="bold-and-italic-text"></a>Tučné písmo a kurzíva
@@ -38,19 +38,19 @@ K vytvoření nadpisu se používá znak hash (#):
 Pokud chcete text naformátovat jako **tučný**, použijte dvě hvězdičky z obou stran:
 
 ```markdown
-    This text is **bold**.
+This text is **bold**.
 ```
 
 Pokud chcete text naformátovat jako *kurzívu*, použijte jednu hvězdičku z obou stran:
 
 ```markdown
-    This text is *italic*.
+This text is *italic*.
 ```
 
 Pokud chcete text naformátovat jako ***tučný i kurzívu***, použijte tři hvězdičky z obou stran:
 
 ```markdown
-    This is text is both ***bold and italic***.
+This is text is both ***bold and italic***.
 ```
 
 ### <a name="lists"></a>Seznamy
@@ -107,16 +107,16 @@ Pokud chcete seznam vnořit do jiného seznamu, podřízené položky seznamu od
 
 ```markdown
 1. First instruction
-    1. Sub-instruction
-    2. Sub-instruction
+   1. Sub-instruction
+   2. Sub-instruction
 2. Second instruction
 ```
 
 se zobrazí takto:
 
 1. First instruction
-    1. Sub-instruction
-    2. Sub-instruction
+   1. Sub-instruction
+   2. Sub-instruction
 2. Second instruction
 
 ### <a name="tables"></a>Tables
@@ -146,7 +146,7 @@ se zobrazí takto:
 Další informace o vytváření tabulek:
 
 - [Funkce zalamování tabulek](#table-wrapping) v Markdigu určená k formátování širokých tabulek
-- [Organizování informací pomocí tabulek](https://help.github.com/articles/organizing-information-with-tables/) v GitHubu
+- [Uspořádání informací pomocí tabulek](https://help.github.com/articles/organizing-information-with-tables/) v GitHubu
 - Webová aplikace [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables) (Generátor tabulek v Markdownu)
 - [Markdown Cheatsheet (Tahák pro Markdown) od Adama Pritcharda](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables)
 - [Markdown Extra od Michela Fortina](https://michelf.ca/projects/php-markdown/extra/#table)
@@ -212,6 +212,7 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |PowerShell|powershell|
 |Python|python|
 |Q#|qsharp|
+|R|r|
 |Ruby|ruby|
 |SQL|sql|
 |Swift|swift|
@@ -336,18 +337,19 @@ Markdig podporuje rozšířené zahrnutí kódu do článku prostřednictvím ro
 Alternativní text, který obsahuje podtržítka, se správně nezobrazí. Třeba místo použití tohoto:
 
 ```markdown
-![ADextension_2FA_Configure_Step4] (./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
+![ADextension_2FA_Configure_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
 Napište takto před podtržítka zpětné lomítko:
 
 ```markdown
-![ADextension\_2FA\_Configure\_Step4] (./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
+![ADextension\_2FA\_Configure\_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
 ### <a name="apostrophes-and-quotation-marks"></a>Apostrofy a uvozovky
 
-Pokud do editoru Markdownu kopírujete z Wordu, může text obsahovat „inteligentní“ (oblé) jednoduché nebo dvojité uvozovky. Pro ty je nutné použít kód nebo je změnit na základní uvozovky. Jinak se při publikování souboru zobrazí nějak takto: Itâ€™s
+Pokud do editoru Markdownu kopírujete z Wordu, může text obsahovat „inteligentní“ (oblé) jednoduché nebo dvojité uvozovky. Pro ty je nutné použít kód nebo je změnit na základní uvozovky.
+Jinak se při publikování souboru zobrazí nějak takto: Itâ€™s
 
 Pro „inteligentní“ verze interpunkčních znamének se používají tyto kódy:
 
@@ -358,14 +360,15 @@ Pro „inteligentní“ verze interpunkčních znamének se používají tyto k�
 
 ### <a name="angle-brackets"></a>Ostré závorky
 
-Pokud v textu (ne kódu) v souboru používáte ostré závorky, třeba k vyznačení zástupného symbolu, musíte pro ně použít kód. Jinak je Markdown bude považovat za značku HTML.
+K označování zástupných symbolů se běžně používají ostré závorky. Když to uděláte v textu (nikoli v kódu), musíte ostré závorky zakódovat. Jinak je Markdown bude považovat za značku HTML.
 
 Například `<script name>` přepište kódem jako `&lt;script name&gt;`
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 ### <a name="markdown-resources"></a>Prostředky pro Markdown
 
 - [Úvod do Markdownu](https://daringfireball.net/projects/markdown/syntax)
 - [Tahák pro Markdown v Docs](./media/documents/markdown-cheatsheet.pdf?raw=true)
 - [Základy Markdownu v GitHubu](https://help.github.com/articles/markdown-basics/)
+- [Příručka pro Markdown](https://www.markdownguide.org/)

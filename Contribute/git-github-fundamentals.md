@@ -2,12 +2,12 @@
 title: Základy Gitu a GitHubu pro dokumentaci
 description: Tento článek poskytuje přehled úložišť Git a GitHub a způsob uspořádání obsahu a konvence vytváření názvů pro web docs.microsoft.com.
 ms.date: 06/30/2017
-ms.openlocfilehash: 8a116067fdd7d031c560abfb7055236e0bfb1a3d
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 05c758845007f859382014166e88fd9614cdb873
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239795"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805693"
 ---
 # <a name="git-and-github-essentials-for-docs"></a>Základy Gitu a GitHubu pro web Docs
 
@@ -30,7 +30,7 @@ Git také k ukládání a správě obsahu pro projekt používá strukturu úrov
 
 Přispěvatelé při práci s Gitem aktualizují a upravují úložiště jak na místní úrovni, tak na úrovni GitHubu:
 
-- Místně prostřednictvím nástrojů jako je konzola Git Bash, která podporuje příkazy Gitu pro správu místních úložišť a komunikaci s úložišti GitHub.
+- Místně prostřednictvím nástrojů jako je konzola Git Bash, která podporuje příkazy Gitu pro správu místních úložišť a komunikaci s úložišti GitHubu.
 - Prostřednictvím webu [www.github.com](https://www.github.com), který integruje Git pro účely správy sloučení příspěvků, které se přenášejí zpět do hlavního úložiště.
 
 ## <a name="github"></a>GitHub
@@ -46,7 +46,7 @@ Všechny pracovní postupy začínají i končí na úrovni GitHubu, kde se nach
 
 Jak jsme už zmínili, výchozí/hlavní větev projektu slouží jako aktuální verze obsahu projektu. Obsah v hlavní větvi (a ve větvích z ní vytvořených) přibližně odpovídá uspořádání článků na odpovídajících stránkách webu Docs. Podadresáře se používají k oddělení podobného obsahu (jako jsou služby) a multimediálního obsahu (jako jsou obrázky) a „zahrnují“ soubory (které umožňují opakované použití obsahu).
 
-Hlavní adresář `articles` obvykle najdete v kořenovém adresáři úložiště. Adresář článků obsahuje sadu podadresářů. Články v podadresářích jsou formátované jako soubory Markdownu, které používají příponu *.md*. Některá úložiště podporující více služeb používají obecný podadresář `/articles`, jako například úložiště [https://github.com/microsoft/Azure-Docs](https://github.com/microsoft/Azure-Docs). Jiná můžou použít název specifický pro službu, jako například úložiště [https://github.com/microsoft/IntuneDocs](https://github.com/microsoft/IntuneDocs), které používá `/IntuneDocs`.
+Hlavní adresář `articles` obvykle najdete v kořenovém adresáři úložiště. Adresář článků obsahuje sadu podadresářů. Články v podadresářích jsou formátované jako soubory Markdownu, které používají příponu *.md*. Některá úložiště podporující více služeb používají obecný podadresář `/articles`, jako například úložiště [Azure-Docs](https://github.com/MicrosoftDocs/Azure-Docs). Jiná mohou používat název specifický pro službu, jako například úložiště [IntuneDocs](https://github.com/MicrosoftDocs/IntuneDocs), které používá `/IntuneDocs`.
 
 V kořenové složce tohoto adresáře naleznete obecné články související s obecným fungováním služby nebo produktu. Obvykle pak také najdete další řady podadresářů, které odpovídají příslušným funkcím/službám nebo běžným scénářům. Třeba články o „virtuálním počítači“ Azure jsou v podadresáři `/virtual-machines`, zatímco články o „porozumění a prozkoumání“ Intune jsou v podadresáři `/understand-explore`.
 

@@ -3,14 +3,13 @@ title: Místní nastavení úložiště Git
 description: Tento článek poskytuje pokyny pro vytvoření místního úložiště Git a pro přispívání do dokumentace, včetně postupu vytváření forků a klonování.
 author: jasonwhowell
 ms.author: jasonh
-manager: kfile
 ms.date: 01/18/2018
-ms.openlocfilehash: 2ad0de552d481e2460ca0f56570181e33d0a6608
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 895c0fb0d64708e8e3d0f632c10a060791d15b65
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36238982"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805670"
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>Místní nastavení úložiště Git pro dokumentaci
 
@@ -60,7 +59,7 @@ Dokumentace hostovaná na webu [docs.microsoft.com](https://docs.microsoft.com) 
 ## <a name="fork-the-repository"></a>Rozvětvení úložiště
 Ve vhodném úložišti vytvořte fork úložiště do vlastního účtu GitHubu pomocí webu GitHub.
 
-Osobní fork se vyžaduje, protože všechna hlavní úložiště dokumentace poskytují přístup jen ke čtení, což znamená, že přímo na obsahu v úložištích nemůžete provádět změny. Pokud chcete změny provádět, musíte z vlastního forku odeslat [žádost o přijetí změn](git-github-fundamentals.md#pull-requests) do hlavního úložiště. Abyste tento proces usnadnili, potřebujete nejprve vlastní kopii úložiště, ve které máte oprávnění k zápisu. K tomuto účelu slouží *fork* Githubu.
+Osobní fork se vyžaduje, protože všechna hlavní úložiště dokumentace poskytují přístup jen pro čtení. Pokud chcete změny provádět, musíte z vlastního forku odeslat [žádost o přijetí změn](git-github-fundamentals.md#pull-requests) do hlavního úložiště. Abyste tento proces usnadnili, potřebujete nejprve vlastní kopii úložiště, ve které máte oprávnění k zápisu. K tomuto účelu slouží *fork* Githubu.
 
 1. Přejděte na stránku GitHubu hlavního úložiště a vpravo nahoře klikněte na tlačítko **Fork**.
 

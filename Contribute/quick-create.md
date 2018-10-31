@@ -8,12 +8,12 @@ ms.date: 07/24/2018
 ms.author: cfowler
 zone_pivot_groups: keyvault-languages
 ROBOTS: NOINDEX, NOFOLLOW
-ms.openlocfilehash: 27ebd3e348fc231d8b82e6c17f282bd9ca4afb9f
-ms.sourcegitcommit: 5e508a7ad2991632a38f302e4769b36e3bf37eb2
+ms.openlocfilehash: 497631fe46ac4e2c9c495a609547753a84d662bf
+ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43308817"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49805729"
 ---
 # <a name="quickstart-set-and-retrieve-a-secret-from-azure-key-vault"></a>Rychlý start: Nastavení a načtení tajného kódu ze služby Azure Key Vault
 
@@ -35,11 +35,14 @@ Než budete pokračovat, ujistěte se, že znáte [základní koncepty](https://
 ## <a name="prerequisites"></a>Požadavky
 
 ::: zone pivot="nodejs"
-* [Node JS](https://nodejs.org/en/) ::: zone-end ::: zone pivot="dotnet"
+* [Node JS](https://nodejs.org/en/)
+::: zone-end
+::: zone pivot="dotnet"
 * [Visual Studio 2017 verze 15.7.3 nebo novější](https://www.microsoft.com/net/download/windows) s následujícími úlohami:
   * Vývoj pro ASP.NET a web
   * Vývoj pro různé platformy pomocí rozhraní .NET Core
-* [Sada .NET Core 2.1 SDK nebo novější](https://www.microsoft.com/net/download/windows) ::: zone-end
+* [Sada .NET Core 2.1 SDK nebo novější](https://www.microsoft.com/net/download/windows)
+::: zone-end
 * Git ([stáhnout](https://git-scm.com/downloads)).
 * Předplatné Azure. Pokud předplatné Azure ještě nemáte, vytvořte si [bezplatný účet](https://azure.microsoft.com/free/?WT.mc_id=A261C142F) předtím, než začnete.
 * [Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) verze 2.0.4 nebo novější. K dispozici pro Windows, Mac a Linux.
@@ -110,7 +113,10 @@ git clone https://github.com/Azure-Samples/key-vault-node-quickstart.git
 
 ## <a name="install-dependencies"></a>Instalace závislostí
 
-Teď nainstalujeme závislosti. Spusťte následující příkazy: cd key-vault-node-quickstart npm install
+Teď nainstalujeme závislosti. Spusťte následující příkazy:
+
+    cd key-vault-node-quickstart
+    npm install
 
 Tento projekt používal 2 moduly uzlu:
 
@@ -119,14 +125,14 @@ Tento projekt používal 2 moduly uzlu:
 
 ## <a name="publish-the-web-application-to-azure"></a>Publikování webové aplikace do Azure
 
-Následuje několik kroků, které je potřeba provést.
+Níže je uvedeno několik kroků, kterými je potřeba aplikaci publikovat do Azure.
 
 * Prvním krokem je vytvořit plán služby [Azure App Service](https://azure.microsoft.com/services/app-service/). Do tohoto plánu můžete uložit několik webových aplikací.
 
     ```azurecli
     az appservice plan create --name myAppServicePlan --resource-group myResourceGroup
     ```
-* Dále vytvoříme webovou aplikaci. V následujícím příkladu nahraďte <app_name> globálně jedinečným názvem aplikace (platné znaky jsou a–z, 0–9 a -). Modul runtime je nastavený na NODE|6.9. Pokud chcete zobrazit všechny podporované moduly runtime, spusťte příkaz az webapp list-runtimes.
+* Dále vytvoříme webovou aplikaci. V následujícím příkladu nahraďte <app_name> globálně jedinečným názvem aplikace (platné znaky jsou a–z, 0–9 a -). Modul runtime je nastavený na NODE|6.9. Pokud chcete zobrazit všechny podporované moduly runtime, spusťte příkaz `az webapp list-runtimes`.
 
     ```azurecli
     az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name <app_name> --runtime "NODE|6.9" --deployment-local-git
@@ -238,7 +244,8 @@ Ujistěte se, že jste nahradili název <YourKeyVaultName> názvem vašeho trezo
 
 ::: zone-end
 
-::: zone pivot="dotnet" Když teď spustíte aplikaci, měla by se zobrazit načtená hodnota vašeho tajného kódu.
+::: zone pivot="dotnet"
+Když teď aplikaci spustíte, měla by se zobrazit načtená hodnota vašeho tajného kódu.
 ::: zone-end
 
 ## <a name="next-steps"></a>Další kroky
@@ -247,10 +254,12 @@ Ujistěte se, že jste nahradili název <YourKeyVaultName> názvem vašeho trezo
 * [Domovská stránka služby Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
 * [Dokumentace ke službě Azure Key Vault](https://docs.microsoft.com/azure/key-vault/)
 * [Azure SDK pro Node](https://docs.microsoft.com/javascript/api/overview/azure/key-vault)
-* [Reference k rozhraní Azure REST API](https://docs.microsoft.com/rest/api/keyvault/) ::: zone-end
+* [Referenční informace k rozhraní Azure REST API](https://docs.microsoft.com/rest/api/keyvault/)
+::: zone-end
 
 ::: zone pivot="dotnet"
 * [Domovská stránka služby Azure Key Vault](https://azure.microsoft.com/services/key-vault/)
 * [Dokumentace ke službě Azure Key Vault](https://docs.microsoft.com/azure/key-vault/)
 * [Sada Azure SDK pro .NET](https://github.com/Azure/azure-sdk-for-net)
-* [Reference k rozhraní Azure REST API](https://docs.microsoft.com/rest/api/keyvault/) ::: zone-end
+* [Referenční informace k rozhraní Azure REST API](https://docs.microsoft.com/rest/api/keyvault/)
+::: zone-end
