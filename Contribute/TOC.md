@@ -11,6 +11,11 @@
 ## [Rychlý start věnovaný stylu a způsobu vyjadřování](style-quick-start.md)
 ## [Odkazy](how-to-write-links.md)
 ## [Balíček pro vytváření obsahu na webu Docs](how-to-write-docs-auth-pack.md)
+# Pokyny k určité sadě dokumentace
+## [Dokumentace k .NET](dotnet-contribute.md)
+### [Příspěvky do dokumentace k .NET](dotnet-contribute-process.md)
+### [Zásady týkající se stylu dokumentace k .NET](dotnet-style-guide.md)
+### [Pokyny ke způsobu vyjadřování](dotnet-voice-tone.md)
 
 <!--
 ## Creating new content
