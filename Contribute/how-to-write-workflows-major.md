@@ -2,12 +2,12 @@
 title: Pracovní postup přispívání prostřednictvím GitHubu pro větší nebo dlouho probíhající změny
 description: Tento článek popisuje, jak používat pracovní postup „větších“ přispěvatelů k přispívání do článků na webu docs.microsoft.com.
 ms.date: 08/30/2017
-ms.openlocfilehash: 31f9421fc5edbc2f65c5ff20a86da08c70211ec7
-ms.sourcegitcommit: 92aef5ea8bdd692c5c393d5c8f99b9e4f672ef2b
+ms.openlocfilehash: 93e659df4f72c6a272d15fd7487eb3a997bdf3c8
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36239818"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609384"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>Pracovní postup přispívání prostřednictvím GitHubu pro větší nebo dlouho probíhající změny
 
@@ -31,7 +31,7 @@ Než začnete, seznamte se s některými termíny a výrazy pro Git/GitHub použ
 | Název | Popis |
 |-----------|-------------|
 |fork|Označuje kopii hlavního úložiště GitHubu. V praxi je fork prostě další úložiště. Je ale speciální v tom smyslu, že GitHub udržuje jeho spojení zpět s hlavním/nadřazeným úložištěm. Někdy se používá jako sloveso, například "Je nutné nejprve rozvětvit úložiště."|
-|remote (vzdálené)|Pojmenované spojení se vzdáleným úložištěm, například vzdálené úložiště „zdroj“ nebo „upstream“. Git je označuje za vzdálená, protože slouží k odkazování na úložiště hostovaná na jiném počítači. V tomto pracovním postupu je vzdálené úložiště vždy úložiště GitHubu.|
+|remote (vzdálené)|Pojmenované spojení se vzdáleným úložištěm, například vzdálené úložiště „zdroj“ nebo „upstream“. Git označuje toto připojení jako vzdálené, protože ho používá v odkazech na úložiště, které je hostované na jiném počítači. V tomto pracovním postupu je vzdálené úložiště vždy úložiště GitHubu.|
 |origin (zdroj)|Název přidělený spojení mezi vaším místním úložištěm a úložištěm, ze kterého bylo naklonováno. V tomto pracovním postupu zdroj představuje spojení s vaším forkem. Někdy se používá jako označení pro samotné zdrojové úložiště, například „Nezapomeňte své změny odeslat do zdroje“.|
 |upstream|Podobně jako vzdálené úložiště původ je i upstream pojmenovaným spojením s jiným úložištěm. V tomto pracovním postupu upstream představuje spojení mezi vaším místním úložištěm a hlavním úložištěm, z něhož byl vytvořen váš fork. Někdy se používá jako označení pro samotné úložiště upstream, například „Nezapomeňte své změny přijmout z upstreamu“.|
 

@@ -8,16 +8,16 @@ ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 audience: internal,external
-ms.openlocfilehash: e248eafb0247b200313ba198f2545eca947f5627
-ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
+ms.openlocfilehash: 64921bacf48e638221048db4b24e1a941f1d2777
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49805876"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609538"
 ---
 # <a name="markdown-reference-for-ops"></a>Referenční informace k jazyku Markdown pro OPS
 
-Markdown je jednoduchý jazyk využívající značky se syntaxí formátování prostého textu. OPS podporuje pro Markdown standard CommonMark plus několik vlastních rozšíření navržených kvůli poskytování bohatšího obsahu na webu docs.microsoft.com. Tento článek obsahuje referenční informace o používání jazyka Markdown v OPS pro docs.microsoft.com.
+Markdown je jednoduchý jazyk využívající značky se syntaxí formátování prostého textu. Platforma Open Publishing Services (OPS) podporuje standard CommonMark jazyka Markdown a k němu několik vlastních rozšíření Markdownu navržených kvůli poskytování bohatšího obsahu na webu docs.microsoft.com. Tento článek obsahuje referenční informace o používání jazyka Markdown v OPS pro docs.microsoft.com.
 
 K vytváření Markdownu můžete použít libovolný textový editor. Jako editor, který umožňuje vkládání standardní syntaxe Markdownu i vlastních rozšíření OPS, doporučujeme [VS Code](https://code.visualstudio.com/) s nainstalovaným [balíčkem pro vytváření obsahu na webu Docs](https://aka.ms/DocsAuthoringPack).
 
@@ -25,7 +25,7 @@ Platforma OPS přijala Markdig za standard pro všechna nová úložiště a sta
 
 ## <a name="alerts-note-tip-important-caution-warning"></a>Výstrahy (Poznámka, Tip, Důležité, Pozor, Upozornění)
 
-Výstrahy jsou rozšíření Markdownu specifické pro OPS určené k vytváření blokových citací zobrazovaných na webu docs.microsoft.com s barvami a ikonami, které označují důležitost obsahu. Podporují se následující typy výstrah:
+Výstrahy jsou rozšíření Markdownu, které je specifické pro OPS. Umožňují vytvářet citované bloky zobrazované na webu docs.microsoft.com i s barvami a ikonami, které zdůrazňují důležitost obsahu. Podporují se následující typy výstrah:
 
 ```markdown
 > [!NOTE]
@@ -69,7 +69,7 @@ Do souborů Markdown můžete začlenit fragmenty kódu:
 [!code-<language>[<name>](<codepath><queryoption><queryoptionvalue> "<title>")]
 ```
 
-## <a name="headings"></a>Nadpisy
+## <a name="headings"></a>Nadpis
 
 OPS podporuje šest úrovní nadpisů Markdownu:
 
@@ -122,7 +122,7 @@ OPS používá ve většině případů standardní odkazy Markdownu na jiné so
 > Balíček pro vytváření obsahu na webu Docs pro VS Code vám může pomoci vkládat relativní odkazy a záložky bez nudného určování cest.
 
 > [!IMPORTANT]
-> Do odkazů na weby Microsoftu nezačleňujte kódy národního prostředí, například cs-cz. Pevně zakódované kódy národního prostředí zabraňují zobrazení lokalizovaného obsahu, což je pro uživatele v jiných národních prostředích nepříjemná zkušenost, a způsobují významné náklady na lokalizaci. Při kopírování adresy URL z prohlížeče se kód národního prostředí zkopíruje, takže ho při vytváření odkazu musíte ručně odstranit. Použijte například tento odkaz:
+> Do odkazů na weby Microsoftu nezačleňujte kódy národního prostředí, například cs-cz. Pevně zakódované kódy národního prostředí zabraňují zobrazení lokalizovaného obsahu, což je pro uživatele v jiných národních prostředích nepříjemná zkušenost, a způsobují významné náklady na lokalizaci. Při kopírování adresy URL z prohlížeče se automaticky kopíruje i kód národního prostředí, který při vytváření odkazu musíte ručně odstranit. Použijte například tento odkaz:
 >
 > `[Microsoft](https://www.microsoft.com)`
 >
@@ -206,7 +206,7 @@ To go to a section on another page.
 K odkazování na automaticky generované stránky s referencemi rozhraní API v aktuální sadě dokumentace nebo v jiných sadách dokumentace použijte odkazy XREF s jedinečným ID (UID).
 
 > [!NOTE]
-> K odkazování na stránky s referencemi rozhraní API v jiných sadách dokumentace potřebujete do souboru `docfx.json` přidat konfiguraci `xrefService`.
+> Pokud chcete vytvářet odkazy na stránky s referenčními informacemi k rozhraní API v jiných sadách dokumentace, potřebujete do souboru `docfx.json` přidat konfiguraci `xrefService`.
 > ```
 > "build": {
 >   ...
@@ -308,7 +308,7 @@ Tento příklad se na webu docs.microsoft.com zobrazí takto:
 > * List item 2
 > * List item 3
 
-Kontrolní seznamy můžete použít na začátku nebo na konci článku k sumarizaci toho, „co se naučíte“ nebo „co jste se naučili“. Nepřidávejte do svých článků náhodné kontrolní seznamy.
+Ke shrnutí probírané látky nebo k její rekapitulaci použijte kontrolní seznamy, které přidáte na začátek nebo na konec článku. Nepřidávejte do svých článků náhodné kontrolní seznamy.
 <!-- is this guidance still accurate? -->
 
 ## <a name="next-step-action"></a>Akce dalšího kroku
@@ -360,7 +360,7 @@ Předchozí text Markdownu blokové citace se zobrazí takto:
 > <js code text>
 > ```
 
-## <a name="selectors"></a>Selektory
+## <a name="selectors"></a>Voliče
 
 <!-- could be more clear! --> Selektor můžete použít, když chcete propojit různé stránky stejného článku. Čtenáři pak můžou přepínat mezi těmito stránkami.
 
@@ -431,7 +431,7 @@ Tabs are a Markdown extension for docs.microsoft.com that allow us to present di
 Because the syntax and requirements for tabbed content are fairly complex, they are documented separately in Tabbed Content.
 -->
 
-## <a name="tables"></a>Tabulky
+## <a name="tables"></a>Tables
 
 Nejjednodušším způsobem, jak v Markdownu vytvořit tabulku, je použít svislé čáry a řádky. Pokud chcete vytvořit standardní tabulku se záhlavím, za první řádek vložte čárkovaný řádek:
 

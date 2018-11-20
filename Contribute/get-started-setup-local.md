@@ -4,12 +4,12 @@ description: Tento článek poskytuje pokyny pro vytvoření místního úloži�
 author: jasonwhowell
 ms.author: jasonh
 ms.date: 01/18/2018
-ms.openlocfilehash: 895c0fb0d64708e8e3d0f632c10a060791d15b65
-ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
+ms.openlocfilehash: 5373bf34399105c15caabe0abdc1ea0692c46a4a
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49805670"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609492"
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>Místní nastavení úložiště Git pro dokumentaci
 
@@ -29,7 +29,7 @@ Abyste mohli začít přispívat, provedete následující jednorázová nastave
 
 ## <a name="overview"></a>Přehled
 
-Pokud chcete přispívat na web s dokumentací Microsoftu, můžete vytvářet a upravovat soubory Markdown místně, a to klonováním odpovídajícího úložiště dokumentace. Microsoft vyžaduje, abyste příslušné úložiště rozvětvili do svého vlastního účtu GitHubu, a měli tak oprávnění ke čtení a zápisu pro ukládání navrhovaných změn. Pomocí žádostí o přijetí změn pak změny sloučíte do centrálního sdíleného úložiště určeného jen pro čtení.
+Pokud chcete přispívat na web s dokumentací Microsoftu, můžete vytvářet a upravovat soubory Markdown místně, a to klonováním odpovídajícího úložiště dokumentace. Microsoft vyžaduje vytvoření forku příslušného úložiště do vlastního účtu GitHubu, abyste měli oprávnění ke čtení a zápisu pro ukládání navrhovaných změn. Pomocí žádostí o přijetí změn pak změny sloučíte do centrálního sdíleného úložiště určeného jen pro čtení.
 
 ![Trojúhelník GitHubu](./media/git-and-github-initial-setup.png)
 
@@ -41,7 +41,7 @@ Pokud je pro vás GitHub novinkou, podívejte se na toto video s koncepčním p�
 
 Dokumentace hostovaná na webu [docs.microsoft.com](https://docs.microsoft.com) se nachází v několika různých úložištích na webu [github.com](https://www.github.com).
 
-1. Pokud nevíte, které úložiště použít, navštivte tento článek na webu docs.microsoft.com pomocí svého webového prohlížeče. Vyberte odkaz **Upravit** (ikona tužky) v pravém horním rohu článku.
+1. Pokud nevíte, jaké úložiště použít, navštivte tento článek na webu [docs.microsoft.com](https://docs.microsoft.com) ve svém webovém prohlížeči. Vyberte odkaz **Upravit** (ikona tužky) v pravém horním rohu článku.
 
    ![Kliknutím na Upravit určete úložiště a umístění souboru.](media/index/edit-article.png)
 
@@ -92,7 +92,7 @@ Vytvořte místní složku, ve které bude uložená místní kopie úložiště
 Pomocí Git Bashe se připravte na spuštění příkazu **clone**, kterým do svého zařízení v aktuálním adresáři stáhnete kopii úložiště (fork). 
 
 ### <a name="authenticate-by-using-git-credential-manager"></a>Ověření pomocí Git Credential Manageru
-Pokud jste nainstalovali nejnovější verzi Gitu pro Windows a přijali výchozí instalaci, Git Credential Manager je ve výchozím nastavení zapnutý. Git Credential Manager velmi usnadňuje ověření, protože si nemusíte svůj osobní přístupový token pamatovat, když pomocí GitHubu obnovujete ověřená spojení a vzdálená připojení.
+Pokud jste nainstalovali nejnovější verzi Gitu pro Windows a přijali výchozí instalaci, Git Credential Manager je ve výchozím nastavení zapnutý. Správce přihlašovacích údajů Gitu velmi usnadňuje ověřování, protože si při obnovování ověřených nebo vzdálených připojení ke GitHubu nemusíte pamatovat svůj osobní přístupový token.
 
 1. Zadáním názvu úložiště spusťte příkaz **clone**. Při klonování se na místní počítač stáhne (naklonuje) forkované úložiště. 
 

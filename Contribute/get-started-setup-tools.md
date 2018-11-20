@@ -5,12 +5,12 @@ author: jasonwhowell
 ms.author: jasonh
 manager: kfile
 ms.date: 04/30/2018
-ms.openlocfilehash: 9f22a416810711c076645a9483f022112a3a7642
-ms.sourcegitcommit: 886ca76086a302d1d6124967df12a5bcfe4fd4b5
+ms.openlocfilehash: 715634a9a2342311eb1d358cb8379f90a7074d80
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40251463"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609378"
 ---
 # <a name="install-content-authoring-tools"></a>Instalace nástrojů pro tvorbu obsahu
 
@@ -47,7 +47,7 @@ Markdown je jednoduchý jazyk využívající značky, který se snadno čte a i
 
 Text Markdownu se ukládá do souborů s příponou .md.
 
-Další podrobnosti o tom, jak psát pomocí Markdownu, včetně základů Markdownu a funkcí podporovaných vlastními rozšířeními Markdownu od OPS, najdete v článku [Jak používat Markdown](how-to-write-use-markdown.md).
+Podrobnější informace o psaní v Markdownu, včetně základů a funkcí podporovaných vlastními rozšířeními Markdownu na platformě OPS (Open Publishing Services), najdete v článcích [Používání Markdownu pro vytváření článků na webu Docs](how-to-write-use-markdown.md) a [Referenční informace k jazyku Markdown pro OPS](markdown-reference.md).
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
 
@@ -60,7 +60,7 @@ Stáhněte a nainstalujte [VS Code](https://code.visualstudio.com/). Domovská s
 - [Linux](https://code.visualstudio.com/docs/setup/linux)
 
 > [!TIP]
-> Spuštěním příkazu `code .` na příkazovém řádku nebo v prostředí Bash spustíte VS Code a otevřete aktuální složku. Pokud je aktuální složka součástí místního úložiště Git, dojde k integraci GitHubu v nástroji Visual Studio Code automaticky.
+> Spuštěním příkazu `code .` na příkazovém řádku nebo v prostředí Bash spustíte VS Code a otevřete aktuální složku. Pokud je aktuální složka součástí místního úložiště Git, zobrazí se integrovaný GitHub automaticky v editoru Visual Studio Code.
 
 ## <a name="docs-authoring-pack"></a>Balíček pro vytváření obsahu na webu Docs
 Nainstalujte balíček pro vytváření obsahu na webu Docs pro Visual Studio Code. Tato sada rozšíření obsahuje základní podporu pro vytváření obsahu, která vám pomůže s psaním Markdownu, a funkci náhledu, abyste si mohli prohlédnout, jak Markdown vypadá ve stylu webu docs.microsoft.com.
