@@ -2,12 +2,12 @@
 title: Používání Markdownu pro vytváření článků na webu Docs
 description: Tento článek poskytuje základní a referenční informace o jazyku Markdown, který slouží k vytváření článků publikovaných na docs.microsoft.com.
 ms.date: 07/13/2017
-ms.openlocfilehash: 6bb8a1fa20957512addb07dda0e68abec4b0a83f
-ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
+ms.openlocfilehash: 21194c4bd6020d847b526a4d9544c826aa199e2a
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49805717"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609515"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
@@ -24,7 +24,7 @@ Protože je obsah Docs uložený v GitHubu, může používat nadstavbu Markdown
 
 ### <a name="headings"></a>Nadpis
 
-K vytvoření nadpisu se používá znak hash (#):
+K vytvoření nadpisu se používá znak mřížky (#):
 
 ```markdown
 # This is heading 1
@@ -32,6 +32,14 @@ K vytvoření nadpisu se používá znak hash (#):
 ### This is heading 3
 #### This is heading 4
 ```
+
+Nadpisy by se měly vytvářet stylem atx, kdy se na začátku řádku použije 1 až 6 znaků mřížky (#), které označují nadpis odpovídající úrovním nadpisů HTML H1 až H6. Příklady nadpisů první až čtvrté úrovně jsou použité výše.
+
+V tématu **musí** být jen jeden nadpis první úrovně (H1), který se zobrazí jako nadpis stránky.
+
+Pokud nadpis končí znakem `#`, musíte na konec přidat znak `#` navíc, aby se nadpis zobrazil správně. Příklad: `# Async Programming in F# #`
+
+Nadpisy druhé úrovně vygenerují obsah stránky, který se zobrazí v oddílu „V tomto článku“ pod nadpisem stránky.
 
 ### <a name="bold-and-italic-text"></a>Tučné písmo a kurzíva
 
@@ -52,6 +60,18 @@ Pokud chcete text naformátovat jako ***tučný i kurzívu***, použijte tři hv
 ```markdown
 This is text is both ***bold and italic***.
 ```
+
+### <a name="blockquotes"></a>Blokové citace
+
+Blokové citace se vytvářejí pomocí znaku `>`:
+
+```markdown
+> The drought had lasted now for ten million years, and the reign of the terrible lizards had long since ended. Here on the Equator, in the continent which would one day be known as Africa, the battle for existence had reached a new climax of ferocity, and the victor was not yet in sight. In this barren and desiccated land, only the small or the swift or the fierce could flourish, or even hope to survive.
+```
+
+Předchozí příklad se zobrazí takto:
+
+> Sucho nyní panovalo deset miliónů let a nadvláda těchto strašných ještěrů trvala dlouho, než skončila. Zde na rovníku, na kontinentu, který bude jednou známý jako Afrika, dosáhl boj o holou existenci nového vrcholu krutosti, přičemž vítěz zatím nebyl v dohledu. V této pusté a vyprahlé krajině se mohlo dařit jen malým, hbitým nebo krutým tvorům.
 
 ### <a name="lists"></a>Seznamy
 
@@ -93,8 +113,8 @@ Na seřazený/stupňovaný seznam použijte odpovídající čísla. Například
 
 ```markdown
 1. First instruction
-2. Second instruction
-3. Third instruction
+1. Second instruction
+1. Third instruction
 ```
 
 se zobrazí takto:
@@ -108,8 +128,8 @@ Pokud chcete seznam vnořit do jiného seznamu, podřízené položky seznamu od
 ```markdown
 1. First instruction
    1. Sub-instruction
-   2. Sub-instruction
-2. Second instruction
+   1. Sub-instruction
+1. Second instruction
 ```
 
 se zobrazí takto:
@@ -118,6 +138,8 @@ se zobrazí takto:
    1. Sub-instruction
    2. Sub-instruction
 2. Second instruction
+
+Všimněte si, že jsme použili „1.“ pro všechny položky. Usnadňuje to zjištění rozdílů, pokud pozdější vložené soubory obsahují nové kroky nebo odebírají existující kroky.
 
 ### <a name="tables"></a>Tables
 
@@ -194,6 +216,8 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |C++/CX|cppcx|
 |C++/WinRT|cppwinrt|
 |C#|csharp|
+|C# v prohlížeči|csharp-interactive|
+|Konzola|konzola|
 |CSHTML|cshtml|
 |DAX|dax|
 |F#|fsharp|
@@ -221,6 +245,8 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |VSTS CLI|vstscli|
 |XAML|xaml|
 |XML|xml|
+
+Název `csharp-interactive` určuje jazyk C# a možnost spuštění ukázek v prohlížeči. Tyto fragmenty kódu se kompilují a spouští v kontejneru Dockeru a výsledky spuštění tohoto programu se zobrazují v okně prohlížeče uživatele.
 
 #### <a name="example-c"></a>Příklad: C\#
 
@@ -256,8 +282,8 @@ __Markdown__
 
     ```sql
     CREATE TABLE T1 (
-      c1 int PRIMARY KEY,
-      c2 varchar(50) SPARSE NULL
+      c1 int PRIMARY KEY,
+      c2 varchar(50) SPARSE NULL
     );
     ```
 
@@ -265,8 +291,8 @@ __Vykreslení__
 
 ```sql
 CREATE TABLE T1 (
-  c1 int PRIMARY KEY,
-  c2 varchar(50) SPARSE NULL
+  c1 int PRIMARY KEY,
+  c2 varchar(50) SPARSE NULL
 );
 ```
 
@@ -296,6 +322,36 @@ Můžete vybírat ze čtyř typů bloků poznámek k přitažení pozornosti ke 
 
 Obecně by se bloky poznámek měly používat střídmě, protože můžou působit rušivě. I když bloky poznámek podporují také bloky kódu, obrázky, seznamy a odkazy, snažte se, aby byly jednoduché a nekomplikované.
 
+Příklady:
+
+```markdown
+> [!NOTE]
+> This is a NOTE
+
+> [!WARNING]
+> This is a WARNING
+
+> [!TIP]
+> This is a TIP
+
+> [!IMPORTANT]
+> This is IMPORTANT
+```
+
+Se zobrazí takto:
+
+> [!NOTE]
+> Toto je POZNÁMKA.
+
+> [!WARNING]
+> Toto je VAROVÁNÍ.
+
+> [!TIP]
+> Toto je TIP.
+
+> [!IMPORTANT]
+> Toto je DŮLEŽITÉ.
+
 ### <a name="includes"></a>Zahrnutí
 
 Pokud máte opakovaně použitelný text nebo soubory obrázků, které chcete zahrnout do souborů s články, použijte odkaz na zahrnutý soubor prostřednictvím funkce Markdigu pro zahrnutí souboru. Tato funkce platformě OPS říká, aby daný soubor zahrnula do vašeho souboru článku při jeho vytvoření, a soubor se tak stal součástí vašeho publikovaného článku. K dispozici jsou tři typy zahrnutí, které vám pomůžou znovu použít obsah:
@@ -317,13 +373,29 @@ Tady jsou požadavky a důležité informace týkající se zahrnutí:
 - Stejně jako v případě běžných článků nesdílejte multimédia mezi soubory zahrnutí. Pro každé zahrnutí a článek použijte samostatný soubor s jedinečným názvem. Multimediální soubor uložte do složky multimédií spojené se zahrnutím.
 - Nepoužívejte zahrnutí jako jediný obsah článku.  Zahrnutí mají být doplněním obsahu ve zbytku článku.
 
+Příklad:
+
+```markdown
+[!INCLUDE[sample include file](../includes/sampleinclude.md)]
+```
+
 ### <a name="selectors"></a>Voliče
 
-Voliče používejte v technických článcích, když vytváříte více charakterů stejného článku, abyste vyřešili rozdíly v implementaci pro různé technologie nebo platformy. Typicky se to nejvíce hodí na náš obsah pro mobilní platformy pro vývojáře. V Markdigu jsou v současnosti dva různé typy voličů: jednoduchý a vícenásobný.
+Voliče používejte v technických článcích, když vytváříte více variant stejného článku, které objasňují rozdíly v implementaci mezi různými technologiemi nebo platformami. Typicky se to nejvíce hodí na náš obsah pro mobilní platformy pro vývojáře. V Markdigu jsou v současnosti dva různé typy voličů: jednoduchý a vícenásobný.
 
 Protože do každého článku ve výběru přijde stejný Markdown voliče, doporučujeme umístit volič pro článek do zahrnutí. Pak můžete na zahrnutí odkázat ve všech článcích, které stejný volič používají.
 
-### <a name="code-snippets"></a>Fragmenty kódu
+Příklad voliče můžete vidět zde:
+
+```markdown
+> [!div class="op_single_selector"]
+- [macOS](../docs/core/tutorials/using-on-macos.md)
+- [Windows](../docs/core/tutorials/with-visual-studio.md)
+```
+
+Příklad toho, jak se voliče používají v praxi, můžete vidět v [dokumentaci k Azure](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-classic).
+
+### <a name="code-includes"></a>Zahrnutí kódu
 
 Markdig podporuje rozšířené zahrnutí kódu do článku prostřednictvím rozšíření pro fragmenty kódu. To poskytuje pokročilé vykreslení, které vychází z funkcí GFM, jako například výběr programovacího jazyka a barvy syntaxe. Navíc nabízí užitečné funkce jako:
 
@@ -348,8 +420,7 @@ Napište takto před podtržítka zpětné lomítko:
 
 ### <a name="apostrophes-and-quotation-marks"></a>Apostrofy a uvozovky
 
-Pokud do editoru Markdownu kopírujete z Wordu, může text obsahovat „inteligentní“ (oblé) jednoduché nebo dvojité uvozovky. Pro ty je nutné použít kód nebo je změnit na základní uvozovky.
-Jinak se při publikování souboru zobrazí nějak takto: Itâ€™s
+Pokud do editoru Markdownu kopírujete z Wordu, může text obsahovat „inteligentní“ (oblé) jednoduché nebo dvojité uvozovky. Pro ty je nutné použít kód nebo je změnit na základní uvozovky. Jinak se při publikování souboru zobrazí nějak takto: Itâ€™s
 
 Pro „inteligentní“ verze interpunkčních znamének se používají tyto kódy:
 

@@ -1,13 +1,15 @@
 ---
 title: Používání odkazů v dokumentaci
 description: Tento článek obsahuje pokyny k vytváření odkazů na obsah na webu docs.microsoft.com.
-ms.date: 06/29/2017
-ms.openlocfilehash: 1820ed9af561964d7afe0b29827ee43526c72489
-ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
+author: gewarren
+ms.author: gewarren
+ms.date: 10/31/2018
+ms.openlocfilehash: e56bc0fe3a5428af2a79641a8959b4da21270d53
+ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49805762"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51609423"
 ---
 # <a name="using-links-in-documentation"></a>Používání odkazů v dokumentaci
 Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy přesměrovávají uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
@@ -22,7 +24,7 @@ Back-end webu docs.microsoft.com používá systém OPS (Open Publishing Service
 Slova, která použijete v textu odkazu, by měla být popisná. Jinými slovy by mělo jít o normální slova nebo název stránky, na kterou odkazujete.
 
 > [!IMPORTANT]
-> Nepoužívejte „klikněte sem“. Není to dobré pro SEO a nepopisuje to dostatečně cíl odkazu.
+> Nepoužívejte „klikněte sem“. To je špatné pro optimalizaci vyhledávacího webu a adekvátně to nepopisuje cílovou stránku.
 
 **Správně:**
 
@@ -56,7 +58,7 @@ Pokud chcete vytvořit hotlink z technického článku na webu Docs na jiný te
 
   `[link text](../directory/article-name.md)`
 
-- Článek odkazující na různé sady docset (i ve stejném úložišti): `[link text](./directory/article-name)`
+- Článek odkazující na různé sady docset (i ve stejném úložišti):  `[link text](./directory/article-name)`
 
 > [!IMPORTANT]
 > V žádném z výše uvedených příkladů se jako součást odkazu nepoužívá `~/`. Pokud vytváříte odkaz na cestu v kořeni úložiště, začněte znakem `/`. Při zahrnutí řetězce `~/` vznikají neplatné odkazy pro navigaci do zdrojových úložišť na GitHubu. Problém se vyřeší, když bude cesta začínat znakem `/`.
@@ -84,17 +86,23 @@ Ukotvení vytvářet nemusíte. Generují se automaticky pro všechny nadpisy H2
 
 Jelikož jsou vložené soubory umístěné v jiném adresáři, musíte použít delší relativní cesty. Pokud chcete vytvořit odkaz na článek z vloženého souboru, použijte tento formát:
 
-    [link text](../articles/folder/article-name.md)
+   ```markdown
+   [link text](../articles/folder/article-name.md)
+   ```
 
-## <a name="links-in-selectors"></a>Odkazy v selektorech
+## <a name="links-in-selectors"></a>Odkazy ve voličích
 
-Pokud máte selektory, které jsou vložené do vloženého souboru, jak to má tým dokumentace Azure, použijte následující strukturu odkazu:
+Volič je součást navigace, která se v článku dokumentace zobrazuje ve formě rozevíracího seznamu. Když čtenář vybere nějakou hodnotu v tomto rozevíracím seznamu, otevře prohlížeč vybraný článek. Seznam voliče zpravidla obsahuje odkazy na související články, například na stejnou problematiku v několika programovacích jazycích nebo na úzce související sérii článků. 
 
-    > [AZURE.SELECTOR-LIST (Dropdown1 | Dropdown2 )]
-    - [(Text1 | Example1 )](../articles/folder/article-name1.md)
-    - [(Text1 | Example2 )](../articles/folder/article-name2.md)
-    - [(Text2 | Example3 )](../articles/folder/article-name3.md)
-    - [(Text2 | Example4 )](../articles/folder/article-name4.md) -->
+Pokud máte voliče, které jsou začleněné ve vloženém souboru, použijte následující strukturu odkazu:
+
+   ```markdown
+   > [AZURE.SELECTOR-LIST (Dropdown1 | Dropdown2 )]
+   - [(Text1 | Example1 )](../articles/folder/article-name1.md)
+   - [(Text1 | Example2 )](../articles/folder/article-name2.md)
+   - [(Text2 | Example3 )](../articles/folder/article-name3.md)
+   - [(Text2 | Example4 )](../articles/folder/article-name4.md) -->
+   ```
 
 ## <a name="reference-style-links"></a>Odkazy z referencí
 
@@ -102,23 +110,29 @@ Pokud chcete, aby byl váš zdrojový obsah lépe čitelný, můžete použít o
 
 Vložený text:
 
-    I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
+   ```markdown
+   I get 10 times more traffic from [Google][1] than from [Yahoo][2] or [MSN][3].
+   ```
 
 Odkazy referencí na konci článku:
 
-    <!--Reference links in article-->
-    [1]: http://google.com/
-    [2]: http://search.yahoo.com/
-    [3]: http://search.msn.com/
-
+   ```markdown
+   <!--Reference links in article-->
+   [1]: http://google.com/
+   [2]: http://search.yahoo.com/
+   [3]: http://search.msn.com/
+   ```
+   
 Nezapomeňte mezi dvojtečkou a odkazem vytvořit mezeru. Pokud odkazujete na ostatní technické články a zapomenete mezeru vytvořit, odkaz nebude v publikovaném článku fungovat.
 
 ## <a name="links-to-pages-that-are-not-part-of-the-technical-documentation-set"></a>Odkazování na stránky, které nejsou součástí sady technické dokumentace
 
 Pokud chcete vytvořit odkaz na jiný web ve vlastnictví Microsoftu (jako je stránka s ceníkem, stránka SLA nebo cokoli jiného, co není článek dokumentace), použijte absolutní adresu URL, ale vynechejte národní prostředí. Cílem je, aby odkazy fungovaly v GitHubu a na zobrazené stránce:
 
-    [link text](https://azure.microsoft.com/pricing/details/virtual-machines/)
-
+   ```markdown
+   [link text](https://azure.microsoft.com/pricing/details/virtual-machines/)
+   ```
+   
 ## <a name="links-to-third-party-sites"></a>Odkazy na weby třetích stran
 
 Nejlepší uživatelské prostředí minimalizuje odchod uživatelů na jiný web. Odkazy na weby třetích stran, které jsou občas potřeba, proto vytvářejte na základě těchto informací:
@@ -146,7 +160,7 @@ Struktura adresy URL:
   - `/powershell/azure/<topic-file-name>[?view=<moniker-name>]`
   - `/powershell/azure/<service-name>/<topic-file-name>[?view=<moniker-name>]`
 
-Část &lt;moniker-name&gt; je volitelná. Pokud ji vynecháte, budete přesměrováni na nejnovější verzi obsahu. Část &lt;service-name&gt; je jedním z příkladů uvedených v následujících základních adresách URL:
+Část `<moniker-name>` je volitelná. Pokud ji vynecháte, budete přesměrováni na nejnovější verzi obsahu. Část `<service-name>` je jedním z příkladů uvedených v následujících základních adresách URL:
 
 - Obsah Azure PowerShell (AzureRM): [https://docs.microsoft.com/powershell/azure/](https://docs.microsoft.com/powershell/azure/)
 - Obsah Azure PowerShell (ASM): [https://docs.microsoft.com/powershell/azure/_servicemanagement_](https://docs.microsoft.com/powershell/azure/servicemanagement)
