@@ -16,6 +16,7 @@
 ### [Příspěvky do dokumentace k .NET](dotnet-contribute-process.md)
 ### [Zásady týkající se stylu dokumentace k .NET](dotnet-style-guide.md)
 ### [Pokyny ke způsobu vyjadřování](dotnet-voice-tone.md)
+# [Další materiály](additional-resources.md)
 
 <!--
 ## Creating new content
@@ -79,4 +80,3 @@
 
      Open question: How to keep this up to date?
    -->
-## [Další materiály](additional-resources.md)
