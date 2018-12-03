@@ -2,12 +2,12 @@
 title: Šablona a stručná nápověda k článkům o .NET
 description: V tomto článku najdete praktickou šablonu, kterou můžete použít k vytvoření nových článků pro úložiště dokumentace k .NET.
 ms.date: 11/07/2018
-ms.openlocfilehash: 8980f5e39213d8f2edd1d29e66d900f2c3d04bbc
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 15f64ec86c475e2da2f6539c8f388d076389c4e0
+ms.sourcegitcommit: 68d81b61ffa60aba16acfed023760449e16de91b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609732"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52299653"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Metadata a šablona v Markdownu pro dokumentaci k .NET
 
@@ -79,9 +79,11 @@ Tým pro dokumentaci k .NET používá následující konvence:
 - Ve většině případů používáme relativní odkazy. V odkazech nedoporučujeme používat znak `~/`, protože relativní odkazy se překládají ve zdroji na GitHubu. Pokud ale odkazujeme na soubor v závislém úložišti, použijeme v cestě znak `~/`. Soubory v závislém úložišti jsou v GitHubu umístěné jinde, a proto se tyto odkazy nepřeloží správně s relativními odkazy bez ohledu na způsob jejich zápisu.
 - Specifikace jazyka C# a specifikace jazyka Visual Basic zahrnete do dokumentace k .NET tak, že uvedete zdroj z jazykových úložišť. Zdroje v Markdownu jsou spravované v úložištích [csharplang](https://github.com/dotnet/csharplang) a [vblang](https://github.com/dotnet/vblang).
 
-Odkazy na specifikaci musí mířit na zdrojové adresáře s touto specifikací. Pro jazyk C# je to **~/_csharplang/spec** a pro VB je to **~/_vblang/spec**.
+Odkazy na specifikaci musí mířit na zdrojové adresáře s touto specifikací. Pro C# je to **~/_csharplang/spec** a pro VB je to **~/_vblang/spec**, jak vidíte v následujícím příkladu:
 
-- Příklad: `[C# Query Expressions](~/_csharplang/spec/expressions.md#query-expressions)`
+```markdown
+[C# Query Expressions](~/_csharplang/spec/expressions.md#query-expressions)
+```
 
 ### <a name="links-to-apis"></a>Odkazy na rozhraní API
 
@@ -111,13 +113,13 @@ Příklady:
 - System.Exception.\#ctor se změní na `System.Exception.%23ctor`.
 - System.Lazy\`1.\#ctor(System.Threading.LazyThreadSafetyMode) se změní na `System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29`.
 
-Identifikátory UID typů, seznam přetížení členů nebo určitého přetíženého člena najdete na adrese `https://xref.docs.microsoft.com/autocomplete`. Řetězec v dotazu "?text=*\<type-member-name>*" určuje typ nebo člena, jejichž identifikátory UID chcete zobrazit. Třeba `https://xref.docs.microsoft.com/autocomplete?text=string.format` načte přetížení [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format). Nástroj vyhledá zadaný parametr dotazu `text` v libovolné části identifikátoru UID. Můžete třeba hledat jméno člena (ToString), část jména člena (ToStri), typ a jméno člena (Double.ToString) atd.
+Identifikátory UID typů, seznam přetížení členů nebo určitého přetíženého člena najdete na adrese `https://xref.docs.microsoft.com/autocomplete`. Řetězec dotazu `?text=*\<type-member-name>*` identifikuje typ nebo člena, jehož identifikátory UID chcete vidět. Třeba `https://xref.docs.microsoft.com/autocomplete?text=string.format` načte přetížení [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format). Nástroj vyhledá zadaný parametr dotazu `text` v libovolné části identifikátoru UID. Můžete třeba hledat jméno člena (ToString), část jména člena (ToStri), typ a jméno člena (Double.ToString) atd.
 
-Pokud za UID přidáte \* (nebo %2A), představuje tento odkaz stránku přetížení, nikoli určité rozhraní API. UID můžete například použít, pokud chcete odkazovat na stránku [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) obecným způsobem místo konkrétního přetížení, jako je [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). Znaky \* také můžete použít k odkazu na stránku člena, pokud není přetížený, abyste v identifikátoru UID nemuseli uvádět seznam parametrů.
+Pokud za UID přidáte \* (nebo `%2A`), představuje tento odkaz stránku přetížení, nikoli určité rozhraní API. UID můžete například použít, pokud chcete odkazovat na stránku [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) obecným způsobem místo konkrétního přetížení, jako je [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). Znaky \* také můžete použít k odkazu na stránku člena, pokud není přetížený, abyste v identifikátoru UID nemuseli uvádět seznam parametrů.
 
 Pokud chcete vytvořit odkaz na určité přetížení metody, musíte do všech parametrů metody zahrnout úplně určený název typu. Například \<xref:System.DateTime.ToString> odkazuje na metodu [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString), která je bez parametrů, ale \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> odkazuje na metodu [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_).
 
-Pokud chcete vytvořit odkaz na obecný typ, třeba na [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), použijte znak \` (%60) a za něj uveďte počet obecných typů parametrů. Například \<xref:System.Nullable%601> odkazuje na typ [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), ale \<xref:System.Func%602> odkazuje na delegáta [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
+Pokud chcete vytvořit odkaz na obecný typ, třeba na [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), použijte znak \` (`%60`) a za něj uveďte počet obecných typů parametrů. Například `<xref:System.Nullable%601>` odkazuje na typ [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), zatímco `<xref:System.Func%602>` odkazuje na delegáta [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
 
 ## <a name="code"></a>Kód
 
