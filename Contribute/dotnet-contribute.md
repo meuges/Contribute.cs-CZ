@@ -1,13 +1,13 @@
 ---
 title: Psaní příspěvků do úložišť dokumentace k .NET
-description: Tento článek popisuje úložiště, která společně tvoří dokumentaci k .NET.
+description: Tento článek se zabývá procesem přispívání do článků a vzorového kódu v úložištích, která tvoří dokumentaci k rozhraní .NET.
 ms.date: 11/07/2018
-ms.openlocfilehash: 364a38a0b9adbc9465531eb7d174864cc7b7a1e0
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 9104e4215538d2a9eeea7128a2572608b6adde8a
+ms.sourcegitcommit: 68d81b61ffa60aba16acfed023760449e16de91b
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609709"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52299584"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>Přečtěte si, jak přispívat do úložišť dokumentace k .NET.
 
