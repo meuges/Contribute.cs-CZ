@@ -2,12 +2,12 @@
 title: Postup psaní příspěvků do úložišť dokumentace k .NET
 description: V tomto článku najdete stručný úvod k psaní příspěvků do úložišť dokumentace k .NET. Dozvíte se, jaká se používají úložiště, jaký je postup při uspořádání obsahu a jaké zásady platí pro správu vzorového kódu a dalších prostředků.
 ms.date: 11/07/2018
-ms.openlocfilehash: b83a3080f1abd4df8caaa9d10859760006216e86
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 0e7199b72cf9b94d00a09fb180ffef0558c59a53
+ms.sourcegitcommit: 21c9ac71e1abff946466cddf17a1ee97bc349ec5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609755"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245842"
 ---
 # <a name="process-for-contributing-to-net-docs"></a>Postup psaní příspěvků do dokumentace k .NET
 
@@ -131,6 +131,7 @@ Postup vytvoření ukázky:
 2. Napište téma a vysvětlete v něm, co v ukázce předvádíte (příklad: `docs/standard/linq/where-clause.md`).
 3. Napište ukázku (příklad: `WhereClause-Sample1.cs`).
 4. Vytvořte soubor Program.cs s hlavním vstupním bodem, který volá vaše ukázky. Pokud soubor existuje, přidejte do něj volání své ukázky:
+
     ```csharp
     public class Program
     {
@@ -143,6 +144,7 @@ Postup vytvoření ukázky:
         }
     }
     ```
+
 K vytvoření fragmentu nebo ukázky kódu pro .NET Core použijete nástroje .NET Core CLI, které si můžete nainstalovat se sadou [.NET Core SDK](https://www.microsoft.com/net/download). Postup vytvoření a spuštění ukázky:
 
 1. Přejděte do ukázkové složky a zkontrolujte chyby tím, že program zkompilujete:

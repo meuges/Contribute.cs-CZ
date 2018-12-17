@@ -2,12 +2,12 @@
 title: Používání Markdownu pro vytváření článků na webu Docs
 description: Tento článek poskytuje základní a referenční informace o jazyku Markdown, který slouží k vytváření článků publikovaných na docs.microsoft.com.
 ms.date: 07/13/2017
-ms.openlocfilehash: 21194c4bd6020d847b526a4d9544c826aa199e2a
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 8613d525afc11caf9ec760c4f15ea44010781634
+ms.sourcegitcommit: 21c9ac71e1abff946466cddf17a1ee97bc349ec5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609515"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245888"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
@@ -24,7 +24,7 @@ Protože je obsah Docs uložený v GitHubu, může používat nadstavbu Markdown
 
 ### <a name="headings"></a>Nadpis
 
-K vytvoření nadpisu se používá znak mřížky (#):
+K vytvoření nadpisu se používá znak hash (#):
 
 ```markdown
 # This is heading 1
@@ -282,8 +282,8 @@ __Markdown__
 
     ```sql
     CREATE TABLE T1 (
-      c1 int PRIMARY KEY,
-      c2 varchar(50) SPARSE NULL
+      c1 int PRIMARY KEY,
+      c2 varchar(50) SPARSE NULL
     );
     ```
 
@@ -291,8 +291,8 @@ __Vykreslení__
 
 ```sql
 CREATE TABLE T1 (
-  c1 int PRIMARY KEY,
-  c2 varchar(50) SPARSE NULL
+  c1 int PRIMARY KEY,
+  c2 varchar(50) SPARSE NULL
 );
 ```
 
@@ -304,7 +304,7 @@ CREATE TABLE T1 (
 Články Docs používají GFM na většinu formátování, jako jsou odstavce, odkazy, seznamy a nadpisy. Ke složitějšímu formátování článků můžete používat třeba tyto funkce Markdigu:
 
 - Bloky poznámek
-- Zahrnutí
+- Vložené soubory
 - Voliče
 - Vložená videa
 - Fragmenty/ukázky kódu
@@ -352,26 +352,26 @@ Se zobrazí takto:
 > [!IMPORTANT]
 > Toto je DŮLEŽITÉ.
 
-### <a name="includes"></a>Zahrnutí
+### <a name="include-files"></a>Soubory k zahrnutí
 
-Pokud máte opakovaně použitelný text nebo soubory obrázků, které chcete zahrnout do souborů s články, použijte odkaz na zahrnutý soubor prostřednictvím funkce Markdigu pro zahrnutí souboru. Tato funkce platformě OPS říká, aby daný soubor zahrnula do vašeho souboru článku při jeho vytvoření, a soubor se tak stal součástí vašeho publikovaného článku. K dispozici jsou tři typy zahrnutí, které vám pomůžou znovu použít obsah:
+Pokud máte opakovaně použitelný text nebo soubory obrázků, které chcete zahrnout do souborů s články, použijte odkaz na zahrnutý soubor prostřednictvím funkce Markdigu pro zahrnutí souboru. Tato funkce platformě OPS říká, aby daný soubor zahrnula do vašeho souboru článku při jeho vytvoření, a soubor se tak stal součástí vašeho publikovaného článku. K dispozici jsou tři typy odkazů pro zahrnutí, které vám pomůžou znovu použít obsah:
 
-- Vložení: umožňuje znovu použít běžný vložený fragment textu v jiné větě.
-- Blok: umožňuje znovu použít celý soubor Markdownu jako blok vnořený do oddílu článku.
-- Obrázek: takto se v Docs implementuje standardní zahrnutí obrázků.
+- Vložení: Umožňuje znovu použít běžný vložený fragment textu v jiné větě.
+- Blok: Umožňuje znovu použít celý soubor Markdownu jako blok vnořený do oddílu článku.
+- Obrázek: Takto se v Docs implementuje standardní zahrnutí obrázků.
 
-Zahrnutí typu Vložení nebo Blok je jenom prostý soubor Markdownu (.md). Ty mohou obsahovat jakýkoli platný Markdown. Všechny soubory zahrnutí Markdownu musí být umístěné ve [společném podadresáři `/includes`](git-github-fundamentals.md#includes-subdirectory) v kořenovém adresáři úložiště. Při publikování článku se do něho zahrnutý soubor bezproblémově integruje.
+Soubor k zahrnutí typu Vložení nebo Blok je jenom prostý soubor Markdownu (.md). Ty mohou obsahovat jakýkoli platný Markdown. Všechny soubory zahrnutí Markdownu musí být umístěné ve [společném podadresáři `/includes`](git-github-fundamentals.md#includes-subdirectory) v kořenovém adresáři úložiště. Při publikování článku se do něho zahrnutý soubor bezproblémově integruje.
 
-Tady jsou požadavky a důležité informace týkající se zahrnutí:
+Tady jsou požadavky a důležité informace týkající se souborů k zahrnutí:
 
-- Zahrnutí použijte, kdykoli potřebujete, aby se stejný text zobrazoval ve více článcích.
-- Zahrnutí typu Blok používejte na výrazná množství obsahu – jeden nebo dva odstavce, sdílený postup nebo sdílený oddíl. Nepoužívejte je na nic menšího než větu.
-- Zahrnuté soubory se nebudou vykreslovat v zobrazení článku vykresleném GitHubem, protože závisejí na rozšířeních Markdigu. Vykreslí se až po zveřejnění.
-- Dbejte na to, aby byl všechen text v zahrnutí napsaný v úplných větách nebo frázích, které nezávisí na předchozím nebo následujícím textu v článku, který na zahrnutí odkazuje. Ignorováním tohoto pravidla vznikne nepřeložitelný řetězec, který naruší lokalizované použití.
-- Nevkládejte zahrnutí do jiných zahrnutí. Není to podporováno.
-- Multimediální soubory umístěte do složky s multimédii konkrétního podadresáře zahrnutí, třeba do složky `<repo>`/includes/media. Adresář multimédií nesmí ve svém kořenu obsahovat obrázky. Pokud zahrnutí obrázky nemá, pak odpovídající adresář multimédií není potřeba.
-- Stejně jako v případě běžných článků nesdílejte multimédia mezi soubory zahrnutí. Pro každé zahrnutí a článek použijte samostatný soubor s jedinečným názvem. Multimediální soubor uložte do složky multimédií spojené se zahrnutím.
-- Nepoužívejte zahrnutí jako jediný obsah článku.  Zahrnutí mají být doplněním obsahu ve zbytku článku.
+- Soubor k zahrnutí použijte, kdykoli potřebujete, aby se stejný text zobrazoval ve více článcích.
+- Odkazy pro zahrnutí typu Blok používejte pro větší obsah, třeba pro jeden nebo dva odstavce, sdílený postup nebo sdílený oddíl. Nepoužívejte je na nic menšího než větu.
+- Odkazy pro zahrnutí se nebudou vykreslovat v zobrazení článku vykresleném GitHubem, protože závisejí na rozšířeních Markdigu. Vykreslí se až po zveřejnění.
+- Dbejte na to, aby byl všechen text v souboru k zahrnutí napsaný v úplných větách nebo frázích, které nezávisí na předchozím nebo následujícím textu v článku, který na daný soubor k zahrnutí odkazuje. Ignorováním tohoto pravidla vznikne nepřeložitelný řetězec, který naruší lokalizované použití.
+- Nevkládejte odkazy pro zahrnutí do jiných souborů k zahrnutí. Není to podporováno.
+- Multimediální soubory umístěte do složky s multimédii konkrétního podadresáře zahrnutí, třeba do složky `<repo>`/includes/media. Adresář multimédií nesmí ve svém kořenu obsahovat obrázky. Pokud soubor k zahrnutí obrázky nemá, pak odpovídající adresář multimédií není potřeba.
+- Stejně jako v případě běžných článků nesdílejte multimédia mezi soubory zahrnutí. Pro každý soubor k zahrnutí a článek použijte samostatný soubor s jedinečným názvem. Multimediální soubor uložte do složky multimédií spojené s příslušným souborem k zahrnutí.
+- Nepoužívejte soubor k zahrnutí jako jediný obsah článku.  Soubory k zahrnutí mají být doplněním obsahu ve zbytku článku.
 
 Příklad:
 
@@ -383,7 +383,7 @@ Příklad:
 
 Voliče používejte v technických článcích, když vytváříte více variant stejného článku, které objasňují rozdíly v implementaci mezi různými technologiemi nebo platformami. Typicky se to nejvíce hodí na náš obsah pro mobilní platformy pro vývojáře. V Markdigu jsou v současnosti dva různé typy voličů: jednoduchý a vícenásobný.
 
-Protože do každého článku ve výběru přijde stejný Markdown voliče, doporučujeme umístit volič pro článek do zahrnutí. Pak můžete na zahrnutí odkázat ve všech článcích, které stejný volič používají.
+Protože do každého článku ve výběru přijde stejný Markdown voliče, doporučujeme umístit volič pro článek do souboru k zahrnutí. Pak můžete na daný soubor k zahrnutí odkázat ve všech článcích, které stejný volič používají.
 
 Příklad voliče můžete vidět zde:
 
@@ -395,7 +395,7 @@ Příklad voliče můžete vidět zde:
 
 Příklad toho, jak se voliče používají v praxi, můžete vidět v [dokumentaci k Azure](https://docs.microsoft.com/azure/expressroute/expressroute-howto-circuit-classic).
 
-### <a name="code-includes"></a>Zahrnutí kódu
+### <a name="code-include-references"></a>Odkazy pro zahrnutí kódu
 
 Markdig podporuje rozšířené zahrnutí kódu do článku prostřednictvím rozšíření pro fragmenty kódu. To poskytuje pokročilé vykreslení, které vychází z funkcí GFM, jako například výběr programovacího jazyka a barvy syntaxe. Navíc nabízí užitečné funkce jako:
 
