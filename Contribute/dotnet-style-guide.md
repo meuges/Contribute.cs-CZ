@@ -2,12 +2,12 @@
 title: Šablona a stručná nápověda k článkům o .NET
 description: V tomto článku najdete praktickou šablonu, kterou můžete použít k vytvoření nových článků pro úložiště dokumentace k .NET.
 ms.date: 11/07/2018
-ms.openlocfilehash: 15f64ec86c475e2da2f6539c8f388d076389c4e0
-ms.sourcegitcommit: 68d81b61ffa60aba16acfed023760449e16de91b
+ms.openlocfilehash: 08c8e19c858e7417d49cc2de543c67f330b93e89
+ms.sourcegitcommit: b0556fc33803358009a030ac9efcaed23f562868
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52299653"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53264495"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Metadata a šablona v Markdownu pro dokumentaci k .NET
 
@@ -144,7 +144,7 @@ K zahrnutí kódu použijte následující syntaxi:
   * Používá se k upřesnění způsobu načtení kódu ze souboru:
     * `#`:  `#{tagname}` (název značky) *nebo* `#L{startlinenumber}-L{endlinenumber}` (rozsah řádků).
     Nedoporučujeme používat čísla řádků kvůli jejich snadnému porušení. Jako odkaz na fragmenty kódu doporučujeme používat název značky. Názvy značek by měly být srozumitelné. (Mnoho fragmentů kódu bylo migrováno z předchozí platformy. Jsou v nich značky s názvy třeba `Snippet1`, `Snippet2` atd. V praxi je dodržení tohoto pravidla velice náročné.)
-    * `range`: `?range=1,3-5` rozsah řádků. Tento příklad zahrnuje řádky 1, 3, 4 a 5.
+    * `range`: `?range=1,3-5` Rozsah řádků. Tento příklad zahrnuje řádky 1, 3, 4 a 5.
 
 Všude, kde je to možné, doporučujeme používat názvy značek. Název značky je vlastně název oblasti nebo komentáře kódu ve formátu `Snippettagname`, který je ve zdrojovém kódu. V následujícím příkladu je vidět, jak odkazovat na název značky `BasicThrow`:
 
@@ -244,13 +244,13 @@ Odkazy na tlačítka:
 
 ```markdown
 > [!div class="button"]
-[button links](dotnet-contribute.md)
+> [button links](dotnet-contribute.md)
 ```
 
 Zobrazí se takto:
 
 > [!div class="button"]
-[odkazy na tlačítka](dotnet-contribute.md)
+> [odkazy na tlačítka](dotnet-contribute.md)
 
 Příklad použití tlačítek najdete v [dokumentaci k sadě Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio#step-2---download-visual-studio).
 
@@ -258,8 +258,8 @@ Příklad použití tlačítek najdete v [dokumentaci k sadě Visual Studio](htt
 
 ```markdown
 >[!div class="step-by-step"]
-[Pre](../docs/csharp/expression-trees-interpreting.md)
-[Next](../docs/csharp/expression-trees-translating.md)
+> [Pre](../docs/csharp/expression-trees-interpreting.md)
+> [Next](../docs/csharp/expression-trees-translating.md)
 ```
 
 Příklad použití postupů najdete v [příručce k jazyku C#](https://docs.microsoft.com/dotnet/csharp/tour-of-csharp/program-structure).

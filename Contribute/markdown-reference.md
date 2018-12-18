@@ -1,6 +1,6 @@
 ---
-title: Referenční informace k jazyku Markdown pro OPS a docs.microsoft.com
-description: Průvodce platformou OPS pro Markdown a rozšíření DFM (DocFX Flavored Markdown)
+title: Referenční informace k jazyku Markdown pro docs.microsoft.com
+description: Průvodce platformou Docs pro Markdown
 author: meganbradley
 ms.author: mbradley
 manager: jemash
@@ -8,24 +8,24 @@ ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 audience: internal,external
-ms.openlocfilehash: 64921bacf48e638221048db4b24e1a941f1d2777
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 1023f3036e5c1facd0bcd4c31069e6faf3c95483
+ms.sourcegitcommit: 21c9ac71e1abff946466cddf17a1ee97bc349ec5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609538"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245865"
 ---
-# <a name="markdown-reference-for-ops"></a>Referenční informace k jazyku Markdown pro OPS
+# <a name="markdown-reference"></a>Referenční informace k jazyku Markdown
 
-Markdown je jednoduchý jazyk využívající značky se syntaxí formátování prostého textu. Platforma Open Publishing Services (OPS) podporuje standard CommonMark jazyka Markdown a k němu několik vlastních rozšíření Markdownu navržených kvůli poskytování bohatšího obsahu na webu docs.microsoft.com. Tento článek obsahuje referenční informace o používání jazyka Markdown v OPS pro docs.microsoft.com.
+Markdown je jednoduchý jazyk využívající značky se syntaxí formátování prostého textu. Platforma Docs podporuje standard CommonMark pro Markdown plus několik vlastních rozšíření navržených kvůli poskytování bohatšího obsahu na webu docs.microsoft.com. Tento článek obsahuje referenční informace o používání jazyka Markdown pro docs.microsoft.com.
 
-K vytváření Markdownu můžete použít libovolný textový editor. Jako editor, který umožňuje vkládání standardní syntaxe Markdownu i vlastních rozšíření OPS, doporučujeme [VS Code](https://code.visualstudio.com/) s nainstalovaným [balíčkem pro vytváření obsahu na webu Docs](https://aka.ms/DocsAuthoringPack).
+K vytváření Markdownu můžete použít libovolný textový editor. Jako editor, který umožňuje vkládání standardní syntaxe Markdownu i vlastních rozšíření Docs, doporučujeme [VS Code](https://code.visualstudio.com/) s nainstalovaným [balíčkem pro vytváření obsahu na webu Docs](https://aka.ms/DocsAuthoringPack).
 
-Platforma OPS přijala Markdig za standard pro všechna nová úložiště a starší úložiště se na Markdig migrují. Zobrazení Markdownu v Markdigu v porovnání s jinými moduly můžete otestovat na adrese [https://babelmark.github.io/](https://babelmark.github.io/).
+Web Docs používá modul Markdig Markdown. Zobrazení Markdownu v Markdigu v porovnání s jinými moduly můžete otestovat na adrese [https://babelmark.github.io/](https://babelmark.github.io/).
 
 ## <a name="alerts-note-tip-important-caution-warning"></a>Výstrahy (Poznámka, Tip, Důležité, Pozor, Upozornění)
 
-Výstrahy jsou rozšíření Markdownu, které je specifické pro OPS. Umožňují vytvářet citované bloky zobrazované na webu docs.microsoft.com i s barvami a ikonami, které zdůrazňují důležitost obsahu. Podporují se následující typy výstrah:
+Výstrahy jsou rozšíření Docs Markdown určené k vytváření blokových citací zobrazovaných na webu docs.microsoft.com s barvami a ikonami, které označují důležitost obsahu. Podporují se následující typy výstrah:
 
 ```markdown
 > [!NOTE]
@@ -71,7 +71,7 @@ Do souborů Markdown můžete začlenit fragmenty kódu:
 
 ## <a name="headings"></a>Nadpis
 
-OPS podporuje šest úrovní nadpisů Markdownu:
+Web Docs podporuje šest úrovní nadpisů Markdownu:
 
 ```markdown
 # This is a first level heading (H1)
@@ -92,7 +92,7 @@ OPS podporuje šest úrovní nadpisů Markdownu:
 
 ## <a name="html"></a>HTML
 
-Ačkoli Markdown podporuje vložený kód HTML, pro publikování přes OPS se HTML nedoporučuje, přičemž až na omezený seznam hodnot způsobí chyby a upozornění při sestavování. <!--For more information, see HTML Whitelist. // do we want to add the whitelist? -->
+Ačkoli Markdown podporuje vložený kód HTML, pro publikování na webu Docs se HTML nedoporučuje a až na omezený seznam hodnot způsobí chyby a upozornění při sestavování. <!--For more information, see HTML Whitelist. // do we want to add the whitelist? -->
 
 ## <a name="images"></a>Obrázky
 
@@ -116,7 +116,7 @@ Podporu jiných typů obrázků doplníte tak, že je přidáte jako prostředky
 
 ## <a name="links"></a>Odkazy
 
-OPS používá ve většině případů standardní odkazy Markdownu na jiné soubory a stránky. Typy odkazů jsou popsané v níže uvedených pododdílech.
+Web Docs používá ve většině případů standardní odkazy Markdownu na jiné soubory a stránky. Typy odkazů jsou popsané v níže uvedených pododdílech.
 
 > [!TIP]
 > Balíček pro vytváření obsahu na webu Docs pro VS Code vám může pomoci vkládat relativní odkazy a záložky bez nudného určování cest.
@@ -132,7 +132,7 @@ OPS používá ve většině případů standardní odkazy Markdownu na jiné so
 
 ### <a name="relative-links-to-files-in-the-same-doc-set"></a>Relativní odkazy na soubory ve stejné sadě dokumentace
 
-Relativní cesta je cesta k cílovému souboru relativní vzhledem k aktuálnímu souboru. V OPS můžete použít relativní cestu k odkazu na jiný soubor ve stejné sadě dokumentace. Relativní cesta má následující syntaxi:
+Relativní cesta je cesta k cílovému souboru relativní vzhledem k aktuálnímu souboru. Na webu Docs můžete použít relativní cestu k odkazu na jiný soubor ve stejné sadě dokumentace. Relativní cesta má následující syntaxi:
 
 ```markdown
 [link text](../../folder/filename.md)
@@ -142,7 +142,7 @@ Relativní cesta je cesta k cílovému souboru relativní vzhledem k aktuálním
 
 - Relativní cesta se přeloží během sestavování včetně odebrání přípony .md.
 - K odkazování na soubor v nadřazené složce můžete použít ../, tento soubor ale musí být ve stejné sadě dokumentace. Řetězec ../ nemůžete použít k odkazování na soubor v jiné složce se sadou dokumentace.
-- OPS podporuje speciální formu relativní cesty začínající na ~ (například ~/foo/bar.md). Tato syntaxe označuje soubor relativní vzhledem ke kořenové složce sady dokumentace. Během sestavování se ověří a přeloží i tento druh cesty.
+- Web Docs podporuje také speciální formu relativní cesty začínající na ~ (například ~/foo/bar.md). Tato syntaxe označuje soubor relativní vzhledem ke kořenové složce sady dokumentace. Během sestavování se ověří a přeloží i tento druh cesty.
 
 > [!IMPORTANT]
 > Do relativní cesty začleňte příponu souboru. Při sestavování se ověřuje existence cílového souboru v této relativní cestě. Pokud relativní cesta neobsahuje příponu souboru, při sestavování se pravděpodobně nahlásí upozornění nebo přerušený hypertextový odkaz. Použijte například tento odkaz:
@@ -153,7 +153,7 @@ Relativní cesta je cesta k cílovému souboru relativní vzhledem k aktuálním
 >
 > `[link text](../../folder/filename)`
 
-### <a name="absolute-links-to-other-files-in-ops"></a>Absolutní odkazy na jiné soubory v OPS
+### <a name="site-relative-links-to-other-files-on-docs"></a>Relativní odkazy na jiné soubory na webu Docs
 
 ```markdown
 [Azure and Linux](/articles/virtual-machines/linux/overview)
@@ -252,7 +252,7 @@ Using XREF may require some configuration. For more information, see XREF Servic
 
 Při vytváření číslovaného seznamu můžete všude použít jedničky (1), které se při publikování zobrazí jako sekvenční seznam. Kvůli lepší čitelnosti zdrojového kódu můžete seznamy inkrementovat.
 
-Nepoužívejte v seznamech ani vnořených seznamech písmena. Při publikování přes OPS se nezobrazí správně. Vnořené seznamy používající čísla se při publikování zobrazí jako malá písmena. Například:
+Nepoužívejte v seznamech ani vnořených seznamech písmena. Při publikování na webu Docs se nezobrazí správně. Vnořené seznamy používající čísla se při publikování zobrazí jako malá písmena. Například:
 
 ```markdown
 1. This is
@@ -423,14 +423,6 @@ Předchozí text Markdownu blokové citace se zobrazí takto:
 > - [(Xamarin iOS | Javascript)](how-to-write-workflows-major.md)
 > - [(Xamarin Android | Javascript)](how-to-write-workflows-major.md)
 
-<!-- uncomment and link when Cory's topic is live
-## Tabbed content
-
-Tabs are a Markdown extension for docs.microsoft.com that allow us to present different versions of content, such as procedural steps to accomplish the same task on different platforms, in a tabbed format.
-
-Because the syntax and requirements for tabbed content are fairly complex, they are documented separately in Tabbed Content.
--->
-
 ## <a name="tables"></a>Tables
 
 Nejjednodušším způsobem, jak v Markdownu vytvořit tabulku, je použít svislé čáry a řádky. Pokud chcete vytvořit standardní tabulku se záhlavím, za první řádek vložte čárkovaný řádek:
@@ -535,13 +527,13 @@ Tabulky HTML se na webu docs.microsoft.com nedoporučují. Nejsou ve zdrojovém 
 
 ### <a name="embedding-videos-into-a-markdown-page"></a>Vkládání videí na stránku Markdownu
 
-OPS v současnosti podporuje videa publikovaná v jednom z těchto tří umístění:
+Platforma Docs v současnosti podporuje videa publikovaná v jednom z těchto tří umístění:
 
 - YouTube
 - Channel9
 - Vlastní systém Microsoftu „One Player“
 
-Můžete vložit video s následující syntaxí a OPS ho zobrazí.
+Můžete vložit video s následující syntaxí a Docs ho zobrazí.
 
 ```markdown
 > [!VIDEO <embedded_video_link>]
