@@ -2,12 +2,12 @@
 title: Používání Markdownu pro vytváření článků na webu Docs
 description: Tento článek poskytuje základní a referenční informace o jazyku Markdown, který slouží k vytváření článků publikovaných na docs.microsoft.com.
 ms.date: 07/13/2017
-ms.openlocfilehash: 8613d525afc11caf9ec760c4f15ea44010781634
-ms.sourcegitcommit: 21c9ac71e1abff946466cddf17a1ee97bc349ec5
+ms.openlocfilehash: ef75ffd59b75db5757822642f651d863906cf14c
+ms.sourcegitcommit: 18c271ebec920bb976a4bc901f4ab8c1d36b02fa
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245888"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53615828"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
@@ -232,7 +232,8 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
-|Power Apps Formula|powerappsfl|
+|PowerApps (oddělovač desetinných míst v podobě tečky)|powerapps-dot|
+|PowerApps (oddělovač desetinných míst v podobě čárky)|powerapps-comma|
 |PowerShell|powershell|
 |Python|python|
 |Q#|qsharp|
