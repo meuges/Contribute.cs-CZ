@@ -16,6 +16,7 @@
 ### [Příspěvky do dokumentace k .NET](dotnet-contribute-process.md)
 ### [Zásady týkající se stylu dokumentace k .NET](dotnet-style-guide.md)
 ### [Pokyny ke způsobu vyjadřování](dotnet-voice-tone.md)
+### [Proces kontroly žádosti o přijetí změn](dotnet-pr-review.md)
 # [Další materiály](additional-resources.md)
 
 <!--

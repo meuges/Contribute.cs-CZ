@@ -1,29 +1,17 @@
 ---
 author: meganbradley
 ms.author: mbradley
-ms.openlocfilehash: fa048980afcf3c50f7d990f9c88064df6ee5ebb5
-ms.sourcegitcommit: 6f1997864c000a9cd25fb9171a8f8fdb8b5b5ece
+ms.openlocfilehash: 5488ba364ea561a732357bcebf9bf66039c26542
+ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084468"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712779"
 ---
-# <a name="docs-pr-validation-service"></a><span data-ttu-id="5d87a-101">Odkaz na službu ověřování žádostí o přijetí změn Docs</span><span class="sxs-lookup"><span data-stu-id="5d87a-101">Docs PR validation service</span></span>
+# <a name="docs-validation-reference"></a><span data-ttu-id="6bcd3-101">Referenční informace k ověřování na webu Docs</span><span class="sxs-lookup"><span data-stu-id="6bcd3-101">Docs validation reference</span></span>
 
-<span data-ttu-id="5d87a-102">Služba ověřování žádostí o přijetí změn Docs je githubová aplikace, která spouští ověřovací pravidla u souborů v žádosti o přijetí změn.</span><span class="sxs-lookup"><span data-stu-id="5d87a-102">The Docs PR validation service is a GitHub app that runs validation rules on the files in a PR.</span></span>
+<span data-ttu-id="6bcd3-102">Články v této části obsahují informace o chybách, upozorněních a návrzích, které se můžou zobrazit, když do úložiště docs.microsoft.com odesíláte žádosti o přijetí změn nebo když vytváříte úložiště k publikování do docs.microsoft.com.</span><span class="sxs-lookup"><span data-stu-id="6bcd3-102">The articles in this section provide information about Errors, Warnings, and Suggestions you might see when submitting a PR to a docs.microsoft.com repo, or when building a repo to publish to docs.microsoft.com.</span></span>
 
-<span data-ttu-id="5d87a-103">Když je služba ověřování povolená u úložiště, setkáte s tímto chováním:</span><span class="sxs-lookup"><span data-stu-id="5d87a-103">When the validation service is enabled on a repo, you'll see the following behavior:</span></span>
+<span data-ttu-id="6bcd3-103">Pamatujte na to, že ne všechny problémy se týkají všech úložišť – některé jsou specifické pro určité sady obsahu.</span><span class="sxs-lookup"><span data-stu-id="6bcd3-103">Note that not all issues will be enabled on all repos; some are specific to certain content sets.</span></span> <span data-ttu-id="6bcd3-104">Opravte problémy uvedené ve zprávě o sestavení; v těchto referenčních informacích nejsou popsány všechny možné problémy.</span><span class="sxs-lookup"><span data-stu-id="6bcd3-104">Fix the issues listed in your build report, not every issue described in this reference.</span></span>
 
-1. <span data-ttu-id="5d87a-104">Odešlete žádost o přijetí změn.</span><span class="sxs-lookup"><span data-stu-id="5d87a-104">You submit a PR.</span></span>
-1. <span data-ttu-id="5d87a-105">V komentáři GitHubu, který označuje stav vaší žádosti o přijetí změn, se zobrazí stav kontrol povolených u úložiště.</span><span class="sxs-lookup"><span data-stu-id="5d87a-105">In the GitHub comment that indicates the status of your PR, you'll see the status of "checks" enabled on the repo.</span></span> <span data-ttu-id="5d87a-106">Všimněte si, že v tomto příkladu jsou povolené dvě kontroly, Commit Validation a OpenPublishing.Build:</span><span class="sxs-lookup"><span data-stu-id="5d87a-106">Note that in this example, there are two checks enabled, "Commit Validation" and "OpenPublishing.Build":</span></span>
-
-   ![Některé kontroly nebyly úspěšné.](media/validation-failed.png)
-
-   <span data-ttu-id="5d87a-108">Sestavení může projít, i když se ověření potvrzení nezdaří.</span><span class="sxs-lookup"><span data-stu-id="5d87a-108">Build can pass even if commit validation fails.</span></span>
-
-1. <span data-ttu-id="5d87a-109">Další informace se zobrazí po kliknutí na **Details** (Podrobnosti).</span><span class="sxs-lookup"><span data-stu-id="5d87a-109">Click **Details** for more information.</span></span>
-1. <span data-ttu-id="5d87a-110">Na stránce podrobností uvidíte všechny neúspěšné kontroly ověřování s informacemi o tom, jak problémy opravit:</span><span class="sxs-lookup"><span data-stu-id="5d87a-110">On the Details page, you'll see all the validation checks that failed, with information about how to fix the issues:</span></span>
-
-   ![Zpráva ověřování](media/validation-details.png)
-
-<span data-ttu-id="5d87a-112">Seznam ověřování, která služba momentálně obsahuje, najdete v seznamu nalevo.</span><span class="sxs-lookup"><span data-stu-id="5d87a-112">See the left-hand TOC of this article for the list of validations currently in the service.</span></span>
+<span data-ttu-id="6bcd3-105">Pamatujte také na to, že tyto referenční informace nejsou konečné – na základě kódů chyb vyskytujících se ve zprávách o sestavení přidáváme průběžně nové články a odkazy.</span><span class="sxs-lookup"><span data-stu-id="6bcd3-105">Also note that this reference is not complete - new articles will be added and linked from build report error codes as an ongoing effort.</span></span> <span data-ttu-id="6bcd3-106">Zprávy o sestavení jsou sice veřejné, ale některé informace potřebné k opravě některých problémů nejsou dostupné mimo Microsoft.</span><span class="sxs-lookup"><span data-stu-id="6bcd3-106">Although build reports are public, some of the information required to fix some issues is not available outside of Microsoft.</span></span> <span data-ttu-id="6bcd3-107">Pokud nemůžete k chybě nebo upozornění najít dokumentaci, zpráva nebo dokumentace nejsou srozumitelné nebo jste přispěvatelem nepatřícím k Microsoftu a nemáte přístup k dalším informacím, použijte níže tlačítko k odeslání názoru na dokumentaci a založte problém GitHubu.</span><span class="sxs-lookup"><span data-stu-id="6bcd3-107">If you can't find documentation for an Error or Warning, if the message or documentation isn't clear, or if you're a non-Microsoft contributor and can't access additional information, use the documentation feedback button below to file a GitHub issue.</span></span>
