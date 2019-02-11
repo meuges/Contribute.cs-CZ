@@ -2,12 +2,12 @@
 title: Šablona a stručná nápověda k článkům o .NET
 description: V tomto článku najdete praktickou šablonu, kterou můžete použít k vytvoření nových článků pro úložiště dokumentace k .NET.
 ms.date: 11/07/2018
-ms.openlocfilehash: 08c8e19c858e7417d49cc2de543c67f330b93e89
-ms.sourcegitcommit: b0556fc33803358009a030ac9efcaed23f562868
+ms.openlocfilehash: e342373a09b623dc71aadd63e8d8627d154ec8b6
+ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53264495"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712917"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Metadata a šablona v Markdownu pro dokumentaci k .NET
 
@@ -123,7 +123,7 @@ Pokud chcete vytvořit odkaz na obecný typ, třeba na [System.Collections.Gener
 
 ## <a name="code"></a>Kód
 
-Nejlepší způsob, jak zahrnout kód, je použít fragmenty kódu z funkční ukázky. Vytvořte ukázku podle pokynů v článku o [příspěvcích pro .NET](dotnet-contribute-process.md#contributing-to-samples). Základní pravidla, která platí pro zahrnutí kódu, najdete v obecných pokynech ke [kódu](how-to-write-use-markdown.md#code-includes).
+Nejlepší způsob, jak zahrnout kód, je použít fragmenty kódu z funkční ukázky. Vytvořte ukázku podle pokynů v článku o [příspěvcích pro .NET](dotnet-contribute-process.md#contributing-to-samples). Základní pravidla, která platí pro zahrnutí kódu, najdete v obecných pokynech ke [kódu](how-to-write-use-markdown.md#code-snippets).
 
 K zahrnutí kódu použijte následující syntaxi:
 
