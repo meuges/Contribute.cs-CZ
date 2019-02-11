@@ -1,24 +1,19 @@
 ---
 title: Používání Markdownu pro vytváření článků na webu Docs
 description: Tento článek poskytuje základní a referenční informace o jazyku Markdown, který slouží k vytváření článků publikovaných na docs.microsoft.com.
-ms.date: 07/13/2017
-ms.openlocfilehash: ef75ffd59b75db5757822642f651d863906cf14c
-ms.sourcegitcommit: 18c271ebec920bb976a4bc901f4ab8c1d36b02fa
+ms.date: 01/29/2019
+ms.openlocfilehash: 5235189d11c8c20ac20c91572d8bafcf525fb7c0
+ms.sourcegitcommit: fbdd61ae4fb3761aec072732eefcbf2c2dca8011
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53615828"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55887291"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
 Články na [docs.microsoft.com](http://docs.microsoft.com) jsou psané jednoduchým jazykem využívajícím značky, který se nazývá [Markdown](https://daringfireball.net/projects/markdown/) a snadno se čte i učí. Díky tomu se v oboru rychle stal standardem.
 
-Protože je obsah Docs uložený v GitHubu, může používat nadstavbu Markdownu zvanou [GitHub Flavored Markdown (GFM)](https://help.github.com/categories/writing-on-github/), která poskytuje další funkce pro běžné potřeby formátování. Platforma OPS (Open Publishing Services) navíc implementuje Markdig Markdown Parser. Markdig je vysoce kompatibilní s GFM a přidává možnosti podporující funkce specifické pro Docs.
-
-* Markdig je rozšiřitelný procesor Markdownu pro .NET, který je rychlý, výkonný a kompatibilní se syntaxí CommonMark.
-* https://github.com/lunet-io/markdig
-* Lepší podpora komunity
-* Lepší podpora standardů
+Back-end webu docs.microsoft.com používá platformu OPS (Open Publishing Services), která podporuje markdown parsovaný prostřednictvím [Markdigu](https://github.com/lunet-io/markdig) a splňující standard [CommonMark](https://commonmark.org/) a která podporuje také [DFM (DocFX Flavored Markdown)](https://dotnet.github.io/docfx/). Tyto varianty markdownu jsou z větší části kompatibilní s [GFM (GitHub Flavored Markdown)](https://help.github.com/categories/writing-on-github/), protože většina dokumentů je uložená v GitHubu a může tam být upravovaná. Další funkce se přidávají prostřednictvím rozšíření Markdownu.
 
 ## <a name="markdown-basics"></a>Základy Markdownu
 
@@ -220,6 +215,7 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |Konzola|konzola|
 |CSHTML|cshtml|
 |DAX|dax|
+|Docker|dockerfile|
 |F#|fsharp|
 |Go|go|
 |HTML|html|
@@ -227,8 +223,8 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |Java|java|
 |JavaScript|javascript|
 |JSON|json|
+|Dotazovací jazyk Kusto|kusto|
 |Markdown|md|
-|NodeJS|nodejs|
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
@@ -243,7 +239,6 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |Swift|swift|
 |TypeScript|typescript|
 |VB|vb|
-|VSTS CLI|vstscli|
 |XAML|xaml|
 |XML|xml|
 
