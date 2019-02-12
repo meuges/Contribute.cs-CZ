@@ -4,17 +4,17 @@ description: Tento článek obsahuje pokyny k vytváření odkazů na obsah na w
 author: gewarren
 ms.author: gewarren
 ms.date: 10/31/2018
-ms.openlocfilehash: e56bc0fe3a5428af2a79641a8959b4da21270d53
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 9dc1b6dc2ac19b8f28a5a137817245f9a8c34eaf
+ms.sourcegitcommit: fbdd61ae4fb3761aec072732eefcbf2c2dca8011
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609423"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55887245"
 ---
 # <a name="using-links-in-documentation"></a>Používání odkazů v dokumentaci
 Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy přesměrovávají uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
 
-Back-end webu docs.microsoft.com používá systém OPS (Open Publishing Services), který implementuje DFM (DocFX Flavored Markdown). DFM je vysoce kompatibilní s GFM (GitHub Flavored Markdown) a přidává další funkce prostřednictvím rozšíření Markdownu.
+Back-end webu docs.microsoft.com používá platformu OPS (Open Publishing Services), která podporuje markdown parsovaný prostřednictvím [Markdigu](https://github.com/lunet-io/markdig) a splňující standard [CommonMark](https://commonmark.org/) a která podporuje také [DFM (DocFX Flavored Markdown)](https://dotnet.github.io/docfx/). Tyto varianty markdownu jsou z větší části kompatibilní s [GFM (GitHub Flavored Markdown)](https://help.github.com/categories/writing-on-github/), protože většina dokumentů je uložená v GitHubu a může tam být upravovaná. Další funkce se přidávají prostřednictvím rozšíření Markdownu.
 
 > [!IMPORTANT]
 > Všechny odkazy musí být zabezpečené (`https` versus `http`), když to cíl podporuje (což by měla drtivá většina).
@@ -90,7 +90,7 @@ Jelikož jsou vložené soubory umístěné v jiném adresáři, musíte použ�
    [link text](../articles/folder/article-name.md)
    ```
 
-## <a name="links-in-selectors"></a>Odkazy ve voličích
+## <a name="links-in-selectors"></a>Odkazy v selektorech
 
 Volič je součást navigace, která se v článku dokumentace zobrazuje ve formě rozevíracího seznamu. Když čtenář vybere nějakou hodnotu v tomto rozevíracím seznamu, otevře prohlížeč vybraný článek. Seznam voliče zpravidla obsahuje odkazy na související články, například na stejnou problematiku v několika programovacích jazycích nebo na úzce související sérii článků. 
 
@@ -137,10 +137,10 @@ Pokud chcete vytvořit odkaz na jiný web ve vlastnictví Microsoftu (jako je st
 
 Nejlepší uživatelské prostředí minimalizuje odchod uživatelů na jiný web. Odkazy na weby třetích stran, které jsou občas potřeba, proto vytvářejte na základě těchto informací:
 
-- **Odpovědnost:** Na obsah třetích stran odkazujte, když jde o informace, které má sdílet třetí strana. Úkolem Microsoftu například není říkat lidem, jak používat vývojářské nástroje pro Android – to má udělat Google. Pokud je to potřeba, můžeme vysvětlit, jak vývojářské nástroje pro Android používat *se* službou Azure, ale jak tyto nástroje celkově používat by měl vysvětlit Google.
-- **Schválení od PM**: Požádejte Microsoft o schválení obsahu třetí strany. Odkazování na takový obsah znamená, že mu důvěřujeme, a zahrnuje odpovědnost, pokud se lidé těmito pokyny budou řídit.
-- **Ověření čerstvosti:** Ověřte, že informace třetí strany jsou stále aktuální, správné a relevantní a že se odkaz nezměnil.
-- **Přesměrování ven:** Informujte uživatele, že budou přesměrováni na jiný web. Pokud to není jasné z kontextu, přidejte vysvětlení. Například: „Požadavky zahrnují vývojářské nástroje pro Android, které si můžete stáhnout z webu Android Studio“.
+- **Odpovědnost:** Když jde o informace, které má sdílet třetí strana, odkazujte na obsah třetí strany. Úkolem Microsoftu například není říkat lidem, jak používat vývojářské nástroje pro Android – to má udělat Google. Pokud je to potřeba, můžeme vysvětlit, jak vývojářské nástroje pro Android používat *se* službou Azure, ale jak tyto nástroje celkově používat by měl vysvětlit Google.
+- **Schválení od PM:** O schválení obsahu třetí strany požádejte Microsoft. Odkazování na takový obsah znamená, že mu důvěřujeme, a zahrnuje odpovědnost, pokud se lidé těmito pokyny budou řídit.
+- **Kontroly aktuálnosti:** Ověřujte, jestli jsou informace třetí strany stále aktuální, správné a relevantní a jestli se odkaz nezměnil.
+- **Přesměrování ven:** Informujte uživatele, že budou přesměrováni na jiný web. Pokud to není jasné z kontextu, přidejte vysvětlení. Například: „Požadavky zahrnují vývojářské nástroje pro Android, které si můžete stáhnout z webu Android Studio.“
 - **Další kroky:** V sekci Další kroky můžete přidat odkaz například na blog MVP. Jen uživatele znovu nezapomeňte informovat, že budou přesměrováni na jiný web.
 - **Právní náležitosti:** Jsme právně krytí částí **Odkazy na weby třetích stran** v **Podmínkách použití** uvedených v zápatí každé stránky ms.com.
 

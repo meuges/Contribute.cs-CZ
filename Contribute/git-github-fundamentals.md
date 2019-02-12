@@ -2,12 +2,12 @@
 title: Základy Gitu a GitHubu pro dokumentaci
 description: Tento článek poskytuje přehled úložišť Git a GitHub a způsob uspořádání obsahu a konvence vytváření názvů pro web docs.microsoft.com.
 ms.date: 06/30/2017
-ms.openlocfilehash: 05c758845007f859382014166e88fd9614cdb873
-ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
+ms.openlocfilehash: b7eb82f299d3efcdb1e49649fb77367ef8ba3fae
+ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49805693"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712871"
 ---
 # <a name="git-and-github-essentials-for-docs"></a>Základy Gitu a GitHubu pro web Docs
 
@@ -25,8 +25,8 @@ Pokud už centralizované systémy správy verzí znáte (například Team Found
 
 Git také k ukládání a správě obsahu pro projekt používá strukturu úrovní:
 
-- *Úložiště*: *úložiště* je nejvyšší jednotka pro ukládání dat. Úložiště obsahuje jednu nebo více větví.
-- *Větev*: jednotka úložiště obsahující soubory a složky, které tvoří sadu obsahu projektu. Větve oddělují toky práce (obvykle označované jako verze). Příspěvky se vždy provádějí do konkrétní větve. Všechna úložiště obsahují výchozí větev (která se obvykle označuje jako „hlavní“) a jednu nebo víc větví určených ke sloučení s hlavní větví. Hlavní větev slouží jako aktuální verze a „jediný zdroj pravdy“ pro projekt. Je nadřazenou větví, ze které se vytvářejí všechny ostatní větve v úložišti.
+- *Úložiště*: Nejvyšší jednotka pro ukládání dat.**   Úložiště obsahuje jednu nebo více větví.
+- *Větev*: Jednotka úložiště obsahující soubory a složky, které tvoří sadu obsahu projektu. Větve oddělují toky práce (obvykle označované jako verze). Příspěvky se vždy provádějí do konkrétní větve. Všechna úložiště obsahují výchozí větev (která se obvykle označuje jako „hlavní“) a jednu nebo víc větví určených ke sloučení s hlavní větví. Hlavní větev slouží jako aktuální verze a „jediný zdroj pravdy“ pro projekt. Je nadřazenou větví, ze které se vytvářejí všechny ostatní větve v úložišti.
 
 Přispěvatelé při práci s Gitem aktualizují a upravují úložiště jak na místní úrovni, tak na úrovni GitHubu:
 
@@ -58,7 +58,7 @@ Adresář každého článku obsahuje podadresář `/media` pro odpovídající 
 
 Pokud máme nějaký opakovaně použitelný obsah, který je sdílený dvěma nebo více články, je umístěný v podadresáři `/includes` hlavního adresáře `articles`. Do souboru Markdownu, který používá příslušný soubor zahrnutí, se na místo, kde se na tento soubor má odkazovat, umístí odpovídající rozšíření Markdownu pro „zahrnutí“.
 
-Další pokyny najdete v části článku [Jak používat Markdown: Zahrnutí](how-to-write-use-markdown.md#includes).
+Další pokyny najdete v části [Používání Markdownu: Soubory k zahrnutí](how-to-write-use-markdown.md#include-files).
 
 ### <a name="markdown-file-template"></a>Šablona souboru Markdown
 
