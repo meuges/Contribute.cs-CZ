@@ -17,7 +17,7 @@ Volitelná závislá karta:
 
 Příklad oddílu karet s jednou úrovní, ve kterém jsou dvě karty a ukončovací znak skupiny karet (---):
 
-```
+```markdown
 # [Linux](#tab/linux)
 
 Content for Linux...
