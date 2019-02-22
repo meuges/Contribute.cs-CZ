@@ -1,23 +1,23 @@
-# <a name="tabbed-conceptual"></a><span data-ttu-id="d79d5-101">Koncepce s kartami</span><span class="sxs-lookup"><span data-stu-id="d79d5-101">Tabbed conceptual</span></span>
+# <a name="tabbed-conceptual"></a><span data-ttu-id="6dc14-101">Koncepce s kartami</span><span class="sxs-lookup"><span data-stu-id="6dc14-101">Tabbed conceptual</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="d79d5-102">Syntaxe pro koncepci s kartami je zastaralá a nové karty by se neměly přidávat.</span><span class="sxs-lookup"><span data-stu-id="d79d5-102">The tabbed conceptual syntax has been deprecated and new tabs should not be added.</span></span> <span data-ttu-id="d79d5-103">Ověřování popisovaná v tomto článku se týkají obsahových sad, u kterých bylo schváleno používání koncepce s kartami, než bude k dispozici nahrazující funkčnost.</span><span class="sxs-lookup"><span data-stu-id="d79d5-103">The validations described in this article apply to content sets that have been approved to use tabbed conceptual until replacement functionality is available.</span></span>
+> <span data-ttu-id="6dc14-102">Syntaxe pro koncepci s kartami je zastaralá a nové karty by se neměly přidávat.</span><span class="sxs-lookup"><span data-stu-id="6dc14-102">The tabbed conceptual syntax has been deprecated and new tabs should not be added.</span></span> <span data-ttu-id="6dc14-103">Ověřování popisovaná v tomto článku se týkají obsahových sad, u kterých bylo schváleno používání koncepce s kartami, než bude k dispozici nahrazující funkčnost.</span><span class="sxs-lookup"><span data-stu-id="6dc14-103">The validations described in this article apply to content sets that have been approved to use tabbed conceptual until replacement functionality is available.</span></span>
 
-## <a name="tab-syntax"></a><span data-ttu-id="d79d5-104">Syntaxe karet</span><span class="sxs-lookup"><span data-stu-id="d79d5-104">Tab syntax</span></span>
+## <a name="tab-syntax"></a><span data-ttu-id="6dc14-104">Syntaxe karet</span><span class="sxs-lookup"><span data-stu-id="6dc14-104">Tab syntax</span></span>
 
-<span data-ttu-id="d79d5-105">Syntaxe pro karty je následující:</span><span class="sxs-lookup"><span data-stu-id="d79d5-105">The syntax for tabs is as follows:</span></span>
+<span data-ttu-id="6dc14-105">Syntaxe pro karty je následující:</span><span class="sxs-lookup"><span data-stu-id="6dc14-105">The syntax for tabs is as follows:</span></span>
 
-<span data-ttu-id="d79d5-106">Karta s jednou úrovní:</span><span class="sxs-lookup"><span data-stu-id="d79d5-106">Single level tab:</span></span>
+<span data-ttu-id="6dc14-106">Karta s jednou úrovní:</span><span class="sxs-lookup"><span data-stu-id="6dc14-106">Single level tab:</span></span>
 
 `# [Tab Display Name](#tab/tab-id)`
 
-<span data-ttu-id="d79d5-107">Volitelná závislá karta:</span><span class="sxs-lookup"><span data-stu-id="d79d5-107">Optional dependent tab:</span></span>
+<span data-ttu-id="6dc14-107">Volitelná závislá karta:</span><span class="sxs-lookup"><span data-stu-id="6dc14-107">Optional dependent tab:</span></span>
 
 `# [Tab Display Name](#tab/tab-id/tab-condition)`
 
-<span data-ttu-id="d79d5-108">Příklad oddílu karet s jednou úrovní, ve kterém jsou dvě karty a ukončovací znak skupiny karet (---):</span><span class="sxs-lookup"><span data-stu-id="d79d5-108">Example of a single-level tab section with two tabs and the tab group terminator (---):</span></span>
+<span data-ttu-id="6dc14-108">Příklad oddílu karet s jednou úrovní, ve kterém jsou dvě karty a ukončovací znak skupiny karet (---):</span><span class="sxs-lookup"><span data-stu-id="6dc14-108">Example of a single-level tab section with two tabs and the tab group terminator (---):</span></span>
 
-```
+```markdown
 # [Linux](#tab/linux)
 
 Content for Linux...
@@ -29,7 +29,7 @@ Content for Windows...
 ---
 ```
 
-<span data-ttu-id="d79d5-109">Karty můžou volitelně obsahovat sekundární (závislé) karty.</span><span class="sxs-lookup"><span data-stu-id="d79d5-109">Tabs can optionally contain secondary tabs, or dependency tabs.</span></span> <span data-ttu-id="d79d5-110">Tyto karty jsou závislé na výběru v jiné sadě karet.</span><span class="sxs-lookup"><span data-stu-id="d79d5-110">This makes tabs dependent on the selection in another set of tabs.</span></span> <span data-ttu-id="d79d5-111">Tady je příklad:</span><span class="sxs-lookup"><span data-stu-id="d79d5-111">Here's an example:</span></span>
+<span data-ttu-id="6dc14-109">Karty můžou volitelně obsahovat sekundární (závislé) karty.</span><span class="sxs-lookup"><span data-stu-id="6dc14-109">Tabs can optionally contain secondary tabs, or dependency tabs.</span></span> <span data-ttu-id="6dc14-110">Tyto karty jsou závislé na výběru v jiné sadě karet.</span><span class="sxs-lookup"><span data-stu-id="6dc14-110">This makes tabs dependent on the selection in another set of tabs.</span></span> <span data-ttu-id="6dc14-111">Tady je příklad:</span><span class="sxs-lookup"><span data-stu-id="6dc14-111">Here's an example:</span></span>
 
 ```markdown
 # [Azure CLI](#tab/azure-cli/linux)
@@ -51,22 +51,22 @@ PowerShell content for Windows...
 ---
 ```
 
-<span data-ttu-id="d79d5-112">Následující ověřování se týkají syntaxe karet:</span><span class="sxs-lookup"><span data-stu-id="d79d5-112">The following validations apply to tab syntax:</span></span>
+<span data-ttu-id="6dc14-112">Následující ověřování se týkají syntaxe karet:</span><span class="sxs-lookup"><span data-stu-id="6dc14-112">The following validations apply to tab syntax:</span></span>
 
-- <span data-ttu-id="d79d5-113">Syntaxe karet musí být správná.</span><span class="sxs-lookup"><span data-stu-id="d79d5-113">Tab syntax must be correct.</span></span>
-- <span data-ttu-id="d79d5-114">Závislé karty se musí definovat v předchozí skupině karet.</span><span class="sxs-lookup"><span data-stu-id="d79d5-114">Dependent tabs must have been defined in a previous tab group.</span></span>
-- <span data-ttu-id="d79d5-115">Povoluje se jenom jedna úroveň závislosti.</span><span class="sxs-lookup"><span data-stu-id="d79d5-115">Only one level of dependency is allowed.</span></span>
-- <span data-ttu-id="d79d5-116">Nepovoluje se méně než dvě karty.</span><span class="sxs-lookup"><span data-stu-id="d79d5-116">No fewer than two tabs are allowed.</span></span>
-- <span data-ttu-id="d79d5-117">Nepovoluje se více než čtyři karty.</span><span class="sxs-lookup"><span data-stu-id="d79d5-117">No more than four tabs are allowed.</span></span>
-- <span data-ttu-id="d79d5-118">Karty musí být v seznamu povolených karet.</span><span class="sxs-lookup"><span data-stu-id="d79d5-118">Tabs must be whitelisted.</span></span>
-- <span data-ttu-id="d79d5-119">Dvojice Název karty a ID karty musí být platné.</span><span class="sxs-lookup"><span data-stu-id="d79d5-119">Tab/ID pairs must be valid.</span></span>
-- <span data-ttu-id="d79d5-120">Stejné ID karty se nesmí v jedné skupině karet vyskytovat vícekrát.</span><span class="sxs-lookup"><span data-stu-id="d79d5-120">Cannot have the same tab ID multiple times in one tab group.</span></span>
+- <span data-ttu-id="6dc14-113">Syntaxe karet musí být správná.</span><span class="sxs-lookup"><span data-stu-id="6dc14-113">Tab syntax must be correct.</span></span>
+- <span data-ttu-id="6dc14-114">Závislé karty se musí definovat v předchozí skupině karet.</span><span class="sxs-lookup"><span data-stu-id="6dc14-114">Dependent tabs must have been defined in a previous tab group.</span></span>
+- <span data-ttu-id="6dc14-115">Povoluje se jenom jedna úroveň závislosti.</span><span class="sxs-lookup"><span data-stu-id="6dc14-115">Only one level of dependency is allowed.</span></span>
+- <span data-ttu-id="6dc14-116">Nepovoluje se méně než dvě karty.</span><span class="sxs-lookup"><span data-stu-id="6dc14-116">No fewer than two tabs are allowed.</span></span>
+- <span data-ttu-id="6dc14-117">Nepovoluje se více než čtyři karty.</span><span class="sxs-lookup"><span data-stu-id="6dc14-117">No more than four tabs are allowed.</span></span>
+- <span data-ttu-id="6dc14-118">Karty musí být v seznamu povolených karet.</span><span class="sxs-lookup"><span data-stu-id="6dc14-118">Tabs must be whitelisted.</span></span>
+- <span data-ttu-id="6dc14-119">Dvojice Název karty a ID karty musí být platné.</span><span class="sxs-lookup"><span data-stu-id="6dc14-119">Tab/ID pairs must be valid.</span></span>
+- <span data-ttu-id="6dc14-120">Stejné ID karty se nesmí v jedné skupině karet vyskytovat vícekrát.</span><span class="sxs-lookup"><span data-stu-id="6dc14-120">Cannot have the same tab ID multiple times in one tab group.</span></span>
 
-## <a name="tab-whitelist"></a><span data-ttu-id="d79d5-121">Seznam povolených karet</span><span class="sxs-lookup"><span data-stu-id="d79d5-121">Tab whitelist</span></span>
+## <a name="tab-whitelist"></a><span data-ttu-id="6dc14-121">Seznam povolených karet</span><span class="sxs-lookup"><span data-stu-id="6dc14-121">Tab whitelist</span></span>
 
-<span data-ttu-id="d79d5-122">Následující dvojice Název karty a ID karty jsou v seznamu povolených karet.</span><span class="sxs-lookup"><span data-stu-id="d79d5-122">The following tab name/tab ID pairs are whitelisted.</span></span> <span data-ttu-id="d79d5-123">ID závislých karet nejsou spárované, ale musí být platné ve sloupci ID karty.</span><span class="sxs-lookup"><span data-stu-id="d79d5-123">Dependent tab IDs are not paired but must be valid per the Tab ID column.</span></span> <span data-ttu-id="d79d5-124">V hodnotách se rozlišují malá a velká písmena.</span><span class="sxs-lookup"><span data-stu-id="d79d5-124">The values are case-sensitive</span></span>
+<span data-ttu-id="6dc14-122">Následující dvojice Název karty a ID karty jsou v seznamu povolených karet.</span><span class="sxs-lookup"><span data-stu-id="6dc14-122">The following tab name/tab ID pairs are whitelisted.</span></span> <span data-ttu-id="6dc14-123">ID závislých karet nejsou spárované, ale musí být platné ve sloupci ID karty.</span><span class="sxs-lookup"><span data-stu-id="6dc14-123">Dependent tab IDs are not paired but must be valid per the Tab ID column.</span></span> <span data-ttu-id="6dc14-124">V hodnotách se rozlišují malá a velká písmena.</span><span class="sxs-lookup"><span data-stu-id="6dc14-124">The values are case-sensitive</span></span>
 
-|<span data-ttu-id="d79d5-125">Název karty</span><span class="sxs-lookup"><span data-stu-id="d79d5-125">Tab name</span></span>              |<span data-ttu-id="d79d5-126">ID karty</span><span class="sxs-lookup"><span data-stu-id="d79d5-126">Tab ID</span></span>            |
+|<span data-ttu-id="6dc14-125">Název karty</span><span class="sxs-lookup"><span data-stu-id="6dc14-125">Tab name</span></span>              |<span data-ttu-id="6dc14-126">ID karty</span><span class="sxs-lookup"><span data-stu-id="6dc14-126">Tab ID</span></span>            |
 |----------------------|------------------|
 |`[.NET]`              |`(#tab/dotnet)`   |
 |`[.NET Core 1.x]`     |`(#tab/netcore1x)`|
