@@ -1,22 +1,16 @@
 ---
 title: Průvodce pro přispěvatele na web Microsoft Docs – přehled
-description: Tento průvodce popisuje, jak přispívat na web docs.microsoft.com, který obsahuje dokumentaci Microsoftu.
+description: 'Tento průvodce popisuje, jak přispívat na web docs.microsoft.com, který obsahuje dokumentaci Microsoftu.'
 author: billwagner
 ms.author: wiwagn
-manager: wpickett
-ms.date: 04/17/2018
-ms.openlocfilehash: 4a9a7573a62cfc7d5187b90de7e1fe147825273e
-ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
-ms.translationtype: HT
-ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55712848"
+ms.date: 02/19/2019
 ---
+
 # <a name="microsoft-docs-contributor-guide-overview"></a>Průvodce pro přispěvatele na web Microsoft Docs – přehled
 
 Vítá vás Průvodce pro přispěvatele na webu [docs.microsoft.com](https://docs.microsoft.com) (Docs)!
 
-Některé sady naší dokumentace jsou dostupné jako Open Source hostovaný na GitHubu. Tento model si přisvojuje stále více týmů v Microsoftu. Dokonce i sady dokumentů, které nejsou celé dostupné jako Open Source, mají veřejná úložiště, ve kterých můžete zadávat žádosti o přijetí změn. Komunikace mezi produktovými inženýry, týmy pro obsah a našimi zákazníky je tak jednodušší a efektivnější. Práce v otevřeném prostředí poskytuje několik výhod:
+Některé sady dokumentace Microsoftu jsou dostupné jako Open Source a hostují se na GitHubu. Některé sady dokumentace sice nejsou plně dostupné jako Open Source, ale často mají veřejná úložiště, ve kterých můžete zadávat žádosti o přijetí změn. Komunikace mezi produktovými inženýry, týmy pro obsah a našimi zákazníky je tak jednodušší a efektivnější. Práce v otevřeném prostředí poskytuje několik výhod:
 
 - Plánování úložišť Open Source se provádí otevřeně, což umožňuje získávat zpětnou vazbu o tom, které dokumenty jsou nejvíce žádané.
 - Revize úložišť Open Source se provádějí otevřeně, takže je možné v naší nové verzi publikovat nejužitečnější obsah.
@@ -31,34 +25,34 @@ Aby to bylo ještě jednodušší, uživatelské prostředí na webu [docs.micro
 
 ## <a name="quick-edits-to-existing-documents"></a>Rychlé úpravy existujících dokumentů
 
-Rychlé úpravy zjednodušují proces oznamování a oprav drobných chyb a vynechávek v dokumentech. I přes veškeré úsilí můžou v našich publikovaných dokumentech zůstat drobné gramatické a pravopisné chyby. Je sice možné oznamovat tyto chyby tak, že vytvoříte položky problémů, když ale vytvoříte žádost o přijetí změn, bude oprava těchto chyb rychlejší a jednodušší. Téměř u každého článku se zobrazuje tlačítko pro úpravy, které je znázorněno na následujícím obrázku. Kliknutím na **Edit** (Upravit) se dostanete na zdrojový soubor na GitHubu.
+Rychlé úpravy zjednodušují proces oznamování a oprav drobných chyb a vynechávek v dokumentech. I přes veškeré úsilí můžou v našich publikovaných dokumentech zůstat drobné gramatické a pravopisné chyby. Je sice možné oznamovat tyto chyby tak, že vytvoříte položky problémů, když ale vytvoříte žádost o přijetí změn (pokud je tato možnost dostupná), bude jejich oprava rychlejší a jednodušší.
 
-![Umístění odkazu pro úpravy](./media/index/edit-article.png)
+1. Na některých stránkách dokumentace můžete upravovat obsah přímo v prohlížeči. V takovém případě se na stránce zobrazí tlačítko **Edit** (Upravit), jak vidíte níže. Kliknutím na **Edit** (Upravit) se dostanete na zdrojový soubor na GitHubu. Pokud tlačítko **Edit** (s ikonou tužky) nevidíte, znamená to, že stránku dokumentace nelze měnit.
 
-Pak klikněte na ikonu tužky, která je znázorněna na následujícím obrázku, abyste mohli článek upravit.
+   ![Umístění odkazu pro úpravy](./media/index/edit-article.png)
 
-![Umístění ikony tužky](./media/index/edit-icon.png)
+2. Pak klikněte na ikonu tužky, abyste mohli článek upravit. Pokud je ikona tužky šedá, je nutné, abyste se přihlásili ke svému účtu GitHub nebo abyste si vytvořili nový účet. 
 
-> [!NOTE]
-> Pokud je ikona tužky šedá, je nutné, abyste se přihlásili ke svému účtu GitHub nebo abyste si vytvořili nový účet.
+   ![Umístění ikony tužky](./media/index/edit-icon.png)
 
-Proveďte příslušné změny ve webovém editoru. Kliknutím na kartu **Preview changes** (Náhled změn) můžete zkontrolovat formátování jednotlivých změn.
 
-Po provedení změn se posuňte do dolní části stránky. Zadejte název a popis pro vaši žádost o přijetí změn a klikněte na tlačítko **Propose file change** (Navrhnout změnu souboru), jak je znázorněno na následujícím obrázku:
+3. Proveďte příslušné změny ve webovém editoru. Klikněte na kartu **Preview changes** (Náhled změn) a zkontrolujte formátování jednotlivých změn.
 
-![navržení změny](./media/index/submit-pull-request.png)
+4. Po provedení změn se posuňte do dolní části stránky. Zadejte název a popis svých změn a klikněte na tlačítko **Propose file change** (Navrhnout změnu souboru), jak je vidět na následujícím obrázku:
 
-Teď, když jste navrhli změnu, musíte požádat vlastníky úložiště, aby vaši změnu „přijali“ do svého úložiště. K tomu slouží takzvaná „žádost o přijetí změn“. Když jste kliknuli na **Propose file change** (Navrhnout změnu souboru) v obrázku výše, měli byste se dostat na novou stránku, která vypadá jako na následujícím obrázku:
+   ![Návrh změny souboru](./media/index/submit-pull-request.png)
 
-![vytvoření žádosti o přijetí změn](media/index/create-pull-request.png)
+5. Teď, když jste navrhli změnu, musíte požádat vlastníky úložiště, aby vaši změnu „přijali“ do svého úložiště. K tomu slouží takzvaná „žádost o přijetí změn“. Když jste kliknuli na **Propose file change** (Navrhnout změnu souboru) v obrázku výše, měli byste se dostat na novou stránku, která vypadá jako na následujícím obrázku:
 
-Klikněte na **Create pull request** (Vytvořit žádost o přijetí změn), zadejte název (a volitelně popis) této žádosti o přijetí změn a pak znovu klikněte na **Create pull request**.
+   ![vytvoření žádosti o přijetí změn](media/index/create-pull-request.png)
 
-A to je vše! Členové týmu pro obsah provedou revizi a sloučení vaší žádosti o přijetí změn. Pokud jste provedli větší změny, je možné, že dostanete zpětnou vazbu vyžadující nějaké změny.
+   Klikněte na **Create pull request** (Vytvořit žádost o přijetí změn), zadejte název (a volitelně popis) této žádosti o přijetí změn a pak znovu klikněte na **Create pull request**.
+
+6. A to je vše! Členové týmu pro obsah provedou revizi a sloučení vaší žádosti o přijetí změn. Pokud jste provedli větší změny, je možné, že dostanete zpětnou vazbu vyžadující nějaké změny.
 
 Uživatelské rozhraní GitHubu pro úpravy se přizpůsobuje podle oprávnění uživatele v daném úložišti. Předchozí obrázky jsou přesné pro přispěvatele, kteří nemají oprávnění k zápisu do cílového úložiště. GitHub automaticky vytvoří ve vašem účtu fork cílového úložiště. Pokud máte oprávnění k zápisu do cílového úložiště, GitHub vytvoří v cílovém úložišti novou větev. Název větve má formát **\<GitHubId\>-patch-n** a používá vaše ID pro GitHub a číselný identifikátor pro větev opravy.
 
-Žádosti o přijetí změn používáme pro všechny změny, tedy i od přispěvatelů, kteří mají oprávnění k zápisu. U většiny úložišť je větev `master` chráněná, takže aktualizace je nutné odesílat jako žádosti o přijetí změn.
+Žádosti o přijetí změn používáme u všech změn, tedy i u změn od přispěvatelů, kteří mají oprávnění k zápisu. U většiny úložišť je větev `master` chráněná, takže aktualizace je nutné odesílat jako žádosti o přijetí změn.
 
 Prostředí pro úpravy v prohlížeči je nejvhodnější pro drobné nebo málo časté změny. Pokud provádíte velké příspěvky nebo používáte pokročilé funkce Git (třeba správu větví nebo pokročilé řešení konfliktů při sloučení), potřebujete [vytvořit fork úložiště a pracovat místně](how-to-write-workflows-major.md).
 
@@ -75,6 +69,8 @@ S novými tématy se můžete seznámit před jejich publikováním tak, že zko
 ## <a name="create-quality-issues"></a>Vytváření užitečných položek problémů
 
 Naše dokumenty jsou výsledkem nepřetržitě probíhající práce. Vhodně vytvořené položky problémů pomáhají zaměřit naše úsilí na to, co má pro komunitu nejvyšší prioritu. Čím více podrobností zadáte, tím je položka problému užitečnější. Sdělte nám, co jste hledali. Sdělte nám, jaké termíny jste při hledání použili. Pokud nemůžete zahájit práci, sdělte nám, jak se chcete s neznámou technologií začít seznamovat.
+
+Mnoho stránek dokumentace Microsoftu obsahuje v dolní části sekci **Feedback** (Vaše názory), kde můžete zanechat svůj názor na produkt (**Product feedback**) nebo na obsah (**Content feedback**). Umožníte nám tak zaznamenávat konkrétní problémy týkající se daného článku.
 
 Položky problémů umožňují zahájit konverzaci o tom, co je potřeba udělat. Tým pro obsah bude na tyto položky problémů reagovat návrhy, co můžeme přidat, a požádá vás o váš názor. Až vytvoříme koncept, požádáme vás o [revizi dané žádosti o přijetí změn](#review-open-prs).
 
