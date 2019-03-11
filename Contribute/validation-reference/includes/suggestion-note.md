@@ -1,14 +1,12 @@
 ---
 author: meganbradley
 ms.author: mbradley
-ms.openlocfilehash: 089a344a573f9d63c40493c939b2d1bb19bc277e
-ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
+ms.openlocfilehash: 97a5e8df1fbac10119a1bed7f979ad424db1cab0
+ms.sourcegitcommit: 4053577bd0478d711257a283ee661d618b49c2df
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55713055"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57457969"
 ---
 > [!IMPORTANT]
-> Toto pravidlo je nejdříve povolené jako Návrh, aby týmy pro obsah měly čas na posouzení dopadu a na vytvoření plánu, jak úložiště vyčistit. Na rozdíl od Chyb, které blokují sestavení na webu Docs, a Upozornění, která můžou mít vliv na automatizaci pracovního postupu, nevyžadují Návrhy okamžitou akci. Měli byste je ale opravit co nejdříve, protože v určitém okamžiku budou povýšené na Upozornění nebo Chyby. Podrobnosti o tom, kdy se závažnost změní a na co se změní, jsou obsažené ve zprávě (pokud je k dispozici).
->
-> Pokud máte ohledně Návrhů nějaké otázky nebo starosti, založte pomocí odkazu v dolní části tohoto článku problém GitHubu.
+> Toto pravidlo je nejdříve povolené jako Návrh, aby týmy pro obsah měly čas na posouzení dopadu a na vytvoření plánu, jak úložiště vyčistit. Návrhy nevyžadují okamžitou akci, ale měli byste je opravit co nejdříve, protože v určitém okamžiku budou povýšené na Upozornění nebo Chyby. Podrobnosti o tom, kdy se závažnost změní a na co se změní, jsou obsažené ve zprávě (pokud je k dispozici).
