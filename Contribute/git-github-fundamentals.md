@@ -25,7 +25,7 @@ Pokud už centralizované systémy správy verzí znáte (například Team Found
 
 Git také k ukládání a správě obsahu pro projekt používá strukturu úrovní:
 
-- *Úložiště*: Nejvyšší jednotka pro ukládání dat.**   Úložiště obsahuje jednu nebo více větví.
+- *Úložiště*: *úložiště* je nejvyšší jednotka pro ukládání dat. Úložiště obsahuje jednu nebo více větví.
 - *Větev*: Jednotka úložiště obsahující soubory a složky, které tvoří sadu obsahu projektu. Větve oddělují toky práce (obvykle označované jako verze). Příspěvky se vždy provádějí do konkrétní větve. Všechna úložiště obsahují výchozí větev (která se obvykle označuje jako „hlavní“) a jednu nebo víc větví určených ke sloučení s hlavní větví. Hlavní větev slouží jako aktuální verze a „jediný zdroj pravdy“ pro projekt. Je nadřazenou větví, ze které se vytvářejí všechny ostatní větve v úložišti.
 
 Přispěvatelé při práci s Gitem aktualizují a upravují úložiště jak na místní úrovni, tak na úrovni GitHubu:
