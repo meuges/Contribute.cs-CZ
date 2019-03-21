@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 2/2/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: 2bc425726f82840565978072b2efdf13a1284ec0
-ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
+ms.openlocfilehash: 7c5860d9ef50598ad5b3e9546100af0ba436e69f
+ms.sourcegitcommit: 42e5a6ae071826afc2a32a9b7150ca113b39afdf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55713078"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57987714"
 ---
 # <a name="ms-service-missing"></a>ms-service-missing
 
@@ -29,7 +29,7 @@ K zadání cloudových služeb používejte `ms.service`. Pokud chcete o `ms.ser
 
 Ujistěte se, jestli je vámi zadaná hodnota `ms.subservice` pro váš článek správná. Potom přidejte příslušnou hodnotu `ms.service`, která je platným nadřazeným objektem pro `ms.subservice`.
 
-Platné hodnoty se dají najít na [tomto interním webu Microsoftu](https://docsmetadatatool.azurewebsites.net/whitelists).
+Platné hodnoty se dají najít na [tomto interním webu Microsoftu](https://docsmetadatatool.azurewebsites.net/allowlists).
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]
