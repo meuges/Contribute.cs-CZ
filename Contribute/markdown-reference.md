@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
-ms.openlocfilehash: 17bc6d3bf2de5077f490bea2f03cddf23d925b78
-ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
+ms.openlocfilehash: b4ac631a4ebdf7daf00bc39be80fe2e479720392
+ms.sourcegitcommit: 42e5a6ae071826afc2a32a9b7150ca113b39afdf
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55712940"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57987875"
 ---
 # <a name="markdown-reference"></a>Referenční informace k jazyku Markdown
 
@@ -90,7 +90,7 @@ Web Docs podporuje šest úrovní nadpisů Markdownu:
 
 ## <a name="html"></a>HTML
 
-Ačkoli Markdown podporuje vložený kód HTML, pro publikování na webu Docs se HTML nedoporučuje a až na omezený seznam hodnot způsobí chyby a upozornění při sestavování. <!--For more information, see HTML Whitelist. // do we want to add the whitelist? -->
+Ačkoli Markdown podporuje vložený kód HTML, pro publikování na webu Docs se HTML nedoporučuje a až na omezený seznam hodnot způsobí chyby a upozornění při sestavování.
 
 ## <a name="images"></a>Obrázky
 
@@ -110,7 +110,7 @@ Obrázky by měly být uložené ve složce `/media` v sadě dokumentace. Pro ob
 - .jpg
 - .png
 
-Podporu jiných typů obrázků doplníte tak, že je přidáte jako prostředky do souboru docfx.json<!--add link to reference when available--> sady dokumentace.
+Podporu jiných typů obrázků doplníte tak, že je přidáte jako prostředky do souboru docfx.json<!--add link to reference when available--> pro sadu dokumentace.
 
 ## <a name="links"></a>Odkazy
 
@@ -169,7 +169,7 @@ Odkaz na jinou webovou stránku založený na adrese URL (musí obsahovat https:
 
 ### <a name="bookmark-links"></a>Odkazy na záložky
 
-Odkaz na záložku u nadpisu v jiném souboru ve stejném úložišti:
+Odkaz na záložku u nadpisu v jiném souboru ve stejném úložišti. Například:
 
 ```markdown
 [Managed Disks](../../linux/overview.md#managed-disks)
@@ -181,7 +181,12 @@ Odkaz na záložku u nadpisu v aktuálním souboru:
 [Managed Disks](#managed-disks)
 ```
 
-Použijte mřížku následovanou textem nadpisu s odebranou interpunkcí a mezerami nahrazenými pomlčkami.
+Použijte znak hash (`#`) a za ním slova nadpisu. Pokud chcete změnit text nadpisu na text odkazu:
+- Použijte jenom malá písmena.
+- Odeberte interpunkci.
+- Nahraďte mezery pomlčkami.
+
+Pokud máte například nadpis „2.2 Otázky zabezpečení“, pak text odkazu na záložku bude „#22-otázky-zabezpečení“.
 
 ### <a name="explicit-anchor-links"></a>Explicitní odkazy na ukotvení
 
@@ -230,7 +235,7 @@ Příklady:
 - `<xref:System.String?displayProperty=nameWithType>` se zobrazí jako „System.String“.
 - `[String class](xref:System.String)` se zobrazí jako „třída String“.
 
-V současné době neexistuje jednoduchý způsob, jak najít identifikátory UID. <!-- ? -->Nejlepším způsobem, jak najít UID pro rozhraní API, je zobrazit zdrojový kód stránky API, na kterou chcete odkázat, a najít hodnotu ms.assetid. Hodnoty jednotlivých přetížení se ve zdroji nezobrazují. Pracujeme na tom, abychom v budoucnu měli lepší systém.
+V současné době neexistuje jednoduchý způsob, jak najít identifikátory UID. <!-- ? -->Nejlepším způsobem, jak najít identifikátor UID pro rozhraní API, je zobrazit zdroj stránky API, kterou chcete propojit, a najít hodnotu ms.assetid. Hodnoty jednotlivých přetížení se ve zdroji nezobrazují. Pracujeme na tom, abychom v budoucnu měli lepší systém.
 
 Pokud UID obsahuje speciální znaky \`, \# nebo \*, musí být hodnota UID uvedena ve formátu HTML `%60`, `%23` a `%2A` v uvedeném pořadí. Někdy v tomto formátu uvidíte i závorky, není to ale povinné.
 
@@ -336,7 +341,8 @@ V akci dalšího kroku můžete použít jakýkoli podporovaný odkaz včetně o
 
 ## <a name="section-definition"></a>Definice oddílu
 
-<!-- more info about this would be helpful! --> Je možné, že budete potřebovat nadefinovat oddíl. Tato syntaxe se nejčastěji používá pro tabulky kódu.
+<!-- more info about this would be helpful! -->
+Je možné, že budete potřebovat nadefinovat oddíl. Tato syntaxe se nejčastěji používá pro tabulky kódu.
 Prohlédněte si následující příklad:
 
 ````
@@ -360,7 +366,8 @@ Předchozí text Markdownu blokové citace se zobrazí takto:
 
 ## <a name="selectors"></a>Voliče
 
-<!-- could be more clear! --> Selektor můžete použít, když chcete propojit různé stránky stejného článku. Čtenáři pak můžou přepínat mezi těmito stránkami.
+<!-- could be more clear! -->
+Volič neboli selektor můžete použít, když chcete připojit různé stránky pro stejný článek. Čtenáři pak můžou přepínat mezi těmito stránkami.
 
 > [!NOTE]
 > Toto rozšíření funguje mezi weby docs.microsoft.com a MSDN různě. <!-- should we keep info about MSDN? If so say how they differ?-->

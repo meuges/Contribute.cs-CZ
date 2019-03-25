@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: fa7cd177f6c4a3c4862677dbfa89f63a91e7f464
+ms.sourcegitcommit: 42e5a6ae071826afc2a32a9b7150ca113b39afdf
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57987806"
+---
 # <a name="tabbed-conceptual"></a>Koncepce s kartami
 
 > [!IMPORTANT]
@@ -58,13 +66,13 @@ Následující ověřování se týkají syntaxe karet:
 - Povoluje se jenom jedna úroveň závislosti.
 - Nepovoluje se méně než dvě karty.
 - Nepovoluje se více než čtyři karty.
-- Karty musí být v seznamu povolených karet.
+- Karty musí být schválené.
 - Dvojice Název karty a ID karty musí být platné.
 - Stejné ID karty se nesmí v jedné skupině karet vyskytovat vícekrát.
 
-## <a name="tab-whitelist"></a>Seznam povolených karet
+## <a name="approved-tabs"></a>Schválené karty
 
-Následující dvojice Název karty a ID karty jsou v seznamu povolených karet. ID závislých karet nejsou spárované, ale musí být platné ve sloupci ID karty. V hodnotách se rozlišují malá a velká písmena.
+Následující dvojice Název karty a ID karty jsou schválené. ID závislých karet nejsou spárované, ale musí být platné ve sloupci ID karty. V hodnotách se rozlišují malá a velká písmena.
 
 |Název karty              |ID karty            |
 |----------------------|------------------|

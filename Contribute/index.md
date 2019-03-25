@@ -12,9 +12,9 @@ Vítá vás Průvodce pro přispěvatele na webu [docs.microsoft.com](https://do
 
 Některé sady dokumentace Microsoftu jsou dostupné jako Open Source a hostují se na GitHubu. Některé sady dokumentace sice nejsou plně dostupné jako Open Source, ale často mají veřejná úložiště, ve kterých můžete zadávat žádosti o přijetí změn. Komunikace mezi produktovými inženýry, týmy pro obsah a našimi zákazníky je tak jednodušší a efektivnější. Práce v otevřeném prostředí poskytuje několik výhod:
 
-- Plánování úložišť Open Source se provádí otevřeně, což umožňuje získávat zpětnou vazbu o tom, které dokumenty jsou nejvíce žádané.
-- Revize úložišť Open Source se provádějí otevřeně, takže je možné v naší nové verzi publikovat nejužitečnější obsah.
-- Aktualizace úložišť Open Source se provádějí otevřeně, takže průběžné vylepšování obsahu je jednodušší.
+- _Plánování úložišť Open Source se provádí otevřeně_, což umožňuje získávat zpětnou vazbu o tom, které dokumenty jsou nejvíce žádané.
+- _Revize úložišť Open Source se provádějí otevřeně_, takže je možné v naší nové verzi publikovat nejužitečnější obsah.
+- _Aktualizace úložišť Open Source se provádějí otevřeně_, takže jde snadněji průběžně vylepšovat obsah.
 
 Aby to bylo ještě jednodušší, uživatelské prostředí na webu [docs.microsoft.com](https://docs.microsoft.com) přímo integruje pracovní postupy [GitHubu](https://github.com). Můžete začít [úpravami dokumentu, který si prohlížíte](#quick-edits-to-existing-documents). Případně můžete pomoct s [revizemi nových témat](#review-open-prs) nebo s [vytvářením užitečných položek problémů](#create-quality-issues).
 
@@ -25,9 +25,9 @@ Aby to bylo ještě jednodušší, uživatelské prostředí na webu [docs.micro
 
 ## <a name="quick-edits-to-existing-documents"></a>Rychlé úpravy existujících dokumentů
 
-Rychlé úpravy zjednodušují proces oznamování a oprav drobných chyb a vynechávek v dokumentech. I přes veškeré úsilí můžou v našich publikovaných dokumentech zůstat drobné gramatické a pravopisné chyby. Je sice možné oznamovat tyto chyby tak, že vytvoříte položky problémů, když ale vytvoříte žádost o přijetí změn (pokud je tato možnost dostupná), bude jejich oprava rychlejší a jednodušší.
+Rychlé úpravy zjednodušují proces oznamování a oprav drobných chyb a vynechávek v dokumentech. I přes veškeré úsilí _můžou_ v našich publikovaných dokumentech zůstat drobné gramatické a pravopisné chyby. Je sice možné oznamovat tyto chyby tak, že vytvoříte položky problémů, když ale vytvoříte žádost o přijetí změn (pokud je tato možnost dostupná), bude jejich oprava rychlejší a jednodušší.
 
-1. Na některých stránkách dokumentace můžete upravovat obsah přímo v prohlížeči. V takovém případě se na stránce zobrazí tlačítko **Edit** (Upravit), jak vidíte níže. Kliknutím na **Edit** (Upravit) se dostanete na zdrojový soubor na GitHubu. Pokud tlačítko **Edit** (s ikonou tužky) nevidíte, znamená to, že stránku dokumentace nelze měnit.
+1. Na některých stránkách dokumentace můžete upravovat obsah přímo v prohlížeči. V takovém případě se na stránce zobrazí tlačítko **Edit** (Upravit), jak vidíte níže. Kliknutím na tlačítko **Edit** (Upravit) se dostanete na zdrojový soubor na GitHubu. Pokud tlačítko **Edit** (Upravit – může být s ikonou tužky a bez textu) nevidíte, znamená to, že stránku dokumentace nejde měnit.
 
    ![Umístění odkazu pro úpravy](./media/index/edit-article.png)
 
@@ -46,7 +46,7 @@ Rychlé úpravy zjednodušují proces oznamování a oprav drobných chyb a vyne
 
    ![vytvoření žádosti o přijetí změn](media/index/create-pull-request.png)
 
-   Klikněte na **Create pull request** (Vytvořit žádost o přijetí změn), zadejte název (a volitelně popis) této žádosti o přijetí změn a pak znovu klikněte na **Create pull request**.
+   Klikněte na **Create pull request** (Vytvořit žádost o přijetí změn), zadejte název (a volitelně popis) této žádosti o přijetí změn a pak znovu klikněte na **Create pull request**. (Pokud s GitHubem teprve začínáte, můžete si přečíst další informace v článku o [žádostech o přijetí změn](https://help.github.com/en/articles/about-pull-requests).)
 
 6. A to je vše! Členové týmu pro obsah provedou revizi a sloučení vaší žádosti o přijetí změn. Pokud jste provedli větší změny, je možné, že dostanete zpětnou vazbu vyžadující nějaké změny.
 
@@ -59,7 +59,7 @@ Prostředí pro úpravy v prohlížeči je nejvhodnější pro drobné nebo mál
 > [!NOTE]
 > Pokud je to povolené, můžete článek upravit v **libovolném jazyce**, přičemž podle typu úpravy se stane následující:
 > 1. Jakákoli schválená jazyková změna zároveň pomůže vylepšit náš modul strojového překladu.
-> 2. Jakákoli úprava, která podstatně změní obsah článku, se zpracuje interně a změna se odešle do stejného článku v angličtině, takže pokud bude schválena, lokalizuje se do všech jazyků.
+> 2. Jakákoliv úprava, která podstatně změní obsah článku, se zpracuje interně a změna se odešle do stejného článku v angličtině, takže pokud bude schválena, bude se lokalizovat do všech jazyků.
 > Vámi navržená vylepšení tedy pozitivně ovlivní nejen články ve vašem vlastním jazyce, ale také ve všech dostupných jazycích.
 
 ## <a name="review-open-prs"></a>Revize otevřených žádostí o přijetí změn
@@ -72,7 +72,7 @@ Naše dokumenty jsou výsledkem nepřetržitě probíhající práce. Vhodně vy
 
 Mnoho stránek dokumentace Microsoftu obsahuje v dolní části sekci **Feedback** (Vaše názory), kde můžete zanechat svůj názor na produkt (**Product feedback**) nebo na obsah (**Content feedback**). Umožníte nám tak zaznamenávat konkrétní problémy týkající se daného článku.
 
-Položky problémů umožňují zahájit konverzaci o tom, co je potřeba udělat. Tým pro obsah bude na tyto položky problémů reagovat návrhy, co můžeme přidat, a požádá vás o váš názor. Až vytvoříme koncept, požádáme vás o [revizi dané žádosti o přijetí změn](#review-open-prs).
+Položky problémů umožňují zahájit konverzaci o tom, co je potřeba udělat. Tým pro obsah bude na tyto položky problémů reagovat návrhy, co můžeme přidat, a požádá vás o váš názor. Až vytvoříme koncept, požádáme vás o [revizi dané žádosti o přijetí změn](#review-open-PRs).
 
 ## <a name="get-more-involved"></a>Zapojte se více
 
