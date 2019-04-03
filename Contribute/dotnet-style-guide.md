@@ -2,12 +2,12 @@
 title: Šablona a stručná nápověda k článkům o .NET
 description: V tomto článku najdete praktickou šablonu, kterou můžete použít k vytvoření nových článků pro úložiště dokumentace k .NET.
 ms.date: 11/07/2018
-ms.openlocfilehash: e342373a09b623dc71aadd63e8d8627d154ec8b6
-ms.sourcegitcommit: 203ca15fda2d217f082c74ec648c1f1db323f9f1
+ms.openlocfilehash: 9b57abd96093940c96f90a4a01b9f81eae063ffb
+ms.sourcegitcommit: af37d44eb67daa2841959817cd205ec95db18cec
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55712917"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653613"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Metadata a šablona v Markdownu pro dokumentaci k .NET
 
@@ -132,7 +132,7 @@ K zahrnutí kódu použijte následující syntaxi:
 ```
 
 * `-<language>` (*volitelné*, ale *doporučené*)
-  * Jazyk fragmentu kódu, na který vytváříte odkaz. Seznam podporovaných hodnot najdete v tématu [Podporované jazyky](#supported-languages).
+  * Jazyk fragmentu kódu, na který vytváříte odkaz.
 
 * `<name>` (*volitelné*)
   * Název fragmentu kódu Nemá žádný vliv na výstupní HTML, ale můžete ho použít ke zlepšení čitelnosti zdroje Markdownu.
