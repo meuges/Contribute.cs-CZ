@@ -2,12 +2,12 @@
 title: Postup psaní příspěvků do úložišť dokumentace k .NET
 description: V tomto článku najdete stručný úvod k psaní příspěvků do úložišť dokumentace k .NET. Dozvíte se, jaká se používají úložiště, jaký je postup při uspořádání obsahu a jaké zásady platí pro správu vzorového kódu a dalších prostředků.
 ms.date: 11/07/2018
-ms.openlocfilehash: 0e7199b72cf9b94d00a09fb180ffef0558c59a53
-ms.sourcegitcommit: 21c9ac71e1abff946466cddf17a1ee97bc349ec5
+ms.openlocfilehash: 121f6c885ef6d292968e5bb3961cae8e9c22942b
+ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245842"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58637499"
 ---
 # <a name="process-for-contributing-to-net-docs"></a>Postup psaní příspěvků do dokumentace k .NET
 
