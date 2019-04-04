@@ -1,16 +1,21 @@
 ---
 title: Průvodce pro přispěvatele na web Microsoft Docs – přehled
-description: 'Tento průvodce popisuje, jak přispívat na web docs.microsoft.com, který obsahuje dokumentaci Microsoftu.'
+description: Tento průvodce popisuje, jak přispívat na web docs.microsoft.com, který obsahuje dokumentaci Microsoftu.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/19/2019
+ms.openlocfilehash: 9b091f864f5191c9f7a00900ec11a4a1cffdb698
+ms.sourcegitcommit: af37d44eb67daa2841959817cd205ec95db18cec
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653498"
 ---
-
 # <a name="microsoft-docs-contributor-guide-overview"></a>Průvodce pro přispěvatele na web Microsoft Docs – přehled
 
 Vítá vás Průvodce pro přispěvatele na webu [docs.microsoft.com](https://docs.microsoft.com) (Docs)!
 
-Některé sady dokumentace Microsoftu jsou dostupné jako Open Source a hostují se na GitHubu. Některé sady dokumentace sice nejsou plně dostupné jako Open Source, ale často mají veřejná úložiště, ve kterých můžete zadávat žádosti o přijetí změn. Komunikace mezi produktovými inženýry, týmy pro obsah a našimi zákazníky je tak jednodušší a efektivnější. Práce v otevřeném prostředí poskytuje několik výhod:
+Některé sady dokumentace Microsoftu jsou dostupné jako Open Source a hostují se na GitHubu. Všechny sady dokumentace nejsou plně dostupné jako Open Source, ale řada z nich má veřejná úložiště, ve kterých můžete provádět navrhované změny prostřednictvím žádostí o přijetí změn. Opensourcový přístup zjednodušuje a zlepšuje komunikaci mezi produktovými techniky, týmy vytvářejícími obsah a zákazníky, ale má i další výhody:
 
 - _Plánování úložišť Open Source se provádí otevřeně_, což umožňuje získávat zpětnou vazbu o tom, které dokumenty jsou nejvíce žádané.
 - _Revize úložišť Open Source se provádějí otevřeně_, takže je možné v naší nové verzi publikovat nejužitečnější obsah.
@@ -72,7 +77,7 @@ Naše dokumenty jsou výsledkem nepřetržitě probíhající práce. Vhodně vy
 
 Mnoho stránek dokumentace Microsoftu obsahuje v dolní části sekci **Feedback** (Vaše názory), kde můžete zanechat svůj názor na produkt (**Product feedback**) nebo na obsah (**Content feedback**). Umožníte nám tak zaznamenávat konkrétní problémy týkající se daného článku.
 
-Položky problémů umožňují zahájit konverzaci o tom, co je potřeba udělat. Tým pro obsah bude na tyto položky problémů reagovat návrhy, co můžeme přidat, a požádá vás o váš názor. Až vytvoříme koncept, požádáme vás o [revizi dané žádosti o přijetí změn](#review-open-PRs).
+Položky problémů umožňují zahájit konverzaci o tom, co je potřeba udělat. Tým pro obsah bude na tyto položky problémů reagovat návrhy, co můžeme přidat, a požádá vás o váš názor. Až vytvoříme koncept, požádáme vás o [revizi dané žádosti o přijetí změn](#review-open-prs).
 
 ## <a name="get-more-involved"></a>Zapojte se více
 

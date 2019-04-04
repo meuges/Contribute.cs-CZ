@@ -1,19 +1,18 @@
 ---
 title: Používání Markdownu pro vytváření článků na webu Docs
 description: Tento článek poskytuje základní a referenční informace o jazyku Markdown, který slouží k vytváření článků publikovaných na docs.microsoft.com.
-ms.date: 01/29/2019
-ms.openlocfilehash: 5235189d11c8c20ac20c91572d8bafcf525fb7c0
-ms.sourcegitcommit: fbdd61ae4fb3761aec072732eefcbf2c2dca8011
+ms.date: 03/26/2019
+ms.openlocfilehash: eeb49961fbf530676b55ae4e42d4fca7b8d7edf7
+ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55887291"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58637476"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
-Články na [docs.microsoft.com](http://docs.microsoft.com) jsou psané jednoduchým jazykem využívajícím značky, který se nazývá [Markdown](https://daringfireball.net/projects/markdown/) a snadno se čte i učí. Díky tomu se v oboru rychle stal standardem.
+Články na [docs.microsoft.com](http://docs.microsoft.com) jsou psané jednoduchým jazykem využívajícím značky, který se nazývá [Markdown](https://daringfireball.net/projects/markdown/) a snadno se čte i učí. Díky tomu se v oboru rychle stal standardem. Na webu Docs se používá [varianta Markdig](#markdown-flavor) jazyka Markdown.
 
-Back-end webu docs.microsoft.com používá platformu OPS (Open Publishing Services), která podporuje markdown parsovaný prostřednictvím [Markdigu](https://github.com/lunet-io/markdig) a splňující standard [CommonMark](https://commonmark.org/) a která podporuje také [DFM (DocFX Flavored Markdown)](https://dotnet.github.io/docfx/). Tyto varianty markdownu jsou z větší části kompatibilní s [GFM (GitHub Flavored Markdown)](https://help.github.com/categories/writing-on-github/), protože většina dokumentů je uložená v GitHubu a může tam být upravovaná. Další funkce se přidávají prostřednictvím rozšíření Markdownu.
 
 ## <a name="markdown-basics"></a>Základy Markdownu
 
@@ -162,7 +161,6 @@ se zobrazí takto:
 
 Další informace o vytváření tabulek:
 
-- [Funkce zalamování tabulek](#table-wrapping) v Markdigu určená k formátování širokých tabulek
 - [Uspořádání informací pomocí tabulek](https://help.github.com/articles/organizing-information-with-tables/) v GitHubu
 - Webová aplikace [Markdown Tables Generator](https://www.tablesgenerator.com/markdown_tables) (Generátor tabulek v Markdownu)
 - [Markdown Cheatsheet (Tahák pro Markdown) od Adama Pritcharda](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables)
@@ -207,6 +205,7 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |AzCopy|azcopy|
 |Azure CLI|azurecli|
 |Azure PowerShell|azurepowershell|
+|Bash|bash|
 |C++|cpp|
 |C++/CX|cppcx|
 |C++/WinRT|cppwinrt|
@@ -430,6 +429,10 @@ Pro „inteligentní“ verze interpunkčních znamének se používají tyto k�
 K označování zástupných symbolů se běžně používají ostré závorky. Když to uděláte v textu (nikoli v kódu), musíte ostré závorky zakódovat. Jinak je Markdown bude považovat za značku HTML.
 
 Například `<script name>` přepište kódem jako `&lt;script name&gt;`
+
+## <a name="markdown-flavor"></a>Varianta Markdownu
+
+Back-end webu docs.microsoft.com používá platformu OPS (Open Publishing Services), která podporuje markdown kompatibilní s verzí [CommonMark](https://commonmark.org/) parsovaný prostřednictvím parsovacího modulu [Markdig](https://github.com/lunet-io/markdig). Tato varianta markdownu je z větší části kompatibilní s verzí [GFM (GitHub Flavored Markdown)](https://help.github.com/categories/writing-on-github/), protože většina dokumentů je uložená v GitHubu, aby bylo možné je upravovat. Další funkce se přidávají prostřednictvím rozšíření Markdownu.
 
 ## <a name="see-also"></a>Viz také:
 

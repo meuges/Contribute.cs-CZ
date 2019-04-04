@@ -6,16 +6,14 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 1/15/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: d7697c8449e451879c137d9d6cdf42327e597be6
-ms.sourcegitcommit: f374ad2607360f46d88982b4b7ecc63d3ab08235
+ms.openlocfilehash: ae2a28993671255a9ffd4503eebdbee404e52373
+ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56431454"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58637269"
 ---
 # <a name="ms-date-missing"></a>ms-date-missing
-
-**Připravujeme**
 
 [!INCLUDE [suggestion-note](includes/suggestion-note.md)]
 
@@ -23,7 +21,7 @@ ms.locfileid: "56431454"
 
 `Missing attribute: ms.date. A freshness date is required for this content. Add a date in format MM/DD/YYYY.`
 
-Toto datum se používá k indikaci „aktuálnosti“ – to znamená, kdy byl článek naposledy zkontrolován z hlediska relevance, přesnosti, správných snímků obrazovek a funkčních odkazů. Není to totéž jako datum posledního *publikování* článku, které se na stránce objeví v případě, že `ms.date` není explicitně zadané.
+Některé skupiny obsahu vyžadují atribut `ms.date`, který určuje „čerstvost“ článku, tzn. kdy byla naposledy zkontrolována jeho relevance, přesnost, správné snímky obrazovek a funkční odkazy. Není to totéž jako datum posledního *publikování* článku, které se na stránce objeví v případě, že `ms.date` není explicitně zadané.
 
 ## <a name="resolution"></a>Řešení
 
