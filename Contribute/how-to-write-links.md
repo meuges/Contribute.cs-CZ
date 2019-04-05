@@ -4,17 +4,17 @@ description: Tento článek obsahuje pokyny k vytváření odkazů na obsah na w
 author: gewarren
 ms.author: gewarren
 ms.date: 10/31/2018
-ms.openlocfilehash: 9dc1b6dc2ac19b8f28a5a137817245f9a8c34eaf
-ms.sourcegitcommit: fbdd61ae4fb3761aec072732eefcbf2c2dca8011
+ms.openlocfilehash: 464c6b2ae8976252828d73390f9cbeea67f4e3ce
+ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55887245"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58637545"
 ---
 # <a name="using-links-in-documentation"></a>Používání odkazů v dokumentaci
 Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy přesměrovávají uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
 
-Back-end webu docs.microsoft.com používá platformu OPS (Open Publishing Services), která podporuje markdown parsovaný prostřednictvím [Markdigu](https://github.com/lunet-io/markdig) a splňující standard [CommonMark](https://commonmark.org/) a která podporuje také [DFM (DocFX Flavored Markdown)](https://dotnet.github.io/docfx/). Tyto varianty markdownu jsou z větší části kompatibilní s [GFM (GitHub Flavored Markdown)](https://help.github.com/categories/writing-on-github/), protože většina dokumentů je uložená v GitHubu a může tam být upravovaná. Další funkce se přidávají prostřednictvím rozšíření Markdownu.
+Back-end webu docs.microsoft.com používá platformu OPS (Open Publishing Services), která podporuje markdown kompatibilní s verzí [CommonMark](https://commonmark.org/) parsovaný prostřednictvím parsovacího modulu [Markdig](https://github.com/lunet-io/markdig). Tato varianta markdownu je z větší části kompatibilní s verzí [GFM (GitHub Flavored Markdown)](https://help.github.com/categories/writing-on-github/), protože většina dokumentů je uložená v GitHubu, aby bylo možné je upravovat. Další funkce se přidávají prostřednictvím rozšíření Markdownu.
 
 > [!IMPORTANT]
 > Všechny odkazy musí být zabezpečené (`https` versus `http`), když to cíl podporuje (což by měla drtivá většina).
