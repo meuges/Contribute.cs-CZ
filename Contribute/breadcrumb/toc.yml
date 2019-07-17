@@ -1,7 +1,7 @@
 - name: Docs
-  href: /
-  homepage: /
+  tocHref: /
+  topicHref: /
   items:
     - name: Průvodce pro přispěvatele
-      href: /contribute/
-      homepage: /contribute/
+      tocHref: /contribute/
+      topicHref: /contribute/
