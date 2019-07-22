@@ -21,7 +21,7 @@ K vytváření Markdownu můžete použít libovolný textový editor. Jako edit
 
 Web Docs používá modul Markdig Markdown. Zobrazení Markdownu v Markdigu v porovnání s jinými moduly můžete otestovat na adrese [https://babelmark.github.io/](https://babelmark.github.io/).
 
-## <a name="alerts-note-tip-important-caution-warning"></a>Výstrahy (Poznámka, Tip, Důležité, Pozor, Upozornění)
+## <a name="alerts-note-tip-important-caution-warning"></a>Výstrahy – Note (Poznámka), Tip, Important (Důležité), Caution (Pozor), Warning (Upozornění)
 
 Výstrahy jsou rozšíření Docs Markdown určené k vytváření blokových citací zobrazovaných na webu docs.microsoft.com s barvami a ikonami, které označují důležitost obsahu. Podporují se následující typy výstrah:
 
@@ -45,19 +45,19 @@ Výstrahy jsou rozšíření Docs Markdown určené k vytváření blokových ci
 Tyto výstrahy vypadají na webu docs.microsoft.com takto:
 
 > [!NOTE]
-> Informace, kterých by si uživatel měl všimnout i při rychlém čtení
+> Information the user should notice even if skimming.
 
 > [!TIP]
-> Informace, které pomáhají uživateli lépe uspět
+> Optional information to help a user be more successful.
 
 > [!IMPORTANT]
-> Důležité informace potřebné k tomu, aby uživatel uspěl
+> Essential information required for user success.
 
 > [!CAUTION]
-> Negativní potenciální důsledky nějaké akce
+> Negative potential consequences of an action.
 
 > [!WARNING]
-> Nebezpečné důsledky nějaké akce
+> Dangerous certain consequences of an action.
 
 ## <a name="code-snippets"></a>Fragmenty kódu
 
@@ -67,7 +67,7 @@ Do souborů Markdown můžete začlenit fragmenty kódu:
 [!code-<language>[<name>](<codepath><queryoption><queryoptionvalue> "<title>")]
 ```
 
-## <a name="headings"></a>Nadpis
+## <a name="headings"></a>Nadpisy
 
 Web Docs podporuje šest úrovní nadpisů Markdownu:
 
@@ -117,14 +117,14 @@ Podporu jiných typů obrázků doplníte tak, že je přidáte jako prostředky
 Web Docs používá ve většině případů standardní odkazy Markdownu na jiné soubory a stránky. Typy odkazů jsou popsané v níže uvedených pododdílech.
 
 > [!TIP]
-> Balíček pro vytváření obsahu na webu Docs pro VS Code vám může pomoci vkládat relativní odkazy a záložky bez nudného určování cest.
+> The Docs Authoring Pack for VS Code can help insert relative links and bookmarks correctly without the tedium of figuring out the paths!
 
 > [!IMPORTANT]
-> Do odkazů na weby Microsoftu nezačleňujte kódy národního prostředí, například cs-cz. Pevně zakódované kódy národního prostředí zabraňují zobrazení lokalizovaného obsahu, což je pro uživatele v jiných národních prostředích nepříjemná zkušenost, a způsobují významné náklady na lokalizaci. Při kopírování adresy URL z prohlížeče se automaticky kopíruje i kód národního prostředí, který při vytváření odkazu musíte ručně odstranit. Použijte například tento odkaz:
+> Do not include locale codes, such as en-us, in your links to Microsoft sites. Hard-coded locale codes prevent localized content from rendering, which is a bad customer experience for users in other locales and incurs significant localization costs. When you copy a URL from a browser, the locale code is included by default, so you need to manually delete it when you create your link. For example, use:
 >
 > `[Microsoft](https://www.microsoft.com)`
 >
-> Nikoli tento odkaz:
+> Not:
 >
 > `[Microsoft](https://www.microsoft.com/en-us/)`
 
@@ -143,11 +143,11 @@ Relativní cesta je cesta k cílovému souboru relativní vzhledem k aktuálním
 - Web Docs podporuje také speciální formu relativní cesty začínající na ~ (například ~/foo/bar.md). Tato syntaxe označuje soubor relativní vzhledem ke kořenové složce sady dokumentace. Během sestavování se ověří a přeloží i tento druh cesty.
 
 > [!IMPORTANT]
-> Do relativní cesty začleňte příponu souboru. Při sestavování se ověřuje existence cílového souboru v této relativní cestě. Pokud relativní cesta neobsahuje příponu souboru, při sestavování se pravděpodobně nahlásí upozornění nebo přerušený hypertextový odkaz. Použijte například tento odkaz:
+> Include the file extension in the relative path. Build validates the existence of the target file of that relative path. If relative path does not include file extension, it is likely build will report a warning of broken link. For example, use:
 >
 > `[link text](../../folder/filename.md)`
 >
-> Nikoli tento odkaz:
+> Not:
 >
 > `[link text](../../folder/filename)`
 
@@ -209,7 +209,7 @@ To go to a section on another page.
 K odkazování na automaticky generované stránky s referencemi rozhraní API v aktuální sadě dokumentace nebo v jiných sadách dokumentace použijte odkazy XREF s jedinečným ID (UID).
 
 > [!NOTE]
-> Pokud chcete vytvářet odkazy na stránky s referenčními informacemi k rozhraní API v jiných sadách dokumentace, potřebujete do souboru `docfx.json` přidat konfiguraci `xrefService`.
+> To reference API reference pages in other doc sets, you need to add `xrefService` configuration in `docfx.json` file.
 > ```
 > "build": {
 >   ...
@@ -267,11 +267,11 @@ Nepoužívejte v seznamech ani vnořených seznamech písmena. Při publikován�
 
 Toto se zobrazí takto:
 
-1. Toto je
-1. nadřazený číslovaný seznam
-   1. a toto je
-   1. vnořený číslovaný seznam
-1. (konec)
+1. This is
+1. a parent numbered list
+   1. and this is
+   1. a nested numbered list
+1. (fin)
 
 ### <a name="bulleted-list"></a>Seznam s odrážkami
 
@@ -287,11 +287,11 @@ Pokud chcete vytvořit seznam s odrážkami, použijte na začátku každého ř
 
 Toto se zobrazí takto:
 
-- Toto je
-- nadřazený seznam s odrážkami
-  - a toto je
-  - vnořený seznam s odrážkami
-- Hotovo!
+- This is
+- a parent bulleted list
+  - and this is
+  - a nested bulleted list
+- All done!
 
 ### <a name="checklist"></a>Kontrolní seznam
 
@@ -335,7 +335,7 @@ Například:
 Toto se zobrazí takto:
 
 > [!div class="nextstepaction"]
-> [Informace o základním stylu](style-quick-start.md)
+> [Learn about basic style](style-quick-start.md)
 
 V akci dalšího kroku můžete použít jakýkoli podporovaný odkaz včetně odkazu Markdownu na jinou webovou stránku. Ve většině případů bude odkaz na další akci relativním odkazem na jiný soubor ve stejné sadě dokumentace.
 
@@ -370,7 +370,7 @@ Předchozí text Markdownu blokové citace se zobrazí takto:
 Volič neboli selektor můžete použít, když chcete připojit různé stránky pro stejný článek. Čtenáři pak můžou přepínat mezi těmito stránkami.
 
 > [!NOTE]
-> Toto rozšíření funguje mezi weby docs.microsoft.com a MSDN různě. <!-- should we keep info about MSDN? If so say how they differ?-->
+> This extension works differently between docs.microsoft.com and MSDN. <!-- should we keep info about MSDN? If so say how they differ?-->
 
 ### <a name="single-selector"></a>Jeden selektor
 
@@ -428,7 +428,7 @@ Volič neboli selektor můžete použít, když chcete připojit různé stránk
 > - [(Xamarin iOS | Javascript)](how-to-write-workflows-major.md)
 > - [(Xamarin Android | Javascript)](how-to-write-workflows-major.md)
 
-## <a name="tables"></a>Tables
+## <a name="tables"></a>Tabulky
 
 Nejjednodušším způsobem, jak v Markdownu vytvořit tabulku, je použít svislé čáry a řádky. Pokud chcete vytvořit standardní tabulku se záhlavím, za první řádek vložte čárkovaný řádek:
 
@@ -441,10 +441,10 @@ Nejjednodušším způsobem, jak v Markdownu vytvořit tabulku, je použít svis
 
 Toto se zobrazí takto:
 
-|Toto je   |jednoduché   |záhlaví tabulky|
+|This is   |a simple   |table header|
 |----------|-----------|------------|
-|data     |tabulky       |zde        |
-|ani nemusí|být pěkně   |zarovnaná!||
+|table     |data       |here        |
+|it doesn't|actually   |have to line up nicely!||
 
 Můžete také vytvořit tabulku bez záhlaví. Příklad vytvoření seznamu s více sloupci:
 
@@ -459,8 +459,8 @@ Toto se zobrazí takto:
 
 |   |   |
 | - | - |
-| Tato | tabulka |
-| nemá žádné | záhlaví |
+| This | table |
+| has no | header |
 
 Sloupce můžete zarovnat pomocí dvojtečky:
 
@@ -476,19 +476,19 @@ Se vykreslí takto:
 
 |                  |
 |------------------|
-|    zarovnání vpravo:|
-|:zarovnání vlevo     |
-|:na střed        :|
+|    right aligned:|
+|:left aligned     |
+|:centered        :|
 
 > [!TIP]
-> Rozšíření pro vytváření obsahu na webu Docs pro VS Code usnadňuje přidávání základních tabulek Markdownu.
+> The Docs Authoring Extension for VS Code makes it easy to add basic Markdown tables!
 >
-> Můžete také použít [online generátor tabulek](http://www.tablesgenerator.com/markdown_tables).
+> You can also use an [online table generator](http://www.tablesgenerator.com/markdown_tables).
 
 ### <a name="mx-tdbreakall"></a>mx-tdBreakAll
 
 > [!IMPORTANT]
-> Toto funguje jen na webu docs.microsoft.com.
+> This only works on the docs.microsoft.com site.
 
 Když vytvoříte tabulku v Markdownu, často se stane, že tabulka zasahuje do navigace napravo a stává se nečitelnou. Tento problém můžete vyřešit tak, že při zobrazování na webu Docs umožníte tabulku v případě potřeby rozdělit. Tabulku stačí zalomit pomocí vlastní třídy `[!div class="mx-tdBreakAll"]`.
 
@@ -506,16 +506,16 @@ Toto je ukázka tabulky v Markdownu se třemi řádky, která se zalomí pomocí
 Zobrazí se takto:
 
 > [!div class="mx-tdBreakAll"]
-> |Název|Syntaxe|Povinné pro tichou instalaci?|Popis|
+> |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
-> |Tichá instalace|/quiet|Ano|Spustí instalační program bez zobrazení uživatelského rozhraní a výzev.|
-> |Bez restartování|/norestart|Ne|Potlačí všechny pokusy o restartování. Ve výchozím nastavení zobrazí uživatelské rozhraní před restartováním výzvu.|
-> |Nápověda|/help|Ne|Poskytuje nápovědu a stručné referenční informace. Zobrazí správné použití příkazu instalace včetně seznamu všech možností a chování.|
+> |Quiet|/quiet|Yes|Runs the installer, displaying no UI and no prompts.|
+> |NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
+> |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command, including a list of all options and behaviors.|
 
 ### <a name="mx-tdcol2breakall"></a>mx-tdCol2BreakAll
 
 > [!IMPORTANT]
-> Toto funguje jen na webu docs.microsoft.com.
+> This only works on the docs.microsoft.com site.
 
 Někdy se může stát, že druhý sloupec v tabulce obsahuje velmi dlouhá slova. Pokud chcete zajistit jejich správné rozdělení, můžete použít třídu `mx-tdCol2BreakAll` pomocí syntaxe obálky `div`, jak bylo uvedeno dříve.
 
@@ -572,7 +572,7 @@ A na publikovaných stránkách se zobrazí takto:
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
 
 > [!IMPORTANT]
-> Adresa URL videa CH9 by měla začínat řetězcem `https` a končit řetězcem `/player`. V opačném případě totiž místo samotného videa vloží celou stránku.
+> The CH9 video URL should start with `https` and end with `/player`. Otherwise, it will embed the whole page instead of the video only.
 
 ### <a name="uploading-new-videos"></a>Nahrání nových videí
 

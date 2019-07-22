@@ -16,7 +16,7 @@ ms.locfileid: "66373116"
 
 ## <a name="markdown-basics"></a>Základy Markdownu
 
-### <a name="headings"></a>Nadpis
+### <a name="headings"></a>Nadpisy
 
 K vytvoření nadpisu se používá znak hash (#):
 
@@ -135,7 +135,7 @@ se zobrazí takto:
 
 Všimněte si, že jsme použili „1.“ pro všechny položky. Usnadňuje to zjištění rozdílů, pokud pozdější vložené soubory obsahují nové kroky nebo odebírají existující kroky.
 
-### <a name="tables"></a>Tables
+### <a name="tables"></a>Tabulky
 
 Tabulky nejsou součástí základní specifikace Markdownu, ale podporuje je GFM. Tabulky můžete vytvářet pomocí svislé čáry (|) a spojovníku (-). Spojovníky vytvářejí záhlaví každého sloupce, zatímco svislé čáry jednotlivé sloupce oddělují. Aby se tabulka správně vykreslila, přidejte před ni prázdný řádek.
 
@@ -152,7 +152,7 @@ Například tento Markdown:
 
 Se zobrazí takto:
 
-| Fun                  | With                 | Tables          |
+| Fun                  | With                 | Tabulky          |
 | :------------------- | -------------------: |:---------------:|
 | left-aligned column  | right-aligned column | centered column |
 | $100                 | $100                 | $100            |
@@ -310,10 +310,10 @@ Kompletní seznam funkcí najdete v tématech „Rozšíření Markdig a Markdow
 
 Můžete vybírat ze čtyř typů bloků poznámek k přitažení pozornosti ke konkrétnímu obsahu:
 
-- POZNÁMKA
-- VAROVÁNÍ
+- NOTE (POZNÁMKA)
+- WARNING (VAROVÁNÍ)
 - TIP
-- DŮLEŽITÉ
+- IMPORTANT (DŮLEŽITÉ)
 
 Obecně by se bloky poznámek měly používat střídmě, protože můžou působit rušivě. I když bloky poznámek podporují také bloky kódu, obrázky, seznamy a odkazy, snažte se, aby byly jednoduché a nekomplikované.
 
@@ -336,16 +336,16 @@ Příklady:
 Se zobrazí takto:
 
 > [!NOTE]
-> Toto je POZNÁMKA.
+> This is a NOTE
 
 > [!WARNING]
-> Toto je VAROVÁNÍ.
+> This is a WARNING
 
 > [!TIP]
-> Toto je TIP.
+> This is a TIP
 
 > [!IMPORTANT]
-> Toto je DŮLEŽITÉ.
+> This is IMPORTANT
 
 ### <a name="include-files"></a>Soubory k zahrnutí
 
