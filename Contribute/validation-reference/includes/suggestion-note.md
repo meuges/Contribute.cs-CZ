@@ -1,12 +1,12 @@
 ---
 author: meganbradley
 ms.author: mbradley
-ms.openlocfilehash: 97a5e8df1fbac10119a1bed7f979ad424db1cab0
-ms.sourcegitcommit: 4053577bd0478d711257a283ee661d618b49c2df
+ms.openlocfilehash: 22d9b3b13856e978aa5b8a902f27e460293e0bd0
+ms.sourcegitcommit: 495d49f10df51a8897687940aa653e906c48c2a0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57457969"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68819706"
 ---
 > [!IMPORTANT]
-> Toto pravidlo je nejdříve povolené jako Návrh, aby týmy pro obsah měly čas na posouzení dopadu a na vytvoření plánu, jak úložiště vyčistit. Návrhy nevyžadují okamžitou akci, ale měli byste je opravit co nejdříve, protože v určitém okamžiku budou povýšené na Upozornění nebo Chyby. Podrobnosti o tom, kdy se závažnost změní a na co se změní, jsou obsažené ve zprávě (pokud je k dispozici).
+> Toto pravidlo bylo nejdříve povoleno jako Návrh, aby týmy pro obsah měly čas na posouzení dopadu a na vytvoření plánu, jak úložiště vyčistit. **1. 9. 2019 bude úroveň zvýšena na Upozornění**.
