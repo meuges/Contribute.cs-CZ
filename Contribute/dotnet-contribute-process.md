@@ -2,12 +2,12 @@
 title: Postup psaní příspěvků do úložišť dokumentace k .NET
 description: V tomto článku najdete stručný úvod k psaní příspěvků do úložišť dokumentace k .NET. Dozvíte se, jaká se používají úložiště, jaký je postup při uspořádání obsahu a jaké zásady platí pro správu vzorového kódu a dalších prostředků.
 ms.date: 11/07/2018
-ms.openlocfilehash: 121f6c885ef6d292968e5bb3961cae8e9c22942b
-ms.sourcegitcommit: 8e897e90268a8a87dc4b97d7c28d22ed5950c8d9
+ms.openlocfilehash: a5429864efe56e2004ccfeac4443dc74fbf15dc3
+ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58637499"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71247330"
 ---
 # <a name="process-for-contributing-to-net-docs"></a>Postup psaní příspěvků do dokumentace k .NET
 
@@ -94,7 +94,7 @@ Kód, který je v úložišti, rozdělujeme do dvou skupin:
 Veškerý kód je v úložišti [dotnet/samples](https://github.com/dotnet/samples). Pracujeme na modelu, ve kterém bude struktura složek s ukázkami odpovídat struktuře složek dokumentace. Dodržujeme tato pravidla:
 
 - Nejvyšší složka *snippets* obsahuje fragmenty kódu, které představují malé, jednoúčelové ukázky.
-- Ukázky referenčního rozhraní API se ukládají do složek podle tohoto vzoru: *fragmenty kódu/\<jazyk>/api/\<obor názvů>/\<název rozhraní api>*.
+- Ukázky referenčního rozhraní API se ukládají do složek podle tohoto vzoru: *fragmenty kódu/\<jazyk>/api/\<obor názvů>/\<název rozhraní api>* .
 - Další složky nejvyšší úrovně odpovídají nejvyšším složkám v úložišti *docs*. Například v úložišti docs je složka *machine-learning/tutorials* a ukázky ke kurzům věnovaným strojovému učení jsou ve složce *samples/machine-learning/tutorials*.
 
 Navíc všechny ukázky ve složkách *core* a *standard* se musí dát vytvořit a spustit na všech platformách, které podporuje .NET Core. To zajistí náš systém sestavení CI. Nejvyšší složka *framework* obsahuje ukázky, které jsou vytvořené a ověřené jen ve Windows.
@@ -103,7 +103,7 @@ Ukázkové projekty se mají dát vytvořit a spustit na co nejvíce platformác
 
 Pracujeme na tom, abychom pro všechen kód mohli používat systém CI. Při aktualizaci ukázek dbejte na to, aby každá aktualizace byla součástí sestavitelného projektu. Ideálně přidejte k ukázkám také testy správnosti.
 
-Každá hotová ukázka, kterou vytvoříte, má obsahovat soubor *readme.md*. V tomto souboru by měl být krátký popis ukázky (jeden nebo dva odstavce). Ze souboru *readme.md* by se čtenáři měli dozvědět, co se naučí, když si tuto ukázku vyzkouší. V souboru *readme.md* má být také odkaz na živý dokument na [webu s dokumentací k .NET](https://docs.microsoft.com/dotnet/welcome). Pokud chcete zjistit mapování daného souboru v úložišti na tento web, nahraďte `/docs` v cestě k úložišti adresou `http://docs.microsoft.com/dotnet`.
+Každá hotová ukázka, kterou vytvoříte, má obsahovat soubor *readme.md*. V tomto souboru by měl být krátký popis ukázky (jeden nebo dva odstavce). Ze souboru *readme.md* by se čtenáři měli dozvědět, co se naučí, když si tuto ukázku vyzkouší. V souboru *readme.md* má být také odkaz na živý dokument na [webu s dokumentací k .NET](https://docs.microsoft.com/dotnet/welcome). Pokud chcete zjistit mapování daného souboru v úložišti na tento web, nahraďte `/docs` v cestě k úložišti adresou `https://docs.microsoft.com/dotnet`.
 
 Odkaz na ukázku bude i ve vašem tématu. Vytvořte odkaz přímo na složku s ukázkou na GitHubu.
 
@@ -158,11 +158,11 @@ K vytvoření fragmentu nebo ukázky kódu pro .NET Core použijete nástroje .N
     dotnet run
     ```
 
-3. Do kořenové složky ukázky přidejte soubor readme.md. 
+3. Do kořenové složky ukázky přidejte soubor readme.md.
 
    Soubor by měl obsahovat stručný popis kódu a měl by uživatele odkázat na článek, který se ukázky týká.
 
-Pokud není uvedeno jinak, jsou všechny ukázky vytvořené z příkazového řádku pro libovolnou platformu, kterou podporuje .NET Core. Některé ukázky jsou určené konkrétně pro Visual Studio, a proto vyžadují Visual Studio 2017 nebo novější verzi. Jiné ukázky předvádějí funkce určité platformy, a proto vyžadují určitou platformu. Další ukázky a fragmenty kódu vyžadují rozhraní .NET Framework. Půjdou spustit na platformě Windows, ale budou potřebovat sadu Developer Pack pro cílovou verzi rozhraní.
+Pokud není uvedeno jinak, jsou všechny ukázky vytvořené z příkazového řádku pro libovolnou platformu, kterou podporuje .NET Core. Některé ukázky jsou určené konkrétně pro Visual Studio, a proto vyžadují Visual Studio 2017 nebo novější verzi. Jiné ukázky předvádějí funkce určité platformy, a proto vyžadují určitou platformu. Další ukázky a fragmenty kódu vyžadují rozhraní .NET Framework. Půjdou spustit na platformě Windows, ale budou potřebovat sadu Developer Pack pro verzi cílové architektury.
 
 ## <a name="the-c-interactive-experience"></a>Interaktivní prostředí jazyka C#
 
