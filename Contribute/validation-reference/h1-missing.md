@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 12/12/2018
 ms.prod: non-product-specific
-ms.openlocfilehash: 677127d09349445bb80778dfb501d7d4294ea46b
-ms.sourcegitcommit: 89147521f0aa3b39e7ddf390136b09a43d95c416
+ms.openlocfilehash: 2d0b766bba5b5ba32bff68f7ac185ab639fc7557
+ms.sourcegitcommit: 7e73bef8bcdca39fd54cd79fbe8cb22da5566411
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70848473"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71247424"
 ---
 # <a name="h1-missing"></a>h1-missing
 
@@ -36,7 +36,9 @@ ms.author: mbradley
 ```
 
 > [!NOTE]
-> Toto pravidlo se netýká zahrnutých souborů. Pokud se upozornění H1 zobrazí u zahrnutých souborů, budete pravděpodobně muset zahrnuté soubory přesunout do složky `includes`. Složka `includes` se může v cestě k souboru nacházet na libovolné úrovni. Sestavení na webu Docs na základě cesty rozpozná daný soubor jako zahrnutý soubor a ověření H1 se nebudou provádět.
+> Toto pravidlo se netýká zahrnutých souborů. Pokud se v zahrnutých souborech zobrazí výsledky představující nadpisy H1, budete pravděpodobně muset zahrnuté soubory přesunout do složky `includes`. Složka `includes` se může v cestě k souboru nacházet na libovolné úrovni. Sestavení na webu Docs na základě cesty rozpozná daný soubor jako zahrnutý soubor a ověření H1 se nebudou provádět.
+>
+> Běžnou příčinou chybějících nadpisů H1 v nadřazených souborech je chybné použití zahrnutých souborů: H1 je v zahrnutém souboru, ne v nadřazeném souboru. To není povoleno, protože použití nadpisu H1 v zahrnutém souboru znamená, že v nadřazených souborech budou duplicitní nadpisy H1 nebo bude zahrnutý soubor použitý jen jednou. Nadpisy H1 by měly být v rámci sady obsahu jedinečné a zahrnuté soubory by se měly používat jen ke sdílení obsahu mezi více soubory. Pokud se zobrazí výsledky `h1-missing`, protože se nadpis H1 nachází v zahrnutém souboru, dá se to vyřešit přesunutím nadpisu – a veškerého zahrnutého obsahu, pokud je zahrnutý soubor použitý jen jednou – do nadřazeného souboru. Další informace o zahrnutých souborech v dokumentaci najdete v interním článku Microsoftu o [zahrnování opakovaně použitelného obsahu do článků](https://review.docs.microsoft.com/en-us/help/contribute/includes-best-practices?branch=master).
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]
