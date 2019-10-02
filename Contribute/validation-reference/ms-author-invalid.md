@@ -4,14 +4,14 @@ description: Vysvětlení a řešení problému sestavení ms-author-invalid na 
 author: meganbradley
 ms.author: mbradley
 ms.topic: error-reference
-ms.date: 2/28/2019
+ms.date: 9/27/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: 25428f93eaa7d36a5bbe35d77434ef33972e8944
-ms.sourcegitcommit: dd751d0cb5b11f81a64ef62f3c83fd17cc5f0541
+ms.openlocfilehash: b3100b4a304356aee3c50f805628890b8c738fe1
+ms.sourcegitcommit: d2f5b68b6a6d1ac902dba5063482ff5955a5b1f7
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70236531"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481697"
 ---
 # <a name="ms-author-invalid"></a>ms-author-invalid
 
@@ -21,9 +21,9 @@ ms.locfileid: "70236531"
 
 ## <a name="resolution"></a>Řešení
 
-Ověřte, že hodnota `ms.author` je platný alias Microsoftu aktuálního autora. Pokud je tento alias distribučním seznamem, musí být také na seznamu povolených.
+Ověřte, že hodnota `ms.author` je platný alias Microsoftu aktuálního autora. Doporučujeme, aby byl jako autor určen zaměstnanec na plný úvazek nebo distribuční seznam představující tým, ne externí dodavatel s krátkodobým kontraktem. Pokud tento alias představuje distribuční seznam, musí být také na seznamu povolených pro `ms.author`.
 
-Platné hodnoty pro distribuční seznamy se dají najít na [tomto interním webu Microsoftu](https://docsmetadatatool.azurewebsites.net/allowlists).
+Platné hodnoty pro distribuční seznamy `ms.author` se dají najít na tomto [interním webu Microsoftu](https://docsmetadatatool.azurewebsites.net/allowlists).
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]
