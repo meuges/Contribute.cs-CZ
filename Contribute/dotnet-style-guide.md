@@ -1,13 +1,16 @@
 ---
 title: Šablona a stručná nápověda k článkům o .NET
 description: V tomto článku najdete praktickou šablonu, kterou můžete použít k vytvoření nových článků pro úložiště dokumentace k .NET.
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: 9b57abd96093940c96f90a4a01b9f81eae063ffb
-ms.sourcegitcommit: af37d44eb67daa2841959817cd205ec95db18cec
+ms.openlocfilehash: 998ebf90c8a162451dd4ca2e7c8a55833ed9d408
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653613"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288376"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Metadata a šablona v Markdownu pro dokumentaci k .NET
 
@@ -58,7 +61,7 @@ Pro názvy souborů platí následující pravidla:
 * Musí být ve formátu Markdown a mít příponu souboru .md.
 * Názvy souborů musí být krátké, protože tvoří část adresy URL vašich článků.
 
-## <a name="headings"></a>Nadpis
+## <a name="headings"></a>Nadpisy
 
 Používejte velká písmena jako při psaní věty. První slovo v nadpisu musí začínat velkým písmenem.
 
