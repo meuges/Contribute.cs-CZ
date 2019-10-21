@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 12/20/2018
 ms.prod: non-product-specific
-ms.openlocfilehash: eb969487a432014795920b9c40025ec899cf3e1c
-ms.sourcegitcommit: dd751d0cb5b11f81a64ef62f3c83fd17cc5f0541
+ms.openlocfilehash: 6b313bd6b168b913d82721607126fcd4e6255009
+ms.sourcegitcommit: 57eb071bdc55ef71fa3f8ac979326c3f8fbe9c45
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70236454"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72246255"
 ---
 # <a name="ms-author-missing"></a>ms-author-missing
 
@@ -21,9 +21,11 @@ ms.locfileid: "70236454"
 
 ## <a name="resolution"></a>Řešení
 
-Pro hodnotu `ms.author` zadejte alias Microsoftu aktuálního autora. Měl by to být jednotlivý autor článku nebo určený alias týmu.
+Pro hodnotu `ms.author` zadejte alias Microsoftu aktuálního autora. Toto by měl být *aktuální* vlastník článku, nikoli původní autor, pokud došlo ke změně vlastnictví. Doporučujeme jako autora zvolit zaměstnance na plný úvazek nebo týmový distribuční seznam, nikoli krátkodobého dodavatele. 
 
-Toto by měl být *aktuální* vlastník článku, nikoli původní autor, pokud došlo ke změně vlastnictví.
+Pokud tento alias představuje distribuční seznam, musí být také na seznamu povolených pro `ms.author`.
+
+Platné hodnoty pro distribuční seznamy `ms.author` se dají najít na tomto [interním webu Microsoftu](https://docsmetadatatool.azurewebsites.net/allowlists).
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]

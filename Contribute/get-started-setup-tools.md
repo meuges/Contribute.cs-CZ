@@ -1,16 +1,18 @@
 ---
 title: Instalace nástrojů pro tvorbu obsahu
 description: Tento článek vám pomůže stáhnout a nainstalovat klientské nástroje, které jsou potřeba pro Git a úpravy souborů markdownu.
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 author: jasonwhowell
 ms.author: jasonh
-manager: kfile
 ms.date: 04/30/2018
-ms.openlocfilehash: 715634a9a2342311eb1d358cb8379f90a7074d80
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 24d47c4e094c318be75a27dbaaec11d8ead94452
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609378"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288553"
 ---
 # <a name="install-content-authoring-tools"></a>Instalace nástrojů pro tvorbu obsahu
 
@@ -39,7 +41,7 @@ Postupujte podle pokynů k instalaci a konfiguraci zvoleného klienta.
 
 V dalším článku [nastavíte místní úložiště Git](get-started-setup-local.md).
 
-   Další materiály pro Git najdete zde: [Terminologie pro Git](https://help.github.com/articles/github-glossary) | [Základy Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) | [Výuka Git a GitHubu](https://help.github.com/articles/good-resources-for-learning-git-and-github/).
+   Další zdroje informací o Gitu jsou k dispozici zde: [Terminologie systému Git](https://help.github.com/articles/github-glossary) | [Základy systému Git](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) | [Výuka systému Git a služby GitHub](https://help.github.com/articles/good-resources-for-learning-git-and-github/)
 
 ## <a name="understand-markdown-editors"></a>Princip editorů Markdownu
 

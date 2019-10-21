@@ -1,25 +1,28 @@
 ---
 title: Balíček pro vytváření obsahu na webu Docs pro Visual Studio Code
 description: Tento článek popisuje balíček rozšíření pro Visual Studio Code, který usnadňuje vytváření obsahu v jazyce Markdown pro docs.microsoft.com.
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 author: meganbradley
 ms.author: mbradley
 ms.date: 10/22/2018
-ms.openlocfilehash: 00afafbbf16096ac6433c0ab276578d8d9084b51
-ms.sourcegitcommit: d3c7b49dc854dae8da9cd49da8ac4035789a5010
+ms.openlocfilehash: 11f18ce4f769b478108d399b780937f927e0e12d
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49805647"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288323"
 ---
 # <a name="docs-authoring-pack-for-vs-code"></a>Balíček pro vytváření obsahu na webu Docs pro VS Code
 
 Balíček pro vytváření obsahu na webu Docs je kolekce rozšíření nástroje Visual Studio Code, která vám pomohou s vytvářením obsahu v jazyce Markdown pro docs.microsoft.com. Balíček je [dostupný na VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack) a obsahuje následující rozšíření:
 
-- [markdownlint:](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint) Oblíbený markdownový linter od Davida Ansona, který vám pomůže zajistit, aby Markdown dodržoval osvědčené postupy.
-- [Code Spell Checker:](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) Kontrola pravopisu od firmy Street Side Software, která funguje plně offline.
-- [Docs Preview:](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-preview) Využívá šablonu stylů CSS z webu docs.microsoft.com pro přesnější náhled Markdownu včetně vlastního Markdownu.
-- [Docs Markdown:](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-markdown) Poskytuje pomoc při vytváření obsahu v jazyce Markdown pro docs.microsoft.com v systému OPS (Open Publishing System), včetně podpory základního Markdownu a vlastní syntaxe Markdownu v OPS. Ve zbývající části tématu se popisuje rozšíření Markdown Docs.
-- [Docs Article Templates:](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-article-templates) Umožňuje uživatelům použít obsah kostry Markdownu na nové soubory.
+- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint): Oblíbený linter Markdownu od Davida Ansona, který pomáhá dodržovat osvědčené postupy Markdownu.
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker): Kontrola pravopisu od firmy Street Side Software, která je plně offline.
+- [Docs Preview](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-preview): Používá šablonu stylů CSS z webu docs.microsoft.com k přesnějšímu zobrazení náhledu Markdownu, včetně vlastního Markdownu.
+- [Docs Markdown](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-markdown): Poskytuje pomoc při vytváření obsahu v Markdownu pro docs.microsoft.com v systému OPS (Open Publishing System), včetně podpory základního Markdownu a podpory vlastní syntaxe Markdownu v OPS. Ve zbývající části tématu se popisuje rozšíření Markdown Docs.
+- [Docs Article Templates](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-article-templates): Umožňuje uživatelům u nových souborů použít obsah, který představuje kostru Markdownu.
 
 ## <a name="prerequisites-and-assumptions"></a>Požadavky a předpoklady
 
@@ -31,7 +34,7 @@ Určité syntaxe podporované rozšířením, například výstrahy a fragmenty 
 
 K nabídce Docs Markdown se dostanete tak, že zadáte `ALT+M`. Kliknutím nebo klávesami se šipkami nahoru a dolů můžete vybrat požadovanou funkci. Můžete ale také začít psát a spustit filtrování. Jakmile se požadovaná funkce zvýrazní v nabídce, stačí stisknout `ENTER`. K dispozici jsou následující funkce:
 
-|Funkce     |Popis           |
+|Funkce     |Description           |
 |-------------|----------------------|
 |Náhled      |Zobrazí náhled aktivního tématu ve vedlejším okně pomocí rozšíření Docs Preview. Tato možnost je dostupná jen v případě, že je nainstalované rozšíření Docs Preview.|
 |Tučné         |Formátuje text **tučně**.|
@@ -43,12 +46,12 @@ K nabídce Docs Markdown se dostanete tak, že zadáte `ALT+M`. Kliknutím nebo 
 |Tabulka        |Vloží tabulkovou strukturu Markdownu.<br><br>Po výběru příkazu k vytvoření tabulky zadejte počet sloupců a řádků ve formátu sloupce:řádky, například 3:4. Všimněte si, že maximální počet sloupců, které můžete zadat prostřednictvím tohoto rozšíření, je 5, což je doporučený maximální počet s ohledem na čitelnost.|
 |Odkaz na soubor v úložišti|Vloží relativní odkaz na jiný soubor v aktuálním úložišti. Po výběru této možnosti začněte psát do okna příkazu, aby se začaly filtrovat soubory podle názvu, a potom vyberte požadovaný soubor. Pokud jste předtím vybrali text, stane se z něho text odkazu. V opačném případě se jako text odkazu použije H1 cílového souboru.|
 |Odkaz na webovou stránku    |Vloží odkaz na webovou stránku. Po výběru této možnosti vložte nebo napište do příkazového okna identifikátor URI. `https://` je povinné. Pokud jste předtím vybrali text, stane se z něho text odkazu. V opačném případě se jako text odkazu použije identifikátor URI.|
-|Odkaz na nadpis     |Vytvoří odkaz na záložku v aktuálním souboru nebo jiném souboru v úložišti.<br>`Bookmark in this file`: Vyberte záhlaví ze seznamu v aktuálním souboru, aby se vložila správně formátovaná záložka.<br>`Bookmark in another file`: Nejprve vyfiltrujte soubor podle názvu a vyberte soubor, na který chcete vytvořit odkaz, a potom ve vybraném souboru zvolte příslušné záhlaví.|
+|Odkaz na nadpis     |Vytvoří odkaz na záložku v aktuálním souboru nebo jiném souboru v úložišti.<br>`Bookmark in this file`: Vyberte položku ze seznamu nadpisů v aktuálním souboru, aby se vložila správně naformátovaná záložka.<br>`Bookmark in another file`: Nejprve filtrujte soubory podle jejich názvu, vyberte soubor, na který chcete vytvořit odkaz, a potom ve vybraném souboru vyberte odpovídající nadpis.|
 |Obrázek        |Zadejte alternativní text (vyžadovaný z důvodu usnadnění) a vyberte ho. Potom zavolejte tento příkaz, aby se vyfiltroval seznam podporovaných souborů obrázků v úložišti, a vyberte požadovaný soubor. Pokud jste při volání tohoto příkazu neměli vybraný alternativní text, zobrazí se výzva k jeho výběru, než budete moci vybrat soubor obrázku.|
 |Vložený soubor      |Vyhledá soubor, který se má vložit do aktuálního souboru.|
 |Fragment kódu      |Vyhledá fragment kódu v úložišti, který se má vložit do aktuálního souboru.|
 |Video        |Přidá vložené video.|
-|Šablona      |Vytvoří nový soubor a použije šablonu Markdownu. Další informace najdete v části [Šablony](#how-to-use-docs-templates) níže.|
+|Šablona     |Vytvoří nový soubor a použije šablonu Markdownu. Další informace najdete v části [Šablony](#how-to-use-docs-templates) níže.|
 
 ## <a name="how-to-assign-keyboard-shortcuts"></a>Přiřazení klávesových zkratek
 

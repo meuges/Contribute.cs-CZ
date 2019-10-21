@@ -1,13 +1,16 @@
 ---
 title: Pracovní postup přispívání prostřednictvím GitHubu pro větší nebo dlouho probíhající změny
 description: Tento článek popisuje, jak používat pracovní postup „větších“ přispěvatelů k přispívání do článků na webu docs.microsoft.com.
+ms.topic: contributor-guide
+ms.prod: non-product-specific
+ms.custom: external-contributor-guide
 ms.date: 08/30/2017
-ms.openlocfilehash: 93e659df4f72c6a272d15fd7487eb3a997bdf3c8
-ms.sourcegitcommit: 44eb4f5ee65c1848d7f36fca107b296eb7687397
+ms.openlocfilehash: 87c31979e60a957586ea623b22be190bfdaa41d9
+ms.sourcegitcommit: d357977935b432381f3df6297164417ed59ab434
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51609384"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72310290"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>Pracovní postup přispívání prostřednictvím GitHubu pro větší nebo dlouho probíhající změny
 
@@ -28,7 +31,7 @@ Mezi příklady těchto typů příspěvků patří:
 
 Než začnete, seznamte se s některými termíny a výrazy pro Git/GitHub používanými v tomto pracovním postupu. Nemusíte jim hned rozumět. Stačí vědět, že se o nich budete dozvídat a můžete se k této sekci vrátit, když si budete chtít zjistit jejich definici.
 
-| Název | Popis |
+| Name | Popis |
 |-----------|-------------|
 |fork|Označuje kopii hlavního úložiště GitHubu. V praxi je fork prostě další úložiště. Je ale speciální v tom smyslu, že GitHub udržuje jeho spojení zpět s hlavním/nadřazeným úložištěm. Někdy se používá jako sloveso, například "Je nutné nejprve rozvětvit úložiště."|
 |remote (vzdálené)|Pojmenované spojení se vzdáleným úložištěm, například vzdálené úložiště „zdroj“ nebo „upstream“. Git označuje toto připojení jako vzdálené, protože ho používá v odkazech na úložiště, které je hostované na jiném počítači. V tomto pracovním postupu je vzdálené úložiště vždy úložiště GitHubu.|
@@ -59,4 +62,4 @@ Vytvořme tedy novou pracovní větev v místním úložišti k zachycení vaši
 
 A to je vše! Přispěli jste k obsahu docs.microsoft.com.
 
-- Pokud se chcete dozvědět víc o tématech jako Markdown a syntaxe rozšíření Markdownu a dalších tématech, pokračujte na sekci Základy psaní.
+- Pokud chcete získat další informace o tématech, jako je Markdown a syntaxe rozšíření Markdownu, pokračujte článkem [Základy psaní](how-to-write-use-markdown.md).

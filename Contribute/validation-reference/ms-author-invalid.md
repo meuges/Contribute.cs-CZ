@@ -6,12 +6,12 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 9/27/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: b3100b4a304356aee3c50f805628890b8c738fe1
-ms.sourcegitcommit: d2f5b68b6a6d1ac902dba5063482ff5955a5b1f7
+ms.openlocfilehash: 615d9f5978893196a24e3a043f3b71a22e1eb353
+ms.sourcegitcommit: 57eb071bdc55ef71fa3f8ac979326c3f8fbe9c45
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71481697"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72246293"
 ---
 # <a name="ms-author-invalid"></a>ms-author-invalid
 
@@ -21,7 +21,7 @@ ms.locfileid: "71481697"
 
 ## <a name="resolution"></a>Řešení
 
-Ověřte, že hodnota `ms.author` je platný alias Microsoftu aktuálního autora. Doporučujeme, aby byl jako autor určen zaměstnanec na plný úvazek nebo distribuční seznam představující tým, ne externí dodavatel s krátkodobým kontraktem. Pokud tento alias představuje distribuční seznam, musí být také na seznamu povolených pro `ms.author`.
+Aktualizujte hodnotu `ms.author` platným aliasem Microsoftu, který patří aktuálnímu autorovi. Doporučujeme jako autora zvolit zaměstnance na plný úvazek nebo týmový distribuční seznam, nikoli krátkodobého dodavatele. Pokud tento alias představuje distribuční seznam, musí být také na seznamu povolených pro `ms.author`.
 
 Platné hodnoty pro distribuční seznamy `ms.author` se dají najít na tomto [interním webu Microsoftu](https://docsmetadatatool.azurewebsites.net/allowlists).
 
