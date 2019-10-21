@@ -1,0 +1,56 @@
+- name: Přehledný průvodce pro přispěvatele a úlohy prováděné v prohlížeči
+  href: index.md
+- name: Nastavení a místní práce
+  items:
+    - name: 1. Registrace do GitHubu
+      href: get-started-setup-github.md
+    - name: 2. Instalace nástrojů Git a Markdown
+      href: get-started-setup-tools.md
+    - name: 3. Nastavení místního úložiště Git
+      href: get-started-setup-local.md
+    - name: Git a GitHub – základy
+      href: git-github-fundamentals.md
+    - name: Celý pracovní postup
+      href: how-to-write-workflows-major.md
+- name: Základy zápisu
+  items:
+    - name: Markdown
+      href: how-to-write-use-markdown.md
+    - name: Referenční informace k jazyku Markdown
+      href: markdown-reference.md
+    - name: "Rychlý start věnovaný stylu a\_způsobu vyjadřování"
+      href: style-quick-start.md
+    - name: Odkazy
+      href: how-to-write-links.md
+    - name: Balíček pro vytváření obsahu na webu Docs
+      href: how-to-write-docs-auth-pack.md
+- name: Pokyny k určité sadě dokumentace
+  items:
+    - name: Dokumentace k .NET
+      items:
+        - name: Jak přispívat do dokumentace k .NET
+          href: dotnet-contribute.md
+        - name: Příspěvky do dokumentace k .NET
+          href: dotnet-contribute-process.md
+        - name: Zásady týkající se stylu dokumentace k .NET
+          href: dotnet-style-guide.md
+        - name: Pokyny ke způsobu a tónu vyjadřování
+          href: dotnet-voice-tone.md
+        - name: Postup kontroly žádosti o přijetí změn
+          href: dotnet-pr-review.md
+    - name: Dokumentace k PowerShellu
+      items:
+        - name: Jak přispívat do dokumentace k PowerShellu
+          href: powershell\powershell-contribute.md
+        - name: Postup psaní příspěvků pro PowerShell
+          href: powershell\powershell-contribute-process.md
+        - name: Rychlý start do psaní článků o PowerShellu
+          href: powershell\powershell-style-basic-markdown.md
+        - name: Průvodce správným stylem vzorových skriptů v PowerShellu
+          href: powershell\powershell-style-code.md
+        - name: Referenční informace ohledně stylu rutin PowerShellu
+          href: powershell\powershell-style-reference.md
+        - name: Odeslání žádosti o přijetí změn pro PowerShell
+          href: powershell\powershell-pull-requests.md
+- name: Další materiály
+  href: additional-resources.md

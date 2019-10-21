@@ -6,24 +6,24 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 9/27/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: b3100b4a304356aee3c50f805628890b8c738fe1
-ms.sourcegitcommit: d2f5b68b6a6d1ac902dba5063482ff5955a5b1f7
+ms.openlocfilehash: 615d9f5978893196a24e3a043f3b71a22e1eb353
+ms.sourcegitcommit: 57eb071bdc55ef71fa3f8ac979326c3f8fbe9c45
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71481697"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72246293"
 ---
-# <a name="ms-author-invalid"></a><span data-ttu-id="9669b-103">ms-author-invalid</span><span class="sxs-lookup"><span data-stu-id="9669b-103">ms-author-invalid</span></span>
+# <a name="ms-author-invalid"></a><span data-ttu-id="ee11e-103">ms-author-invalid</span><span class="sxs-lookup"><span data-stu-id="ee11e-103">ms-author-invalid</span></span>
 
-## <a name="warning"></a><span data-ttu-id="9669b-104">Upozornění</span><span class="sxs-lookup"><span data-stu-id="9669b-104">Warning</span></span>
+## <a name="warning"></a><span data-ttu-id="ee11e-104">Upozornění</span><span class="sxs-lookup"><span data-stu-id="ee11e-104">Warning</span></span>
 
 `Invalid value for ms.author: '{value}' is not a valid Microsoft alias, or is not an allowed distribution list.`
 
-## <a name="resolution"></a><span data-ttu-id="9669b-105">Řešení</span><span class="sxs-lookup"><span data-stu-id="9669b-105">Resolution</span></span>
+## <a name="resolution"></a><span data-ttu-id="ee11e-105">Řešení</span><span class="sxs-lookup"><span data-stu-id="ee11e-105">Resolution</span></span>
 
-<span data-ttu-id="9669b-106">Ověřte, že hodnota `ms.author` je platný alias Microsoftu aktuálního autora.</span><span class="sxs-lookup"><span data-stu-id="9669b-106">Verify that the `ms.author` value is the current author's valid Microsoft alias.</span></span> <span data-ttu-id="9669b-107">Doporučujeme, aby byl jako autor určen zaměstnanec na plný úvazek nebo distribuční seznam představující tým, ne externí dodavatel s krátkodobým kontraktem.</span><span class="sxs-lookup"><span data-stu-id="9669b-107">We recommend that the designated author be a full-time employee or team distrubution list (DL), rather than a short-term vendor.</span></span> <span data-ttu-id="9669b-108">Pokud tento alias představuje distribuční seznam, musí být také na seznamu povolených pro `ms.author`.</span><span class="sxs-lookup"><span data-stu-id="9669b-108">If the alias is a DL, it must also be on the `ms.author` allow list.</span></span>
+<span data-ttu-id="ee11e-106">Aktualizujte hodnotu `ms.author` platným aliasem Microsoftu, který patří aktuálnímu autorovi.</span><span class="sxs-lookup"><span data-stu-id="ee11e-106">Update the `ms.author` value with the current author's valid Microsoft alias.</span></span> <span data-ttu-id="ee11e-107">Doporučujeme jako autora zvolit zaměstnance na plný úvazek nebo týmový distribuční seznam, nikoli krátkodobého dodavatele.</span><span class="sxs-lookup"><span data-stu-id="ee11e-107">We recommend that the designated author be a full-time employee or team distribution list (DL), rather than a short-term vendor.</span></span> <span data-ttu-id="ee11e-108">Pokud tento alias představuje distribuční seznam, musí být také na seznamu povolených pro `ms.author`.</span><span class="sxs-lookup"><span data-stu-id="ee11e-108">If the alias is a DL, it must also be on the `ms.author` allow list.</span></span>
 
-<span data-ttu-id="9669b-109">Platné hodnoty pro distribuční seznamy `ms.author` se dají najít na tomto [interním webu Microsoftu](https://docsmetadatatool.azurewebsites.net/allowlists).</span><span class="sxs-lookup"><span data-stu-id="9669b-109">Valid values for `ms.author` DLs can be found on [this Microsoft-internal site](https://docsmetadatatool.azurewebsites.net/allowlists).</span></span>
+<span data-ttu-id="ee11e-109">Platné hodnoty pro distribuční seznamy `ms.author` se dají najít na tomto [interním webu Microsoftu](https://docsmetadatatool.azurewebsites.net/allowlists).</span><span class="sxs-lookup"><span data-stu-id="ee11e-109">Valid values for `ms.author` DLs can be found on [this Microsoft-internal site](https://docsmetadatatool.azurewebsites.net/allowlists).</span></span>
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]
