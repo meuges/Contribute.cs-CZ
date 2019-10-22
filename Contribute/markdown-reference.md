@@ -6,12 +6,13 @@ ms.author: mbradley
 ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
-ms.openlocfilehash: b4ac631a4ebdf7daf00bc39be80fe2e479720392
-ms.sourcegitcommit: 42e5a6ae071826afc2a32a9b7150ca113b39afdf
+ms.custom: external-contributor-guide
+ms.openlocfilehash: 3142b1aee8cadb69f82bfbcd3f89c701fac5b356
+ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57987875"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72288305"
 ---
 # <a name="markdown-reference"></a>Referenční informace k jazyku Markdown
 
@@ -416,7 +417,7 @@ Volič neboli selektor můžete použít, když chcete připojit různé stránk
 
 ...se zobrazí takto:
 
-> [!div class="op_multi_selector" title1="Platform" title2="Backend"]
+> [!div class="op_multi_selector" title1="Platforma" title2="Back-end"]
 > - [(iOS | .NET)](how-to-write-workflows-major.md)
 > - [(iOS | JavaScript)](how-to-write-workflows-major.md)
 > - [(Windows Universal C# | .NET)](how-to-write-workflows-major.md)
