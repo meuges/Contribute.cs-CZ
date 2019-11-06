@@ -7,12 +7,12 @@ ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 3142b1aee8cadb69f82bfbcd3f89c701fac5b356
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: a5ff6c5122a08d2b611fd6b0344a6f5740d93928
+ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288305"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592567"
 ---
 # <a name="markdown-reference"></a>Referenční informace k jazyku Markdown
 
@@ -26,7 +26,7 @@ Web Docs používá modul Markdig Markdown. Zobrazení Markdownu v Markdigu v po
 
 Výstrahy jsou rozšíření Docs Markdown určené k vytváření blokových citací zobrazovaných na webu docs.microsoft.com s barvami a ikonami, které označují důležitost obsahu. Podporují se následující typy výstrah:
 
-```markdown
+```md
 > [!NOTE]
 > Information the user should notice even if skimming.
 
@@ -45,26 +45,13 @@ Výstrahy jsou rozšíření Docs Markdown určené k vytváření blokových ci
 
 Tyto výstrahy vypadají na webu docs.microsoft.com takto:
 
-> [!NOTE]
-> Information the user should notice even if skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]
-> Essential information required for user success.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
-> [!WARNING]
-> Dangerous certain consequences of an action.
+![Ukazuje, jak výstrahy v předchozím příkladu vypadají na publikované stránce Docs s různými ikonami a barvami.](media/alerts-rendering.png)
 
 ## <a name="code-snippets"></a>Fragmenty kódu
 
 Do souborů Markdown můžete začlenit fragmenty kódu:
 
-```markdown
+```md
 [!code-<language>[<name>](<codepath><queryoption><queryoptionvalue> "<title>")]
 ```
 
@@ -72,7 +59,7 @@ Do souborů Markdown můžete začlenit fragmenty kódu:
 
 Web Docs podporuje šest úrovní nadpisů Markdownu:
 
-```markdown
+```md
 # This is a first level heading (H1)
 
 ## This is a second level heading (H2)
@@ -97,7 +84,7 @@ Ačkoli Markdown podporuje vložený kód HTML, pro publikování na webu Docs s
 
 Syntaxe pro začlenění obrázku:
 
-```markdown
+```md
 ![[alt text]](<folderPath>)
 
 Example:
@@ -133,7 +120,7 @@ Web Docs používá ve většině případů standardní odkazy Markdownu na jin
 
 Relativní cesta je cesta k cílovému souboru relativní vzhledem k aktuálnímu souboru. Na webu Docs můžete použít relativní cestu k odkazu na jiný soubor ve stejné sadě dokumentace. Relativní cesta má následující syntaxi:
 
-```markdown
+```md
 [link text](../../folder/filename.md)
 ```
 
@@ -154,7 +141,7 @@ Relativní cesta je cesta k cílovému souboru relativní vzhledem k aktuálním
 
 ### <a name="site-relative-links-to-other-files-on-docs"></a>Relativní odkazy na jiné soubory na webu Docs
 
-```markdown
+```md
 [Azure and Linux](/articles/virtual-machines/linux/overview)
 ```
 
@@ -162,7 +149,7 @@ Nezačleňujte příponu souboru (.md). Odkazuje na přehledový soubor Linuxu v
 
 ### <a name="links-to-external-sites"></a>Odkazy na externí weby
 
-```markdown
+```md
 [Microsoft](https://www.microsoft.com)
 ```
 
@@ -172,13 +159,13 @@ Odkaz na jinou webovou stránku založený na adrese URL (musí obsahovat https:
 
 Odkaz na záložku u nadpisu v jiném souboru ve stejném úložišti. Například:
 
-```markdown
+```md
 [Managed Disks](../../linux/overview.md#managed-disks)
 ```
 
 Odkaz na záložku u nadpisu v aktuálním souboru:
 
-```markdown
+```md
 [Managed Disks](#managed-disks)
 ```
 
@@ -197,7 +184,7 @@ Explicitní odkazy na ukotvení používající značku `<a>` jazyka HTML **nejs
 
 Pro odkaz na explicitní ukotvení použijte následující syntaxi:
 
-```markdown
+```md
 To go to a section on the same page:
 [text](#AnchorText)
 
@@ -258,7 +245,7 @@ Při vytváření číslovaného seznamu můžete všude použít jedničky (1),
 
 Nepoužívejte v seznamech ani vnořených seznamech písmena. Při publikování na webu Docs se nezobrazí správně. Vnořené seznamy používající čísla se při publikování zobrazí jako malá písmena. Například:
 
-```markdown
+```md
 1. This is
 1. a parent numbered list
    1. and this is
@@ -278,7 +265,7 @@ Toto se zobrazí takto:
 
 Pokud chcete vytvořit seznam s odrážkami, použijte na začátku každého řádku znak `-` následovaný mezerou:
 
-```markdown
+```md
 - This is
 - a parent bulleted list
   - and this is
@@ -298,7 +285,7 @@ Toto se zobrazí takto:
 
 Kontrolní seznamy jsou webu docs.microsoft.com dostupné jen při použití vlastního rozšíření Markdownu:
 
-```markdown
+```md
 > [!div class="checklist"]
 > * List item 1
 > * List item 2
@@ -321,14 +308,14 @@ K přidání tlačítka akce dalšího kroku na stránky docs.microsoft.com mů�
 
 Syntaxe je následující:
 
-```markdown
+```md
 > [!div class="nextstepaction"]
 > [button text](link to topic)
 ```
 
 Například:
 
-```markdown
+```md
 > [!div class="nextstepaction"]
 > [Learn about basic style](style-quick-start.md)
 ```
@@ -433,7 +420,7 @@ Volič neboli selektor můžete použít, když chcete připojit různé stránk
 
 Nejjednodušším způsobem, jak v Markdownu vytvořit tabulku, je použít svislé čáry a řádky. Pokud chcete vytvořit standardní tabulku se záhlavím, za první řádek vložte čárkovaný řádek:
 
-```markdown
+```md
 |This is   |a simple   |table header|
 |----------|-----------|------------|
 |table     |data       |here        |
@@ -449,7 +436,7 @@ Toto se zobrazí takto:
 
 Můžete také vytvořit tabulku bez záhlaví. Příklad vytvoření seznamu s více sloupci:
 
-```markdown
+```md
 |   |   |
 | - | - |
 | This | table |
@@ -465,7 +452,7 @@ Toto se zobrazí takto:
 
 Sloupce můžete zarovnat pomocí dvojtečky:
 
-```markdown
+```md
 |                  |
 |------------------|
 |    right aligned:|
@@ -495,7 +482,7 @@ Když vytvoříte tabulku v Markdownu, často se stane, že tabulka zasahuje do 
 
 Toto je ukázka tabulky v Markdownu se třemi řádky, která se zalomí pomocí `div` s názvem třídy `mx-tdBreakAll`.
 
-```markdown
+```md
 > [!div class="mx-tdBreakAll"]
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
@@ -541,13 +528,13 @@ Platforma Docs v současnosti podporuje videa publikovaná v jednom z těchto t�
 
 Můžete vložit video s následující syntaxí a Docs ho zobrazí.
 
-```markdown
+```md
 > [!VIDEO <embedded_video_link>]
 ```
 
 Příklad:
 
-```markdown
+```md
 > [!VIDEO https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player]
 
 > [!VIDEO https://www.youtube.com/embed/iAtwVM-Z7rY]
@@ -591,6 +578,6 @@ Všechna nová videa by měla být nahrána následujícím postupem:
 1. Jakmile získáte odkaz na video, zavřete tuto pracovní položku.
 1. Odkaz na video pak můžete přidat do příspěvku pomocí této syntaxe:
 
-   ```markdown
+   ```md
    > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
    ```

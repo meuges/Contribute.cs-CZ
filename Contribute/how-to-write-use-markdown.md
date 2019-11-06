@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: c823e086ba61e7ddfe643da13afc8597e5ea280c
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: ffc44f07929890ef17b3878ba389dfeea82691a6
+ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288424"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73592472"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
@@ -23,7 +23,7 @@ ms.locfileid: "72288424"
 
 K vytvoření nadpisu se používá znak hash (#):
 
-```markdown
+```md
 # This is heading 1
 ## This is heading 2
 ### This is heading 3
@@ -42,19 +42,19 @@ Nadpisy druhé úrovně vygenerují obsah stránky, který se zobrazí v oddílu
 
 Pokud chcete text naformátovat jako **tučný**, použijte dvě hvězdičky z obou stran:
 
-```markdown
+```md
 This text is **bold**.
 ```
 
 Pokud chcete text naformátovat jako *kurzívu*, použijte jednu hvězdičku z obou stran:
 
-```markdown
+```md
 This text is *italic*.
 ```
 
 Pokud chcete text naformátovat jako ***tučný i kurzívu***, použijte tři hvězdičky z obou stran:
 
-```markdown
+```md
 This is text is both ***bold and italic***.
 ```
 
@@ -62,7 +62,7 @@ This is text is both ***bold and italic***.
 
 Blokové citace se vytvářejí pomocí znaku `>`:
 
-```markdown
+```md
 > The drought had lasted now for ten million years, and the reign of the terrible lizards had long since ended. Here on the Equator, in the continent which would one day be known as Africa, the battle for existence had reached a new climax of ferocity, and the victor was not yet in sight. In this barren and desiccated land, only the small or the swift or the fierce could flourish, or even hope to survive.
 ```
 
@@ -76,7 +76,7 @@ Předchozí příklad se zobrazí takto:
 
 Na neseřazený seznam / seznam s odrážkami můžete použít hvězdičky nebo spojovníky. Například tento Markdown:
 
-```markdown
+```md
 - List item 1
 - List item 2
 - List item 3
@@ -90,7 +90,7 @@ se zobrazí takto:
 
 Pokud chcete seznam vnořit do jiného seznamu, podřízené položky seznamu odsaďte. Například tento Markdown:
 
-```markdown
+```md
 - List item 1
   - List item A
   - List item B
@@ -108,7 +108,7 @@ se zobrazí takto:
 
 Na seřazený/stupňovaný seznam použijte odpovídající čísla. Například tento Markdown:
 
-```markdown
+```md
 1. First instruction
 1. Second instruction
 1. Third instruction
@@ -122,7 +122,7 @@ se zobrazí takto:
 
 Pokud chcete seznam vnořit do jiného seznamu, podřízené položky seznamu odsaďte. Například tento Markdown:
 
-```markdown
+```md
 1. First instruction
    1. Sub-instruction
    1. Sub-instruction
@@ -144,7 +144,7 @@ Tabulky nejsou součástí základní specifikace Markdownu, ale podporuje je GF
 
 Například tento Markdown:
 
-```markdown
+```md
 | Fun                  | With                 | Tables          |
 | :------------------- | -------------------: |:---------------:|
 | left-aligned column  | right-aligned column | centered column |
@@ -322,33 +322,26 @@ Obecně by se bloky poznámek měly používat střídmě, protože můžou půs
 
 Příklady:
 
-```markdown
+```md
 > [!NOTE]
-> This is a NOTE
-
-> [!WARNING]
-> This is a WARNING
+> Information the user should notice even if skimming.
 
 > [!TIP]
-> This is a TIP
+> Optional information to help a user be more successful.
 
 > [!IMPORTANT]
-> This is IMPORTANT
+> Essential information required for user success.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+> [!WARNING]
+> Dangerous certain consequences of an action.
 ```
 
-Se zobrazí takto:
+Tyto výstrahy vypadají na webu docs.microsoft.com takto:
 
-> [!NOTE]
-> This is a NOTE
-
-> [!WARNING]
-> This is a WARNING
-
-> [!TIP]
-> This is a TIP
-
-> [!IMPORTANT]
-> This is IMPORTANT
+![Ukazuje, jak výstrahy v předchozím příkladu vypadají na publikované stránce Docs s různými ikonami a barvami.](media/alerts-rendering.png)
 
 ### <a name="include-files"></a>Soubory k zahrnutí
 
@@ -373,7 +366,7 @@ Tady jsou požadavky a důležité informace týkající se souborů k zahrnutí
 
 Příklad:
 
-```markdown
+```md
 [!INCLUDE[sample include file](../includes/sampleinclude.md)]
 ```
 
@@ -385,7 +378,7 @@ Protože do každého článku ve výběru přijde stejný Markdown voliče, dop
 
 Příklad voliče můžete vidět zde:
 
-```markdown
+```md
 > [!div class="op_single_selector"]
 - [macOS](../docs/core/tutorials/using-on-macos.md)
 - [Windows](../docs/core/tutorials/with-visual-studio.md)
@@ -406,13 +399,13 @@ Markdig podporuje rozšířené zahrnutí kódu do článku prostřednictvím ro
 
 Alternativní text, který obsahuje podtržítka, se správně nezobrazí. Třeba místo použití tohoto:
 
-```markdown
+```md
 ![ADextension_2FA_Configure_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
 Napište takto před podtržítka zpětné lomítko:
 
-```markdown
+```md
 ![ADextension\_2FA\_Configure\_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
 ```
 
