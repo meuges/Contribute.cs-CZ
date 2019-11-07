@@ -6,24 +6,42 @@ ms.author: mbradley
 ms.topic: error-reference
 ms.date: 6/5/2019
 ms.prod: non-product-specific
-ms.openlocfilehash: bb58c472371c429002cf5b35b7d6157ffb28b5cd
-ms.sourcegitcommit: 495d49f10df51a8897687940aa653e906c48c2a0
+ms.openlocfilehash: 9f8074d3746ea375e29704853c82f48d95273cdc
+ms.sourcegitcommit: 55624c641bea5367bcfa08655c085bc950e8beae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68817410"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73166761"
 ---
-# <a name="validation-timeout"></a><span data-ttu-id="666b7-103">validation-timeout</span><span class="sxs-lookup"><span data-stu-id="666b7-103">validation-timeout</span></span>
+# <a name="validation-timeout"></a><span data-ttu-id="1adf8-103">validation-timeout</span><span class="sxs-lookup"><span data-stu-id="1adf8-103">validation-timeout</span></span>
 
-## <a name="warning"></a><span data-ttu-id="666b7-104">Upozornění</span><span class="sxs-lookup"><span data-stu-id="666b7-104">Warning</span></span>
+## <a name="warning"></a><span data-ttu-id="1adf8-104">Upozornění</span><span class="sxs-lookup"><span data-stu-id="1adf8-104">Warning</span></span>
 
-`The call to the validation service timed out and validation was not completed. This happens when there's an issue with the service and continuing to retry the call could cause build delays. You might have content issues that were not reported. To retry validation, close and re-open your PR, or rebuild your branch via Docs Portal (requires admin permissions). If you need admin help or if you continue to see this message, file an issue via https://SiteHelp.`
+`The call to the validation service timed out and validation was not completed. This happens when there's an issue with the service and continuing to retry the call could cause build delays. You might have content issues that were not reported. To retry validation, close and re-open your PR, or force a full build of your branch via https://ops.microsoft.com. Note that forcing a full build requires admin permissions to the repo. If you don’t know who your repo admin is, or if you continue to see this message after a forced build, file an issue via https://SiteHelp.`
 
-<span data-ttu-id="666b7-105">Přechodné problémy ověřovací služby, jako je špatný stav serveru, někdy brání sestavení na webu Docs v úspěšném volání služby.</span><span class="sxs-lookup"><span data-stu-id="666b7-105">Sometimes transient issues in the validation service, such as a server in a bad state, prevent Docs Build from successfully calling the service.</span></span> <span data-ttu-id="666b7-106">Po několika pokusech časový limit tohoto volání vyprší a ověřování se zruší, aby se zabránilo kumulaci prodlev a zahlcení kanálu buildu.</span><span class="sxs-lookup"><span data-stu-id="666b7-106">After several tries, the call times out and validation is canceled to avoid build delays and clogging the build pipeline.</span></span>
+<span data-ttu-id="1adf8-105">Přechodné problémy ověřovací služby, jako je špatný stav serveru, někdy brání sestavení na webu Docs v úspěšném volání služby.</span><span class="sxs-lookup"><span data-stu-id="1adf8-105">Sometimes transient issues in the validation service, such as a server in a bad state, prevent Docs Build from successfully calling the service.</span></span> <span data-ttu-id="1adf8-106">Po několika pokusech časový limit tohoto volání vyprší a ověřování se zruší, aby se zabránilo kumulaci prodlev a zahlcení kanálu buildu.</span><span class="sxs-lookup"><span data-stu-id="1adf8-106">After several tries, the call times out and validation is canceled to avoid build delays and clogging the build pipeline.</span></span>
 
-## <a name="resolution"></a><span data-ttu-id="666b7-107">Řešení</span><span class="sxs-lookup"><span data-stu-id="666b7-107">Resolution</span></span>
+## <a name="resolution"></a><span data-ttu-id="1adf8-107">Řešení</span><span class="sxs-lookup"><span data-stu-id="1adf8-107">Resolution</span></span>
 
-<span data-ttu-id="666b7-108">Zkuste žádost o přijetí změn zavřít a znovu otevřít, případně znovu spustit ruční sestavení přes portál Docs (jen správci úložiště).</span><span class="sxs-lookup"><span data-stu-id="666b7-108">Try closing and re-opening your PR, or re-running a manual build via Docs Portal (repo admins only).</span></span> <span data-ttu-id="666b7-109">Po prvotním pokusu se problémy se službou často vyřeší samovolně.</span><span class="sxs-lookup"><span data-stu-id="666b7-109">Often service issues clear themselves up after the initial retry.</span></span> <span data-ttu-id="666b7-110">Pokud potřebujete pomoc od správce nebo pokud se tato zpráva nepřestává zobrazovat, zadejte problém přes [https://SiteHelp](https://SiteHelp) (pokud jste zaměstnancem Microsoftu) nebo v žádosti o přijetí změn pomocí zmínky (@) požádejte o pomoc autora článku (pokud jste externím přispěvatelem).</span><span class="sxs-lookup"><span data-stu-id="666b7-110">If you need help from an admin or if you continue to get this message, file an issue via [https://SiteHelp](https://SiteHelp) if you're a Microsoft employee, or @ mention the author of an article in your PR for assistance if you're an external contributor.</span></span>
+<span data-ttu-id="1adf8-108">Zkuste zavřít a znovu otevřít svoji žádost o přijetí změn nebo vynutit úplné sestavení přes [portál Docs](https://ops.microsoft.com/#/).</span><span class="sxs-lookup"><span data-stu-id="1adf8-108">Try closing and re-opening your PR, or forcing a full build via [Docs Portal](https://ops.microsoft.com/#/).</span></span> <span data-ttu-id="1adf8-109">Po prvotním pokusu se problémy se službou často vyřeší samovolně.</span><span class="sxs-lookup"><span data-stu-id="1adf8-109">Often service issues clear themselves up after the initial retry.</span></span>
+
+<span data-ttu-id="1adf8-110">Abyste mohli vynutit úplné sestavení přes portál Docs, musíte být správce úložiště.</span><span class="sxs-lookup"><span data-stu-id="1adf8-110">Note that you must be a repo admin to force a build via Docs Portal.</span></span> <span data-ttu-id="1adf8-111">Pokud nevíte, kdo je váš správce úložiště nebo pokud se tato zpráva bude objevovat i po vynuceném sestavení, zadejte problém přes [https://SiteHelp](https://SiteHelp) (pokud jste zaměstnancem Microsoftu) nebo v žádosti o přijetí změn požádejte pomocí zmínky (@) o pomoc autora článku (pokud jste externím přispěvatelem).</span><span class="sxs-lookup"><span data-stu-id="1adf8-111">If you don't know who your repo admin is, or if you continue to get this message after a forced build, file an issue via [https://SiteHelp](https://SiteHelp) if you're a Microsoft employee, or @ mention the author of an article in your PR for assistance if you're an external contributor.</span></span>
+
+<span data-ttu-id="1adf8-112">Pokud jste správce úložiště, můžete vynutit úplné sestavení následujícím způsobem:</span><span class="sxs-lookup"><span data-stu-id="1adf8-112">If you're a repo admin, you can force a full build as follows:</span></span>
+
+1. <span data-ttu-id="1adf8-113">Přejděte na [portál Docs](https://ops.microsoft.com/#/) a přihlaste se.</span><span class="sxs-lookup"><span data-stu-id="1adf8-113">Go to [Docs Portal](https://ops.microsoft.com/#/) and sign in.</span></span>
+1. <span data-ttu-id="1adf8-114">Hledáním v levém horním rohu najděte své úložiště a vyberte ho.</span><span class="sxs-lookup"><span data-stu-id="1adf8-114">Find your repo by searching in the upper left corner, and select it.</span></span>
+
+   <span data-ttu-id="1adf8-115">:::image type="content" source="media/find-repo.png" alt-text="Najděte své úložiště prostřednictvím vyhledávacího pole na portálu Docs.":::</span><span class="sxs-lookup"><span data-stu-id="1adf8-115">:::image type="content" source="media/find-repo.png" alt-text="find your repo via the Docs Portal search box":::</span></span>
+1. <span data-ttu-id="1adf8-116">Na kartě **Historie sestavení** klikněte na **+ Ruční publikování**.</span><span class="sxs-lookup"><span data-stu-id="1adf8-116">On the **Build History** tab, click **+ Manual Publish**.</span></span>
+1. <span data-ttu-id="1adf8-117">Vyberte větev, pro kterou se zobrazuje upozornění, například hlavní větev.</span><span class="sxs-lookup"><span data-stu-id="1adf8-117">Select the branch that's getting the Warning, such as Master.</span></span>
+1. <span data-ttu-id="1adf8-118">Cíl ponechte výchozí – **web Docs**.</span><span class="sxs-lookup"><span data-stu-id="1adf8-118">For target, keep the default, **Docs site**.</span></span>
+1. <span data-ttu-id="1adf8-119">Zaškrtněte políčko **Vynutit publikování**.</span><span class="sxs-lookup"><span data-stu-id="1adf8-119">Check the **Force Publish** checkbox.</span></span>
+1. <span data-ttu-id="1adf8-120">Klikněte na **Publikovat**.</span><span class="sxs-lookup"><span data-stu-id="1adf8-120">Click **Publish**.</span></span>
+
+   <span data-ttu-id="1adf8-121">:::image type="content" source="media/force-build.png" alt-text="Postup vynucení úplného sestavení":::</span><span class="sxs-lookup"><span data-stu-id="1adf8-121">:::image type="content" source="media/force-build.png" alt-text="steps to force a full build":::</span></span>
+
+<span data-ttu-id="1adf8-122">Tím se vynutí úplné sestavení ve větvi.</span><span class="sxs-lookup"><span data-stu-id="1adf8-122">This will force a full build on the branch.</span></span>
 
 <!--make sure to add this file to your includes folder and verify the path-->
 [!INCLUDE [validation-reference-help](includes/validation-reference-help.md)]
