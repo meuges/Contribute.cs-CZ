@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: ffc44f07929890ef17b3878ba389dfeea82691a6
-ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
+ms.openlocfilehash: 1f43cecb450c988e4f546aa5ecc5907061521f34
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592472"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188288"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
@@ -196,7 +196,7 @@ Ohraničené bloky kódu představují snadný způsob, jak umožnit zvýrazněn
     ...
     ```
 
-Alias za prvními třemi znaky „`“ definuje použité zvýraznění syntaxe. Tady je seznam běžně používaných programovacích jazyků v obsahu na webu Docs a příslušných popisků:
+Alias za prvními třemi znaky (\`) definuje zvýraznění syntaxe, které se má použít. Tady je seznam běžně používaných programovacích jazyků v obsahu na webu Docs a příslušných popisků:
 
 Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňování jazyka.
 
@@ -230,6 +230,7 @@ Tyto jazyky podporují popisné názvy a většina z nich umožňuje zvýrazňov
 |Objective-C|objc|
 |OData|odata|
 |PHP|php|
+|protobuf|protobuf|
 |PowerApps (oddělovač desetinných míst v podobě tečky)|powerapps-dot|
 |PowerApps (oddělovač desetinných míst v podobě čárky)|powerapps-comma|
 |PowerShell|powershell|

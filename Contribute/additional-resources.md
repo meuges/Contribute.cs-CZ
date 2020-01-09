@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: billwagner
 ms.author: wiwagn
 ms.date: 03/29/2019
-ms.openlocfilehash: 63192315c66eb05750c5a59751c339f671985314
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 862bf048b30584a5dc51c1b0758ffc7d41a406f5
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288289"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188365"
 ---
 # <a name="additional-git-and-github-resources"></a>Další materiály pro Git a GitHub
 

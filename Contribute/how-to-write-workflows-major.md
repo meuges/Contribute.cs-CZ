@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 08/30/2017
-ms.openlocfilehash: 87c31979e60a957586ea623b22be190bfdaa41d9
-ms.sourcegitcommit: d357977935b432381f3df6297164417ed59ab434
+ms.openlocfilehash: 997f313e94e4858f37501736c1ec0be2fa8fd552
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72310290"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188236"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>Pracovní postup přispívání prostřednictvím GitHubu pro větší nebo dlouho probíhající změny
 
@@ -54,7 +54,55 @@ Izolování souvisejících změn v konkrétní větvi vám umožní tyto změny
 >[!TIP]
 >Provádět změny v hlavní větvi *není* dobrý postup. Představte si, že hlavní větev použijete k zavedení sady změn pro načasované vydání funkce. Změny dokončíte a čekáte na jejich vydání. Mezitím dostanete urgentní žádost o nějakou opravu, takže provedete změnu v souboru v hlavní větvi a pak změnu publikujete. V tomto příkladu neúmyslně publikujete opravu a *současně* i změny, se kterými jste čekali na vydání v konkrétní den.
 
-Vytvořme tedy novou pracovní větev v místním úložišti k zachycení vašich navrhovaných změn. Každý klient Git je jiný, proto si prostudujte nápovědu ke klientovi, kterému dáváte přednost. Přehled tohoto procesu najdete v příručce GitHubu na webu s [pracovním postupem GitHubu](https://guides.github.com/introduction/flow/).
+Vytvořme tedy novou pracovní větev v místním úložišti k zachycení vašich navrhovaných změn. Pokud jste si zřídili Git Bash (další informace najdete v tématu [Instalace nástrojů pro tvorbu obsahu](get-started-setup-tools.md)), můžete vytvořit novou větev a „rezervovat“ ji pomocí jednoho příkazu v rámci klonovaného úložiště:
+
+````
+git checkout -b "branchname"
+````
+
+Každý klient Git je jiný, proto si prostudujte nápovědu ke klientovi, kterému dáváte přednost. Přehled tohoto procesu najdete v příručce GitHubu na webu s [pracovním postupem GitHubu](https://guides.github.com/introduction/flow/).
+
+## <a name="making-your-changes"></a>Provádění změn
+
+Teď, když máte kopii („klon“) úložiště Microsoftu a vytvořili jste větev, můžete volně provádět jakékoliv změny, které by podle vás byly přínosné pro komunitu, pomocí libovolného textového editoru nebo editoru Markdownu, jak je uvedeno na stránce [Instalace nástrojů pro tvorbu obsahu](get-started-setup-tools.md).  Změny můžete ukládat místně, aniž byste je museli odesílat do Microsoftu, dokud nebudete připraveni.
+
+## <a name="saving-changes-to-your-repository"></a>Ukládání změn do úložiště
+
+Než odešlete změny autorovi, musíte je nejdřív uložit do úložiště GitHub.  Když používáte příkazový řádek Git Bash, ale všechny nástroje se liší, dá se to opět udělat v několika snadných krocích.
+
+Nejprve je třeba v rámci úložiště _připravit_ všechny změny, které se mají potvrdit.  To se dá udělat provedením příkazu:
+
+````
+git add --all
+````
+
+Dál je potřeba potvrdit uložené změny do místního úložiště.  To se dá udělat v Gitu Bashu spuštěním tohoto příkazu:
+
+````
+git commit -m "Short Description of Changes Made"
+````
+
+Vzhledem k tomu, že jste tuto větev vytvořili na svém místním počítači, je nakonec potřeba, aby o tom věděl fork v účtu GitHub.com.  Pokud používáte Git Bash, můžete to udělat spuštěním tohoto příkazu:
+
+````
+git push --set-upstream origin <branchname>
+````
+
+A máte to hotové!  Váš kód je teď v úložišti GitHub a je připravený na vytvoření žádosti o přijetí změn.  
+
+>[!TIP]
+> I když se vaše změny zobrazí ve vašem osobním účtu GitHub, když je nahrajete, neexistuje žádné pravidlo, že by bylo potřeba žádosti o přijetí změn odesílat okamžitě.  Pokud chcete práci přerušit a vrátit se později, abyste provedli další vylepšení, je to v pořádku!
+
+Potřebujete opravit něco, co jste odeslali?  Žádný problém!  Stačí udělat změny ve stejné větvi a pak je znovu potvrdit a odeslat (při následných odesíláních stejné větve není nutné nastavovat nadřazený server).
+
+Máte další změny, které potřebujete udělat, ale nesouvisejí s touto změnou?  Přepněte zpátky do hlavní větve a pomocí Gitu Bashu zarezervujte jinou novou větev. Je to takto jednoduché:
+
+````
+git checkout master
+git checkout -b "branchname"
+````
+
+Teď jste zpátky v nové větvi a jste na dobré cestě stát se hlavním přispěvatelem.
 
 [!INCLUDE[contribute-how-to-write-workflows-pull-request-processing](includes/contribute-how-to-write-workflows-pull-request-processing.md)]
 
