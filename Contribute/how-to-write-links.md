@@ -7,15 +7,16 @@ ms.custom: external-contributor-guide
 author: gewarren
 ms.author: gewarren
 ms.date: 10/31/2018
-ms.openlocfilehash: 69371cd201d156b2d0ce5e3e38527d77baca5a8a
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 970f80b4e6ce795e0e2f15192d31680d7de6d35b
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288584"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188338"
 ---
-# <a name="using-links-in-documentation"></a>Používání odkazů v dokumentaci
-Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy přesměrovávají uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
+# <a name="use-links-in-documentation"></a>Použití odkazů v dokumentaci
+
+Tento článek popisuje způsob používání hypertextových odkazů ze stránek hostovaných na webu docs.microsoft.com. Odkazy se snadno přidávají do markdownu pomocí několika různých konvencí. Odkazy směrují uživatele na obsah na stejné stránce, na jiné sousední stránky nebo na externí weby a adresy URL.
 
 Back-end webu docs.microsoft.com používá platformu OPS (Open Publishing Services), která podporuje markdown kompatibilní s verzí [CommonMark](https://commonmark.org/) parsovaný prostřednictvím parsovacího modulu [Markdig](https://github.com/lunet-io/markdig). Tato varianta markdownu je z větší části kompatibilní s verzí [GFM (GitHub Flavored Markdown)](https://help.github.com/categories/writing-on-github/), protože většina dokumentů je uložená v GitHubu, aby bylo možné je upravovat. Další funkce se přidávají prostřednictvím rozšíření Markdownu.
 
@@ -27,7 +28,7 @@ Back-end webu docs.microsoft.com používá platformu OPS (Open Publishing Servi
 Slova, která použijete v textu odkazu, by měla být popisná. Jinými slovy by mělo jít o normální slova nebo název stránky, na kterou odkazujete.
 
 > [!IMPORTANT]
-> Nepoužívejte „klikněte sem“. To je špatné pro optimalizaci vyhledávacího webu a adekvátně to nepopisuje cílovou stránku.
+> Nepoužívejte „klikněte sem“. Je to špatné pro optimalizaci vyhledávacího webu a adekvátně to nepopisuje cílovou stránku.
 
 **Správně:**
 
@@ -43,28 +44,35 @@ Slova, která použijete v textu odkazu, by měla být popisná. Jinými slovy b
 
 ## <a name="links-from-one-article-to-another"></a>Odkazy z jednoho článku na druhý
 
-Pokud chcete vytvořit hotlink z technického článku na webu Docs na jiný technický článek webu Docs v rámci stejné sady docset, použijte následující syntax pro odkazy:
+Pokud chcete vytvořit vložený odkaz (hotlink) z technického článku na webu Docs na jiný technický článek webu Docs v rámci stejné sady *docset*, použijte následující syntax pro odkazy:
 
-- Článek v adresáři odkazuje na jiný článek ve stejném adresáři:
+- Článek odkazuje na jiný článek ve stejném adresáři:
 
   `[link text](article-name.md)`
 
-- Článek z podadresáře odkazuje na článek v kořenovém adresáři:
+- Článek odkazuje na článek v nadřazeném adresáři aktuálního adresáře:
 
   `[link text](../article-name.md)`
 
-- Článek v kořenovém adresáři odkazuje na článek v podadresáři:
+- Článek odkazuje na článek v podadresáři aktuálního adresáře:
 
-  `[link text](./directory/article-name.md)`
+  `[link text](directory/article-name.md)`
 
-- Článek v podadresáři odkazuje na článek v jiném podadresáři:
+- Článek odkazuje na článek v podadresáři nadřazeného adresáře aktuálního adresáře:
 
   `[link text](../directory/article-name.md)`
 
-- Článek odkazující na různé sady docset (i ve stejném úložišti):  `[link text](./directory/article-name)`
+> [!NOTE]
+> V žádném z předchozích příkladů se jako součást odkazu nepoužívá `~/`. Pokud chcete vytvořit odkaz na absolutní cestu, která začíná v kořenovém adresáři úložiště, začněte odkaz znakem `/`. Při zahrnutí řetězce `~/` vznikají neplatné odkazy pro navigaci do zdrojových úložišť na GitHubu. Problém se vyřeší, když bude cesta začínat znakem `/`.
 
-> [!IMPORTANT]
-> V žádném z výše uvedených příkladů se jako součást odkazu nepoužívá `~/`. Pokud vytváříte odkaz na cestu v kořeni úložiště, začněte znakem `/`. Při zahrnutí řetězce `~/` vznikají neplatné odkazy pro navigaci do zdrojových úložišť na GitHubu. Problém se vyřeší, když bude cesta začínat znakem `/`.
+Jestli chcete vytvořit odkaz na článek v jiné sadě docset, i když je soubor ve stejném úložišti, použijte následující syntaxi:
+
+`[link text](/docset-root/directory/article-name)`
+   
+Pokud například článek, jehož kořenová adresa URL je `https://docs.microsoft.com/dotnet`, odkazuje na článek, jehož kořenová adresa URL je `https://docs.microsoft.com/visualstudio`, odkaz by vypadal takto: `[link text](/visualstudio/directory/article-name)`.
+
+> [!TIP]
+> Články ve stejné sadě *docset* mají po docs.microsoft.com stejný fragment adresy URL. Například `https://docs.microsoft.com/dotnet/core/get-started` a `https://docs.microsoft.com/dotnet/framework/install` jsou ve stejné sadě docset a `https://docs.microsoft.com/dotnet/core/get-started` a `https://docs.microsoft.com/visualstudio/whats-new` jsou v různých sadách docset.
 
 ## <a name="links-to-anchors"></a>Odkazy na ukotvení
 
@@ -75,12 +83,7 @@ Ukotvení vytvářet nemusíte. Generují se automaticky pro všechny nadpisy H2
   `[link](#the-text-of-the-H2-section-separated-by-hyphens)`
   `[Create cache](#create-cache)`
 
-- Vytvoření odkazu na ukotvení z jiného článku ve stejném podadresáři:
-
-  `[link text](article-name.md#anchor-name)`
-  `[Configure your profile](media-services-create-account.md#configure-your-profile)`
-
-- Vytvoření odkazu na ukotvení v jiném podadresáři služby:
+- Vytvoření odkazu na ukotvení v jiném článku:
 
   `[link text](../directory/article-name.md#anchor-name)`
   `[Configure your profile](../directory/media-services-create-account.md#configure-your-profile)`
@@ -147,10 +150,6 @@ Nejlepší uživatelské prostředí minimalizuje odchod uživatelů na jiný we
 - **Další kroky:** V sekci Další kroky můžete přidat odkaz například na blog MVP. Jen uživatele znovu nezapomeňte informovat, že budou přesměrováni na jiný web.
 - **Právní náležitosti:** Jsme právně krytí částí **Odkazy na weby třetích stran** v **Podmínkách použití** uvedených v zápatí každé stránky ms.com.
 
-## <a name="links-to-msdn-or-technet"></a>Odkazy na MSDN nebo TechNet
-
-Když budete potřebovat odkázat na MSDN nebo Technet, použijte celý odkaz na téma a odeberte z odkazu jazyk národního prostředí „en-us“.
-
 ## <a name="links-to-azure-powershell-reference-content"></a>Odkazy na referenční obsah Azure PowerShell
 
 Referenční obsah Azure PowerShell prošel od listopadu 2016 několika změnami. Pro odkazování na tento obsah z jiných článků na webu docs.microsoft.com použijte následující pokyny.
@@ -174,18 +173,15 @@ Struktura adresy URL:
 
 Když tyto adresy URL použijete, budete přesměrováni na nejnovější verzi obsahu. Tímto způsobem nemusíte určovat verzi parametru moniker. Nebudete tak mít odkazy na koncepční obsah, které se musí při změně verze aktualizovat.
 
-Pokud chcete vytvořit odkaz, najděte ve svém prohlížeči stránku, na kterou chcete odkázat, a zkopírujte její adresu URL.
-Potom odeberte `https://docs.microsoft.com` a informace o národním prostředí.
-
-Když odkazujete z obsahu stránky, musíte použít celou adresu URL bez informace o národním prostředí.
+Pokud chcete vytvořit správný odkaz, najděte ve svém prohlížeči stránku, na kterou chcete odkázat, zkopírujte její adresu URL a pak odeberte kód národního prostředí, například **en-us**.
 
 Příklad Markdownu:
 
 ```markdown
-[Get-AzureRmResourceGroup](/powershell/module/azurerm.resources/get-azurermresourcegroup)
-[Get-AzureRmResourceGroup](/powershell/module/azurerm.resources/get-azurermresourcegroup?view=azurermps-4.1.0)
-[New-AzureVM](/powershell/module/azure/new-azurevm?view=azuresmps-4.0.0)
-[New-AzureRmVM](/powershell/module/azurerm.compute/new-azurermvm)
-[Install Azure PowerShell for Service Management](/powershell/azure/servicemanagement/install-azurerm-ps)
-[Install Azure PowerShell](/powershell/azure/install-azurerm-ps)
+[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup)
+[Get-AzureRmResourceGroup](https://docs.microsoft.com/powershell/module/azurerm.resources/get-azurermresourcegroup?view=azurermps-4.1.0)
+[New-AzureVM](https://docs.microsoft.com/powershell/module/azure/new-azurevm?view=azuresmps-4.0.0)
+[New-AzureRmVM](https://docs.microsoft.com/powershell/module/azurerm.compute/new-azurermvm)
+[Install Azure PowerShell for Service Management](https://docs.microsoft.com/powershell/azure/servicemanagement/install-azurerm-ps)
+[Install Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-azurerm-ps)
 ```

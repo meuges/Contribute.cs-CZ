@@ -7,12 +7,12 @@ ms.date: 05/18/2018
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: a5ff6c5122a08d2b611fd6b0344a6f5740d93928
-ms.sourcegitcommit: 254c804bb0b451c262745fe8d87e2e8f9196440c
+ms.openlocfilehash: 452cbf97db748532ae2b0e09b4bb558c8f757a61
+ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73592567"
+ms.lasthandoff: 12/18/2019
+ms.locfileid: "75188269"
 ---
 # <a name="markdown-reference"></a>Referenční informace k jazyku Markdown
 
@@ -73,7 +73,7 @@ Web Docs podporuje šest úrovní nadpisů Markdownu:
 - Každý soubor Markdown musí mít právě jeden nadpis H1.
 - Nadpis H1 musí být prvním obsahem v souboru za blokem metadat YML.
 - Nadpisy H2 se automaticky objeví v pravé navigační nabídce publikovaného souboru. Nadpisy nižších úrovní nikoli, proto nadpisy H2 můžete strategicky použít k navigaci čtenářů v obsahu.
-- Nadpisy HTML (například `<h1>`) se nedoporučují a v některých případech způsobí upozornění při sestavování.
+- Nadpisy HTML (například `<h1>`) se nedoporučují a v některých případech způsobí upozornění sestavení.
 - Odkazy na jednotlivé nadpisy v souboru můžete realizovat přes [záložky](#bookmark-links).
 
 ## <a name="html"></a>HTML
