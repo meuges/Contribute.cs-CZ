@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 03/26/2019
-ms.openlocfilehash: 1f43cecb450c988e4f546aa5ecc5907061521f34
-ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
+ms.openlocfilehash: 086972acaef9647709fbe43f07c07abde71c7d9f
+ms.sourcegitcommit: fd92198ec2d0ce2d6687b6f1521a82b3fefc60e0
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75188288"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76111063"
 ---
 # <a name="how-to-use-markdown-for-writing-docs"></a>Používání Markdownu pro vytváření článků na webu Docs
 
@@ -389,10 +389,312 @@ Příklad toho, jak se voliče používají v praxi, můžete vidět v [dokument
 
 ### <a name="code-include-references"></a>Odkazy pro zahrnutí kódu
 
-Markdig podporuje rozšířené zahrnutí kódu do článku prostřednictvím rozšíření pro fragmenty kódu. To poskytuje pokročilé vykreslení, které vychází z funkcí GFM, jako například výběr programovacího jazyka a barvy syntaxe. Navíc nabízí užitečné funkce jako:
+Rozšíření Markdownu pro fragmenty kódu na webu Docs umožňuje vkládat do článků ukázky kódu a vykreslovat je s barevným zvýrazňováním syntaxe specifického jazyka. Můžete zahrnout kód jak z aktuálního úložiště, tak z jiného úložiště. Níže uvedené pokyny poskytují přehled o tom, jak používat tuto funkci se sadou [Docs Authoring Pack](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-authoring-pack). V editoru Visual Studio Code můžete zobrazit náhled fragmentů kódu otevřením okna **Preview** (Náhled). V náhledu nejsou k dispozici zvýrazňování a interaktivita.
 
-- Zahrnutí centralizovaných ukázek/fragmentů kódu z externího úložiště
-- Uživatelské rozhraní s kartami k zobrazení více verzí ukázek kódu v různých jazycích
+> [!NOTE]
+> Toto rozšíření nepodporuje zahrnutí kódu formou vložení do textu – to se provádí pomocí standardní konvence Markdownu, tedy tří znaků `.
+
+#### <a name="code-from-current-repository"></a>Kód z aktuálního úložiště
+
+1. V editoru Visual Studio Code stiskněte **Alt+M** nebo **Option+M** a vyberte Snippet (Fragment).
+2. Po výběru možnosti Snippet (Fragment) se zobrazí možnosti Full Search (Úplné vyhledávání), Scoped Search (Vyhledávání v oboru) a Cross-Repository Reference (Odkaz mezi úložišti). Pokud chcete vyhledávat místně, vyberte Full Local Search (Úplné místní vyhledávání).
+3. Zadejte hledaný termín pro vyhledání souboru. Jakmile soubor najdete, vyberte ho.
+4. Dále vyberte možnost, jež určuje, které řádky kódu by se měly zahrnout do fragmentu. Možnosti jsou: **ID**, **Range** (Rozsah) a **None** (Žádný).
+5. Podle výběru z kroku 4 zadejte v případě potřeby hodnotu.
+
+Zobrazení celého souboru kódu:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs":::
+```
+
+Zobrazení části souboru kódu zadáním čísel řádků:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+Zobrazení části souboru kódu zadáním názvu fragmentu:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" id="snippet_Create":::
+```
+
+#### <a name="code-from-another-repository"></a>Kód z jiného úložiště
+
+1. V editoru Visual Studio Code stiskněte **Alt+M** nebo **Option+M** a vyberte Snippet (Fragment).
+2. Po výběru možnosti Snippet (Fragment) se zobrazí možnosti Full Search (Úplné vyhledávání), Scoped Search (Vyhledávání v oboru) a Cross-Repository Reference (Odkaz mezi úložišti). Pokud chcete hledat v jiném úložišti, vyberte Cross-Repository Reference (Odkaz mezi úložišti).
+3. Dostanete možnost vybrat úložiště, která jsou v *.openpublishing.publish.config.json*. Vyberte úložiště.
+3. Zadejte hledaný termín pro vyhledání souboru. Jakmile soubor najdete, vyberte ho.
+4. Dále vyberte možnost, jež určuje, které řádky kódu by se měly zahrnout do fragmentu. Možnosti jsou: **ID**, **Range** (Rozsah) a **None** (Žádný).
+5. Podle výběru z kroku 5 zadejte v případě potřeby hodnotu.
+
+Váš odkaz na fragment bude vypadat nějak takto:
+
+```markdown
+:::code language="csharp" source="~/samples-durable-functions/samples/csx/shared/Location.csx" highlight="2,5":::
+```
+
+#### <a name="path-to-code-file"></a>Cesta k souboru kódu
+
+Příklad:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+Příklad je z úložiště dokumentů ASP.NET, soubor článku [aspnetcore/data/ef-mvc/crud.md](https://github.com/aspnet/Docs/blob/master/aspnetcore/data/ef-mvc/crud.md). Na soubor kódu odkazuje relativní cesta k [aspnetcore/data/ef-mvc/intro/samples/cu/Controllers/StudentsController.cs](https://github.com/aspnet/Docs/blob/master/aspnetcore/data/ef-mvc/intro/samples/cu/Controllers/StudentsController.cs) ve stejném úložišti.
+
+#### <a name="selected-line-numbers"></a>Vybraná čísla řádků
+
+Příklad:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26":::
+```
+
+Tento příklad zobrazí jenom řádky 2 až 24 a 26 ze souboru kódu *StudentController.cs*.
+
+Dejte raději přednost fragmentům před pevnými čísly řádků, jak je vysvětleno v další části.
+
+#### <a name="named-snippet"></a>Pojmenovaný fragment
+
+Příklad:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" id="snippet_Create":::
+```
+
+Pro název používejte jenom písmena a podtržítka.
+
+V příkladu je zobrazený oddíl `snippet_Create` souboru kódu. Soubor kódu pro tento příklad má oblast C# s názvem `snippet_Create`:
+
+```cs
+// code excluded from the snippet
+// <snippet_Create>
+// code included in the snippet
+// </snippet_Create>
+// code excluded from the snippet
+```
+
+Vždy, když je to možné, odkazujte na pojmenovanou část a nezadávejte čísla řádků. S odkazy na čísla řádků je třeba zacházet opatrně, protože soubory kódu se nevyhnutelně mění tak, že dochází ke změnám čísel řádků.
+Takové změny vám lehce uniknou. Ve vašem článku se nakonec začnou zobrazovat chybné řádky a vy nebudete mít potuchy, že se něco změnilo.
+
+#### <a name="highlighting-selected-lines"></a>Zvýraznění vybraných řádků
+
+Příklad:
+
+```markdown
+:::code language="csharp" source="intro/samples/cu/Controllers/StudentsController.cs" range="2-24,26" highlight="2,5":::
+```
+
+V příkladu jsou zvýrazněné řádky 2 a 5, počítáno od začátku zobrazeného fragmentu. (Čísla zvýrazněných řádků se nepočítají od začátku souboru kódu.) Jinými slovy jsou zvýrazněné řádky 3 a 6 ze souboru kódu.
+
+#### <a name="interactive-code-snippets"></a>Interaktivní fragmenty kódu
+
+Interaktivní režim můžete povolit pro fragmenty kódu, které jsou zahrnuté odkazem. Tady jsou příklady:
+
+```markdown
+:::code language="powershell" source="PowerShell.ps1" interactive="cloudshell-powershell":::
+```
+
+```markdown
+:::code language="bash" source="Bash.sh" interactive="cloudshell-bash":::
+```
+
+Pokud chcete tuto funkci zapnout pro konkrétní blok kódu, použijte atribut `interactive`. Dostupné hodnoty atributu jsou:
+
+- `cloudshell-powershell` – povolí Azure PowerShell Cloud Shell, jako v předchozím příkladu.
+- `cloudshell-bash` – povolí Azure Cloud Shell.
+- `try-dotnet` – povolí Try .NET.
+- `try-dotnet-class` – povolí Try .NET s generováním tříd.
+- `try-dotnet-method` – povolí Try .NET s generováním metod.
+
+Existují páry hodnot atributů `language` a `interactive`, které jsou kompatibilní. Pokud má například atribut `interactive` hodnotu `try-dotnet`, musí být jako jazyk zadaný `csharp`. Podobně bude atribut `cloudshell-powershell` fungovat jenom s jazykem `powershell` a atribut `cloudshell-bash` s jazykem `bash`.
+
+Pro prostředí Azure Cloud Shell a PowerShell Cloud Shell můžou uživatelé spouštět příkazy jenom se svým vlastním účtem Azure.
+
+[Try .NET](https://github.com/dotnet/try) umožňuje interaktivní spouštění kódu .NET (C#) v prohlížeči. Pro Try .NET existují tři možnosti interaktivity: `try-dotnet`, `try-dotnet-class` a `try-dotnet-method`. Použití těchto možností nevyžaduje žádnou další konfiguraci v rámci fragmentu kódu. Ve výchozím nastavení jsou v současnosti dostupné tyto obory názvů:
+
+- System
+- System.Linq
+- System.Collections.Generic
+- System.Text
+- System.Globalization
+- System.Text.RegularExpressions
+
+Hodnota atributu `try-dotnet` umožňuje uživatelům spustit kód C# v prohlížeči bez nutnosti zabalit kód do jakéhokoli vlastního kódu.
+
+Příklad:
+
+```md
+:::code language="csharp" source="relative/path/source.cs" interactive="try-dotnet":::
+```
+
+Hodnota `try-dotnet-class` aplikuje u kódu předaného interaktivní komponentě generování na úrovni třídy.
+
+```md
+:::code language="csharp" source="relative/path/source.cs" id="snippet-tag" interactive="try-dotnet-class":::
+```
+
+Příklad:
+
+Fragment kódu bez aplikovaného generování tříd
+
+```md
+public static void Main()
+    {  
+        // Specify the data source.  
+        int[] scores = new int[] { 97, 92, 81, 60 };        // Define the query expression.
+
+        IEnumerable<int> scoreQuery =
+            from score in scores  
+            where score > 80  
+            select score;
+
+        // Execute the query.  
+        foreach (int i in scoreQuery)
+        {  
+            Console.Write(i + " ");
+        }
+    }  
+}
+```
+
+Fragment kódu s aplikovaným generováním tříd
+
+```md
+class NameOfClass {
+
+   public static void Main()
+    {
+        // Specify the data source.
+        int[] scores = new int[] { 97, 92, 81, 60 };
+
+        // Define the query expression.
+        IEnumerable<int> scoreQuery =
+            from score in scores
+            where score > 80
+            select score;
+
+        // Execute the query.
+        foreach (int i in scoreQuery)
+        {
+            Console.Write(i + " ");
+        }
+    }  
+}
+```
+
+Hodnota `try-dotnet-method` aplikuje u kódu předaného interaktivní komponentě generování na úrovni metody.
+
+```md
+:::code language="csharp" source="relative/path/source.cs" id="snippet-tag" interactive="try-dotnet-method":::
+```
+
+Příklad:
+
+Fragment kódu bez aplikovaného generování metod
+
+```md
+/*Print some string in C#*/
+
+Console.WriteLine("Hello C#.);
+```
+
+Fragment kódu s aplikovaným generováním metod
+
+```md
+public static void Main(string args[]) {
+
+/*Print some string in C#*/
+
+Console.WriteLine("Hello C#.);
+}
+```
+
+#### <a name="snippet-syntax-reference"></a>Přehled syntaxe fragmentů
+
+Na fragmenty kódu uložené v úložišti můžete odkazovat pomocí zadaného jazyka kódu. Obsah specifikované cesty kódu se rozbalí a zahrne do vašeho souboru.
+
+Struktura složek fragmentů kódu není nijak omezená. Fragmenty kódu můžete spravovat jako běžný zdrojový kód.
+
+Syntaxe:
+
+```md
+:::code language="<language>" source="<path>" <attribute>="<attribute-value>":::
+```
+
+> [!IMPORTANT]
+> Tato syntaxe je blokové rozšíření Markdownu. Musíte ji použít na samostatném řádku.
+
+- `<language>` (*volitelné*)
+  - Jazyk fragmentu kódu. Další informace najdete v části [Podporované jazyky](#supported-languages) dále v tomto článku.
+
+- `<path>` (*povinné*)
+  - Relativní cesta v systému souborů označující soubor fragmentu kódu, na který se má odkazovat
+
+- `<attribute>` a `<attribute-value>` (*volitelné*)
+  - Společně se používají pro zadání, jak se má kód ze souboru načítat:
+    - `range`: `1,3-5` Rozsah řádků. Tento příklad zahrnuje řádky 1, 3, 4 a 5.
+    - `id`: `snippet_Create` ID fragmentu, který se má vložit ze souboru kódu. Tato hodnota nemůže existovat současně s rozsahem.
+    - `highlight`: `2-4,6` Rozsah a/nebo čísla řádků, které se mají zvýraznit ve vygenerovaném fragmentu kódu. Číslování je relativní vzhledem k samotnému fragmentu kódu, nikoli k importovanému rozsahu.
+    - `interactive`: `cloudshell-powershell`, `cloudshell-bash`, `try-dotnet`, `try-dotnet-class`, `try-dotnet-method` Hodnota řetězce určuje, jaké druhy interaktivity jsou povolené.
+
+#### <a name="supported-languages"></a>Podporované jazyky
+
+|Name|Popisek Markdownu|
+|-----|-------|
+|.NET Core CLI|`dotnetcli`|
+|ASP.NET s C#|`aspx-csharp`|
+|ASP.NET s VB|`aspx-vb`|
+|Azure CLI|`azurecli`|
+|Azure CLI v prohlížeči|`azurecli-interactive`|
+|Azure PowerShell v prohlížeči|`azurepowershell-interactive`|
+|AzCopy|`azcopy`|
+|Bash|`bash`|
+|C++|`cpp`|
+|C#|`csharp`|
+|C# v prohlížeči|`csharp-interactive`|
+|Konzola|`console`|
+|CSHTML|`cshtml`|
+|DAX|`dax`|
+|Docker|`Dockerfile`|
+|F#|`fsharp`|
+|HTML|`html`|
+|Java|`java`|
+|JavaScript|`javascript`|
+|JSON|`json`|
+|Dotazovací jazyk Kusto|`kusto`|
+|Markdown|`md`|
+|Objective-C|`objc`|
+|PHP|`php`|
+|PowerShell|`powershell`|
+|Power Query M|`powerquery-m`|
+|protobuf|`protobuf`|
+|Python|`python`|
+|Ruby|`ruby`|
+|SQL|`sql`|
+|Swift|`swift`|
+|VB|`vb`|
+|XAML|`xaml`|
+|XML|`xml`|
+|YAML|`yml`|
+
+#### <a name="code-extensions"></a>Rozšíření kódu
+
+|Name|Popisek Markdownu|Přípona souboru|
+|-----|-------|-----|
+|C#|csharp|.cs, .csx|
+|C++|cpp|.cpp, .h|
+|F#|fsharp|.fs|
+|Java|java|.java|
+|JavaScript|javascript|.js|
+|Python|python|.py|
+|SQL|sql|.sql|
+|VB|vb|.vb|
+|XAML|xaml|.xaml|
+|XML|xml|.xml|
 
 ## <a name="gotchas-and-troubleshooting"></a>Možná úskalí a řešení potíží
 
