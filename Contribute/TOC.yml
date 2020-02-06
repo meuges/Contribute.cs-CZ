@@ -20,6 +20,8 @@
       href: markdown-reference.md
     - name: "Rychlý start věnovaný stylu a\_způsobu vyjadřování"
       href: style-quick-start.md
+    - name: Průvodce správným stylem
+      href: /style-guide/
     - name: Odkazy
       href: how-to-write-links.md
     - name: Balíček pro vytváření obsahu na webu Docs
