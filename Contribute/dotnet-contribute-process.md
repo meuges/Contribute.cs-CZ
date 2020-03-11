@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: e54ade313f026b5ea512c0f783d3f8ad83979390
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 161f831bf3f31428f78d3a828b12b4c9ecaffb0e
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288347"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331753"
 ---
 # <a name="process-for-contributing-to-net-docs"></a>Postup psaní příspěvků do dokumentace k .NET
 
@@ -20,7 +20,7 @@ Vážíme si příspěvků, kterými komunita přispívá do dokumentace. V nás
 - **DODRŽUJTE** tyto pokyny a pokyny týkající se [způsobu vyjadřování](dotnet-voice-tone.md).
 - **POUŽÍVEJTE** jako výchozí bod své práce soubor se [šablonou](dotnet-style-guide.md).
 - **VYTVOŘTE** ve svém forku samostatnou větev dřív, než začnete pracovat na článcích.
-- **DODRŽUJTE** [pracovní postup v toku GitHubu](https://guides.github.com/introduction/flow/).
+- **DODRŽUJTE**[pracovní postup v toku GitHubu](https://guides.github.com/introduction/flow/).
 - **BLOGUJTE A TWEETUJTE** (nebo jinak komunikujte) o svých příspěvcích co nejčastěji.
 
 Dodržením těchto pokynů usnadníte práci sobě i nám.
@@ -169,7 +169,7 @@ Pokud není uvedeno jinak, jsou všechny ukázky vytvořené z příkazového ř
 
 ## <a name="the-c-interactive-experience"></a>Interaktivní prostředí jazyka C#
 
-U všech ukázek v článku je [značka jazyka](how-to-write-use-markdown.md#code-snippets), která označuje zdrojový jazyk. Krátké ukázky kódu v jazyce C# používají jazykovou značku `csharp-interactive`, která znamená, že ukázku v jazyce C# můžete spustit v prohlížeči (ukázky vloženého kódu používají značku `csharp-interactive`, pro fragmenty kódu zahrnuté ze zdroje se používá značka `code-csharp-interactive`). Tyto ukázky kódu jsou v článku zobrazené v okně kódu a ve výstupním okně. V okně výstupu se zobrazuje výstup spuštěného interaktivního kódu po spuštění ukázky uživatelem.
+U všech ukázek v článku je [značka jazyka](code-in-docs.md), která označuje zdrojový jazyk. Krátké ukázky kódu v jazyce C# používají jazykovou značku `csharp-interactive`, která znamená, že ukázku v jazyce C# můžete spustit v prohlížeči (ukázky vloženého kódu používají značku `csharp-interactive`, pro fragmenty kódu zahrnuté ze zdroje se používá značka `code-csharp-interactive`). Tyto ukázky kódu jsou v článku zobrazené v okně kódu a ve výstupním okně. V okně výstupu se zobrazuje výstup spuštěného interaktivního kódu po spuštění ukázky uživatelem.
 
 Prostředí kompilačního nástroje C# Interactive mění způsob práce s ukázkami. Návštěvníci můžou ukázku spustit a podívat se na výsledky. To, jestli mají být v ukázce nebo v příslušném textu i informace o výstupu, záleží na řadě okolností.
 
