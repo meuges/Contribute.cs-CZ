@@ -7,12 +7,12 @@ ms.custom: external-contributor-guide
 author: sdwheeler
 ms.author: sewhee
 ms.date: 10/09/2019
-ms.openlocfilehash: e7ee9295794adfde78a2d500f0de3309dd3c821a
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 073a44240b1aa4baa9e655dab069097d21cdd66d
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72290350"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331922"
 ---
 # <a name="markdown-style-guide-for-powershell-docs"></a>Průvodce správným stylem jazyka Markdown pro dokumentaci k PowerShellu
 
@@ -59,7 +59,7 @@ Obecně platí, že odkazy na „Windows PowerShell“ můžete v dokumentaci zm
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>Základy jazyka Markdown (GFM) a speciální znaky
 
-Základy jazyka Markdown také označované jako GitHub Flavored Markdown (GFM) a určité přípony OPS jsou v obecných článcích o [Markdownu](../how-to-write-use-markdown.md) a v [referenčních materiálech k Markdownu](../markdown-reference.md).
+Základy jazyka Markdown také označované jako GitHub Flavored Markdown (GFM) a určité přípony OPS najdete v článku [Referenční informace k jazyku Markdown](../markdown-reference.md).
 
 Markdown používá k formátování zvláštní znaky, například \*, \` a \#. Pokud chcete některý z těchto znaků přidat do obsahu, máte na výběr dvě možnosti:
 

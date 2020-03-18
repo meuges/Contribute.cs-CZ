@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 08/30/2017
-ms.openlocfilehash: 997f313e94e4858f37501736c1ec0be2fa8fd552
-ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
+ms.openlocfilehash: 5231b68f04caa94d3ff2ff26afc38e3218ca06b8
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75188236"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331899"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>Pracovní postup přispívání prostřednictvím GitHubu pro větší nebo dlouho probíhající změny
 
@@ -110,4 +110,4 @@ Teď jste zpátky v nové větvi a jste na dobré cestě stát se hlavním přis
 
 A to je vše! Přispěli jste k obsahu docs.microsoft.com.
 
-- Pokud chcete získat další informace o tématech, jako je Markdown a syntaxe rozšíření Markdownu, pokračujte článkem [Základy psaní](how-to-write-use-markdown.md).
+- Pokud chcete získat další informace o tématech, jako je Markdown a syntaxe rozšíření Markdownu, pokračujte článkem [Referenční informace k jazyku Markdown](markdown-reference.md).

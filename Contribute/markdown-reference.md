@@ -3,30 +3,30 @@ title: Referenční informace k jazyku Markdown pro docs.microsoft.com
 description: Informace o funkcích a syntaxi jazyka Markdown používaných na platformě Microsoft Docs
 author: meganbradley
 ms.author: mbradley
-ms.date: 05/18/2018
+ms.date: 01/30/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 452cbf97db748532ae2b0e09b4bb558c8f757a61
-ms.sourcegitcommit: a812d716b31084926b886b93923f9b84c9b23429
+ms.openlocfilehash: 14cc9f0912149eb342c97d0dd7d2776bd54c84e7
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/18/2019
-ms.locfileid: "75188269"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331949"
 ---
-# <a name="markdown-reference"></a>Referenční informace k jazyku Markdown
+# <a name="docs-markdown-reference"></a>Referenční informace k jazyku Markdown pro Docs
 
-Markdown je jednoduchý jazyk využívající značky se syntaxí formátování prostého textu. Platforma Docs podporuje standard CommonMark pro Markdown plus několik vlastních rozšíření navržených kvůli poskytování bohatšího obsahu na webu docs.microsoft.com. Tento článek obsahuje referenční informace o používání jazyka Markdown pro docs.microsoft.com.
+Tento článek obsahuje referenční informace o psaní jazyka Markdown pro docs.microsoft.com.
 
-K vytváření Markdownu můžete použít libovolný textový editor. Jako editor, který umožňuje vkládání standardní syntaxe Markdownu i vlastních rozšíření Docs, doporučujeme [VS Code](https://code.visualstudio.com/) s nainstalovaným [balíčkem pro vytváření obsahu na webu Docs](https://aka.ms/DocsAuthoringPack).
+[Markdown](https://daringfireball.net/projects/markdown/) je jednoduchý jazyk využívající značky se syntaxí formátování prostého textu. Web Docs podporuje Markdown kompatibilní s verzí [CommonMark](https://commonmark.org/), který k parsování používá parsovací modul [Markdig](https://github.com/lunet-io/markdig). Podporuje také vlastní rozšíření Markdownu, které na webu poskytuje bohatší obsah.
 
-Web Docs používá modul Markdig Markdown. Zobrazení Markdownu v Markdigu v porovnání s jinými moduly můžete otestovat na adrese [https://babelmark.github.io/](https://babelmark.github.io/).
+Markdown sice můžete psát v jakémkoliv textovém editoru, doporučujeme ale použít [Visual Studio Code](https://code.visualstudio.com/) s [balíčkem pro vytváření obsahu na webu Docs](https://aka.ms/DocsAuthoringPack). Balíček pro vytváření obsahu na webu Docs obsahuje nástroje pro úpravy a funkci náhledu, díky které se můžete podívat, jak bude váš článek po publikování na webu Docs vypadat.
 
 ## <a name="alerts-note-tip-important-caution-warning"></a>Výstrahy – Note (Poznámka), Tip, Important (Důležité), Caution (Pozor), Warning (Upozornění)
 
-Výstrahy jsou rozšíření Docs Markdown určené k vytváření blokových citací zobrazovaných na webu docs.microsoft.com s barvami a ikonami, které označují důležitost obsahu. Podporují se následující typy výstrah:
+Výstrahy představují rozšíření Markdownu určené k vytváření blokových citací zobrazovaných na webu docs.microsoft.com s barvami a ikonami, které označují důležitost obsahu. Podporují se následující typy výstrah:
 
-```md
+```markdown
 > [!NOTE]
 > Information the user should notice even if skimming.
 
@@ -45,21 +45,134 @@ Výstrahy jsou rozšíření Docs Markdown určené k vytváření blokových ci
 
 Tyto výstrahy vypadají na webu docs.microsoft.com takto:
 
-![Ukazuje, jak výstrahy v předchozím příkladu vypadají na publikované stránce Docs s různými ikonami a barvami.](media/alerts-rendering.png)
+> [!NOTE]
+> Information the user should notice even if skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Essential information required for user success.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+> [!WARNING]
+> Dangerous certain consequences of an action.
+
+### <a name="angle-brackets"></a>Ostré závorky
+
+Pokud v textu v souboru používáte ostré závorky, třeba k vyznačení zástupného symbolu, musíte pro ně použít kód. Jinak je Markdown bude považovat za značku HTML.
+
+Například `<script name>` přepište kódem jako `&lt;script name&gt;` nebo `\<script name>`.
+
+Hranaté závorky nemusí být uvozené v textu formátovaném jako vložený kód ani v blocích kódu.
+
+## <a name="apostrophes-and-quotation-marks"></a>Apostrofy a uvozovky
+
+Pokud do editoru Markdownu kopírujete z Wordu, může text obsahovat „inteligentní“ (oblé) jednoduché nebo dvojité uvozovky. Pro ty je nutné použít kód nebo je změnit na základní uvozovky. Jinak se při publikování souboru zobrazí nějak takto: Itâ€™s
+
+Pro „inteligentní“ verze interpunkčních znamének se používají tyto kódy:
+
+- Levá (otevírací) uvozovka: `&#8220;`
+- Pravá (uzavírací) uvozovka: `&#8221;`
+- Pravá (uzavírací) jednoduchá uvozovka nebo apostrof: `&#8217;`
+- Levá (otevírací) jednoduchá uvozovka (používaná zřídka): `&#8216;`
+
+## <a name="blockquotes"></a>Blokové citace
+
+Blokové citace se vytvářejí pomocí znaku `>`:
+
+```md
+> This is a blockquote. It is usually rendered indented and with a different background color.
+```
+
+Předchozí příklad se zobrazí takto:
+
+> This is a blockquote. It is usually rendered indented and with a different background color.
+
+## <a name="bold-and-italic-text"></a>Tučné písmo a kurzíva
+
+Pokud chcete text naformátovat jako **tučný**, použijte dvě hvězdičky z obou stran:
+
+```markdown
+This text is **bold**.
+```
+
+Pokud chcete text naformátovat jako *kurzívu*, použijte jednu hvězdičku z obou stran:
+
+```markdown
+This text is *italic*.
+```
+
+Pokud chcete text naformátovat jako ***tučný i kurzívu***, použijte tři hvězdičky z obou stran:
+
+```markdown
+This text is both ***bold and italic***.
+```
 
 ## <a name="code-snippets"></a>Fragmenty kódu
 
-Do souborů Markdown můžete začlenit fragmenty kódu:
+Markdown pro Docs podporuje umístění fragmentů kódu vložením do věty i jako samostatný ohraničený blok mezi větami. Podrobnosti najdete v tématu věnovaném [přidávání kódu na webu Docs](code-in-docs.md).
 
-```md
-[!code-<language>[<name>](<codepath><queryoption><queryoptionvalue> "<title>")]
+## <a name="columns"></a>Sloupce
+
+Rozšíření Markdownu pro **sloupce** umožňuje autorům webu Docs přidávat rozložení obsahu založená na sloupcích, která jsou flexibilnější a výkonnější než základní tabulky Markdownu (ty se hodí jen pro skutečná tabulková data). Můžete přidat až čtyři sloupce a pomocí volitelného atributu `span` spojit dva nebo více sloupců.
+
+Syntaxe pro sloupce je následující:
+
+```markdown
+:::row:::
+   :::column span="":::
+      Content...
+   :::column-end:::
+   :::column span="":::
+      More content...
+   :::column-end:::
+:::row-end:::
 ```
+
+Sloupce by měly obsahovat jen základní Markdown, a to včetně obrázků. Záhlaví, tabulky, tabulátory ani další složité struktury nevkládejte. Mimo sloupec nesmí být na řádku žádný obsah.
+
+Tento Markdown například vytvoří jeden sloupec, který pokrývá dvě šířky sloupců, a jeden standardní sloupec (bez `span`):
+
+```markdown
+:::row:::
+   :::column span="2":::
+      **This is a 2-span column with lots of text.**
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum mollis nunc
+      ornare commodo. Nullam ac metus imperdiet, rutrum justo vel, vulputate leo. Donec
+      rutrum non eros eget consectetur.
+   :::column-end:::
+   :::column span="":::
+      **This is a single-span column with an image in it.**
+
+      ![Doc.U.Ment](media/markdown-reference/document.png)
+   :::column-end:::
+:::row-end:::
+```
+
+Toto se zobrazí takto:
+
+:::row:::
+   :::column span="2":::
+      **This is a 2-span column with lots of text.**
+
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vestibulum mollis nunc ornare commodo. Nullam ac metus imperdiet, rutrum justo vel, vulputate leo. Donec rutrum non eros eget consectetur.
+   :::column-end:::
+   :::column span="":::
+      **This is a single-span column with an image in it.**
+
+      ![Doc.U.Ment](media/markdown-reference/document.png)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="headings"></a>Nadpisy
 
 Web Docs podporuje šest úrovní nadpisů Markdownu:
 
-```md
+```markdown
 # This is a first level heading (H1)
 
 ## This is a second level heading (H2)
@@ -70,182 +183,134 @@ Web Docs podporuje šest úrovní nadpisů Markdownu:
 ```
 
 - Mezi posledním symbolem `#` a textem nadpisu musí být mezera.
-- Každý soubor Markdown musí mít právě jeden nadpis H1.
+- Každý soubor Markdownu musí mít právě jeden nadpis H1.
 - Nadpis H1 musí být prvním obsahem v souboru za blokem metadat YML.
-- Nadpisy H2 se automaticky objeví v pravé navigační nabídce publikovaného souboru. Nadpisy nižších úrovní nikoli, proto nadpisy H2 můžete strategicky použít k navigaci čtenářů v obsahu.
+- Nadpisy H2 se automaticky objeví v pravé navigační nabídce publikovaného souboru. Nadpisy nižších úrovní nikoliv, takže nadpisy H2 můžete strategicky použít k navigaci čtenářů v obsahu.
 - Nadpisy HTML (například `<h1>`) se nedoporučují a v některých případech způsobí upozornění sestavení.
-- Odkazy na jednotlivé nadpisy v souboru můžete realizovat přes [záložky](#bookmark-links).
+- Odkazy na jednotlivé nadpisy v souboru můžete realizovat pomocí [odkazů na záložky](how-to-write-links.md#links-to-anchors).
 
 ## <a name="html"></a>HTML
 
-Ačkoli Markdown podporuje vložený kód HTML, pro publikování na webu Docs se HTML nedoporučuje a až na omezený seznam hodnot způsobí chyby a upozornění při sestavování.
+Ačkoli Markdown podporuje vložený kód HTML, pro publikování na webu Docs se HTML nedoporučuje a až na omezený seznam hodnot způsobí chyby a upozornění při sestavování. 
 
 ## <a name="images"></a>Obrázky
 
-Syntaxe pro začlenění obrázku:
+Pro obrázky se standardně podporují tyto typy souborů:
 
-```md
-![[alt text]](<folderPath>)
+- .jpg
+- .png
+
+### <a name="standard-conceptual-images-default-markdown"></a>Standardní konceptuální obrázky (výchozí Markdown)
+
+Základní syntaxe Markdownu pro vložení obrázku je následující:
+
+```Markdown
+![<alt text>](<folderPath>)
 
 Example:
 ![alt text for image](../images/Introduction.png)
 ```
 
-`alt text` je stručný popis obrázku a `<folder path>` je relativní cesta k obrázku. Alternativní text se vyžaduje pro čtečky obrazovky, které používají lidé s vadami zraku. Je rovněž užitečný, pokud je na webu chyba a obrázek se nezobrazí.
+`<alt text>` je stručný popis obrázku a `<folder path>` je relativní cesta k obrázku. Alternativní text se vyžaduje pro čtečky obrazovky, které používají lidé s vadami zraku. Je rovněž užitečný, pokud je na webu chyba a obrázek se nezobrazí.
 
-Obrázky by měly být uložené ve složce `/media` v sadě dokumentace. Pro obrázky se standardně podporují tyto typy souborů:
+Podtržítka se v alternativním textu zobrazí správně jen tehdy, pokud je uvedete předponou zpětného lomítka (`\_`). Jako alternativní text ale nepoužívejte zkopírovaný název souborů. Například namísto tohoto:
 
-- .jpg
-- .png
+```markdown
+![ADextension_2FA_Configure_Step4](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
+```
 
-Podporu jiných typů obrázků doplníte tak, že je přidáte jako prostředky do souboru docfx.json<!--add link to reference when available--> pro sadu dokumentace.
+Napište toto:
+
+```markdown
+![Active Directory extension for two-factor authentication, step 4: Configure](./media/bogusfilename/ADextension_2FA_Configure_Step4.PNG)
+```
+
+### <a name="standard-conceptual-images-docs-markdown"></a>Standardní konceptuální obrázky (Markdown pro Docs)
+
+Vlastní rozšíření `:::image:::` pro web Docs podporuje standardní obrázky, složité obrázky a ikony.
+
+I když u standardních obrázků bude i nadále fungovat starší syntaxe Markdownu, doporučujeme použít toto nové rozšíření, protože podporuje výkonnější funkce, jako je specifikace rozsahu lokalizace, která se liší od nadřazeného tématu. V budoucnu budou k dispozici i další pokročilé funkce, například možnost výběru ze sdílené galerie obrázků namísto specifikace místního obrázku. Nová syntaxe vypadá takto:
+
+```Markdown
+:::image type="content" source="<folderPath>" alt-text="<alt text>":::
+```
+
+V případě výchozího `type="content"` se vyžaduje `source` i `alt-text`.
+
+### <a name="complex-images-with-long-descriptions"></a>Složité obrázky s dlouhými popisy
+
+Díky tomuto rozšíření můžete také přidávat obrázky s dlouhým popisem, který přečte čtečka obrazovky, ale vizuálně se na publikované stránce nevykreslí. Dlouhé popisy představují požadavek na přístupnost u složitých obrázků (například grafů). Syntaxe je následující:
+
+```Markdown
+:::image type="complex" source="<folderPath>" alt-text="<alt text>":::
+   <long description here>
+:::image-end:::
+```
+
+V případě `type="complex"` se vyžaduje `source`, `alt-text`, dlouhý popis i značka `:::image-end:::`.
+
+### <a name="specifying-loc-scope"></a>Specifikace rozsahu lokalizace
+
+Někdy se rozsah lokalizace obrázku liší od rozsahu článku nebo modulu, který ho obsahuje. To může způsobit potíže uživatelům z různých částí světa – například pokud se snímek obrazovky s produktem omylem lokalizuje do jazyka, v němž není produkt k dispozici. Chcete-li tomu zabránit, můžete v obrázcích typu `content` a `complex` zadat volitelný atribut `loc-scope`.
+
+### <a name="icons"></a>Ikony
+
+Rozšíření pro obrázky podporuje ikony, které neobsahují alternativní text a slouží jako dekorativní obrázky. Syntaxe pro ikony je následující:
+
+```Markdown
+:::image type="icon" source="<folderPath>":::
+```
+
+V případě výchozího `type="icon"` je potřeba specifikovat jen `source`.
+
+## <a name="included-markdown-files"></a>Zahrnuté soubory Markdownu
+
+Tam, kde se mají soubory Markdownu opakovat ve více článcích, můžete použít soubor k zahrnutí. Tato funkce říká webu Docs, že má v době sestavování nahradit odkaz obsahem zahrnutého souboru. Soubory k zahrnutí můžete používat dvěma způsoby:
+
+- Vložení: Umožňuje znovu použít běžný vložený fragment textu v rámci věty.
+- Blok: Umožňuje znovu použít celý soubor Markdownu jako blok vnořený do oddílu článku.
+
+Soubor k zahrnutí typu Vložení nebo Blok je soubor Markdownu (.md). Ty mohou obsahovat jakýkoli platný Markdown. Zahrnuté soubory se obvykle nachází ve společném podadresáři *includes* v kořenovém adresáři úložiště. Při publikování článku se do něho zahrnutý soubor bezproblémově integruje.
+
+### <a name="includes-syntax"></a>Zahrnutá syntaxe
+
+Soubor typu Blok má vlastní řádek:
+
+```markdown
+[!INCLUDE [<title>](<filepath>)]
+```
+
+Soubor typu Vložení je součástí řádku:
+
+```markdown
+Text before [!INCLUDE [<title>](<filepath>)] and after.
+```
+
+`<title>` představuje název souboru a `<filepath>` relativní cestu k souboru. `INCLUDE` musí být velkými písmeny a před `<title>` se musí nacházet čárka.
+
+Tady jsou požadavky a důležité informace týkající se souborů k zahrnutí:
+
+- Zahrnutí typu Blok používejte na výrazná množství obsahu – jeden nebo dva odstavce, sdílený postup nebo sdílený oddíl. Nepoužívejte je na nic menšího než větu.
+- Zahrnuté soubory se nevykreslí v zobrazení článku vykresleném GitHubem, protože závisejí na rozšířeních pro Docs. Vykreslí se až po zveřejnění.
+- Dbejte na to, aby byl všechen text v souboru k zahrnutí napsaný v úplných větách nebo frázích, které nezávisí na předchozím nebo následujícím textu v článku, který na daný soubor odkazuje. Ignorováním tohoto pravidla vznikne v článku nepřeložitelný řetězec.
+- Nevkládejte zahrnuté soubory do jiných zahrnutých souborů.
+- Multimediální soubory umístěte do složky s multimédii konkrétního podadresáře zahrnutí, třeba do složky `<repo>` */includes/media*. Adresář *media* nesmí ve svém kořenu obsahovat obrázky. Pokud soubor k zahrnutí obrázky nemá, pak odpovídající adresář *media* není potřeba.
+- Stejně jako v případě běžných článků nesdílejte multimédia mezi soubory zahrnutí. Pro každé zahrnutí a článek použijte samostatný soubor s jedinečným názvem. Multimediální soubor uložte do složky multimédií spojené se zahrnutím.
+- Nepoužívejte zahrnutí jako jediný obsah článku.  Zahrnutí mají být doplněním obsahu ve zbytku článku.
 
 ## <a name="links"></a>Odkazy
 
-Web Docs používá ve většině případů standardní odkazy Markdownu na jiné soubory a stránky. Typy odkazů jsou popsané v níže uvedených pododdílech.
-
-> [!TIP]
-> The Docs Authoring Pack for VS Code can help insert relative links and bookmarks correctly without the tedium of figuring out the paths!
-
-> [!IMPORTANT]
-> Do not include locale codes, such as en-us, in your links to Microsoft sites. Hard-coded locale codes prevent localized content from rendering, which is a bad customer experience for users in other locales and incurs significant localization costs. When you copy a URL from a browser, the locale code is included by default, so you need to manually delete it when you create your link. For example, use:
->
-> `[Microsoft](https://www.microsoft.com)`
->
-> Not:
->
-> `[Microsoft](https://www.microsoft.com/en-us/)`
-
-### <a name="relative-links-to-files-in-the-same-doc-set"></a>Relativní odkazy na soubory ve stejné sadě dokumentace
-
-Relativní cesta je cesta k cílovému souboru relativní vzhledem k aktuálnímu souboru. Na webu Docs můžete použít relativní cestu k odkazu na jiný soubor ve stejné sadě dokumentace. Relativní cesta má následující syntaxi:
-
-```md
-[link text](../../folder/filename.md)
-```
-
-`../` označuje jednu úroveň výše v hierarchii.
-
-- Relativní cesta se přeloží během sestavování včetně odebrání přípony .md.
-- K odkazování na soubor v nadřazené složce můžete použít ../, tento soubor ale musí být ve stejné sadě dokumentace. Řetězec ../ nemůžete použít k odkazování na soubor v jiné složce se sadou dokumentace.
-- Web Docs podporuje také speciální formu relativní cesty začínající na ~ (například ~/foo/bar.md). Tato syntaxe označuje soubor relativní vzhledem ke kořenové složce sady dokumentace. Během sestavování se ověří a přeloží i tento druh cesty.
-
-> [!IMPORTANT]
-> Include the file extension in the relative path. Build validates the existence of the target file of that relative path. If relative path does not include file extension, it is likely build will report a warning of broken link. For example, use:
->
-> `[link text](../../folder/filename.md)`
->
-> Not:
->
-> `[link text](../../folder/filename)`
-
-### <a name="site-relative-links-to-other-files-on-docs"></a>Relativní odkazy na jiné soubory na webu Docs
-
-```md
-[Azure and Linux](/articles/virtual-machines/linux/overview)
-```
-
-Nezačleňujte příponu souboru (.md). Odkazuje na přehledový soubor Linuxu vně sady dokumentace s články Azure.
-
-### <a name="links-to-external-sites"></a>Odkazy na externí weby
-
-```md
-[Microsoft](https://www.microsoft.com)
-```
-
-Odkaz na jinou webovou stránku založený na adrese URL (musí obsahovat https://).
-
-### <a name="bookmark-links"></a>Odkazy na záložky
-
-Odkaz na záložku u nadpisu v jiném souboru ve stejném úložišti. Například:
-
-```md
-[Managed Disks](../../linux/overview.md#managed-disks)
-```
-
-Odkaz na záložku u nadpisu v aktuálním souboru:
-
-```md
-[Managed Disks](#managed-disks)
-```
-
-Použijte znak hash (`#`) a za ním slova nadpisu. Pokud chcete změnit text nadpisu na text odkazu:
-- Použijte jenom malá písmena.
-- Odeberte interpunkci.
-- Nahraďte mezery pomlčkami.
-
-Pokud máte například nadpis „2.2 Otázky zabezpečení“, pak text odkazu na záložku bude „#22-otázky-zabezpečení“.
-
-### <a name="explicit-anchor-links"></a>Explicitní odkazy na ukotvení
-
-Explicitní odkazy na ukotvení používající značku `<a>` jazyka HTML **nejsou povinné ani doporučené** s výjimkou centra a cílových stránek. V obecných souborech Markdown použijte výše popsané záložky. Pro centrum a cílové stránky použijte ukotvení následujícím způsobem:
-
-`## <a id="AnchorText"> </a>Header text` nebo `## <a name="AnchorText"> </a>Header text`
-
-Pro odkaz na explicitní ukotvení použijte následující syntaxi:
-
-```md
-To go to a section on the same page:
-[text](#AnchorText)
-
-To go to a section on another page.
-[text](FileName.md#AnchorText)
-```
-
-### <a name="xref-cross-reference-links"></a>Křížové odkazy XREF
-
-K odkazování na automaticky generované stránky s referencemi rozhraní API v aktuální sadě dokumentace nebo v jiných sadách dokumentace použijte odkazy XREF s jedinečným ID (UID).
-
-> [!NOTE]
-> To reference API reference pages in other doc sets, you need to add `xrefService` configuration in `docfx.json` file.
-> ```
-> "build": {
->   ...
->   "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ]
-> }
-> ```
-
-Identifikátor odpovídá plně kvalifikované třídě a názvu člena. Pokud za UID přidáte *, představuje tento odkaz stránku přetížení, nikoli konkrétní rozhraní API. `List<T>.BinarySearch*` použijte například k odkazu na stránku metody BinarySearch místo odkazu na konkrétní přetížení, jako je `List<T>.BinarySearch(T, IComparer<T>)`.
-
-Můžete použít jednu z následujících syntaxí:
-
-- Automatický odkaz: `<xref:UID> or <xref:UID?displayProperty=nameWithType>`
-
-  Nepovinný parametr dotazu `displayProperty` vytvoří plně kvalifikovaný text odkazu. Ve výchozím nastavení text odkazu zobrazuje pouze název člena nebo typu.
-
-- Odkaz Markdownu: `[link text](xref:UID)`
-  
-  Tento způsob použijte, když chcete přizpůsobit zobrazený text odkazu.
-
-Příklady:
-
-- `<xref:System.String>` se zobrazí jako „String“.
-- `<xref:System.String?displayProperty=nameWithType>` se zobrazí jako „System.String“.
-- `[String class](xref:System.String)` se zobrazí jako „třída String“.
-
-V současné době neexistuje jednoduchý způsob, jak najít identifikátory UID. <!-- ? -->Nejlepším způsobem, jak najít identifikátor UID pro rozhraní API, je zobrazit zdroj stránky API, kterou chcete propojit, a najít hodnotu ms.assetid. Hodnoty jednotlivých přetížení se ve zdroji nezobrazují. Pracujeme na tom, abychom v budoucnu měli lepší systém.
-
-Pokud UID obsahuje speciální znaky \`, \# nebo \*, musí být hodnota UID uvedena ve formátu HTML `%60`, `%23` a `%2A` v uvedeném pořadí. Někdy v tomto formátu uvidíte i závorky, není to ale povinné.
-
-Příklady:
-
-- System.Threading.Tasks.Task\`1 se změní na `System.Threading.Tasks.Task%601`.
-- System.Exception.\#ctor se změní na `System.Exception.%23ctor`.
-- System.Lazy\`1.\#ctor(System.Threading.LazyThreadSafetyMode) se změní na `System.Lazy%601.%23ctor%28System.Threading.LazyThreadSafetyMode%29`.
-
-<!-- leave out of Contributor Guide for now
-Using XREF may require some configuration. For more information, see XREF Service.
--->
+Informace o syntaxi odkazů najdete v tématu [Použití odkazů v dokumentaci](how-to-write-links.md).
 
 ## <a name="lists-numbered-bulleted-checklist"></a>Seznamy (číslované, odrážkové, kontrolní)
 
 ### <a name="numbered-list"></a>Číslovaný seznam
 
-Při vytváření číslovaného seznamu můžete všude použít jedničky (1), které se při publikování zobrazí jako sekvenční seznam. Kvůli lepší čitelnosti zdrojového kódu můžete seznamy inkrementovat.
+Při vytváření číslovaného seznamu můžete všude použít jedničky (1). Ty se při publikování zobrazí jako sekvenční seznam ve vzestupném pořadí. Kvůli lepší čitelnosti zdrojového kódu můžete seznamy inkrementovat ručně.
 
 Nepoužívejte v seznamech ani vnořených seznamech písmena. Při publikování na webu Docs se nezobrazí správně. Vnořené seznamy používající čísla se při publikování zobrazí jako malá písmena. Například:
 
-```md
+```markdown
 1. This is
 1. a parent numbered list
    1. and this is
@@ -263,9 +328,9 @@ Toto se zobrazí takto:
 
 ### <a name="bulleted-list"></a>Seznam s odrážkami
 
-Pokud chcete vytvořit seznam s odrážkami, použijte na začátku každého řádku znak `-` následovaný mezerou:
+Pokud chcete vytvořit seznam s odrážkami, použijte na začátku každého řádku znak `-` nebo `*` následovaný mezerou:
 
-```md
+```markdown
 - This is
 - a parent bulleted list
   - and this is
@@ -281,18 +346,20 @@ Toto se zobrazí takto:
   - a nested bulleted list
 - All done!
 
+Ať už se rozhodnete pro `-` nebo `*`, používejte jeden typ syntaxe konzistentně v rámci celého článku.
+
 ### <a name="checklist"></a>Kontrolní seznam
 
-Kontrolní seznamy jsou webu docs.microsoft.com dostupné jen při použití vlastního rozšíření Markdownu:
+Kontrolní seznamy jsou webu Docs dostupné jen při použití vlastního rozšíření Markdownu:
 
-```md
+```markdown
 > [!div class="checklist"]
 > * List item 1
 > * List item 2
 > * List item 3
 ```
 
-Tento příklad se na webu docs.microsoft.com zobrazí takto:
+Tento příklad se na webu Docs zobrazí takto:
 
 > [!div class="checklist"]
 > * List item 1
@@ -300,38 +367,89 @@ Tento příklad se na webu docs.microsoft.com zobrazí takto:
 > * List item 3
 
 Ke shrnutí probírané látky nebo k její rekapitulaci použijte kontrolní seznamy, které přidáte na začátek nebo na konec článku. Nepřidávejte do svých článků náhodné kontrolní seznamy.
-<!-- is this guidance still accurate? -->
 
 ## <a name="next-step-action"></a>Akce dalšího kroku
 
-K přidání tlačítka akce dalšího kroku na stránky docs.microsoft.com můžete použít jen vlastní rozšíření.
+K přidání tlačítka akce dalšího kroku na stránky Docs můžete použít vlastní rozšíření.
 
 Syntaxe je následující:
 
-```md
+```markdown
 > [!div class="nextstepaction"]
 > [button text](link to topic)
 ```
 
 Například:
 
-```md
+```markdown
 > [!div class="nextstepaction"]
-> [Learn about basic style](style-quick-start.md)
+> [Learn about adding code to articles](code-in-docs.md)
 ```
 
 Toto se zobrazí takto:
 
 > [!div class="nextstepaction"]
-> [Learn about basic style](style-quick-start.md)
+> [Learn about adding code to articles](code-in-docs.md)
 
 V akci dalšího kroku můžete použít jakýkoli podporovaný odkaz včetně odkazu Markdownu na jinou webovou stránku. Ve většině případů bude odkaz na další akci relativním odkazem na jiný soubor ve stejné sadě dokumentace.
 
-## <a name="section-definition"></a>Definice oddílu
+## <a name="non-localized-strings"></a>Nelokalizované řetězce
 
-<!-- more info about this would be helpful! -->
-Je možné, že budete potřebovat nadefinovat oddíl. Tato syntaxe se nejčastěji používá pro tabulky kódu.
-Prohlédněte si následující příklad:
+Pomocí vlastního rozšíření Markdownu `no-loc` můžete identifikovat řetězce obsahu, které má proces lokalizace ignorovat.
+
+Ve všech příslušných řetězcích se budou rozlišovat velká a malá písmena, což znamená, že musí být specifikované naprosto přesně, aby se mohly ignorovat.
+
+Pokud chcete řetězec označit jako nelokalizovaný, použijte tuto syntaxi:
+
+```markdown
+:::no-loc text="String":::
+```
+
+Například v následujícím příkladu se během procesu lokalizace bude ignorovat jen jedna instance `Document`:
+
+```markdown
+# Heading 1 of the Document
+
+Markdown content within the :::no-loc text="Document":::.  The are multiple instances of Document, document, and documents.
+```
+
+> [!NOTE]
+> K uvození speciálních znaků použijte `\`:
+> ```markdown
+> Lorem :::no-loc text="Find a \"Quotation\""::: Ipsum.
+> ```
+
+Pomocí metadat v hlavičce YAML můžete také označit jako nelokalizované všechny instance řetězce v aktuálním souboru Markdownu:
+
+```yml
+author: cillroy
+no-loc: [Global, Strings, to be, Ignored]
+```
+
+> [!NOTE]
+> Nelokalizovaná metadata se v souboru *docfx.json* nepodporují jako globální metadata. Lokalizační kanál nečte soubor *docfx.json*, takže je potřeba tato metadata přidat do každého ze zdrojových souborů.
+
+V následujícím příkladu bude proces lokalizace ignorovat slovo `title` jak v `Document` metadat, tak i v hlavičce Markdownu.
+
+V `description` metadat a v hlavním obsahu Markdownu se slovo `document` lokalizuje, protože nezačíná velkým písmenem `D`.
+
+```markdown
+---
+title: Title of the Document
+author: author-name
+description: Description for the document
+no-loc: [Title, Document]
+---
+# Heading 1 of the Document
+
+Markdown content within the document.
+```
+
+<!-- commenting out for now because no one knows what this means
+## Section definition
+
+You might need to define a section. This syntax is mostly used for code tables.
+See the following example:
 
 ````
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
@@ -343,7 +461,7 @@ Prohlédněte si následující příklad:
 > ```
 ````
 
-Předchozí text Markdownu blokové citace se zobrazí takto:
+The preceding blockquote Markdown text will be rendered as:
 > [!div class="tabbedCodeSnippets" data-resources="OutlookServices.Calendar"]
 > ```cs
 > <cs code text>
@@ -351,76 +469,99 @@ Předchozí text Markdownu blokové citace se zobrazí takto:
 > ```javascript
 > <js code text>
 > ```
+-->
 
 ## <a name="selectors"></a>Voliče
 
-<!-- could be more clear! -->
-Volič neboli selektor můžete použít, když chcete připojit různé stránky pro stejný článek. Čtenáři pak můžou přepínat mezi těmito stránkami.
+Voliče jsou prvky uživatelského rozhraní, které umožňují uživateli přepínat mezi různými variantami jednoho článku. Využívají se v některých sadách dokumentace k řešení rozdílné implementace napříč technologiemi a platformami. Voliče se zpravidla nejvíce hodí pro obsah určený pro vývojářské mobilní platformy.
 
-> [!NOTE]
-> This extension works differently between docs.microsoft.com and MSDN. <!-- should we keep info about MSDN? If so say how they differ?-->
+Protože do každého souboru článku ve výběru přijde stejný Markdown voliče, doporučujeme umístit volič pro článek do souboru k zahrnutí. Pak můžete na daný soubor k zahrnutí odkázat ve všech souborech článků, které daný volič používají.
+
+K dispozici jsou dva typy voličů – jednoduchý a vícenásobný volič.
 
 ### <a name="single-selector"></a>Jeden selektor
 
-```
+```markdown
 > [!div class="op_single_selector"]
-> - [Universal Windows](how-to-write-use-markdown.md)
-> - [Windows Phone](how-to-write-use-markdown.md)
-> - [iOS](how-to-write-use-markdown.md)
-> - [Android](how-to-write-use-markdown.md)
-> - [Kindle](how-to-write-use-markdown.md)
-> - [Baidu](how-to-write-use-markdown.md)
-> - [Xamarin.iOS](how-to-write-use-markdown.md)
-> - [Xamarin.Android](how-to-write-use-markdown.md)
+> - [Universal Windows](../articles/notification-hubs-windows-store-dotnet-get-started/)
+> - [Windows Phone](../articles/notification-hubs-windows-phone-get-started/)
+> - [iOS](../articles/notification-hubs-ios-get-started/)
+> - [Android](../articles/notification-hubs-android-get-started/)
+> - [Kindle](../articles/notification-hubs-kindle-get-started/)
+> - [Baidu](../articles/notification-hubs-baidu-get-started/)
+> - [Xamarin.iOS](../articles/partner-xamarin-notification-hubs-ios-get-started/)
+> - [Xamarin.Android](../articles/partner-xamarin-notification-hubs-android-get-started/)
 ```
 
 ...se zobrazí takto:
 
 > [!div class="op_single_selector"]
-> - [Universal Windows](how-to-write-use-markdown.md)
-> - [Windows Phone](how-to-write-use-markdown.md)
-> - [iOS](how-to-write-use-markdown.md)
-> - [Android](how-to-write-use-markdown.md)
-> - [Kindle](how-to-write-use-markdown.md)
-> - [Baidu](how-to-write-use-markdown.md)
-> - [Xamarin.iOS](how-to-write-use-markdown.md)
-> - [Xamarin.Android](how-to-write-use-markdown.md)
+> - [Universal Windows](how-to-write-links.md)
+> - [Windows Phone](how-to-write-links.md)
+> - [iOS](how-to-write-links.md)
+> - [Android](how-to-write-links.md)
+> - [Kindle](how-to-write-links.md)
+> - [Baidu](how-to-write-links.md)
+> - [Xamarin.iOS](how-to-write-links.md)
+> - [Xamarin.Android](how-to-write-links.md)
 
 ### <a name="multi-selector"></a>Vícenásobný selektor
 
-```
+```markdown
 > [!div class="op_multi_selector" title1="Platform" title2="Backend"]
-> - [(iOS | .NET)](how-to-write-workflows-major.md)
-> - [(iOS | JavaScript)](how-to-write-workflows-major.md)
-> - [(Windows universal C# | .NET)](how-to-write-workflows-major.md)
-> - [(Windows universal C# | Javascript)](how-to-write-workflows-major.md)
-> - [(Windows Phone | .NET)](how-to-write-workflows-major.md)
-> - [(Windows Phone | Javascript)](how-to-write-workflows-major.md)
-> - [(Android | .NET)](how-to-write-workflows-major.md)
-> - [(Android | Javascript)](how-to-write-workflows-major.md)
-> - [(Xamarin iOS | Javascript)](how-to-write-workflows-major.md)
-> - [(Xamarin Android | Javascript)](how-to-write-workflows-major.md)
+> - [(iOS | .NET)](./mobile-services-dotnet-backend-ios-get-started-push.md)
+> - [(iOS | JavaScript)](./mobile-services-javascript-backend-ios-get-started-push.md)
+> - [(Windows universal C# | .NET)](./mobile-services-dotnet-backend-windows-universal-dotnet-get-started-push.md)
+> - [(Windows universal C# | Javascript)](./mobile-services-javascript-backend-windows-universal-dotnet-get-started-push.md)
+> - [(Windows Phone | .NET)](./mobile-services-dotnet-backend-windows-phone-get-started-push.md)
+> - [(Windows Phone | Javascript)](./mobile-services-javascript-backend-windows-phone-get-started-push.md)
+> - [(Android | .NET)](./mobile-services-dotnet-backend-android-get-started-push.md)
+> - [(Android | Javascript)](./mobile-services-javascript-backend-android-get-started-push.md)
+> - [(Xamarin iOS | Javascript)](./partner-xamarin-mobile-services-ios-get-started-push.md)
+> - [(Xamarin Android | Javascript)](./partner-xamarin-mobile-services-android-get-started-push.md)
 ```
 
 ...se zobrazí takto:
 
 > [!div class="op_multi_selector" title1="Platforma" title2="Back-end"]
-> - [(iOS | .NET)](how-to-write-workflows-major.md)
-> - [(iOS | JavaScript)](how-to-write-workflows-major.md)
-> - [(Windows Universal C# | .NET)](how-to-write-workflows-major.md)
-> - [(Windows Universal C# | Javascript)](how-to-write-workflows-major.md)
-> - [(Windows Phone | .NET)](how-to-write-workflows-major.md)
-> - [(Windows Phone | Javascript)](how-to-write-workflows-major.md)
-> - [(Android | .NET)](how-to-write-workflows-major.md)
-> - [(Android | Javascript)](how-to-write-workflows-major.md)
-> - [(Xamarin iOS | Javascript)](how-to-write-workflows-major.md)
-> - [(Xamarin Android | Javascript)](how-to-write-workflows-major.md)
+> - [(iOS | .NET)](how-to-write-links.md)
+> - [(iOS | JavaScript)](how-to-write-links.md)
+> - [(Windows Universal C# | .NET)](how-to-write-links.md)
+> - [(Windows Universal C# | Javascript)](how-to-write-links.md)
+> - [(Windows Phone | .NET)](how-to-write-links.md)
+> - [(Windows Phone | Javascript)](how-to-write-links.md)
+> - [(Android | .NET)](how-to-write-links.md)
+> - [(Android | Javascript)](how-to-write-links.md)
+> - [(Xamarin iOS | Javascript)](how-to-write-links.md)
+> - [(Xamarin Android | Javascript)](how-to-write-links.md)
+
+## <a name="subscript-and-superscript"></a>Dolní index a horní index
+
+Dolní a horní index používejte jen tam, kde jsou potřeba k zajištění technické přesnosti, například v článcích o matematických vzorcích. Nepoužívejte je v nestandardních stylech, jako jsou poznámky pod čarou.
+
+V obou případech použijte HTML:
+
+```html
+Hello <sub>This is subscript!</sub>
+```
+
+Toto se zobrazí takto:
+
+Hello <sub>This is subscript!</sub>
+
+```html
+Goodbye <sup>This is superscript!</sup>
+```
+
+Toto se zobrazí takto:
+
+Goodbye <sup>This is superscript!</sup>
 
 ## <a name="tables"></a>Tabulky
 
 Nejjednodušším způsobem, jak v Markdownu vytvořit tabulku, je použít svislé čáry a řádky. Pokud chcete vytvořit standardní tabulku se záhlavím, za první řádek vložte čárkovaný řádek:
 
-```md
+```markdown
 |This is   |a simple   |table header|
 |----------|-----------|------------|
 |table     |data       |here        |
@@ -434,55 +575,38 @@ Toto se zobrazí takto:
 |table     |data       |here        |
 |it doesn't|actually   |have to line up nicely!||
 
-Můžete také vytvořit tabulku bez záhlaví. Příklad vytvoření seznamu s více sloupci:
-
-```md
-|   |   |
-| - | - |
-| This | table |
-| has no | header |
-```
-
-Toto se zobrazí takto:
-
-|   |   |
-| - | - |
-| This | table |
-| has no | header |
-
 Sloupce můžete zarovnat pomocí dvojtečky:
 
-```md
-|                  |
-|------------------|
-|    right aligned:|
-|:left aligned     |
-|:centered        :|
+```markdown
+| Fun                  | With                 | Tables          |
+| :------------------- | -------------------: |:---------------:|
+| left-aligned column  | right-aligned column | centered column |
+| $100                 | $100                 | $100            |
+| $10                  | $10                  | $10             |
+| $1                   | $1                   | $1              |
 ```
 
 Se vykreslí takto:
 
-|                  |
-|------------------|
-|    right aligned:|
-|:left aligned     |
-|:centered        :|
+| Fun                  | With                 | Tabulky          |
+| :------------------- | -------------------: |:---------------:|
+| left-aligned column  | right-aligned column | centered column |
+| $100                 | $100                 | $100            |
+| $10                  | $10                  | $10             |
+| $1                   | $1                   | $1              |
 
 > [!TIP]
 > The Docs Authoring Extension for VS Code makes it easy to add basic Markdown tables!
 >
 > You can also use an [online table generator](http://www.tablesgenerator.com/markdown_tables).
 
-### <a name="mx-tdbreakall"></a>mx-tdBreakAll
+### <a name="line-breaks-within-words-in-any-table-cell"></a>Konce řádků ve slovech v libovolných buňkách tabulky
 
-> [!IMPORTANT]
-> This only works on the docs.microsoft.com site.
-
-Když vytvoříte tabulku v Markdownu, často se stane, že tabulka zasahuje do navigace napravo a stává se nečitelnou. Tento problém můžete vyřešit tak, že při zobrazování na webu Docs umožníte tabulku v případě potřeby rozdělit. Tabulku stačí zalomit pomocí vlastní třídy `[!div class="mx-tdBreakAll"]`.
+Dlouhá slova v markdownové tabulce můžou způsobit, že bude tabulka zasahovat do navigace napravo a stane se nečitelnou. Tento problém vyřešíte tak, že webu Docs umožníte při zobrazování automaticky vkládat konce řádků do slov tam, kde je to potřeba. Tabulku stačí zalomit pomocí vlastní třídy `[!div class="mx-tdBreakAll"]`.
 
 Toto je ukázka tabulky v Markdownu se třemi řádky, která se zalomí pomocí `div` s názvem třídy `mx-tdBreakAll`.
 
-```md
+```markdown
 > [!div class="mx-tdBreakAll"]
 > |Name|Syntax|Mandatory for silent installation?|Description|
 > |-------------|----------|---------|---------|
@@ -500,84 +624,10 @@ Zobrazí se takto:
 > |NoRestart|/norestart|No|Suppresses any attempts to restart. By default, the UI will prompt before restart.|
 > |Help|/help|No|Provides help and quick reference. Displays the correct use of the setup command, including a list of all options and behaviors.|
 
-### <a name="mx-tdcol2breakall"></a>mx-tdCol2BreakAll
+### <a name="line-breaks-within-words-in-second-column-table-cells"></a>Konce řádků ve slovech v buňkách druhého sloupce tabulky
 
-> [!IMPORTANT]
-> This only works on the docs.microsoft.com site.
-
-Někdy se může stát, že druhý sloupec v tabulce obsahuje velmi dlouhá slova. Pokud chcete zajistit jejich správné rozdělení, můžete použít třídu `mx-tdCol2BreakAll` pomocí syntaxe obálky `div`, jak bylo uvedeno dříve.
+Je možné, že budete potřebovat automaticky vkládat konce řádků do slov jen ve druhém sloupci tabulky. Pokud chcete konce řádků omezit právě jen na druhý sloupec, použijte třídu `mx-tdCol2BreakAll` pomocí syntaxe obálky `div`, jak bylo uvedeno dříve.
 
 ### <a name="html-tables"></a>Tabulky HTML
 
 Tabulky HTML se na webu docs.microsoft.com nedoporučují. Nejsou ve zdrojovém kódu čitelné pro člověka, což je klíčový princip Markdownu.
-
-<!--If you use HTML tables and your Markdown is not being rendered between the two tables, you need to add a closing `br` tag after the closing `table` tag.
-
-![break HTML tables](media/break-tables.png)
--->
-
-## <a name="videos"></a>Videa
-
-### <a name="embedding-videos-into-a-markdown-page"></a>Vkládání videí na stránku Markdownu
-
-Platforma Docs v současnosti podporuje videa publikovaná v jednom z těchto tří umístění:
-
-- YouTube
-- Channel9
-- Vlastní systém Microsoftu „One Player“
-
-Můžete vložit video s následující syntaxí a Docs ho zobrazí.
-
-```md
-> [!VIDEO <embedded_video_link>]
-```
-
-Příklad:
-
-```md
-> [!VIDEO https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player]
-
-> [!VIDEO https://www.youtube.com/embed/iAtwVM-Z7rY]
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
-```
-
-...se zobrazí takto:
-
-```html
-<iframe src="https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-
-<iframe src="https://www.youtube-nocookie.com/embed/iAtwVM-Z7rY" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-<iframe src="https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS" width="640" height="320" allowFullScreen="true" frameBorder="0"></iframe>
-```
-
-A na publikovaných stránkách se zobrazí takto:
-
-> [!VIDEO https://channel9.msdn.com/Series/Youve-Got-Key-Values-A-Redis-Jump-Start/03/player]
-
-> [!VIDEO https://www.youtube.com/embed/iAtwVM-Z7rY]
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
-
-> [!IMPORTANT]
-> The CH9 video URL should start with `https` and end with `/player`. Otherwise, it will embed the whole page instead of the video only.
-
-### <a name="uploading-new-videos"></a>Nahrání nových videí
-
-Všechna nová videa by měla být nahrána následujícím postupem:
-
-1. Připojte se ke skupině **docs_video_users** na IDWEB.
-1. Přejděte na adresu https://aka.ms/VideoUploadRequest a vyplňte podrobnosti o videu. Budete potřebovat zadat tyto údaje (žádné z nich nebudou veřejně viditelné):
-    1. Název videa
-    1. Seznam produktů/služeb, kterých se video týká
-    1. Cílová stránka nebo (pokud tuto stránku ještě nemáte) sada dokumentace, kde bude video hostované
-    1. Odkaz na soubor MP4 s videem (pokud ještě nevíte, kde bude soubor umístěný, můžete sem dočasně zadat: `\\scratch2\scratch\apex`). Soubory MP4 by měly mít rozlišení 720p nebo vyšší.
-    1. Popis videa
-1. Odešlete (uložte) tuto položku.
-1. Video se nahraje během dvou pracovních dnů. Odkaz potřebný k vložení bude umístěn do pracovní položky, která vám bude *přeložena zpět*.
-1. Jakmile získáte odkaz na video, zavřete tuto pracovní položku.
-1. Odkaz na video pak můžete přidat do příspěvku pomocí této syntaxe:
-
-   ```md
-   > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE1XVQS]
-   ```

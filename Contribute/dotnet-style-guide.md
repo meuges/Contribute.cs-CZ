@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: 998ebf90c8a162451dd4ca2e7c8a55833ed9d408
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 8d4d8c572435b9261038017c04dcad78ec83fe67
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288376"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331738"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Metadata a šablona v Markdownu pro dokumentaci k .NET
 
@@ -43,7 +43,7 @@ Ke každému článku jsou připojená další metadata, ale většinu hodnot me
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>Základy jazyka Markdown (GFM) a speciální znaky
 
-Základy jazyka Markdown také označované jako GitHub Flavored Markdown (GFM) a určité přípony OPS jsou v obecných článcích o [Markdownu](how-to-write-use-markdown.md) a v [referenčních materiálech k Markdownu](markdown-reference.md).
+Základy jazyka Markdown také označované jako GitHub Flavored Markdown (GFM) a určité přípony OPS najdete v článku [Referenční informace k jazyku Markdown](markdown-reference.md).
 
 Markdown používá k formátování zvláštní znaky, například \*, \` a \#. Pokud chcete některý z těchto znaků přidat do obsahu, máte na výběr dvě možnosti:
 
@@ -126,7 +126,7 @@ Pokud chcete vytvořit odkaz na obecný typ, třeba na [System.Collections.Gener
 
 ## <a name="code"></a>Kód
 
-Nejlepší způsob, jak zahrnout kód, je použít fragmenty kódu z funkční ukázky. Vytvořte ukázku podle pokynů v článku o [příspěvcích pro .NET](dotnet-contribute-process.md#contributing-to-samples). Základní pravidla, která platí pro zahrnutí kódu, najdete v obecných pokynech ke [kódu](how-to-write-use-markdown.md#code-snippets).
+Nejlepší způsob, jak zahrnout kód, je použít fragmenty kódu z funkční ukázky. Vytvořte ukázku podle pokynů v článku o [příspěvcích pro .NET](dotnet-contribute-process.md#contributing-to-samples). Základní pravidla, která platí pro zahrnutí kódu, najdete v obecných pokynech ke [kódu](code-in-docs.md).
 
 K zahrnutí kódu použijte následující syntaxi:
 

@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 06/30/2017
-ms.openlocfilehash: 5154b80102069f1d5526b744637f8ba854f1fe3f
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: c099a458718ade11840c314542c530dd6669402d
+ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288444"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78331876"
 ---
 # <a name="git-and-github-essentials-for-docs"></a>Základy Gitu a GitHubu pro web Docs
 
@@ -61,7 +61,7 @@ Adresář každého článku obsahuje podadresář `/media` pro odpovídající 
 
 Pokud máme nějaký opakovaně použitelný obsah, který je sdílený dvěma nebo více články, je umístěný v podadresáři `/includes` hlavního adresáře `articles`. Do souboru Markdownu, který používá příslušný soubor zahrnutí, se na místo, kde se na tento soubor má odkazovat, umístí odpovídající rozšíření Markdownu pro „zahrnutí“.
 
-Další pokyny najdete v části [Používání Markdownu: Soubory k zahrnutí](how-to-write-use-markdown.md#include-files).
+Další pokyny najdete v části [Referenční informace k jazyku Markdown: Soubory k zahrnutí](markdown-reference.md#included-markdown-files).
 
 ### <a name="markdown-file-template"></a>Šablona souboru Markdown
 
