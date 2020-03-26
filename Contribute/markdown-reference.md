@@ -7,12 +7,12 @@ ms.date: 01/30/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 14cc9f0912149eb342c97d0dd7d2776bd54c84e7
-ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
+ms.openlocfilehash: c1568264c687ebaf26048f5432fdea7d5132c012
+ms.sourcegitcommit: 216ef77ca2cd1eeb31c6c89d96778b178fc0d540
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78331949"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80070083"
 ---
 # <a name="docs-markdown-reference"></a>Referenční informace k jazyku Markdown pro Docs
 
@@ -627,6 +627,19 @@ Zobrazí se takto:
 ### <a name="line-breaks-within-words-in-second-column-table-cells"></a>Konce řádků ve slovech v buňkách druhého sloupce tabulky
 
 Je možné, že budete potřebovat automaticky vkládat konce řádků do slov jen ve druhém sloupci tabulky. Pokud chcete konce řádků omezit právě jen na druhý sloupec, použijte třídu `mx-tdCol2BreakAll` pomocí syntaxe obálky `div`, jak bylo uvedeno dříve.
+
+### <a name="data-matrix-tables"></a>Tabulky matic dat
+
+Tabulka matic dat má záhlaví a vážený první sloupec. Výsledkem je matice s prázdnou buňkou v levém horním rohu. Dokumentace (Docs) obsahuje vlastní Markdown pro tabulky matic dat:
+
+```md
+|                  |Header 1 |Header 2|
+|------------------|---------|--------|
+|**First column A**|Cell 1A  |Cell 2A |
+|**First column B**|Cell 1B  |Cell 2B |
+```
+
+Každá položka v prvním sloupci musí být naformátovaná jako tučná (`**bold**`); jinak tabulky nebudou přístupné pro čtečky obrazovky ani platné pro dokumentaci (Docs).
 
 ### <a name="html-tables"></a>Tabulky HTML
 
