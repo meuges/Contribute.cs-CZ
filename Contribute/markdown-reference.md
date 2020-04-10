@@ -3,16 +3,16 @@ title: Referenční informace k jazyku Markdown pro docs.microsoft.com
 description: Informace o funkcích a syntaxi jazyka Markdown používaných na platformě Microsoft Docs
 author: meganbradley
 ms.author: mbradley
-ms.date: 01/30/2020
+ms.date: 03/31/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: c1568264c687ebaf26048f5432fdea7d5132c012
-ms.sourcegitcommit: 216ef77ca2cd1eeb31c6c89d96778b178fc0d540
+ms.openlocfilehash: f0aed4ebb57ee1ce34f55d9085bab718fd4511cb
+ms.sourcegitcommit: 5ef2dc72e2ff8bddf873415a3f4b816eb16029dd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80070083"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80624731"
 ---
 # <a name="docs-markdown-reference"></a>Referenční informace k jazyku Markdown pro Docs
 
@@ -70,7 +70,7 @@ Hranaté závorky nemusí být uvozené v textu formátovaném jako vložený k�
 
 ## <a name="apostrophes-and-quotation-marks"></a>Apostrofy a uvozovky
 
-Pokud do editoru Markdownu kopírujete z Wordu, může text obsahovat „inteligentní“ (oblé) jednoduché nebo dvojité uvozovky. Pro ty je nutné použít kód nebo je změnit na základní uvozovky. Jinak se při publikování souboru zobrazí nějak takto: Itâ€™s
+Pokud do editoru Markdownu kopírujete z Wordu, může text obsahovat „inteligentní“ (oblé) jednoduché nebo dvojité uvozovky. Pro ty je nutné použít kód nebo je změnit na základní uvozovky. Jinak se při publikování souboru zobrazí nějak takto: Itâ&euro;&trade;s
 
 Pro „inteligentní“ verze interpunkčních znamének se používají tyto kódy:
 
@@ -187,11 +187,11 @@ Web Docs podporuje šest úrovní nadpisů Markdownu:
 - Nadpis H1 musí být prvním obsahem v souboru za blokem metadat YML.
 - Nadpisy H2 se automaticky objeví v pravé navigační nabídce publikovaného souboru. Nadpisy nižších úrovní nikoliv, takže nadpisy H2 můžete strategicky použít k navigaci čtenářů v obsahu.
 - Nadpisy HTML (například `<h1>`) se nedoporučují a v některých případech způsobí upozornění sestavení.
-- Odkazy na jednotlivé nadpisy v souboru můžete realizovat pomocí [odkazů na záložky](how-to-write-links.md#links-to-anchors).
+- Odkazy na jednotlivé nadpisy v souboru můžete realizovat pomocí [odkazů na záložky](how-to-write-links.md#explicit-anchor-links).
 
 ## <a name="html"></a>HTML
 
-Ačkoli Markdown podporuje vložený kód HTML, pro publikování na webu Docs se HTML nedoporučuje a až na omezený seznam hodnot způsobí chyby a upozornění při sestavování. 
+Ačkoli Markdown podporuje vložený kód HTML, pro publikování na webu Docs se HTML nedoporučuje a až na omezený seznam hodnot způsobí chyby a upozornění při sestavování.
 
 ## <a name="images"></a>Obrázky
 
