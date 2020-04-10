@@ -53,28 +53,16 @@
     - name: Dokumentace k .NET
       items:
         - name: Jak přispívat do dokumentace k .NET
-          href: dotnet-contribute.md
-        - name: Příspěvky do dokumentace k .NET
-          href: dotnet-contribute-process.md
+          href: dotnet/dotnet-contribute.md
+        - name: Průvodce popisky a projekty
+          href: dotnet/labels-projects.md
         - name: Zásady týkající se stylu dokumentace k .NET
-          href: dotnet-style-guide.md
+          href: dotnet/dotnet-style-guide.md
         - name: Pokyny ke způsobu a tónu vyjadřování
-          href: dotnet-voice-tone.md
+          href: dotnet/dotnet-voice-tone.md
         - name: Postup kontroly žádosti o přijetí změn
-          href: dotnet-pr-review.md
-    - name: Dokumentace k PowerShellu
-      items:
-        - name: Jak přispívat do dokumentace k PowerShellu
-          href: powershell\powershell-contribute.md
-        - name: Postup psaní příspěvků pro PowerShell
-          href: powershell\powershell-contribute-process.md
-        - name: Rychlý start do psaní článků o PowerShellu
-          href: powershell\powershell-style-basic-markdown.md
-        - name: Průvodce správným stylem vzorových skriptů v PowerShellu
-          href: powershell\powershell-style-code.md
-        - name: Referenční informace ohledně stylu rutin PowerShellu
-          href: powershell\powershell-style-reference.md
-        - name: Odeslání žádosti o přijetí změn pro PowerShell
-          href: powershell\powershell-pull-requests.md
+          href: dotnet/dotnet-pr-review.md
+    - name: PowerShell-Docs
+      href: powershell-overview.md
 - name: Další materiály
   href: additional-resources.md
