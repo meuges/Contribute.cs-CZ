@@ -7,12 +7,12 @@ ms.date: 02/19/2019
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 3efe66a71a4a61b84ff513a6253777cb2d21bc9e
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.openlocfilehash: 95dadff41bb31e0b34ee34f85ae47708297954f1
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72288655"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81784279"
 ---
 # <a name="microsoft-docs-contributor-guide-overview"></a>Průvodce pro přispěvatele na web Microsoft Docs – přehled
 
@@ -68,7 +68,7 @@ Prostředí pro úpravy v prohlížeči je nejvhodnější pro drobné nebo mál
 > Pokud je to povolené, můžete článek upravit v **libovolném jazyce**, přičemž podle typu úpravy se stane následující:
 > 1. Jakákoli schválená jazyková změna zároveň pomůže vylepšit náš modul strojového překladu.
 > 2. Jakákoliv úprava, která podstatně změní obsah článku, se zpracuje interně a změna se odešle do stejného článku v angličtině, takže pokud bude schválena, bude se lokalizovat do všech jazyků.
-> Vámi navržená vylepšení tedy pozitivně ovlivní nejen články ve vašem vlastním jazyce, ale také ve všech dostupných jazycích.
+> Vámi navržená vylepšení pozitivně ovlivní nejen články ve vašem vlastním jazyce, ale také ve všech dostupných jazycích.
 
 ## <a name="review-open-prs"></a>Revize otevřených žádostí o přijetí změn
 

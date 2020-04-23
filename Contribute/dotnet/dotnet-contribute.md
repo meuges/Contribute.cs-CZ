@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: d52d681987e26fddc89a33075b3d35279608ac04
-ms.sourcegitcommit: bf2f4c7d9050b480d4db306df19d4c9f8714eff0
+ms.openlocfilehash: d97d72e8458a53ab11b01cbd4bb5df3b8458b048
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80759574"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81784310"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>Přečtěte si, jak přispívat do úložišť dokumentace k .NET.
 
@@ -203,6 +203,10 @@ Prostředí kompilačního nástroje C# Interactive mění způsob práce s uká
 
 > [!NOTE]
 > Možná jste si všimli, že v současnosti některá témata nedodržují všechny uvedené pokyny. Pracujeme na tom, aby měl web konzistentní podobu. Můžete se podívat na seznam [otevřených problémů](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3A%22%3Abookmark_tabs%3A+Information+Architecture%22), které k tomuto cíli v současnosti evidujeme.
+
+### <a name="contributing-to-international-content"></a>Příspěvky do mezinárodního obsahu   
+
+Příspěvky spočívající ve strojově přeloženém obsahu (MT) se aktuálně nepřijímají. V rámci úsilí o zvyšování kvality strojově přeloženého obsahu jsme přešli na modul pro neurální MT. Přijímáme a doporučujeme využívat příspěvky přeložené člověkem (HT), na jejichž základě se trénuje modul pro neurální MT. V průběhu času tak budou člověkem přeložené příspěvky vylepšovat kvalitu obsahu v kvalitě HT i MT. Témata v kvalitě MT budou zahrnovat upozornění, že část textu může být strojově přeložená, a tlačítko **Upravit** se nezobrazí, protože úpravy jsou zakázané.   
 
 ## <a name="contributor-license-agreement"></a>Licenční smlouva s přispěvatelem
 
