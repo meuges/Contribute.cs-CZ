@@ -7,10 +7,10 @@ ms.topic: contributor-guide
 ms.date: 03/03/2020
 ms.author: dapine
 ms.openlocfilehash: 048f244324d7dde540c78e6631ccb5abbed3e431
-ms.sourcegitcommit: dbc2c48194e29bfa0c88d33f50f94b9ee26be2da
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78336697"
 ---
 # <a name="smart-quote-replacement"></a>Nahrazení inteligentních uvozovek
@@ -23,7 +23,7 @@ Vývojáři obsahu zodpovídají za vytváření některých z nejpokročilejš�
 
 Při práci na dokumentu v Microsoft Wordu jste si například asi všimli, že když podržíte <kbd>Shift</kbd> a zadáte <kbd>"</kbd>, Microsoft Word znak `"` rychle nahradí ekvivalentním znakem `“` inteligentních uvozovek.
 
-| Popis        | Unicode  | Inteligentní uvozovky | Nahrazení |
+| Description        | Unicode  | Inteligentní uvozovky | Nahrazení |
 |--------------------|----------|-------------|-------------|
 | Dvojité levé uvozovky  | `\u201c` | `“`         | `"`         |
 | Dvojité pravé uvozovky | `\u201d` | `”`         | `"`         |

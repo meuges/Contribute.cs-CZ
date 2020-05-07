@@ -8,10 +8,10 @@ author: jasonwhowell
 ms.author: jasonh
 ms.date: 01/18/2018
 ms.openlocfilehash: e73c60c439285f901c5c83e538f8971d795bd6c4
-ms.sourcegitcommit: ca84e542b081e145052f38967e826f6ef25da1b2
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "72288611"
 ---
 # <a name="set-up-git-repository-locally-for-documentation"></a>Místní nastavení úložiště Git pro dokumentaci
@@ -79,7 +79,7 @@ Vytvořte místní složku, ve které bude uložená místní kopie úložiště
    > [!IMPORTANT]
    > Nepoužívejte cestu k místní složce, která je vnořená v umístění jiné složky úložiště Git. I když klonované složky Gitu mohou existovat vedle sebe, vnoření složky Gitu do jiné způsobí chyby sledování souboru.
 
-2. Spusťte Git Bash.
+2. Spuštění Git Bashe
 
    ![Spuštění Git Bashe](./media/contribute-get-started-setup-local/gitbash-start.png)
 

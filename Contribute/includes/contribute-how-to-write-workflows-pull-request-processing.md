@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9cb0ba651d40d2834081d32443a8fd2b1152003d
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "53286102"
+---
 ## <a name="pull-request-processing"></a>Zpracování žádosti o přijetí změn
 
 Předchozí oddíl vás provedl procesem odeslání navrhovaných změn, kdy se tyto změny seskupí do nové žádosti o přijetí změn, která se přidá do fronty žádostí o přijetí změn v cílovém úložišti. Žádost o přijetí změn umožňuje model spolupráce na GitHubu, a to tak, že se vyžádá přijetí změn z vaší pracovní větve a jejich sloučení do další větve. Ve většině případů je tou další větví výchozí/hlavní větev v hlavním úložišti.

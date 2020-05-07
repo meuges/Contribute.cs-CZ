@@ -6,10 +6,10 @@ ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 08/30/2017
 ms.openlocfilehash: 5231b68f04caa94d3ff2ff26afc38e3218ca06b8
-ms.sourcegitcommit: 804a99b89785e5c8f056a9da3f0fbde9f0a56a51
+ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 05/04/2020
 ms.locfileid: "78331899"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>Pracovní postup přispívání prostřednictvím GitHubu pro větší nebo dlouho probíhající změny
@@ -31,7 +31,7 @@ Mezi příklady těchto typů příspěvků patří:
 
 Než začnete, seznamte se s některými termíny a výrazy pro Git/GitHub používanými v tomto pracovním postupu. Nemusíte jim hned rozumět. Stačí vědět, že se o nich budete dozvídat a můžete se k této sekci vrátit, když si budete chtít zjistit jejich definici.
 
-| Name | Popis |
+| Název | Description |
 |-----------|-------------|
 |fork|Označuje kopii hlavního úložiště GitHubu. V praxi je fork prostě další úložiště. Je ale speciální v tom smyslu, že GitHub udržuje jeho spojení zpět s hlavním/nadřazeným úložištěm. Někdy se používá jako sloveso, například "Je nutné nejprve rozvětvit úložiště."|
 |remote (vzdálené)|Pojmenované spojení se vzdáleným úložištěm, například vzdálené úložiště „zdroj“ nebo „upstream“. Git označuje toto připojení jako vzdálené, protože ho používá v odkazech na úložiště, které je hostované na jiném počítači. V tomto pracovním postupu je vzdálené úložiště vždy úložiště GitHubu.|
