@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: d97d72e8458a53ab11b01cbd4bb5df3b8458b048
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 948c96a63754566fc73e54c722998739984977d6
+ms.sourcegitcommit: 43a4f52ab827a7cf4609cc592483595efde3ceae
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "81784310"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203067"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>Přečtěte si, jak přispívat do úložišť dokumentace k .NET.
 
@@ -69,7 +69,11 @@ U malých změn si prohlédněte pokyny k úpravě GitHubu, které jsou na [domo
 
 Pokud je téma nové, použijte jako výchozí bod tento [soubor se šablonou](dotnet-style-guide.md). Obsahuje pokyny k psaní a vysvětluje metadata, která jsou ke každému článku potřeba, například informace o autorovi.
 
-Přejděte do složky, která odpovídá místu v obsahu, které jste pro svůj článek vybrali v prvním kroku. V této složce jsou soubory v jazyce Markdown všech článků v tomto oddílu. Pokud je to potřeba, vytvořte novou složku, do které umístíte soubory se svým obsahem. Hlavní článek v tomto oddílu se jmenuje *index.md*. Pro obrázky a další statické prostředky vytvořte podsložku nazvanou **media** (pokud ještě neexistuje) a dejte ji do složky se svým článkem. Ve složce **media** vytvořte podsložku s názvem článku (kromě souboru indexu). Vzorový kód musí být v úložišti `dotnet/samples`. Popis najdete v části o [ukázkách](#contributing-to-samples).
+Přejděte do složky, která odpovídá místu v obsahu, které jste pro svůj článek vybrali v prvním kroku. V této složce jsou soubory v jazyce Markdown všech článků v tomto oddílu. Pokud je to potřeba, vytvořte novou složku, do které umístíte soubory se svým obsahem. Hlavní článek v tomto oddílu se jmenuje *index.md*.
+
+Pro obrázky a další statické prostředky vytvořte podsložku nazvanou **media** (pokud ještě neexistuje) a dejte ji do složky se svým článkem. Ve složce **media** vytvořte podsložku s názvem článku (kromě souboru indexu). 
+
+Pro **fragmenty kódu** vytvořte podsložku s názvem **snippets** (pokud ještě neexistuje) a umístěte ji do složky se svým článkem. Ve většině případů budete mít fragmenty kódu pro všechny tři hlavní jazyky .NET (C#, F# a Visual Basic). V takovém případě vytvořte podsložky nazvané **csharp**, **fsharp** a **vb** pro každý ze tří projektů. Z důvodu zjednodušení použijte složku **snippets** pro svůj projekt v příručce k C#, F# a Visual Basic. Tyto oblasti obvykle mají fragmenty pro jeden jazyk. Fragmenty kódu jsou malé a cílené příklady kódu, které demonstrují koncepty probírané článku. Větší programy, které jsou určeny pro stažení a průzkum, by měly být umístěny v úložišti [dotnet/samples](https://github.com/dotnet/samples). Úplné ukázky jsou uvedeny v části s [příspěvky do ukázek kódu](#contributing-to-samples).
 
 Dodržujte správnou syntaxi jazyka Markdown. Nejčastější příklady použití najdete ve [stručné nápovědě k šablonám a jazyku Markdown](dotnet-style-guide.md).
 
@@ -83,6 +87,24 @@ Dodržujte správnou syntaxi jazyka Markdown. Nejčastější příklady použit
           /media
             /porting-overview
                 portability_report.png
+          /snippets
+            /porting-overview
+              /csharp
+                porting.csproj
+                porting-overview.cs
+                Program.cs
+              /fsharp
+                porting.fsproj
+                porting-overview.fs
+                Program.fs
+               /vb
+                porting.vbproj
+                porting-overview.vb
+                Program.vb
+
+Struktura uvedená výše zahrnuje jeden obrázek, *portability_report.png*, a tři projekty kódu, které obsahují **fragmenty kódu** zahrnuté v článku *porting-overview.md*. Přijatá alternativní struktura obsahuje jeden projekt na jeden jazyk, který obsahuje všechny fragmenty pro všechny články v dané složce. Kvůli velmi malým fragmentům je tato alternativa použitá v referenčních oblastech jazyka pro demonstraci jazykové syntaxe. V jiných oblastech se nedoporučuje.
+
+Z historických důvodů se mnoho zahrnutých fragmentů ukládá do složky */samples* v úložišti *dotnet/docs*. Pokud provádíte v článku zásadní změny, měli byste tyto fragmenty přesunout do nové struktury. U malých změn fragmenty nepřesunujte.
 
 **4. krok:** Odešlete žádost o přijetí změn (PR) ze své větve do hlavní větve.
 
@@ -105,16 +127,14 @@ Všechny potvrzené změny v hlavní větvi pravidelně sdílíme do živé vět
 
 Veškerý vzorový kód, který je součástí témat v dokumentaci k .NET, je v úložišti [dotnet/samples](https://github.com/dotnet/samples). Některé projekty jsou uspořádané do podsložek. Tyto podsložky jsou uspořádané podobně jako dokumentace k .NET.
 
-Kód, který je v úložišti, rozdělujeme do dvou skupin:
+Kód, který podporuje náš obsah, rozdělujeme do těchto skupin:
 
 - Ukázky: Čtenáři si je můžou stáhnout a spustit. Všechny ukázky musí představovat celé aplikace nebo knihovny. Pokud ukázka vytvoří knihovnu, musí obsahovat testy jednotek nebo aplikaci, která uživatelům umožní kód spustit. Ukázky často používají více technologií, funkcí nebo sad nástrojů. Soubor readme.md, který je u každé ukázky, odkazuje na článek, kde si můžete přečíst další informace o probírané látce.
 - Fragmenty kódu: Ilustrují menší prvek nebo úlohu. Jsou kompilovatelné, ale nejde o kompletní aplikace. Měly by běžet správně, i když nejde o ukázkovou aplikaci pro typický scénář. Jsou navržené tak, aby byly co nejmenší a ilustrovaly jednu určitou problematiku nebo funkci. Neměly by být delší než jedna obrazovka kódu.
 
-Veškerý kód je v úložišti [dotnet/samples](https://github.com/dotnet/samples). Pracujeme na modelu, ve kterém bude struktura složek s ukázkami odpovídat struktuře složek dokumentace. Dodržujeme tato pravidla:
+Ukázky jsou uloženy v úložišti [dotnet/samples](https://github.com/dotnet/samples). Pracujeme na modelu, ve kterém bude struktura složek s ukázkami odpovídat struktuře složek dokumentace. Dodržujeme tato pravidla:
 
-- Nejvyšší složka *snippets* obsahuje fragmenty kódu, které představují malé, jednoúčelové ukázky.
-- Ukázky referenčního rozhraní API se ukládají do složek podle tohoto vzoru: *fragmenty kódu/\<jazyk>/api/\<obor názvů>/\<název rozhraní api>* .
-- Další složky nejvyšší úrovně odpovídají nejvyšším složkám v úložišti *docs*. Například v úložišti docs je složka *machine-learning/tutorials* a ukázky ke kurzům věnovaným strojovému učení jsou ve složce *samples/machine-learning/tutorials*.
+- Složky nejvyšší úrovně odpovídají nejvyšším složkám v úložišti *docs*. Například v úložišti docs je složka *machine-learning/tutorials* a ukázky ke kurzům věnovaným strojovému učení jsou ve složce *samples/machine-learning/tutorials*.
 
 Navíc všechny ukázky ve složkách *core* a *standard* se musí dát vytvořit a spustit na všech platformách, které podporuje .NET Core. To zajistí náš systém sestavení CI. Nejvyšší složka *framework* obsahuje ukázky, které jsou vytvořené a ověřené jen ve Windows.
 
@@ -126,7 +146,9 @@ Každá hotová ukázka, kterou vytvoříte, má obsahovat soubor *readme.md*. V
 
 Odkaz na ukázku bude i ve vašem tématu. Vytvořte odkaz přímo na složku s ukázkou na GitHubu.
 
-### <a name="writing-a-new-snippet-or-sample"></a>Psaní nového fragmentu nebo ukázky kódu
+### <a name="writing-a-new-sample"></a>Vytvoření nové ukázky
+
+Ukázky jsou úplné programy a knihovny určené ke stažení. Možná jsou svým rozsahem malé, ale demonstrují koncepty způsobem, který umožňuje, aby si je uživatelé sami prozkoumali a experimentovali s nimi. Pokyny k ukázkám zajišťují, že si uživatelé mohou ukázky stáhnout a prozkoumat. Jako příklad jednotlivých pokynů si projděte si ukázky [Parallel LINQ (PLINQ)](https://github.com/dotnet/samples/tree/master/csharp/parallel/PLINQ).
 
 1. Vaše ukázka **musí být součástí sestavitelného projektu**. Pokud je to možné, měly by být projekty sestavitelné na všech platformách, které podporuje .NET Core. Výjimkou jsou ukázky, které předvádějí funkce určité platformy, nebo nástroj, který se používá jenom pro určitou platformu.
 
@@ -179,7 +201,29 @@ K vytvoření fragmentu nebo ukázky kódu pro .NET Core použijete nástroje .N
 
 3. Do kořenové složky ukázky přidejte soubor readme.md.
 
-   Soubor by měl obsahovat stručný popis kódu a měl by uživatele odkázat na článek, který se ukázky týká.
+   Soubor by měl obsahovat stručný popis kódu a měl by uživatele odkázat na článek, který se ukázky týká. Horní část souboru *readme.md* musí obsahovat metadata vyžadovaná [prohlížečem ukázek](https://docs.microsoft.com/samples). Blok záhlaví musí obsahovat následující pole:
+
+   ```yml
+   ---
+   name: "really cool sample"
+   description: "Learn everything about this really cool sample."
+   page_type: sample
+   languages:
+     - csharp
+     - fsharp
+     - vbnet
+   products:
+     - dotnet-core
+     - dotnet
+     - dotnet-standard
+     - aspnet
+     - aspnet-core
+     - ef-core
+   ---
+   ```
+
+   - Kolekce `languages` musí zahrnovat jen jazyky, které jsou pro vaši ukázku dostupné.
+   - Kolekce `products` musí zahrnovat jen produkty, které jsou pro vaši ukázku relevantní.
 
 Pokud není uvedeno jinak, jsou všechny ukázky vytvořené z příkazového řádku pro libovolnou platformu, kterou podporuje .NET Core. Některé ukázky jsou určené konkrétně pro Visual Studio, a proto vyžadují Visual Studio 2017 nebo novější verzi. Jiné ukázky předvádějí funkce určité platformy, a proto vyžadují určitou platformu. Další ukázky a fragmenty kódu vyžadují rozhraní .NET Framework. Půjdou spustit na platformě Windows, ale budou potřebovat sadu Developer Pack pro verzi cílové architektury.
 
@@ -204,9 +248,9 @@ Prostředí kompilačního nástroje C# Interactive mění způsob práce s uká
 > [!NOTE]
 > Možná jste si všimli, že v současnosti některá témata nedodržují všechny uvedené pokyny. Pracujeme na tom, aby měl web konzistentní podobu. Můžete se podívat na seznam [otevřených problémů](https://github.com/dotnet/docs/issues?q=is%3Aopen+is%3Aissue+label%3A%22%3Abookmark_tabs%3A+Information+Architecture%22), které k tomuto cíli v současnosti evidujeme.
 
-### <a name="contributing-to-international-content"></a>Příspěvky do mezinárodního obsahu   
+### <a name="contributing-to-international-content"></a>Příspěvky do mezinárodního obsahu
 
-Příspěvky spočívající ve strojově přeloženém obsahu (MT) se aktuálně nepřijímají. V rámci úsilí o zvyšování kvality strojově přeloženého obsahu jsme přešli na modul pro neurální MT. Přijímáme a doporučujeme využívat příspěvky přeložené člověkem (HT), na jejichž základě se trénuje modul pro neurální MT. V průběhu času tak budou člověkem přeložené příspěvky vylepšovat kvalitu obsahu v kvalitě HT i MT. Témata v kvalitě MT budou zahrnovat upozornění, že část textu může být strojově přeložená, a tlačítko **Upravit** se nezobrazí, protože úpravy jsou zakázané.   
+Příspěvky spočívající ve strojově přeloženém obsahu (MT) se aktuálně nepřijímají. V rámci úsilí o zvyšování kvality strojově přeloženého obsahu jsme přešli na modul pro neurální MT. Přijímáme a doporučujeme využívat příspěvky přeložené člověkem (HT), na jejichž základě se trénuje modul pro neurální MT. V průběhu času tak budou člověkem přeložené příspěvky vylepšovat kvalitu obsahu v kvalitě HT i MT. Témata v kvalitě MT budou zahrnovat upozornění, že část textu může být strojově přeložená, a tlačítko **Upravit** se nezobrazí, protože úpravy jsou zakázané.
 
 ## <a name="contributor-license-agreement"></a>Licenční smlouva s přispěvatelem
 
