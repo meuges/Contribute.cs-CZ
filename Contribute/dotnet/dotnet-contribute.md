@@ -4,13 +4,13 @@ description: Tento článek popisuje postup, jak přispívat do článků a vzor
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.date: 11/07/2018
-ms.openlocfilehash: 948c96a63754566fc73e54c722998739984977d6
-ms.sourcegitcommit: 43a4f52ab827a7cf4609cc592483595efde3ceae
+ms.date: 05/14/2020
+ms.openlocfilehash: c4382a66035a10debb2a0aa05f61c549a3f97ee6
+ms.sourcegitcommit: 300ce72ffc8596213e82ae511b1b314c850841c9
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203067"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404142"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>Přečtěte si, jak přispívat do úložišť dokumentace k .NET.
 
@@ -73,7 +73,7 @@ Přejděte do složky, která odpovídá místu v obsahu, které jste pro svůj 
 
 Pro obrázky a další statické prostředky vytvořte podsložku nazvanou **media** (pokud ještě neexistuje) a dejte ji do složky se svým článkem. Ve složce **media** vytvořte podsložku s názvem článku (kromě souboru indexu). 
 
-Pro **fragmenty kódu** vytvořte podsložku s názvem **snippets** (pokud ještě neexistuje) a umístěte ji do složky se svým článkem. Ve většině případů budete mít fragmenty kódu pro všechny tři hlavní jazyky .NET (C#, F# a Visual Basic). V takovém případě vytvořte podsložky nazvané **csharp**, **fsharp** a **vb** pro každý ze tří projektů. Z důvodu zjednodušení použijte složku **snippets** pro svůj projekt v příručce k C#, F# a Visual Basic. Tyto oblasti obvykle mají fragmenty pro jeden jazyk. Fragmenty kódu jsou malé a cílené příklady kódu, které demonstrují koncepty probírané článku. Větší programy, které jsou určeny pro stažení a průzkum, by měly být umístěny v úložišti [dotnet/samples](https://github.com/dotnet/samples). Úplné ukázky jsou uvedeny v části s [příspěvky do ukázek kódu](#contributing-to-samples).
+Pro **fragmenty kódu** vytvořte podsložku s názvem **snippets** (pokud ještě neexistuje) a umístěte ji do složky se svým článkem.  Ve složce **snippets** vytvořte podsložku s názvem článku. Ve většině případů budete mít fragmenty kódu pro všechny tři hlavní jazyky .NET (C#, F# a Visual Basic). V takovém případě vytvořte podsložky nazvané **csharp**, **fsharp** a **vb** pro každý ze tří projektů. Z důvodu zjednodušení použijte složku **snippets** pro svůj projekt v příručce k C#, F# a Visual Basic. Tyto oblasti obvykle mají fragmenty pro jeden jazyk. Fragmenty kódu jsou malé a cílené příklady kódu, které demonstrují koncepty probírané článku. Větší programy, které jsou určeny pro stažení a průzkum, by měly být umístěny v úložišti [dotnet/samples](https://github.com/dotnet/samples). Úplné ukázky jsou uvedeny v části s [příspěvky do ukázek kódu](#contributing-to-samples).
 
 Dodržujte správnou syntaxi jazyka Markdown. Nejčastější příklady použití najdete ve [stručné nápovědě k šablonám a jazyku Markdown](dotnet-style-guide.md).
 
