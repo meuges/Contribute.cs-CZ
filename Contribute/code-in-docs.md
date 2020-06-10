@@ -7,12 +7,12 @@ ms.date: 03/03/2020
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 4aa34196f59a69651dd19add35a0351dd9b5d59b
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 4e57af6a1fe9a9d3799f09cb04f3bd3f0b9b712d
+ms.sourcegitcommit: 59e77d2fb9c38cccbacde9d2a7df61ae58c38fa4
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "78336470"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421038"
 ---
 # <a name="how-to-include-code-in-docs"></a>Jak do dokumentů vkládat kód
 
@@ -378,12 +378,14 @@ Syntaxe:
   * Relativní cesta v systému souborů označující soubor fragmentu kódu, na který se má odkazovat
 
 * `<attribute>` a `<attribute-value>` (*volitelné*)
-  * Společně se používají pro zadání, jak se má kód ze souboru načítat a jak se má zobrazovat:
-    * `range`: `1,3-5` Rozsah řádků. Tento příklad zahrnuje řádky 1, 3, 4 a 5.
-    * `id`: `snippet_Create` ID fragmentu, který se má vložit ze souboru kódu. Tato hodnota nemůže existovat současně s rozsahem.
-    * `highlight`: `2-4,6` Rozsah a/nebo čísla řádků, které se mají zvýraznit ve vygenerovaném fragmentu kódu. Číslování je relativní vzhledem k zobrazeným řádkům (jak je určeno rozsahem nebo ID), ne k souboru.
-    * `interactive`: `cloudshell-powershell`, `cloudshell-bash`, `try-dotnet`, `try-dotnet-class`, `try-dotnet-method` Hodnota řetězce určuje, jaké druhy interaktivity jsou povolené.
-    * Podrobnosti o reprezentaci názvů značek ve zdrojových souborech fragmentu kódu v jednotlivých jazycích najdete v [pokynech pro DocFX](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#tag-name-representation-in-code-snippet-source-file).
+
+  Společně se používají pro zadání, jak se má kód ze souboru načítat a jak se má zobrazovat:
+
+  * `range`: `1,3-5` Rozsah řádků. Tento příklad zahrnuje řádky 1, 3, 4 a 5.
+  * `id`: `snippet_Create` ID fragmentu, který se má vložit ze souboru kódu. Tato hodnota nemůže existovat současně s rozsahem.
+  * `highlight`: `2-4,6` Rozsah a/nebo čísla řádků, které se mají zvýraznit ve vygenerovaném fragmentu kódu. Číslování je relativní vzhledem k zobrazeným řádkům (jak je určeno rozsahem nebo ID), ne k souboru.
+  * `interactive`: `cloudshell-powershell`, `cloudshell-bash`, `try-dotnet`, `try-dotnet-class`, `try-dotnet-method` Hodnota řetězce určuje, jaké druhy interaktivity jsou povolené.
+  * Podrobnosti o reprezentaci názvů značek ve zdrojových souborech fragmentu kódu v jednotlivých jazycích najdete v [pokynech pro DocFX](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#tag-name-representation-in-code-snippet-source-file).
 
 ## <a name="supported-languages"></a>Podporované jazyky
 
