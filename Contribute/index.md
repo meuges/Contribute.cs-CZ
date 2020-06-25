@@ -3,16 +3,16 @@ title: Průvodce pro přispěvatele na web Microsoft Docs – přehled
 description: Tento průvodce popisuje, jak přispívat na web docs.microsoft.com, který obsahuje dokumentaci Microsoftu.
 author: billwagner
 ms.author: wiwagn
-ms.date: 02/19/2019
+ms.date: 06/23/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 95dadff41bb31e0b34ee34f85ae47708297954f1
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 084da0320514b3a4551ce130d8d17e3040a35f29
+ms.sourcegitcommit: 6a7c9b5e9538ed588bd2da772ae319c09e545a74
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "81784279"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85279340"
 ---
 # <a name="microsoft-docs-contributor-guide-overview"></a>Průvodce pro přispěvatele na web Microsoft Docs – přehled
 
@@ -35,7 +35,7 @@ Aby to bylo ještě jednodušší, uživatelské prostředí na webu [docs.micro
 
 Rychlé úpravy zjednodušují proces oznamování a oprav drobných chyb a vynechávek v dokumentech. I přes veškeré úsilí _můžou_ v našich publikovaných dokumentech zůstat drobné gramatické a pravopisné chyby. Je sice možné oznamovat tyto chyby tak, že vytvoříte položky problémů, když ale vytvoříte žádost o přijetí změn (pokud je tato možnost dostupná), bude jejich oprava rychlejší a jednodušší.
 
-1. Na některých stránkách dokumentace můžete upravovat obsah přímo v prohlížeči. V takovém případě se na stránce zobrazí tlačítko **Edit** (Upravit), jak vidíte níže. Kliknutím na tlačítko **Edit** (Upravit) se dostanete na zdrojový soubor na GitHubu. Pokud tlačítko **Edit** (Upravit – může být s ikonou tužky a bez textu) nevidíte, znamená to, že stránku dokumentace nejde měnit.
+1. Na některých stránkách dokumentace můžete upravovat obsah přímo v prohlížeči. V takovém případě se na stránce zobrazí tlačítko **Edit** (Upravit), jak vidíte níže. Kliknutím na tlačítko **Edit** (Upravit) se dostanete na zdrojový soubor na GitHubu. Pokud tlačítko **Edit** nevidíte, znamená to, že stránku dokumentace nelze měnit.
 
    ![Umístění odkazu pro úpravy](./media/index/edit-article.png)
 
