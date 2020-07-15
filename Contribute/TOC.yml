@@ -52,11 +52,11 @@
   items:
     - name: Dokumentace k .NET
       items:
-        - name: Jak přispívat do dokumentace k .NET
+        - name: Jak přidávat příspěvky
           href: dotnet/dotnet-contribute.md
         - name: Průvodce popisky a projekty
           href: dotnet/labels-projects.md
-        - name: Zásady týkající se stylu dokumentace k .NET
+        - name: Zásady stylů
           href: dotnet/dotnet-style-guide.md
         - name: Pokyny ke způsobu a tónu vyjadřování
           href: dotnet/dotnet-voice-tone.md
