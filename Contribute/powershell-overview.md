@@ -1,20 +1,20 @@
 ---
-title: Přispívání do dokumentace k PowerShellu
+title: Jak přispívat do dokumentace k PowerShellu
 description: Tento článek popisuje, jak začít jako přispěvatel do dokumentace k PowerShellu.
-ms.date: 03/05/2020
+ms.date: 07/10/2020
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 author: sdwheeler
 ms.author: sewhee
-ms.openlocfilehash: df7bad93dfc7b75c2d4fcb6bd3344dd787246cab
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 7845838405599d30e59ff790f8286be3df22496e
+ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "80625159"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86290835"
 ---
-# <a name="contributing-to-powershell-documentation"></a>Přispívání do dokumentace k PowerShellu
+# <a name="how-to-contribute-to-powershell-documentation"></a>Jak přispívat do dokumentace k PowerShellu
 
 Příručka přispěvatele je sbírka článků, které vysvětlují nástroje a procesy, které používáme k vytváření dokumentace v Microsoftu. Některé z těchto příruček se týkají informací, které jsou společné pro jakoukoliv sadu dokumentace publikovanou na docs.microsoft.com. Některé z příruček se přímo zabývají tím, jak píšeme dokumentaci pro PowerShell.
 

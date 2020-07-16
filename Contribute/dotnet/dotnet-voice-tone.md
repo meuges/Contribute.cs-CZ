@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: 4108019ac50d703c6dd509eca7a6394cc1c9dc18
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 49b0e60ec9f4368bf50317dfe4a6b17bd30a82a5
+ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "80625182"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86290812"
 ---
 # <a name="voice-and-tone-guidelines"></a>Pravidla způsobu vyjadřování
 
@@ -54,7 +54,7 @@ První věta používá činný rod. Druhá věta byla napsána v trpném rodu. 
 
 Doporučujeme používat činný rod, protože je čtivější. Čtení trpného rodu může být obtížnější.
 
-## <a name="target-a-fifth-grade-reading-level"></a>Zaměřte se na úroveň čtení páté třídy
+## <a name="target-a-fifth-grade-reading-level"></a>Zaměřte se na úroveň čtení jako v páté třídě
 
 Toto poslední pravidlo souvisí s tím, že rodným jazykem mnoha našich čtenářů není angličtina. Svými články oslovujete mezinárodní publikum. Mějte prosím na paměti, že toto publikum nemusí mít takovou slovní zásobu jako vy.
 

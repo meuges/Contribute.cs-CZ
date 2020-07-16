@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 05/14/2020
-ms.openlocfilehash: c4382a66035a10debb2a0aa05f61c549a3f97ee6
-ms.sourcegitcommit: 300ce72ffc8596213e82ae511b1b314c850841c9
+ms.openlocfilehash: fa905d17a39b5fa7737e06fce38659b7e1563635
+ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404142"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86290950"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>Přečtěte si, jak přispívat do úložišť dokumentace k .NET.
 
@@ -20,7 +20,7 @@ Tento dokument vysvětluje postup při psaní příspěvků a přidávání uká
 
 Web s dokumentací k .NET se skládá z několika úložišť:
 
-- [Koncepční články o technologii .NET](https://github.com/dotnet/docs)
+- [Koncepční články a fragmenty kódu pro .NET](https://github.com/dotnet/docs)
 - [Ukázky a fragmenty kódu](https://github.com/dotnet/samples)
 - [Referenční materiály k rozhraní API .NET Standard, .NET Core a .NET Framework](https://github.com/dotnet/dotnet-api-docs)
 - [Referenční materiály k sadě SDK .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)
@@ -36,30 +36,26 @@ Vážíme si příspěvků, kterými komunita přispívá do dokumentace. V nás
 - **DODRŽUJTE** tyto pokyny a pokyny týkající se [způsobu vyjadřování](dotnet-voice-tone.md).
 - **POUŽÍVEJTE** jako výchozí bod své práce soubor se [šablonou](dotnet-style-guide.md).
 - **VYTVOŘTE** ve svém forku samostatnou větev dřív, než začnete pracovat na článcích.
-- **DODRŽUJTE**[pracovní postup v toku GitHubu](https://guides.github.com/introduction/flow/).
-- **BLOGUJTE A TWEETUJTE** (nebo jinak komunikujte) o svých příspěvcích co nejčastěji.
+- **DODRŽUJTE** [tok GitHubu](https://guides.github.com/introduction/flow/).
+- **BLOGUJTE A TWEETUJTE** (nebo jinak komunikujte) o svých příspěvcích, pokud chcete.
 
 Dodržením těchto pokynů usnadníte práci sobě i nám.
 
 ## <a name="make-a-contribution-to-net-docs"></a>Vytvoření příspěvku do dokumentace k .NET
 
-**1. krok:** U malých změn můžete tento krok přeskočit. Pokud se zajímáte o psaní nového obsahu nebo o úplné přepracování stávajícího obsahu, otevřete [problém](https://github.com/dotnet/docs/issues) a popište v něm, co chcete dělat.
-
-Obsah ve složce **docs** je uspořádaný do oddílů, které odpovídají tabulce s obsahem. Určete, kde se má téma v obsahu nacházet. Získejte ke svému návrhu zpětnou vazbu.
+**1. krok:** Pokud se zajímáte o psaní nového obsahu nebo o úplné přepracování stávajícího obsahu, otevřete [problém](https://github.com/dotnet/docs/issues) a popište v něm, co chcete dělat. Obsah ve složce **docs** je uspořádaný do oddílů, které odpovídají tabulce s obsahem. Určete, kde se má téma v obsahu nacházet. Získejte ke svému návrhu zpětnou vazbu.
 
 -nebo-
 
-Vyberte některý ze stávajících problémů, ke kterým jsou vítané komunitní příspěvky. V [projektech pro přispěvatele z komunity .NET](https://github.com/dotnet/docs/projects/35) je řada problémů, ke kterým můžou přispěvatelé z komunity psát příspěvky. Podle svých zájmů a rozsahu své účasti si můžou vybrat z problémů uspořádaných do následujících kategorií:
+Zvolte existující problém a vyřešte ho. Můžete si prohlédnout seznam [otevřených problémů](https://github.com/dotnet/docs/issues) a dobrovolně pracovat na těch, které vás zajímají:
 
-- **Údržba:** Tato kategorie obsahuje relativně jednoduché příspěvky, třeba opravu nefunkčních nebo nesprávných odkazů, přidání chybějících ukázek kódu nebo řešení menších problémů týkajících se obsahu. V některých případech se tyto problémy můžou týkat velkého počtu souborů. V takovém případě nám dejte předem vědět, na čem byste chtěli začít pracovat. Přidejte k problému komentář, ze kterého poznáme, že na něm pracujete.
+- Filtrováním podle popisku [good-first-issue](https://github.com/dotnet/docs/labels/good-first-issue) si můžete vyfiltrovat tzv. „dobré první problémy“.
+- Filtrováním podle popisku [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) si můžete vyfiltrovat problémy, které jsou vhodné pro příspěvky od komunity. Tyto problémy obvykle vyžadují minimální kontext.
+- Zkušení přispěvatelé můžou řešit jakékoliv problémy, které je zajímají.
 
-- **Aktualizace obsahu:** Vzhledem k obrovskému rozsahu dokumentace se může snadno stát, že je obsah zastaralý a vyžaduje revizi. Navíc z různých důvodů může být obsah duplicitní nebo i triplicitní. Při aktualizaci obsahu je potřeba ověřit, jestli jsou jednotlivá témata aktuální, případně revidovat obsah funkční oblasti tak, aby se vyloučily duplicity. Je také potřeba zajistit, aby byl veškerý jedinečný obsah uchováván v menší sadě dokumentace.
+Když najdete problém, na kterém chcete pracovat, přidejte komentář s dotazem, jestli je otevřený.
 
-- **Tvorba nového obsahu:** Pokud se zajímáte o tvorbu vlastních nových témat, najdete v těchto problémech seznam témat o kterých víme, že bychom je chtěli přidat do naší sady dokumentace. Přesto nám dejte předem vědět, než na tématu začnete pracovat. Pokud máte zájem o napsání tématu, které zde není, otevřete nový problém.
-
-Můžete si také prohlédnout seznam [otevřených problémů](https://github.com/dotnet/docs/issues) a dobrovolně pracovat na těch, které vás zajímají. K označení problémů, ke kterým můžou psát příspěvky členové komunity, používáme značku [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs). U těchto příspěvků se většinou vyžaduje minimální kontext, a jsou proto vhodné jako první problémy. Zveme zkušené přispěvatele v naší komunitě, aby se podívali na problémy, které by je mohly zajímat. Když nějaký najdete, přidejte komentář s dotazem, jestli je otevřený.
-
-Jakmile jste vybrali úkol, na kterém chcete pracovat, postupujte podle [úvodních](../get-started-setup-github.md) pokynů, podle kterých si vytvoříte účet GitHub a nastavíte prostředí.
+Jakmile máte vybraný úkol, na kterém budete pracovat, postupujte podle [úvodních](../get-started-setup-github.md) pokynů, podle kterých si vytvoříte účet GitHub a nastavíte prostředí.
 
 **2. krok:** Vytvořte fork potřebných úložišť `/dotnet/docs`, `dotnet/samples`, `dotnet/dotnet-api-docs`, `dotnet/roslyn-api-docs` nebo `dotnet/ml-api-docs` a vytvořte větev pro změny.
 
@@ -67,40 +63,19 @@ U malých změn si prohlédněte pokyny k úpravě GitHubu, které jsou na [domo
 
 **3. krok:** Proveďte změny v této nové větvi.
 
-Pokud je téma nové, použijte jako výchozí bod tento [soubor se šablonou](dotnet-style-guide.md). Obsahuje pokyny k psaní a vysvětluje metadata, která jsou ke každému článku potřeba, například informace o autorovi.
+Pokud je téma nové, použijte jako výchozí bod tento [soubor se šablonou](dotnet-style-guide.md). Obsahuje pokyny k psaní a vysvětluje metadata, která jsou ke každému článku potřeba, například informace o autorovi. Další informace o syntaxi jazyka Markdown používané na webu docs.microsoft.com najdete v článku [Referenční informace k jazyku Markdown](../markdown-reference.md).
 
 Přejděte do složky, která odpovídá místu v obsahu, které jste pro svůj článek vybrali v prvním kroku. V této složce jsou soubory v jazyce Markdown všech článků v tomto oddílu. Pokud je to potřeba, vytvořte novou složku, do které umístíte soubory se svým obsahem. Hlavní článek v tomto oddílu se jmenuje *index.md*.
 
-Pro obrázky a další statické prostředky vytvořte podsložku nazvanou **media** (pokud ještě neexistuje) a dejte ji do složky se svým článkem. Ve složce **media** vytvořte podsložku s názvem článku (kromě souboru indexu). 
+Pro obrázky a další statické prostředky vytvořte podsložku nazvanou **media** (pokud ještě neexistuje) a dejte ji do složky se svým článkem. Ve složce **media** vytvořte podsložku s názvem článku (kromě souboru indexu).
 
-Pro **fragmenty kódu** vytvořte podsložku s názvem **snippets** (pokud ještě neexistuje) a umístěte ji do složky se svým článkem.  Ve složce **snippets** vytvořte podsložku s názvem článku. Ve většině případů budete mít fragmenty kódu pro všechny tři hlavní jazyky .NET (C#, F# a Visual Basic). V takovém případě vytvořte podsložky nazvané **csharp**, **fsharp** a **vb** pro každý ze tří projektů. Z důvodu zjednodušení použijte složku **snippets** pro svůj projekt v příručce k C#, F# a Visual Basic. Tyto oblasti obvykle mají fragmenty pro jeden jazyk. Fragmenty kódu jsou malé a cílené příklady kódu, které demonstrují koncepty probírané článku. Větší programy, které jsou určeny pro stažení a průzkum, by měly být umístěny v úložišti [dotnet/samples](https://github.com/dotnet/samples). Úplné ukázky jsou uvedeny v části s [příspěvky do ukázek kódu](#contributing-to-samples).
+Pro **fragmenty kódu** vytvořte podsložku s názvem **snippets** (pokud ještě neexistuje) a umístěte ji do složky se svým článkem. Ve složce **snippets** vytvořte podsložku s názvem článku. Ve většině případů budete mít fragmenty kódu pro všechny tři hlavní jazyky .NET (C#, F# a Visual Basic). V takovém případě vytvořte podsložky nazvané **csharp**, **fsharp** a **vb** pro každý ze tří projektů. Pokud vytváříte fragment kódu pro článek ve složce [docs/csharp](https://github.com/dotnet/docs/tree/master/docs/csharp), [docs/fsharp](https://github.com/dotnet/docs/tree/master/docs/fsharp) nebo [docs/visual-basic](https://github.com/dotnet/docs/tree/master/docs/visual-basic), bude fragment kódu jenom v jednom jazyce, takže můžete podsložku jazyka vynechat.
 
-Dodržujte správnou syntaxi jazyka Markdown. Nejčastější příklady použití najdete ve [stručné nápovědě k šablonám a jazyku Markdown](dotnet-style-guide.md).
+Fragmenty kódu jsou malé a cílené příklady kódu, které demonstrují koncepty probírané článku. Větší programy, které jsou určeny pro stažení a průzkum, by měly být umístěny v úložišti [dotnet/samples](https://github.com/dotnet/samples). Úplné ukázky jsou uvedeny v části s [příspěvky do ukázek kódu](#contribute-to-samples).
 
-## <a name="example-structure"></a>Příklad struktury
+## <a name="example-folder-structure"></a>Příklad struktury složek
 
-    docs
-      /about
-      /core
-        /porting
-          porting-overview.md
-          /media
-            /porting-overview
-                portability_report.png
-          /snippets
-            /porting-overview
-              /csharp
-                porting.csproj
-                porting-overview.cs
-                Program.cs
-              /fsharp
-                porting.fsproj
-                porting-overview.fs
-                Program.fs
-               /vb
-                porting.vbproj
-                porting-overview.vb
-                Program.vb
+docs /about /core /porting porting-overview.md /media /porting-overview portability_report.png /snippets /porting-overview /csharp porting.csproj porting-overview.cs Program.cs /fsharp porting.fsproj porting-overview.fs Program.fs /vb porting.vbproj porting-overview.vb Program.vb
 
 Struktura uvedená výše zahrnuje jeden obrázek, *portability_report.png*, a tři projekty kódu, které obsahují **fragmenty kódu** zahrnuté v článku *porting-overview.md*. Přijatá alternativní struktura obsahuje jeden projekt na jeden jazyk, který obsahuje všechny fragmenty pro všechny články v dané složce. Kvůli velmi malým fragmentům je tato alternativa použitá v referenčních oblastech jazyka pro demonstraci jazykové syntaxe. V jiných oblastech se nedoporučuje.
 
@@ -121,11 +96,9 @@ Tým .NET zkontroluje vaši žádost o přijetí změn a bude vás informovat, j
 
 Jakmile jsou připomínky zapracované a změny schválené, sloučí správci vaši žádost o přijetí změn s hlavní větví.
 
-Všechny potvrzené změny v hlavní větvi pravidelně sdílíme do živé větve. Teprve potom uvidíte svůj příspěvek živě na adrese https://docs.microsoft.com/dotnet/. Během pracovního týdne změny většinou publikujeme každý den. Provádění údržby může publikování o několik dní zdržet.
+Všechny potvrzené změny v hlavní větvi pravidelně sdílíme do živé větve. Teprve potom uvidíte svůj příspěvek živě na adrese https://docs.microsoft.com/dotnet/. Během pracovního týdne změny většinou publikujeme každý den.
 
-## <a name="contributing-to-samples"></a>Příspěvky do ukázek kódu
-
-Veškerý vzorový kód, který je součástí témat v dokumentaci k .NET, je v úložišti [dotnet/samples](https://github.com/dotnet/samples). Některé projekty jsou uspořádané do podsložek. Tyto podsložky jsou uspořádané podobně jako dokumentace k .NET.
+## <a name="contribute-to-samples"></a>Příspěvky do ukázek kódu
 
 Kód, který podporuje náš obsah, rozdělujeme do těchto skupin:
 
@@ -146,7 +119,7 @@ Každá hotová ukázka, kterou vytvoříte, má obsahovat soubor *readme.md*. V
 
 Odkaz na ukázku bude i ve vašem tématu. Vytvořte odkaz přímo na složku s ukázkou na GitHubu.
 
-### <a name="writing-a-new-sample"></a>Vytvoření nové ukázky
+### <a name="write-a-new-sample"></a>Vytvoření nové ukázky
 
 Ukázky jsou úplné programy a knihovny určené ke stažení. Možná jsou svým rozsahem malé, ale demonstrují koncepty způsobem, který umožňuje, aby si je uživatelé sami prozkoumali a experimentovali s nimi. Pokyny k ukázkám zajišťují, že si uživatelé mohou ukázky stáhnout a prozkoumat. Jako příklad jednotlivých pokynů si projděte si ukázky [Parallel LINQ (PLINQ)](https://github.com/dotnet/samples/tree/master/csharp/parallel/PLINQ).
 
@@ -154,7 +127,7 @@ Ukázky jsou úplné programy a knihovny určené ke stažení. Možná jsou sv�
 
 2. Kvůli zachování konzistence by měla ukázka odpovídat [stylu programování CoreFX](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md).
 
-    - V ukázkách, ve kterých se nevyžaduje vytvoření instance nového objektu, také raději používáme metody `static` místo instancí metod.
+   V ukázkách, ve kterých se nevyžaduje vytvoření instance nového objektu, také raději používáme metody `static` místo instancí metod.
 
 3. Vaše ukázka by měla mít **náležitě ošetřeny výjimky**. V ukázce by měly být ošetřeny všechny výjimky, které se v této souvislosti můžou vyskytnout. Například v ukázce, ve které se načítá uživatelský vstup voláním metody [Console.ReadLine](https://docs.microsoft.com/dotnet/api/system.console.readline), musí být náležitě ošetřena výjimka, kdy se vstupní řetězec předá metodě jako argument. Podobně platí, že pokud se v ukázce předpokládá, že volání metody způsobí chybu, musíte výslednou výjimku ošetřit. Vždy ošetřete konkrétní výjimky způsobené metodou místo výjimek základních tříd, jako je [Exception](https://docs.microsoft.com/dotnet/api/system.exception) nebo [SystemException](https://docs.microsoft.com/dotnet/api/system.systemexception).
 

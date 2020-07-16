@@ -5,18 +5,18 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: a520112cd77f4c4807e7719c2c4dbd43a762f062
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 926516895798757bde0861a345e0b5d0f95218a4
+ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "80759543"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86290904"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Metadata a šablona v Markdownu pro dokumentaci k .NET
 
 Tato šablona pro dotnet/dokumentaci obsahuje příklady syntaxe jazyka Markdown a pokyny k nastavení metadat.
 
-Při vytváření souboru Markdown byste měli přiloženou šablonu zkopírovat do nového souboru, vyplnit metadata podle tohoto návodu a nastavit záhlaví H1 jako nadpis článku.
+Při vytváření souboru Markdown zkopírujte přiloženou šablonu do nového souboru, vyplňte metadata podle návodu níže a nastavte nadpis H1 výše na název článku.
 
 ## <a name="metadata"></a>Metadata
 
@@ -43,11 +43,11 @@ Ke každému článku jsou připojená další metadata, ale většinu hodnot me
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>Základy jazyka Markdown (GFM) a speciální znaky
 
-Základy jazyka Markdown také označované jako GitHub Flavored Markdown (GFM) a určité přípony OPS najdete v článku [Referenční informace k jazyku Markdown](../markdown-reference.md).
+Základní informace o jazyce Markdown, variantě GitHub Flavored Markdown (GFM) a rozšířeních specifických pro OPS najdete v článku [Referenční informace k jazyku Markdown](../markdown-reference.md).
 
 Markdown používá k formátování zvláštní znaky, například \*, \` a \#. Pokud chcete některý z těchto znaků přidat do obsahu, máte na výběr dvě možnosti:
 
-- Dejte před speciální znak zpětné lomítko, abyste znak vyloučili (třeba `\*` pro \*).
+- Dejte před speciální znak zpětné lomítko jako „řídicí znak“ (například `\*` pro \*).
 - Použijte pro znak [kód entity HTML](http://www.ascii.cl/htmlcodes.htm) (třeba `&#42;` pro &#42;).
 
 ## <a name="file-names"></a>Názvy souborů
@@ -67,11 +67,14 @@ Používejte velká písmena jako při psaní věty. První slovo v nadpisu mus�
 
 ## <a name="text-styling"></a>Styl textu
 
-*Kurzíva* Použijte pro soubory, složky, cesty (dlouhé položky dejte na samostatný řádek) a nové výrazy.
+*Kurzíva*\
+Použijte pro soubory, složky, cesty (dlouhé položky dejte na samostatný řádek) a nové výrazy.
 
-**Tučné** Použijte pro prvky uživatelského rozhraní.
+**Tučné**\
+Použijte pro prvky uživatelského rozhraní.
 
-`Code` Použijte pro vložený kód, klíčová slova jazyka, názvy balíčků NuGet, příkazy příkazového řádku, názvy databázových tabulek a sloupců a pro adresy URL, které nefungují jako odkaz, na který se dá kliknout.
+`Code`\
+Použijte pro vložený kód, klíčová slova jazyka, názvy balíčků NuGet, příkazy příkazového řádku, názvy databázových tabulek a sloupců a pro adresy URL, které nemají fungovat jako odkaz, na který se dá kliknout.
 
 ## <a name="links"></a>Odkazy
 
@@ -118,15 +121,15 @@ Příklady:
 
 Identifikátory UID typů, seznam přetížení členů nebo určitého přetíženého člena najdete na adrese `https://xref.docs.microsoft.com/autocomplete`. Řetězec dotazu `?text=*\<type-member-name>*` identifikuje typ nebo člena, jehož identifikátory UID chcete vidět. Třeba `https://xref.docs.microsoft.com/autocomplete?text=string.format` načte přetížení [String.Format](https://docs.microsoft.com/dotnet/api/system.string.format). Nástroj vyhledá zadaný parametr dotazu `text` v libovolné části identifikátoru UID. Můžete třeba hledat jméno člena (ToString), část jména člena (ToStri), typ a jméno člena (Double.ToString) atd.
 
-Pokud za UID přidáte \* (nebo `%2A`), představuje tento odkaz stránku přetížení, nikoli určité rozhraní API. UID můžete například použít, pokud chcete odkazovat na stránku [List\<T>.BinarySearch Method](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) obecným způsobem místo konkrétního přetížení, jako je [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). Znaky \* také můžete použít k odkazu na stránku člena, pokud není přetížený, abyste v identifikátoru UID nemuseli uvádět seznam parametrů.
+Pokud za UID přidáte \* (nebo `%2A`), představuje tento odkaz stránku přetížení, nikoli určité rozhraní API. Můžete to například použít, pokud chcete odkazovat na stránku [metody List\<T>.BinarySearch](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch) obecným způsobem namísto konkrétního přetížení, jako je [List\<T>.BinarySearch(T, IComparer\<T>)](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1.binarysearch#System_Collections_Generic_List_1_BinarySearch__0_). Znaky \* také můžete použít k odkazu na stránku člena, pokud není přetížený, abyste v identifikátoru UID nemuseli uvádět seznam parametrů.
 
-Pokud chcete vytvořit odkaz na určité přetížení metody, musíte do všech parametrů metody zahrnout úplně určený název typu. Například \<xref:System.DateTime.ToString> odkazuje na metodu [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString), která je bez parametrů, ale \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> odkazuje na metodu [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_).
+Pokud chcete vytvořit odkaz na určité přetížení metody, musíte do všech parametrů metody zahrnout úplně určený název typu. Například \<xref:System.DateTime.ToString> odkazuje na metodu [DateTime.ToString](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString) bez parametrů, zatímco \<xref:System.DateTime.ToString(System.String,System.IFormatProvider)> odkazuje na metodu [DateTime.ToString(String,IFormatProvider)](https://docs.microsoft.com/dotnet/api/system.datetime.tostring#System_DateTime_ToString_System_String_System_IFormatProvider_).
 
-Pokud chcete vytvořit odkaz na obecný typ, třeba na [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), použijte znak \` (`%60`) a za něj uveďte počet obecných typů parametrů. Například `<xref:System.Nullable%601>` odkazuje na typ [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), zatímco `<xref:System.Func%602>` odkazuje na delegáta [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
+Pokud chcete vytvořit odkaz na obecný typ, třeba na [System.Collections.Generic.List\<T>](https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1), použijte znak \` (`%60`) a za něj uveďte počet parametrů obecného typu. Například `<xref:System.Nullable%601>` odkazuje na typ [System.Nullable\<T>](https://docs.microsoft.com/dotnet/api/system.nullable-1), zatímco `<xref:System.Func%602>` odkazuje na delegáta [System.Func\<T,TResult>](https://docs.microsoft.com/dotnet/api/system.func-2).
 
 ## <a name="code"></a>Kód
 
-Nejlepší způsob, jak zahrnout kód, je použít fragmenty kódu z funkční ukázky. Vytvořte ukázku podle pokynů v článku o [příspěvcích pro .NET](dotnet-contribute.md#contributing-to-samples). Základní pravidla, která platí pro zahrnutí kódu, najdete v obecných pokynech ke [kódu](../code-in-docs.md).
+Nejlepší způsob, jak zahrnout kód, je použít fragmenty kódu z funkční ukázky. Vytvořte ukázku podle pokynů v článku o [příspěvcích pro .NET](dotnet-contribute.md#contribute-to-samples). Základní pravidla, která platí pro zahrnutí kódu, najdete v obecných pokynech ke [kódu](../code-in-docs.md).
 
 K zahrnutí kódu použijte následující syntaxi:
 

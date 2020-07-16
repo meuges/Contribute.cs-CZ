@@ -4,21 +4,21 @@ description: Dokumenty .NET nemají povolené webhooky PR Merger. Tento článek
 ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
-ms.date: 01/04/2019
-ms.openlocfilehash: 80877a93dc410454c939bcd5be5588861682ed11
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.date: 06/24/2020
+ms.openlocfilehash: 7a494b00c05251e70b74d874d13653db9ba9f6e9
+ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "80625113"
+ms.lasthandoff: 07/13/2020
+ms.locfileid: "86290973"
 ---
 # <a name="pull-request-review-process-for-the-net-docs-repositories"></a>Proces kontroly žádosti o přijetí změn pro úložiště dokumentů .NET
 
-Mnohá úložiště nemají povolené webhooky PR Merger, takže se automaticky slučují menší žádosti o přijetí změn. Tento článek popisuje proces kontroly žádosti o přijetí změn pro taková úložiště. Proces kontroly žádosti o přijetí změn byl navržen s těmito cíli:
+Některá úložiště, včetně úložišť .NET, nemají povolený webhook PR Merger, který automaticky slučuje menší žádosti o přijetí změn. Tento článek popisuje proces kontroly žádosti o přijetí změn pro taková úložiště. Proces kontroly žádosti o přijetí změn byl navržen s těmito cíli:
 
-1. Publikování vysoce kvalitního obsahu od našeho týmu, členů produktových týmů a členů komunity
-1. Konzistentní poskytování včasné zpětné vazby s akcemi autorům
-1. Usnadnění diskuze mezi autory a revidujícími
+- Publikování vysoce kvalitního obsahu od našeho týmu, členů produktových týmů a členů komunity
+- Konzistentní poskytování včasné zpětné vazby s akcemi autorům
+- Usnadnění diskuze mezi autory a revidujícími
 
 Procesy se neustále vyvíjejí, jak týmy přinášejí inovace a platforma se zdokonaluje.
 
@@ -34,7 +34,7 @@ Kontroly postupují podle jedné ze tří cest podle typu žádosti:
 
 - **Malé žádosti o přijetí změn** – Malé žádosti o přijetí změn představují jednu opravu: překlepy, nefunkční odkazy, drobné změny kódu nebo podobné změny.
 - **Větší příspěvky** – Větší příspěvky jsou významné úpravy existujícího článku, nové články nebo úpravy počtu článků.
-- **Probíhající práce** – Autoři můžou požádat o průběžnou kontrolu otevřením žádosti o přijetí změn se značkou [WIP] v názvu. Značka WIP znamená Probíhající práce. 
+- **Probíhající práce** – Autoři můžou vytvořit žádost o přijetí změn, která je označená jako zatím nepřipravená ke kontrole, a to tak, že otevřou žádost o přijetí změn označenou jako *draft* (koncept).
 
 Zpracování používané robotem pro licenční smlouvu s přispěvatelem (CLA) je dobré vodítko, jak rozlišovat malé a velké příspěvky. Žádosti o přijetí změn, které nevyžadují podepsání CLA, jsou pravděpodobně malé. Žádosti o přijetí změn, které vyžadují CLA, jsou pravděpodobně velké.
 
@@ -58,15 +58,13 @@ Větší žádosti o přijetí změn procházejí důkladnější kontrolou. Kon
 
 Pokud úpravy vyžadují technickou kontrolu, revidující z týmu obsahu požádá o kontrolu od příslušného člena produktového týmu.
 
-### <a name="review-wip-pull-requests"></a>Kontrola žádostí o přijetí změn typu WIP
+### <a name="review-draft-pull-requests"></a>Kontrola žádostí o přijetí změn typu draft (koncept)
 
-Noví autoři můžou chtít zpětnou vazbu v dřívějších fázích procesu. Můžou otevřít žádost o přijetí změn přidáním popisku [WIP] do názvu. V komentáři můžou požádat o ranou kontrolu.
-
-Tyto rané kontroly nejsou tak důkladné jako úplná kontrola žádosti o přijetí změn. Tým obsahu přidá komentář, ale nebude žádost schvalovat ani žádat o změny pomocí funkce pro kontrolu z GitHubu. Tyto rané kontroly se zaměřují na strukturu článku: osnova, celkový obsah a ukázky. Nezahrnují důkladnou kontrolu gramatiky a správných odkazů.
+Někdy můžete chtít zpětnou vazbu v dřívějších fázích procesu. Otevřete žádost o přijetí změn typu draft (koncept) a přidejte komentář, že požadujete ranou kontrolu. Tyto rané kontroly se zaměřují na strukturu článku: osnova, celkový obsah a ukázky. Nezahrnují důkladnou kontrolu gramatiky a správných odkazů.
 
 ## <a name="respond-to-reviews"></a>Reakce na kontroly
 
-Autor aktualizuje žádost o přijetí změn a reaguje na komentáře, přičemž označí každý zpracovaný komentář reakcí +1, která znamená, že byl vyřešen. Pokud autor nesouhlasí s komentářem nebo komentář vyřeší jinak, přidá komentář s vysvětlením své změny.
+Autor aktualizuje žádost o přijetí změn a reaguje na komentáře, přičemž označí každý zpracovaný komentář reakcí +1, která znamená, že byl vyřešen. Pokud autor nesouhlasí s komentářem nebo komentář vyřeší v jiné žádosti o přijetí změn, přidá komentář s vysvětlením své změny.
 
 Autor uvede původního revidujícího v komentáři, pokud chce požádat o novou kontrolu. 
 
