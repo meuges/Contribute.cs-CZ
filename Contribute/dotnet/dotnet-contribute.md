@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 05/14/2020
-ms.openlocfilehash: fa905d17a39b5fa7737e06fce38659b7e1563635
-ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
+ms.openlocfilehash: d1631f34ef9a3ceb10178792842421376fea97b0
+ms.sourcegitcommit: 3774d06ddc1f92b2bdb4c1d8babbd18357229298
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86290950"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87264802"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>Přečtěte si, jak přispívat do úložišť dokumentace k .NET.
 
@@ -75,7 +75,30 @@ Fragmenty kódu jsou malé a cílené příklady kódu, které demonstrují konc
 
 ## <a name="example-folder-structure"></a>Příklad struktury složek
 
-docs /about /core /porting porting-overview.md /media /porting-overview portability_report.png /snippets /porting-overview /csharp porting.csproj porting-overview.cs Program.cs /fsharp porting.fsproj porting-overview.fs Program.fs /vb porting.vbproj porting-overview.vb Program.vb
+```
+docs
+  /about
+  /core
+    /porting
+      porting-overview.md
+      /media
+        /porting-overview
+          portability_report.png
+      /snippets
+        /porting-overview
+          /csharp
+            porting.csproj
+            porting-overview.cs
+            Program.cs
+          /fsharp
+            porting.fsproj
+            porting-overview.fs
+            Program.fs
+          /vb
+            porting.vbproj
+            porting-overview.vb
+            Program.vb
+```
 
 Struktura uvedená výše zahrnuje jeden obrázek, *portability_report.png*, a tři projekty kódu, které obsahují **fragmenty kódu** zahrnuté v článku *porting-overview.md*. Přijatá alternativní struktura obsahuje jeden projekt na jeden jazyk, který obsahuje všechny fragmenty pro všechny články v dané složce. Kvůli velmi malým fragmentům je tato alternativa použitá v referenčních oblastech jazyka pro demonstraci jazykové syntaxe. V jiných oblastech se nedoporučuje.
 
