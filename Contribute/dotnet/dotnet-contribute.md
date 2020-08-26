@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 05/14/2020
-ms.openlocfilehash: d1631f34ef9a3ceb10178792842421376fea97b0
-ms.sourcegitcommit: 3774d06ddc1f92b2bdb4c1d8babbd18357229298
+ms.openlocfilehash: 810a1335bf3c93b79952c701c44470d3e72fb124
+ms.sourcegitcommit: 940c84d6bc23a8fbec780244563af188d2620ed1
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87264802"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88668636"
 ---
 # <a name="learn-how-to-contribute-to-the-net-docs-repositories"></a>Přečtěte si, jak přispívat do úložišť dokumentace k .NET.
 
@@ -100,6 +100,9 @@ docs
             Program.vb
 ```
 
+> [!NOTE]
+> Složky jazyka v oddíle snippets nejsou v oblasti pokynů pro jazyk potřeba, pokud se předpokládá jenom jeden jazyk.
+
 Struktura uvedená výše zahrnuje jeden obrázek, *portability_report.png*, a tři projekty kódu, které obsahují **fragmenty kódu** zahrnuté v článku *porting-overview.md*. Přijatá alternativní struktura obsahuje jeden projekt na jeden jazyk, který obsahuje všechny fragmenty pro všechny články v dané složce. Kvůli velmi malým fragmentům je tato alternativa použitá v referenčních oblastech jazyka pro demonstraci jazykové syntaxe. V jiných oblastech se nedoporučuje.
 
 Z historických důvodů se mnoho zahrnutých fragmentů ukládá do složky */samples* v úložišti *dotnet/docs*. Pokud provádíte v článku zásadní změny, měli byste tyto fragmenty přesunout do nové struktury. U malých změn fragmenty nepřesunujte.
@@ -154,14 +157,6 @@ Ukázky jsou úplné programy a knihovny určené ke stažení. Možná jsou sv�
 
 3. Vaše ukázka by měla mít **náležitě ošetřeny výjimky**. V ukázce by měly být ošetřeny všechny výjimky, které se v této souvislosti můžou vyskytnout. Například v ukázce, ve které se načítá uživatelský vstup voláním metody [Console.ReadLine](https://docs.microsoft.com/dotnet/api/system.console.readline), musí být náležitě ošetřena výjimka, kdy se vstupní řetězec předá metodě jako argument. Podobně platí, že pokud se v ukázce předpokládá, že volání metody způsobí chybu, musíte výslednou výjimku ošetřit. Vždy ošetřete konkrétní výjimky způsobené metodou místo výjimek základních tříd, jako je [Exception](https://docs.microsoft.com/dotnet/api/system.exception) nebo [SystemException](https://docs.microsoft.com/dotnet/api/system.systemexception).
 
-4. Pokud ukázka vytvoří samostatný balíček, musíte kromě modulů runtime použitých v ukázce zahrnout také moduly runtime použité naším systémem sestavení CI:
-    - `win7-x64`
-    - `win8-x64`
-    - `win81-x64`
-    - `ubuntu.16.04-x64`
-
-V blízké době zavedeme systém CI, který bude sloužit ke kompilaci těchto projektů.
-
 Postup vytvoření ukázky:
 
 1. Zadejte [problém](https://github.com/dotnet/docs/issues) nebo přidejte komentář ke stávajícímu problému a uveďte, že na něm pracujete.
@@ -186,12 +181,13 @@ K vytvoření fragmentu nebo ukázky kódu pro .NET Core použijete nástroje .N
 
 1. Přejděte do ukázkové složky a zkontrolujte chyby tím, že program zkompilujete:
 
-    ```console
+    ```dotnetcli
     dotnet build
     ```
+
 2. Spusťte ukázku:
 
-    ```console
+    ```dotnetcli
     dotnet run
     ```
 
