@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 06/24/2020
-ms.openlocfilehash: 7a494b00c05251e70b74d874d13653db9ba9f6e9
-ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
+ms.openlocfilehash: b2c0cbb0ed72948ba49a7456e16df5659057f5e6
+ms.sourcegitcommit: 56505b3f7e670f6387d2c919f0326e9f4c571c8a
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86290973"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89201120"
 ---
 # <a name="pull-request-review-process-for-the-net-docs-repositories"></a>Proces kontroly žádosti o přijetí změn pro úložiště dokumentů .NET
 
@@ -61,6 +61,10 @@ Pokud úpravy vyžadují technickou kontrolu, revidující z týmu obsahu požá
 ### <a name="review-draft-pull-requests"></a>Kontrola žádostí o přijetí změn typu draft (koncept)
 
 Někdy můžete chtít zpětnou vazbu v dřívějších fázích procesu. Otevřete žádost o přijetí změn typu draft (koncept) a přidejte komentář, že požadujete ranou kontrolu. Tyto rané kontroly se zaměřují na strukturu článku: osnova, celkový obsah a ukázky. Nezahrnují důkladnou kontrolu gramatiky a správných odkazů.
+
+## <a name="explain-suggestions"></a>Návrhy s vysvětlením
+
+GitHub umožňuje zadat komentáře do bloků trojitého zpětného apostrofu typu `suggestion`, které se zobrazí jako diff a dají se sloučit kliknutím na tlačítko. Na krátkých řádcích GitHub dobře zvýrazňuje změny. Na delších řádcích, například v případě dlouhého odstavce na jednom řádku textu, GitHub změny nezvýrazňuje. Při zadávání návrhu pro dlouhý řádek si všimněte, jestli jsou změny jasně zvýrazněné. Pokud změny zvýrazněné nejsou, přidejte mimo blok návrhu komentář vysvětlující, co se změnilo. Bez vysvětlení je pro revidující nebo pro autora žádosti o přijetí změn časově náročné zjistit, o jaké změny jde.
 
 ## <a name="respond-to-reviews"></a>Reakce na kontroly
 
