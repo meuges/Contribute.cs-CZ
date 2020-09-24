@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 11/07/2018
-ms.openlocfilehash: 926516895798757bde0861a345e0b5d0f95218a4
-ms.sourcegitcommit: 5f5fc0fc2ff64610cc19a4b40cb3313adbc152cd
+ms.openlocfilehash: 15288ccb1831e994fd078f47788ad4c2f502775c
+ms.sourcegitcommit: 92d06515af1d9d0e5abf632fc3b6425c487174d5
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/13/2020
-ms.locfileid: "86290904"
+ms.lasthandoff: 09/21/2020
+ms.locfileid: "90837205"
 ---
 # <a name="metadata-and-markdown-template-for-net-docs"></a>Metadata a šablona v Markdownu pro dokumentaci k .NET
 
@@ -129,48 +129,9 @@ Pokud chcete vytvořit odkaz na obecný typ, třeba na [System.Collections.Gener
 
 ## <a name="code"></a>Kód
 
-Nejlepší způsob, jak zahrnout kód, je použít fragmenty kódu z funkční ukázky. Vytvořte ukázku podle pokynů v článku o [příspěvcích pro .NET](dotnet-contribute.md#contribute-to-samples). Základní pravidla, která platí pro zahrnutí kódu, najdete v obecných pokynech ke [kódu](../code-in-docs.md).
+Nejlepší způsob, jak zahrnout kód, je použít fragmenty kódu z funkční ukázky. Vytvořte ukázku podle pokynů v článku o [příspěvcích pro .NET](dotnet-contribute.md#contribute-to-samples). Tím, že zahrnete fragmenty kódu z celých programů, zajistíte spustitelnost veškerého kódu v našem systému kontinuální integrace (CI). Pokud ale chcete předvést něco, co způsobuje chyby při kompilaci nebo spuštění, můžete použít vložené bloky kódu.
 
-K zahrnutí kódu použijte následující syntaxi:
-
-```markdown
-[!code-<language>[<name>](<pathToFile><queryoption><queryoptionvalue>)]
-```
-
-* `-<language>` (*volitelné*, ale *doporučené*)
-  * Jazyk fragmentu kódu, na který vytváříte odkaz.
-
-* `<name>` (*volitelné*)
-  * Název fragmentu kódu Nemá žádný vliv na výstupní HTML, ale můžete ho použít ke zlepšení čitelnosti zdroje Markdownu.
-
-* `<pathToFile>` (*povinné*)
-  * Relativní cesta v systému souborů označující soubor fragmentu kódu, na který se má odkazovat Může být složitá kvůli různým úložištím, která tvoří sadu dokumentace k .NET. Ukázky k .NET jsou v úložišti dotnet/samples. Všechny cesty k fragmentům kódu začínají na `~/samples`. Zbytek cesty představuje cestu ke zdroji z kořenového adresáře daného úložiště.
-
-* `<queryoption>` (*volitelné*)
-  * Používá se k upřesnění způsobu načtení kódu ze souboru:
-    * `#`:  `#{tagname}` (název značky) *nebo* `#L{startlinenumber}-L{endlinenumber}` (rozsah řádků).
-    Nedoporučujeme používat čísla řádků kvůli jejich snadnému porušení. Jako odkaz na fragmenty kódu doporučujeme používat název značky. Názvy značek by měly být srozumitelné. (Mnoho fragmentů kódu bylo migrováno z předchozí platformy. Jsou v nich značky s názvy třeba `Snippet1`, `Snippet2` atd. V praxi je dodržení tohoto pravidla velice náročné.)
-    * `range`: `?range=1,3-5` Rozsah řádků. Tento příklad zahrnuje řádky 1, 3, 4 a 5.
-
-Všude, kde je to možné, doporučujeme používat názvy značek. Název značky je vlastně název oblasti nebo komentáře kódu ve formátu `Snippettagname`, který je ve zdrojovém kódu. V následujícím příkladu je vidět, jak odkazovat na název značky `BasicThrow`:
-
-```markdown
-[!code-csharp[csrefKeyword#1](~/samples/snippets/snippets/csharp/language-reference/operators/ConditionalExamples.csConditionalRef)]
-```
-
-Relativní cesta ke zdroji v úložišti **dotnet/samples** je `~/samples`.
-
-Strukturu značek fragmentů kódu si můžete prohlédnout v [tomto zdrojovém souboru](https://github.com/dotnet/samples/blob/master/snippets/csharp/language-reference/operators/ConditionalExamples.cs). Podrobnosti o reprezentaci názvů značek ve zdrojových souborech fragmentu kódu v jednotlivých jazycích najdete v [pokynech pro DocFX](https://dotnet.github.io/docfx/spec/docfx_flavored_markdown.html#tag-name-representation-in-code-snippet-source-file).
-
-V následujícím příkladu je kód ve všech třech jazycích .NET:
-
-```markdown
-[!code-fsharp[ToPigLatin](../../../samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
- [!code-csharp[ADCreateDomain#2](../../../samples/snippets/csharp/VS_Snippets_CLR/ADCreateDomain/CS/source2.cs#2)]
- [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]
-```
-
-Tím, že zahrnete fragmenty kódu z celých programů, zajistíte spustitelnost veškerého kódu v našem systému kontinuální integrace (CI). Pokud ale chcete předvést něco, co způsobuje chyby při kompilaci nebo spuštění, můžete použít vložené bloky kódu.
+Informace o syntaxi Markdown pro zobrazení kódu v dokumentech najdete v tématu [Jak do dokumentů vkládat kód](../code-in-docs.md).
 
 ## <a name="images"></a>Obrázky
 
