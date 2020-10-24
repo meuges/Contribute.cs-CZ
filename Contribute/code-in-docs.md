@@ -7,12 +7,12 @@ ms.date: 03/03/2020
 ms.prod: non-product-specific
 ms.topic: contributor-guide
 ms.custom: external-contributor-guide
-ms.openlocfilehash: 4e57af6a1fe9a9d3799f09cb04f3bd3f0b9b712d
-ms.sourcegitcommit: 59e77d2fb9c38cccbacde9d2a7df61ae58c38fa4
+ms.openlocfilehash: b33333a49df11f0234193ca84fc2c3accdb6894d
+ms.sourcegitcommit: f1535713b66ff9b840f1138583746bc2bf182b4f
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84421038"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91953643"
 ---
 # <a name="how-to-include-code-in-docs"></a>Jak do dokumentů vkládat kód
 
@@ -354,11 +354,17 @@ Pokud chcete tuto funkci zapnout pro konkrétní blok kódu, použijte atribut `
 
 * `cloudshell-powershell` – povolí Azure PowerShell Cloud Shell, jako v předchozím příkladu.
 * `cloudshell-bash` – povolí Azure Cloud Shell.
-* `try-dotnet` – povolí Try .NET.
-* `try-dotnet-class` – povolí Try .NET s generováním tříd.
-* `try-dotnet-method` – povolí Try .NET s generováním metod.
+* `try-dotnet` – povolí .NET Interactive.
+* `try-dotnet-class` – povolí .NET Interactive s generováním tříd.
+* `try-dotnet-method` – povolí .NET Interactive s generováním metod.
 
 Pro prostředí Azure Cloud Shell a PowerShell Cloud Shell můžou uživatelé spouštět příkazy jenom se svým vlastním účtem Azure.
+
+V prostředí .NET Interactive závisí obsah vašeho bloku kódu na tom, které ze tří prostředí generování si vyberete:
+
+* *Bez generování* (`try-dotnet`): Blok kódu by měl představovat celý text programu. Platný by byl například soubor *Program.cs* vygenerovaný prostřednictvím `dotnet new console`. Toto nastavení je nejvhodnější k zobrazení celého malého programu, včetně potřebných direktiv `using`. Příkazy nejvyšší úrovně nejsou v tuto chvíli podporovány.
+* *Generování metod* (`try-dotnet-method`): Blok kódu by měl představovat obsah metody `Main` v konzolové aplikaci. Můžete předpokládat, že direktivy `using` se přidají šablonou `dotnet new console`. Toto nastavení je nejvhodnější pro krátké fragmenty kódu, které ukazují jednu funkci.
+* *Generování tříd* (`try-dotnet-class`): Blok kódu by měl představovat třídu s metodou `Main` jako vstupním bodem programu. Tuto možnost můžete použít, pokud chcete ukázat interakce členů třídy.
 
 ## <a name="snippet-syntax-reference"></a>Přehled syntaxe fragmentů
 
@@ -398,7 +404,7 @@ Syntaxe:
 | .NET Core CLI                  | `dotnetcli`                                                                    |
 | 1C                             | `1c`                                                                           |
 | ABNF                           | `abnf`                                                                         |
-| Přístupové protokoly                    | `accesslog`                                                                    |
+| Protokoly přístupu                    | `accesslog`                                                                    |
 | Ada                            | `ada`                                                                          |
 | Assembler ARM                  | `armasm`, `arm`                                                                |
 | Assembler AVR                  | `avrasm`                                                                       |
@@ -421,7 +427,7 @@ Syntaxe:
 | AzCopy                         | `azcopy`                                                                       |
 | Azure CLI                      | `azurecli`                                                                     |
 | Azure CLI (Interactive)        | `azurecli-interactive`                                                         |
-| Azure PowerShell               | `azurepowershell`                                                              |
+| Azure Powershell               | `azurepowershell`                                                              |
 | Azure Powershell (Interactive) | `azurepowershell-interactive`                                                  |
 | Bash                           | `bash`, `sh`, `zsh`                                                            |
 | Basic                          | `basic`                                                                        |
@@ -472,7 +478,7 @@ Syntaxe:
 | GDScript                       | `godot`, `gdscript`                                                            |
 | Gherkin                        | `gherkin`                                                                      |
 | GN for Ninja                   | `gn`, `gni`                                                                    |
-| Go                             | `go`, `golang`                                                                 |
+| Přejít                             | `go`, `golang`                                                                 |
 | Golo                           | `golo`, `gololang`                                                             |
 | Gradle                         | `gradle`                                                                       |
 | Groovy                         | `groovy`                                                                       |
@@ -533,10 +539,10 @@ Syntaxe:
 | PostgreSQL & PL/pgSQL          | `pgsql`, `postgres`, `postgresql`                                              |
 | PowerShell                     | `powershell`, `ps`                                                             |
 | PowerShell (Interactive)       | `powershell-interactive`                                                       |
-| Processing                     | `processing`                                                                   |
+| Zpracování                     | `processing`                                                                   |
 | Prolog                         | `prolog`                                                                       |
 | Vlastnosti                     | `properties`                                                                   |
-| Vyrovnávací paměti protokolu               | `protobuf`                                                                     |
+| Vyrovnávací paměti protokolů               | `protobuf`                                                                     |
 | Puppet                         | `puppet`, `pp`                                                                 |
 | Python                         | `python`, `py`, `gyp`                                                          |
 | Výsledky profileru Pythonu        | `profile`                                                                      |
@@ -558,7 +564,7 @@ Syntaxe:
 | SQL                            | `sql`                                                                          |
 | STEP Part 21                   | `p21`, `step`, `stp`                                                           |
 | Scala                          | `scala`                                                                        |
-| Scheme                         | `scheme`                                                                       |
+| Schéma                         | `scheme`                                                                       |
 | Scilab                         | `scilab`, `sci`                                                                |
 | Shape Expressions              | `shexc`                                                                        |
 | Prostředí                          | `shell`, `console`                                                             |

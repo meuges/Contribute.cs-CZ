@@ -54,6 +54,8 @@
       items:
         - name: Jak přidávat příspěvky
           href: dotnet/dotnet-contribute.md
+        - name: Dokumentace k analýze kódu
+          href: dotnet/dotnet-contribute-code-analysis.md
         - name: 'Roadmapa popisků, projektů a milníků'
           href: dotnet/labels-projects.md
         - name: Zásady stylů
