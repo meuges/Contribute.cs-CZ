@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 08/30/2017
-ms.openlocfilehash: 5231b68f04caa94d3ff2ff26afc38e3218ca06b8
-ms.sourcegitcommit: cfba5ad25b898bfed76046126ce8ff4871910701
+ms.openlocfilehash: 0661191c64d2f8aa29973e96e98445d070424beb
+ms.sourcegitcommit: 344c3c74c317350a00f91e3e7019a545d5c3c5a2
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "78331899"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92689308"
 ---
 # <a name="github-contribution-workflow-for-major-or-long-running-changes"></a>Pracovní postup přispívání prostřednictvím GitHubu pro větší nebo dlouho probíhající změny
 
@@ -95,10 +95,13 @@ A máte to hotové!  Váš kód je teď v úložišti GitHub a je připravený n
 
 Potřebujete opravit něco, co jste odeslali?  Žádný problém!  Stačí udělat změny ve stejné větvi a pak je znovu potvrdit a odeslat (při následných odesíláních stejné větve není nutné nastavovat nadřazený server).
 
-Máte další změny, které potřebujete udělat, ale nesouvisejí s touto změnou?  Přepněte zpátky do hlavní větve a pomocí Gitu Bashu zarezervujte jinou novou větev. Je to takto jednoduché:
+## <a name="making-your-next-change"></a>Provedení další změny
+
+Máte další změny, které potřebujete udělat, ale nesouvisejí s touto změnou? Přepněte zpátky na hlavní větev, přijměte změny z upstreamového úložiště, abyste měli jistotu, že váš fork je aktuální, a rezervujte si novou větev.  V okně Git Bash spusťte následující příkazy:
 
 ````
 git checkout master
+git pull upstream master
 git checkout -b "branchname"
 ````
 

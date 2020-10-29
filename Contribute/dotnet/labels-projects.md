@@ -5,12 +5,12 @@ ms.topic: contributor-guide
 ms.prod: non-product-specific
 ms.custom: external-contributor-guide
 ms.date: 08/06/2020
-ms.openlocfilehash: b8e9f2a33f9b4a8025aa36a890bff1017cf132c6
-ms.sourcegitcommit: abcc67cb3ec1f635a6374d7c47a4831e3eee9050
+ms.openlocfilehash: 059ed8297956589a281cf11e4f7244e972565160
+ms.sourcegitcommit: 11228bd1d3dc1496820355096453f1eb2d28b33e
 ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89559256"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523463"
 ---
 # <a name="labels-projects-and-milestones-roadmap"></a>Roadmapa popisků, projektů a milníků
 
@@ -114,10 +114,21 @@ Problémy označené pro konkrétní verzi jsou označeny předponou `:checkered
 
 Popisky priorit `P` jsou všechny následované jednou číslicí. Nižší hodnota znamená vyšší prioritu:
 
-- P0 – označuje problémy nebo žádosti o přijetí změn, které mají kritickou prioritou
+- P0 – kritická priorita
+
+  Problém se zabezpečením nebo něco, co je vyžadované zákonem v zájmu dodržování předpisů. Oprava má přednost před vším ostatním.
+  
 - P1 – vysoká priorita
+
+  Zásadní věc pro typické scénáře. Nebo do očí bijící chyba v článku s velkým počtem zobrazení. Opravě těchto chyb se věnujeme před prací na prioritách P2 a P3.
+  
 - P2 – střední priorita
+
+  Něco, co by bylo užitečné pro typické scénáře, ale nebrání zcela v práci.  Tyto chyby opravíme, pokud to jde udělat snadno a rychle, nebo si je přibereme k opravě problému s prioritou P1 ve stejném článku.
+  
 - P3 – nízká priorita
+
+  Užitečné věci pro okrajové případy, triviální opravy pro typické scénáře, články s malým počtem zobrazení nebo zastaralé technologie. Na těchto drobnostech nechceme plýtvat časem, ale dáváme je k dispozici, pokud by se jim chtěl věnovat někdo z komunity. Pokud se problému s prioritou P3 nikdo nevěnuje dva měsíce, může být uzavřen.
 
 ### <a name="what-about-the-other-labels"></a>K čemu jsou ostatní popisky
 
@@ -136,4 +147,4 @@ Projekty používáme dvěma způsoby:
 
 ## <a name="milestones"></a>Milníky
 
-Milníky se obvykle řídí stejnými zásadami vytváření názvů jako projekty `Month YYYY`, ale od projektů se liší. Milníky používáme ke sledování dokončené práce. Milníky by _ne_měly obsahovat problémy (potenciální práci), ale výhradně jen žádosti o přijetí změn. Aktuální milník se automaticky použije na nové žádosti o přijetí změn.
+Milníky se obvykle řídí stejnými zásadami vytváření názvů jako projekty `Month YYYY`, ale od projektů se liší. Milníky používáme ke sledování dokončené práce. Milníky by _ne_ měly obsahovat problémy (potenciální práci), ale výhradně jen žádosti o přijetí změn. Aktuální milník se automaticky použije na nové žádosti o přijetí změn.
